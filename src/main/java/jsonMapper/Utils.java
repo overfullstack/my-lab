@@ -1,10 +1,11 @@
-
 /*
  * Copyright (c) 2017 - Present, Gopal S Akshintala This source code is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
  * 	http://creativecommons.org/licenses/by-sa/4.0/
  */
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+package jsonMapper;
+
+import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jettison.json.JSONArray;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
@@ -18,9 +19,9 @@ import java.util.Map;
 /**
  * Created by Gopala Akshintala on 28/09/16.
  */
-public class JsonMapperLab {
+public class Utils {
     private static final String RESOURCE_PATH = Paths.get(".").toAbsolutePath() + "/./src/main/resources/";
-    private static final ObjectMapper mapper = new ObjectMapper();
+    public static final ObjectMapper mapper = new ObjectMapper();
     public static void main(String[] args) throws IOException, JSONException {
         /*List<Map<String, String>> emails = readJsonFromFile("email.json");
         System.out.println(emails);
@@ -40,9 +41,9 @@ public class JsonMapperLab {
         System.out.println(sConf.get("operation"));
     }*/
 
-    private static void stringToObject() {
+    public static Bean stringToObject() {
         Bean bean = getObjectFromFile(RESOURCE_PATH + "bean.json", Bean.class);
-        System.out.println(bean.getCss());
+        return bean;
     }
 
     public static <T> T getObjectFromFile(String filePath, Class<T> tClass) {
