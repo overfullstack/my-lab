@@ -9,9 +9,9 @@ package exception;
 public class CatchException {
     public static void main(String[] args) {
         try {
-            //throw new RuntimeException();
-            String abc = null;
-            System.out.println(abc.length());
+            throw new RuntimeException("run time");
+            //String abc = null;
+            //System.out.println(abc.length());
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
