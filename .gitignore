@@ -41,3 +41,5 @@ hs_err_pid*
 .idea/workspace.xml
 out/production/classes/generated/
 out/production/resources/
+
+**/rebel.xml

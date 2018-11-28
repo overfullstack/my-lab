@@ -9,13 +9,19 @@ package enumLab;
 public enum MyEnum {
     ENUM1("enum1"),
     ENUM2("enum2");
+
+    private String value;
     
     MyEnum(String value) {
         this.value = value;
     }
-    private final String value;
 
     public String getValue() {
         return value;
+    }
+    
+    public MyEnum withValue(String value) {
+        this.value = value;
+        return this;
     }
 }
