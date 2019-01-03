@@ -19,7 +19,11 @@ public enum MyEnum {
     public String getValue() {
         return value;
     }
-    
+
+    public void setValue(String value) {
+        this.value = value;
+    }
+
     public MyEnum withValue(String value) {
         this.value = value;
         return this;
