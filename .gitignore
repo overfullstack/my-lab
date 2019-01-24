@@ -43,3 +43,4 @@ out/production/classes/generated/
 out/production/resources/
 
 **/rebel.xml
+/.idea/libraries/

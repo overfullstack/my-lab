@@ -5,6 +5,7 @@
 
 package jsonMapper;
 
+import common.Bean;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jettison.json.JSONArray;
 import org.codehaus.jettison.json.JSONException;

@@ -8,10 +8,10 @@ package enumLab;
 
 public class ImmutableEnumTest {
     public static void main(String[] args) {
-        testWithValue();
-        testWithEnum();
+        //testWithValue();
+        //testWithEnum();
     }
-
+    
     private static void testWithValue() {
         MyEnum myEnum = MyEnum.ENUM1;
         MyEnum myEnum1 = myEnum.withValue("newValue");

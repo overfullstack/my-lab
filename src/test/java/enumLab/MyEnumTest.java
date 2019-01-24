@@ -4,11 +4,17 @@
  * 	http://creativecommons.org/licenses/by-sa/4.0/
  */
 
-package string;
+package enumLab;
 
-public class StringFormat {
-    public static void main(String[] args) {
-        // Can pass null to varagrs
-        String.format("abc %s", null);
+import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
+
+class MyEnumTest {
+    
+    @Test
+    void loopThroughValues() {
+        Arrays.stream(MyEnum.values()).forEach(System.out::println);
     }
+
 }

@@ -6,6 +6,7 @@
 
 package jsonMapper;
 
+import common.Bean;
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.StringEntity;
 import org.codehaus.jackson.map.ObjectMapper;
