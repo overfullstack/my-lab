@@ -6,6 +6,7 @@
 
 package enumLab;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -17,4 +18,9 @@ class MyEnumTest {
         Arrays.stream(MyEnum.values()).forEach(System.out::println);
     }
 
+    @Test
+    void enumToString() {
+        System.out.println(MyEnum.ENUM1.toString());
+        Assertions.assertTrue(MyEnum.ENUM1.toString().equalsIgnoreCase("Enum1"));
+    }
 }
