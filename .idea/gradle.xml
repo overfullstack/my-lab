@@ -6,7 +6,7 @@
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleHome" value="/usr/local/opt/gradle/libexec" />
-        <option name="gradleJvm" value="11-oracle" />
+        <option name="gradleJvm" value="10-oracle" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />

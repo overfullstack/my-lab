@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.function.Function;
 
-public class FunctionLab {
+class FunctionLab {
     
     @Test
     void functionChain() {
