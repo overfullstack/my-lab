@@ -12,7 +12,7 @@
     <orderEntry type="library" name="Gradle: com.sun.jersey:jersey-json:1.19.4" level="project" />
     <orderEntry type="library" name="Gradle: org.codehaus.jettison:jettison:1.4.0" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.9.8" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.httpcomponents:httpclient:4.5.7" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.httpcomponents:httpclient:4.5.8" level="project" />
     <orderEntry type="library" name="Gradle: com.sun.jersey:jersey-client:1.19.4" level="project" />
     <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.8.5" level="project" />
     <orderEntry type="library" name="Gradle: com.twitter:twitter-text:1.14.7" level="project" />

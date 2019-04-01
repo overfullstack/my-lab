@@ -6,12 +6,11 @@
 
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalDate;
+import java.util.Objects;
 
-public class DateLab {
-    
+public class EqualsLab {
     @Test
-    void testLocalDate() {
-        System.out.println(LocalDate.of(-999999999,13,1));
+    void objectsEqualsForBothNull() {
+        System.out.println(Objects.equals(null, null));
     }
 }

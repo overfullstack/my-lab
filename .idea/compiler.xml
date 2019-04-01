@@ -12,8 +12,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="my-lab" target="11" />
-      <module name="my-lab_main" target="11" />
-      <module name="my-lab_test" target="11" />
+      <module name="my-lab_main" target="1.10" />
+      <module name="my-lab_test" target="1.10" />
     </bytecodeTargetLevel>
   </component>
 </project>
