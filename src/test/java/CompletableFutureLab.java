@@ -4,25 +4,25 @@
  * 	http://creativecommons.org/licenses/by-sa/4.0/
  */
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
 
 public class CompletableFutureLab {
 
     @Test
-    void isNotLazy() {
-        CompletableFuture
+    void isNotLazy() throws ExecutionException, InterruptedException {
+        final CompletableFuture<String> handle = CompletableFuture
                 .supplyAsync(() -> {
                     System.out.println("Hello - " + Thread.currentThread().getName()); // Runs on thread other than main.
                     return "Hello";
                 }).thenCompose(s ->
-                CompletableFuture
-                        .supplyAsync(() -> {
-                            System.out.println("World - " + Thread.currentThread().getName());
-                            return s + " World";
-                        }));
-
-        //Assertions.assertEquals("Hello World", completableFuture.get());
+                        CompletableFuture
+                                .supplyAsync(() -> {
+                                    System.out.println("World - " + Thread.currentThread().getName());
+                                    return s + " World";
+                                }));
     }
 }

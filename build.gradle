@@ -19,4 +19,5 @@ dependencies {
     compile group: 'com.google.code.gson', name: 'gson', version: '+'
     compile group: 'com.twitter', name:'twitter-text', version: '+'
     compile group: 'org.apache.commons', name: 'commons-text', version: '+'
+    compile group: 'io.vavr', name: 'vavr', version: '0.10.0'
 }

@@ -6,6 +6,7 @@
 
 package optional;
 
+import common.Bean;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -16,5 +17,18 @@ public class OptionalLab {
     @Test
     void optionalWithNull() {
         Assertions.assertThrows(NullPointerException.class, () -> Optional.of(null));
+    }
+    
+    @Test
+    void immutability() {
+        Bean bean = new Bean("str1");
+        Bean beanFromOptional = Optional.of(bean)
+                .map(b -> {
+                    b.setProp("str2");
+                    return b;
+                })
+                .get();
+        System.out.println("Optional Mutates the value inside it" + bean.getProp());
+        Assertions.assertSame(bean, beanFromOptional);
     }
 }
