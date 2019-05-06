@@ -9,18 +9,18 @@ public class ParallelLoopWithTimeStamps {
     private static final int NTHREADS = Runtime.getRuntime().availableProcessors();
 
     private void workToFindSin(int[] array, int from, int to) {
-        for (int j = from; j < to; j++) {
+        for (var j = from; j < to; j++) {
             array[j] = Math.toIntExact(Math.round(Math.sin(j * 10d)));
         }
     }
 
     public void attempt1(final int[] array) {
-        Thread[] threads = new Thread[NTHREADS - 1];
-        final int segmentLen = array.length / NTHREADS;
-        int offset = 0;
-        for (int i = 0; i < NTHREADS - 1; i++) {
-            final int from = offset;
-            final int to = offset + segmentLen;
+        var threads = new Thread[NTHREADS - 1];
+        final var segmentLen = array.length / NTHREADS;
+        var offset = 0;
+        for (var i = 0; i < NTHREADS - 1; i++) {
+            final var from = offset;
+            final var to = offset + segmentLen;
             threads[i] = new Thread(new Runnable() {
 
                 @Override
@@ -35,7 +35,7 @@ public class ParallelLoopWithTimeStamps {
         workToFindSin(array, array.length - segmentLen, array.length);
 
         // wait for completion
-        for (int i = 0; i < NTHREADS - 1; i++) {
+        for (var i = 0; i < NTHREADS - 1; i++) {
             try {
                 threads[i].join();
             } catch (InterruptedException ignore) {
@@ -44,12 +44,12 @@ public class ParallelLoopWithTimeStamps {
     }
 
     public void attempt2(final int[] array) {
-        ExecutorService exec = Executors.newFixedThreadPool(NTHREADS - 1);
-        final int segmentLen = array.length / NTHREADS;
-        int offset = 0;
-        for (int i = 0; i < NTHREADS - 1; i++) {
-            final int from = offset;
-            final int to = offset + segmentLen;
+        var exec = Executors.newFixedThreadPool(NTHREADS - 1);
+        final var segmentLen = array.length / NTHREADS;
+        var offset = 0;
+        for (var i = 0; i < NTHREADS - 1; i++) {
+            final var from = offset;
+            final var to = offset + segmentLen;
             exec.execute(new Runnable() {
 
                 @Override
@@ -72,9 +72,9 @@ public class ParallelLoopWithTimeStamps {
 
     class ForEach extends RecursiveAction {
 
-        private int[] array;
-        private int from;
-        private int to;
+        private final int[] array;
+        private final int from;
+        private final int to;
 
         // you can fine-tune this,
         // should be sth between 100 and 10000
@@ -88,12 +88,12 @@ public class ParallelLoopWithTimeStamps {
 
         @Override
         protected void compute() {
-            int len = to - from;
+            var len = to - from;
             if (len < TASK_LEN) {
                 workToFindSin(array, from, to);
             } else {
                 // split workToFindSin in half, execute sub-tasks asynchronously
-                int mid = (from + to) >>> 1;
+                var mid = (from + to) >>> 1;
                 new ForEach(array, from, mid).fork();
                 new ForEach(array, mid, to).fork();
             }
@@ -101,7 +101,7 @@ public class ParallelLoopWithTimeStamps {
     }
 
     public void attempt3(final int[] array) {
-        ForkJoinPool pool = new ForkJoinPool(NTHREADS);
+        var pool = new ForkJoinPool(NTHREADS);
         // blocks until completion
         pool.invoke(new ForEach(array, 0, array.length));
     }
@@ -117,12 +117,12 @@ public class ParallelLoopWithTimeStamps {
     }
 
     public void test() {
-        final int ROUNDS = 10;
+        final var ROUNDS = 10;
         long seq = 0, a1 = 0, a2 = 0, a3 = 0, a4 = 0, t;
 
-        int[] resultArr = new int[10];
+        var resultArr = new int[10];
 
-        for (int i = 0; i < ROUNDS; i++) {
+        for (var i = 0; i < ROUNDS; i++) {
             t = System.currentTimeMillis();
             workToFindSin(resultArr, 0, resultArr.length);
             seq += System.currentTimeMillis() - t;
@@ -131,7 +131,7 @@ public class ParallelLoopWithTimeStamps {
         print(resultArr);
 
         clear(resultArr);
-        for (int i = 0; i < ROUNDS; i++) {
+        for (var i = 0; i < ROUNDS; i++) {
             t = System.currentTimeMillis();
             attempt1(resultArr);
             a1 += System.currentTimeMillis() - t;
@@ -140,7 +140,7 @@ public class ParallelLoopWithTimeStamps {
         print(resultArr);
 
         clear(resultArr);
-        for (int i = 0; i < ROUNDS; i++) {
+        for (var i = 0; i < ROUNDS; i++) {
             t = System.currentTimeMillis();
             attempt2(resultArr);
             a2 += System.currentTimeMillis() - t;
@@ -149,7 +149,7 @@ public class ParallelLoopWithTimeStamps {
         print(resultArr);
 
         clear(resultArr);
-        for (int i = 0; i < ROUNDS; i++) {
+        for (var i = 0; i < ROUNDS; i++) {
             t = System.currentTimeMillis();
             attempt3(resultArr);
             a3 += System.currentTimeMillis() - t;
@@ -158,7 +158,7 @@ public class ParallelLoopWithTimeStamps {
         print(resultArr);
 
         clear(resultArr);
-        for (int i = 0; i < ROUNDS; i++) {
+        for (var i = 0; i < ROUNDS; i++) {
             t = System.currentTimeMillis();
             resultArr = attempt4();
             a4 += System.currentTimeMillis() - t;
@@ -174,7 +174,7 @@ public class ParallelLoopWithTimeStamps {
     }
 
     private void clear(int[] array) {
-        for (int i = 0; i < array.length; i++) {
+        for (var i = 0; i < array.length; i++) {
             array[i] = 0;
         }
     }

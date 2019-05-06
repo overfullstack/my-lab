@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 public class OptionLab {
     @Test
     void booleanOption() {
-        Assertions.assertSame(Option.some(false), Option.of(false));
+        Assertions.assertEquals(Option.some(false), Option.of(false));
+        // These are not same.
+        Assertions.assertNotSame(Option.some(false), Option.of(false));
     }
 }

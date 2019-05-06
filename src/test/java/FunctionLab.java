@@ -15,7 +15,7 @@ class FunctionLab {
     void functionChain() {
         Function<String, Integer> f1 = Integer::parseInt;
         Function<Integer, String> f2 = String::valueOf;
-        Function<Integer, Integer> fComposed = f2.andThen(f1);
+        var fComposed = f2.andThen(f1);
     }
 
     @Test

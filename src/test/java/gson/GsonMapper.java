@@ -17,20 +17,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 class GsonMapper {
-    private Gson gson = new Gson();
+    private final Gson gson = new Gson();
     
     @Test
     void testDeepCloneListOfBeans() {
         List<Bean> beans = new ArrayList<>();
-        Bean bean1 = new Bean("1");
-        Bean bean2 = new Bean("2");
-        Bean bean3 = new Bean("3");
+        var bean1 = new Bean("1");
+        var bean2 = new Bean("2");
+        var bean3 = new Bean("3");
         beans.add(bean1);
         beans.add(bean2);
         beans.add(bean3);
         System.out.println(beans);
 
-        Type beanListType = new TypeToken<ArrayList<Bean>>(){}.getType();
+        var beanListType = new TypeToken<ArrayList<Bean>>(){}.getType();
 
         List<Bean> deepCopyBeans = gson.fromJson(gson.toJson(beans), beanListType);
         System.out.println(deepCopyBeans);
@@ -40,10 +40,10 @@ class GsonMapper {
     
     @Test
     void testDeepCloneBean() {
-        Bean bean1 = new Bean("1");
+        var bean1 = new Bean("1");
         System.out.println(bean1);
-        
-        Bean deepCopyBean1 = gson.fromJson(gson.toJson(bean1), Bean.class);
+
+        var deepCopyBean1 = gson.fromJson(gson.toJson(bean1), Bean.class);
         System.out.println(deepCopyBean1);
         
         Assertions.assertEquals(bean1, deepCopyBean1);

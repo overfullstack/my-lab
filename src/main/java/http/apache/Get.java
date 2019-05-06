@@ -20,12 +20,12 @@ public class Get {
 
     public static void main(String[] args) throws IOException {
         HttpClient client = HttpClientBuilder.create().build();
-        String URL = "https://slc11cfp.us.oracle.com/eloqua/bluekai/client/scheduleActivityJob/1234/2433?oauth_consumer_key=dyp0jJRSkoBLkGI7c0p4T3og0dJgOfRwV5i3Ogp%2FjR0%3D&siteId=10790440";
-        HttpGet request = new HttpGet(URL);
+        var URL = "https://slc11cfp.us.oracle.com/eloqua/bluekai/client/scheduleActivityJob/1234/2433?oauth_consumer_key=dyp0jJRSkoBLkGI7c0p4T3og0dJgOfRwV5i3Ogp%2FjR0%3D&siteId=10790440";
+        var request = new HttpGet(URL);
 
-        String USER_AGENT = "Mozilla/5.0";
+        var USER_AGENT = "Mozilla/5.0";
         request.addHeader("User-Agent", USER_AGENT);
-        HttpResponse response = client.execute(request);
+        var response = client.execute(request);
     }
 
 }

@@ -13,9 +13,9 @@ import java.util.Set;
 
 public class StringCompare {
     public static void main(String[] args) {
-        MyObject myObject1 = new MyObject();
-        MyObject myObject2 = new MyObject();
-        MyObject myObject3 = new MyObject();
+        var myObject1 = new MyObject();
+        var myObject2 = new MyObject();
+        var myObject3 = new MyObject();
         
         // This comparision results true only if both the references point to same object.
         System.out.println("Reference Comparision" + (myObject1 == myObject2));

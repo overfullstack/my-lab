@@ -5,22 +5,25 @@ import org.junit.jupiter.api.Test;
 
 public class TryLab {
     @Test
-    void testIsTryLazy() {
-        Try<Try<String>> tryNotLazy = Try.of(() -> {
+    void tryIsNotLazy() {
+        var tryNotLazy = Try.of(() -> {
             System.out.println("Try is not Lazy");
             return Try.of(() -> {
                 System.out.println("Try inside is not Lazy");
                 return "I m Tried and printed";
             });
+        }).map(ignore -> {
+            System.out.println("map on Try is not lazy");
+            return null;
         });
         System.out.println(tryNotLazy);
-        System.out.println("Both Try's execute before Calling get() on Try");
+        System.out.println("Both Try's executed, before Calling get() on Try");
         tryNotLazy.get();
     }
     
     @Test
     void tryWithException() {
-        final Try<String> i_threw_it = Try.of(() -> {
+        final var i_threw_it = Try.of(() -> {
             if (true) throw new RuntimeException("I threw it");
             return "try";
         }).orElse(Try.failure(new RuntimeException("I threw it in or else")));
@@ -32,9 +35,9 @@ public class TryLab {
 
     @Test
     void tryWithInnerException() {
-        Try<String> outerTry = Try.of(() -> {
+        var outerTry = Try.of(() -> {
             System.out.println("Try outside");
-            final Try<String> innerTry = Try.of(() -> {
+            final var innerTry = Try.of(() -> {
                 System.out.println("Try inside");
                 if (true) throw new RuntimeException("I threw it");
                 return "I m Tried and printed";

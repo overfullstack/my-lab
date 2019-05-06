@@ -11,7 +11,7 @@ import org.apache.commons.text.StringEscapeUtils;
 public class StringEscape {
     public static void main(String args[]) {
 
-        String testStr = "< > \" &";
+        var testStr = "< > \" &";
 
         System.out.println("Original : " + testStr + "\n");
 

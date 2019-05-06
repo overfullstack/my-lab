@@ -36,9 +36,9 @@ public class StreamImmutability {
     private static Gson gson = new Gson();
 
     public static void main(String[] args) {
-        Holder mutableHolder = new Holder(1);
-        Stream<Holder> stream = Stream.of(mutableHolder);
-        Stream<Holder> mappedStream = stream.peek(holder -> holder.setValue(2));
+        var mutableHolder = new Holder(1);
+        var stream = Stream.of(mutableHolder);
+        var mappedStream = stream.peek(holder -> holder.setValue(2));
 
         System.out.println(mutableHolder.value);
         mappedStream.forEach(System.out::print);

@@ -10,10 +10,10 @@ import utils.ResourceFileReader;
 
 public class StringReplace {
     public static void main(String[] args) {
-        String abc = "\"abc\"";
+        var abc = "\"abc\"";
         System.out.println(abc.replace("\"","\\\""));
         //System.out.println(StringEscapeUtils.escapeJava(abc));
-        String fileLine = new ResourceFileReader("string.txt").readLine();
+        var fileLine = new ResourceFileReader("string.txt").readLine();
         System.out.println(fileLine);
         System.out.println(fileLine.replace("\"","\\\""));
     }

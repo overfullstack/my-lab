@@ -7,8 +7,8 @@ import org.junit.jupiter.api.Test;
 public class LazyLab {
     @Test
     void testLazyWithTry() {
-        Lazy<Try<Object>> lazy = Lazy.of(() -> {
-            Try<Try<Object>> tryOf = Try.of(() -> {
+        var lazy = Lazy.of(() -> {
+            var tryOf = Try.of(() -> {
                 System.out.println("Try is not Lazy");
                 return Try.of(() -> {
                     System.out.println("Try inside is not Lazy");

@@ -27,17 +27,17 @@ public class OptionalImmutability {
         }
     }
 
-    private static Gson gson = new Gson();
+    private static final Gson gson = new Gson();
 
     public static void main(String[] args) {
-        Holder mutableHolder = new Holder(1);
-        Optional<Holder> container = Optional.of(mutableHolder);
+        var mutableHolder = new Holder(1);
+        var container = Optional.of(mutableHolder);
         System.out.println("Before:" + container.get().getValue());
         mutableHolder.setValue(2);
         System.out.println("After:" + container.get().getValue());
 
-        Optional<Holder> mappedContainer = container.map(holder -> {
-            Holder holderCopy = gson.fromJson(gson.toJson(holder), Holder.class);
+        var mappedContainer = container.map(holder -> {
+            var holderCopy = gson.fromJson(gson.toJson(holder), Holder.class);
             holderCopy.setValue(3);
             return holderCopy;
         });

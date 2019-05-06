@@ -41,7 +41,7 @@ public class Bean {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        Bean bean = (Bean) o;
+        var bean = (Bean) o;
         return prop.equals(bean.prop);
     }
 

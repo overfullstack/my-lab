@@ -8,8 +8,8 @@ public class HashSetLab {
     
     @Test
     void isImmutable() {
-        HashSet<String> set = HashSet.of("Red", "Green", "Blue");
-        HashSet<String> newSet = set.add("Yellow");
+        var set = HashSet.of("Red", "Green", "Blue");
+        var newSet = set.add("Yellow");
         
         // Hashset is immutable
         System.out.println(set);

@@ -16,23 +16,23 @@ public class ZonedTimeConvertor {
 
     public static void main(String[] args) {
 
-        String dateInString = "2017-12-05T07:12:18-06:00";
-        LocalDateTime ldt = LocalDateTime.parse(dateInString, DateTimeFormatter.ofPattern(DATE_FORMAT));
+        var dateInString = "2017-12-05T07:12:18-06:00";
+        var ldt = LocalDateTime.parse(dateInString, DateTimeFormatter.ofPattern(DATE_FORMAT));
 
-        ZoneId singaporeZoneId = ZoneId.of("Asia/Singapore");
+        var singaporeZoneId = ZoneId.of("Asia/Singapore");
         System.out.println("TimeZone : " + singaporeZoneId);
 
         //LocalDateTime + ZoneId = ZonedDateTime
-        ZonedDateTime asiaZonedDateTime = ldt.atZone(singaporeZoneId);
+        var asiaZonedDateTime = ldt.atZone(singaporeZoneId);
         System.out.println("Date (Singapore) : " + asiaZonedDateTime);
 
-        ZoneId newYokZoneId = ZoneId.of("America/New_York");
+        var newYokZoneId = ZoneId.of("America/New_York");
         System.out.println("TimeZone : " + newYokZoneId);
 
-        ZonedDateTime nyDateTime = asiaZonedDateTime.withZoneSameInstant(newYokZoneId);
+        var nyDateTime = asiaZonedDateTime.withZoneSameInstant(newYokZoneId);
         System.out.println("Date (New York) : " + nyDateTime);
 
-        DateTimeFormatter format = DateTimeFormatter.ofPattern(DATE_FORMAT);
+        var format = DateTimeFormatter.ofPattern(DATE_FORMAT);
         System.out.println("\n---DateTimeFormatter---");
         System.out.println("Date (Singapore) : " + format.format(asiaZonedDateTime));
         System.out.println("Date (New York) : " + format.format(nyDateTime));

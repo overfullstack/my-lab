@@ -12,8 +12,8 @@ public class SingletonLab {
     
     @Test
     void checkSingletonReferenceEquality() {
-        SingletonBean singletonBean1 = SingletonBean.INSTANCE;
-        SingletonBean singletonBean2 = SingletonBean.INSTANCE;
+        var singletonBean1 = SingletonBean.INSTANCE;
+        var singletonBean2 = SingletonBean.INSTANCE;
         Assertions.assertEquals(singletonBean1, singletonBean2);
     }
 }

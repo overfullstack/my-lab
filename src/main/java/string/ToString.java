@@ -10,7 +10,7 @@ import java.io.StringWriter;
 
 public class ToString {
     public static void main(String[] args) {
-        StringWriter out = new StringWriter();
+        var out = new StringWriter();
         new Throwable().printStackTrace(new PrintWriter(out));
         System.out.println(out.toString());
     }

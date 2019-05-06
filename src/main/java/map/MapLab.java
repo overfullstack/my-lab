@@ -13,7 +13,7 @@ public class MapLab {
     public static void main(String[] args) {
         Map<Integer, MyClass> map = new HashMap<>();
         map.put(1, new MyClass(1));
-        MyClass myClass = map.get(1);
+        var myClass = map.get(1);
         myClass.val++;
         System.out.println(map.get(1).val);
     }

@@ -17,23 +17,23 @@ import javax.ws.rs.core.MediaType;
  */
 public class Client {
     public static void main(String[] args) {
-        final String URL = "https://slc11cfp.us.oracle.com/eloqua/bluekai/client/activity/trigger?oauth_consumer_key=dyp0jJRSkoBLkGI7c0p4T3og0dJgOfRwV5i3Ogp%2FjR0%3D&siteId=10790440";
+        final var URL = "https://slc11cfp.us.oracle.com/eloqua/bluekai/client/activity/trigger?oauth_consumer_key=dyp0jJRSkoBLkGI7c0p4T3og0dJgOfRwV5i3Ogp%2FjR0%3D&siteId=10790440";
         try {
             final ClientConfig clientConfig = new DefaultClientConfig();
             clientConfig.getFeatures().put(JSONConfiguration.FEATURE_POJO_MAPPING, Boolean.TRUE);
 
-            com.sun.jersey.api.client.Client client = com.sun.jersey.api.client.Client.create(clientConfig);
+            var client = com.sun.jersey.api.client.Client.create(clientConfig);
 
             client.setConnectTimeout(60 * 1000);
             client.setReadTimeout(60 * 1000);
 
-            final ClientResponse response = client
+            final var response = client
                     .resource(URL)
                     .type(MediaType.APPLICATION_JSON)
                     .accept(MediaType.APPLICATION_JSON)
                     .method("POST",ClientResponse.class,"{}");
 
-            int code = response.getStatus();
+            var code = response.getStatus();
 
         } catch (Exception e) {
 

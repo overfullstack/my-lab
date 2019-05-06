@@ -17,10 +17,10 @@ import static jsonMapper.Utils.stringToObject;
 
 public class JsonToString {
     public static void main(String[] args) throws IOException {
-        Bean bean = stringToObject();
+        var bean = stringToObject();
         System.out.println(bean.getProp());
         bean.setProp(null);
-        ObjectMapper mapper = new ObjectMapper();
+        var mapper = new ObjectMapper();
         System.out.println(mapper.writeValueAsString(bean));
         HttpEntity httpEntity = new StringEntity(mapper.writeValueAsString(bean));
         System.out.println(httpEntity.toString());

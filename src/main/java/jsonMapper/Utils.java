@@ -43,14 +43,14 @@ public class Utils {
     }*/
 
     public static Bean stringToObject() {
-        Bean bean = getObjectFromFile(RESOURCE_PATH + "bean.json", Bean.class);
+        var bean = getObjectFromFile(RESOURCE_PATH + "bean.json", Bean.class);
         return bean;
     }
 
     public static <T> T getObjectFromFile(String filePath, Class<T> tClass) {
-        ObjectMapper mapper = new ObjectMapper();
+        var mapper = new ObjectMapper();
         try {
-            String fileContent = fileToString(filePath);
+            var fileContent = fileToString(filePath);
             return mapper.readValue(fileContent, tClass);
         } catch (IOException ignored) {
         }
@@ -67,16 +67,16 @@ public class Utils {
 
     private static void stringToJsonArray() throws JSONException {
         Object jsonArrayObj = "[{\"source1Type\": \"1\"}, {\"source1Type\": \"2\"}]";
-        String jsonArrayStr = (String) jsonArrayObj;
-        JSONArray arr = new JSONArray(jsonArrayStr);
+        var jsonArrayStr = (String) jsonArrayObj;
+        var arr = new JSONArray(jsonArrayStr);
         System.out.println(arr.get(0));
     }
 
     public static List<Map<String, String>> readJsonFromFile(String filePath) throws JSONException {
         try {
-            String fileContent = new String(Files.readAllBytes(Paths.get(RESOURCE_PATH + filePath)), "UTF-8");
-            JSONObject jsonObject = new JSONObject(fileContent);
-            JSONArray jsonArray = (JSONArray) jsonObject.get("items");
+            var fileContent = new String(Files.readAllBytes(Paths.get(RESOURCE_PATH + filePath)), "UTF-8");
+            var jsonObject = new JSONObject(fileContent);
+            var jsonArray = (JSONArray) jsonObject.get("items");
 
             /*JSONObject emailMap = (JSONObject) jsonArray.get(0);
             System.out.println(emailMap.get("EmailAddress"));
@@ -92,8 +92,8 @@ public class Utils {
     }
 
     public static void manipulateJsonString() throws IOException, JSONException {
-        String fileContent = new String(Files.readAllBytes(Paths.get(RESOURCE_PATH + "bulkimportdef")), "UTF-8");
-        JSONObject jsonObject = new JSONObject(fileContent);
+        var fileContent = new String(Files.readAllBytes(Paths.get(RESOURCE_PATH + "bulkimportdef")), "UTF-8");
+        var jsonObject = new JSONObject(fileContent);
         /*JSONArray jsonArray = (JSONArray) jsonObject.get("syncActions");
         JSONObject syncActionsMap = (JSONObject) jsonArray.get(0);
         syncActionsMap.put("destination", "{{ActionInstance}}");*/

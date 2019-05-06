@@ -32,8 +32,8 @@ public class ImmutableLab {
     }
 
     public static void main(String[] args) {
-        MyImmutable myImmutable1 = new MyImmutable("abc", "xyz");
-        MyImmutable myImmutable2 = new MyImmutable("abc", "xyz");
+        var myImmutable1 = new MyImmutable("abc", "xyz");
+        var myImmutable2 = new MyImmutable("abc", "xyz");
         System.out.println(myImmutable1 == myImmutable2);
         System.out.println(myImmutable1.equals(myImmutable2));
     }

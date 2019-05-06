@@ -25,13 +25,13 @@ public class CloningWithGson {
         }
     }
 
-    private static Gson gson = new Gson();
+    private static final Gson gson = new Gson();
 
     public static void main(String[] args) {
-        Holder holder = new Holder(1);
-        Holder holderCopy1 = gson.fromJson(gson.toJson(holder), Holder.class);
+        var holder = new Holder(1);
+        var holderCopy1 = gson.fromJson(gson.toJson(holder), Holder.class);
         holderCopy1.setValue(2);
-        Holder holderCopy2 = gson.fromJson(gson.toJson(holder), Holder.class);
+        var holderCopy2 = gson.fromJson(gson.toJson(holder), Holder.class);
         holderCopy2.setValue(3);
         System.out.println(holder.getValue());
         System.out.println(holderCopy1.getValue());

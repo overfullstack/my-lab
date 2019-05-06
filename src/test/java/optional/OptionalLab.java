@@ -21,8 +21,8 @@ public class OptionalLab {
     
     @Test
     void immutability() {
-        Bean bean = new Bean("str1");
-        Bean beanFromOptional = Optional.of(bean)
+        var bean = new Bean("str1");
+        var beanFromOptional = Optional.of(bean)
                 .map(b -> {
                     b.setProp("str2");
                     return b;

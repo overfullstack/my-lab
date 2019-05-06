@@ -13,16 +13,16 @@ public class ImmutableEnumTest {
     }
     
     private static void testWithValue() {
-        MyEnum myEnum = MyEnum.ENUM1;
-        MyEnum myEnum1 = myEnum.withValue("newValue");
+        var myEnum = MyEnum.ENUM1;
+        var myEnum1 = myEnum.withValue("newValue");
 
         System.out.println(myEnum.getValue());
         System.out.println(myEnum1.getValue()); // This changes other enum as well
     }
 
     private static void testWithEnum() {
-        MyEnum myEnum = MyEnum.ENUM1;
-        MyEnum myEnum1 = MyEnum.ENUM1.withValue("newValue");
+        var myEnum = MyEnum.ENUM1;
+        var myEnum1 = MyEnum.ENUM1.withValue("newValue");
 
         System.out.println(myEnum.getValue());
         System.out.println(myEnum1.getValue()); // This changes other enum as well

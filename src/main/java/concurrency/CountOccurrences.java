@@ -35,11 +35,11 @@ public class CountOccurrences extends RecursiveTask<Integer> {
 
     @Override
     protected Integer compute() {
-        final int length = end - start;
+        final var length = end - start;
         
         if (length < SEQUENTIAL_THRESHOLD) {
-            int count = 0;
-            for (int i = start; i < end; i++) {
+            var count = 0;
+            for (var i = start; i < end; i++) {
                 if (data[i] == value) {
                     count++;
                 }
@@ -47,24 +47,24 @@ public class CountOccurrences extends RecursiveTask<Integer> {
             return count;
         }
         
-        final int split = length / 2;
-        final CountOccurrences left = new CountOccurrences(data, start, start + split, value);
+        final var split = length / 2;
+        final var left = new CountOccurrences(data, start, start + split, value);
         left.fork();
-        final CountOccurrences right = new CountOccurrences(data, start + split, end, value);
+        final var right = new CountOccurrences(data, start + split, end, value);
         return right.compute() + left.join();
     }
     
     public static void main(String[] args) {
         Map<Integer, Integer> frequencyCount = new HashMap<>(); 
-        final int[] dataSet = new int[100];
-        Random random = new Random();
-        for (int i = 0; i < 100; i++) {
+        final var dataSet = new int[100];
+        var random = new Random();
+        for (var i = 0; i < 100; i++) {
             dataSet[i] = random.nextInt(10);
         }
-        final ForkJoinPool pool = new ForkJoinPool(10);
+        final var pool = new ForkJoinPool(10);
 
         for(Integer value: dataSet) {
-            final CountOccurrences finder = new CountOccurrences(dataSet, value);
+            final var finder = new CountOccurrences(dataSet, value);
              frequencyCount.put(value, pool.invoke(finder));
         }
         System.out.println(frequencyCount);

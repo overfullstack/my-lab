@@ -17,7 +17,7 @@ public class SingletonBean {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        SingletonBean that = (SingletonBean) o;
+        var that = (SingletonBean) o;
         return prop.equals(that.prop);
     }
 
