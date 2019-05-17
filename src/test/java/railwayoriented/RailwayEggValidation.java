@@ -1,11 +1,11 @@
-package RailwayOriented;
+package railwayoriented;
 
-import RailwayOriented.egg.Egg;
+import railwayoriented.egg.Egg;
 import io.vavr.control.Try;
 import io.vavr.control.Validation;
 import org.junit.jupiter.api.Test;
 
-import static RailwayOriented.ValidationFailure.VALIDATION_FAILURE_1;
+import static railwayoriented.ValidationFailure.VALIDATION_FAILURE_1;
 
 public class RailwayEggValidation {
     @Test
@@ -18,25 +18,25 @@ public class RailwayEggValidation {
                 .map(this::isValid32);
     }
 
-    private Validation<ValidationFailure, Egg> isValid32(Validation<ValidationFailure, Egg> eggTobeValidated) {
-        return Try.of(eggTobeValidated::get)
+    private Validation<ValidationFailure, Egg> isValid32(Validation<ValidationFailure, Egg> validatedEgg) {
+        return Try.of(validatedEgg::get)
                 .map(Egg::getYellow)
                 .toValidation(cause -> ValidationFailure.withErrorMessage(cause.getMessage()))
-                .map(ignore -> eggTobeValidated.get());
+                .flatMap(ignore -> validatedEgg);
     }
 
-    private Validation<ValidationFailure, Egg> isValid31(Validation<ValidationFailure, Egg> eggTobeValidated) {
-        return Try.of(eggTobeValidated::get)
+    private Validation<ValidationFailure, Egg> isValid31(Validation<ValidationFailure, Egg> validatedEgg) {
+        return Try.of(validatedEgg::get)
                 .toValidation(cause -> ValidationFailure.withErrorMessage(cause.getMessage()));
     }
 
-    private Validation<ValidationFailure, Egg> isValid2(Validation<ValidationFailure, Egg> eggTobeValidated) {
-        return Try.of(eggTobeValidated::get)
+    private Validation<ValidationFailure, Egg> isValid2(Validation<ValidationFailure, Egg> validatedEgg) {
+        return Try.of(validatedEgg::get)
                 .toValidation(cause -> ValidationFailure.withErrorMessage(cause.getMessage()));
     }
 
-    private Validation<ValidationFailure, Egg> isValid1(Validation<ValidationFailure, Egg> eggTobeValidated) {
-        return eggTobeValidated
+    private Validation<ValidationFailure, Egg> isValid1(Validation<ValidationFailure, Egg> validatedEgg) {
+        return validatedEgg
                 .toValidation(VALIDATION_FAILURE_1);
     }
 

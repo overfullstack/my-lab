@@ -4,7 +4,7 @@
  * 	http://creativecommons.org/licenses/by-sa/4.0/
  */
 
-package RailwayOriented.egg;
+package railwayoriented.egg;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,15 +1,15 @@
-package RailwayOriented;
+package railwayoriented;
 
-import RailwayOriented.egg.Egg;
-import RailwayOriented.egg.Egg.Yellow;
+import railwayoriented.egg.Egg;
+import railwayoriented.egg.Egg.Yellow;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static RailwayOriented.ValidationFailure.VALIDATION_FAILURE_1;
-import static RailwayOriented.ValidationFailure.VALIDATION_FAILURE_2;
-import static RailwayOriented.ValidationFailure.VALIDATION_FAILURE_32;
+import static railwayoriented.ValidationFailure.VALIDATION_FAILURE_1;
+import static railwayoriented.ValidationFailure.VALIDATION_FAILURE_2;
+import static railwayoriented.ValidationFailure.VALIDATION_FAILURE_32;
 
 public class ImperativeEggValidation {
     @Test

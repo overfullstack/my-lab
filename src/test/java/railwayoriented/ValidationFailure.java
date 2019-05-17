@@ -1,4 +1,4 @@
-package RailwayOriented;
+package railwayoriented;
 
 public enum ValidationFailure {
     VALIDATION_FAILURE_1(""),
