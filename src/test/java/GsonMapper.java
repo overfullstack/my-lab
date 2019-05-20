@@ -4,15 +4,12 @@
  * 	http://creativecommons.org/licenses/by-sa/4.0/
  */
 
-package gson;
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import common.Bean;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 

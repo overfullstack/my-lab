@@ -4,8 +4,6 @@
  * 	http://creativecommons.org/licenses/by-sa/4.0/
  */
 
-package optional;
-
 import common.Bean;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

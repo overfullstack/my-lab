@@ -6,8 +6,13 @@
 
 package concurrency;
 
+import org.junit.jupiter.api.Test;
+
 import java.util.Arrays;
-import java.util.concurrent.*;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ForkJoinPool;
+import java.util.concurrent.RecursiveAction;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.IntStream;
 
 public class ParallelLoop {
@@ -22,7 +27,30 @@ public class ParallelLoop {
         }
     }
 
-    public void parallelWithOnlyThreads(final int[] array) {
+    @Test
+    void test() {
+        var resultArr = new int[10];
+
+        getSinTable(resultArr, 0, resultArr.length);
+        print(resultArr);
+
+        clear(resultArr);
+        parallelWithOnlyThreads(resultArr);
+        print(resultArr);
+
+        clear(resultArr);
+        parallelWithThreadPool(resultArr);
+        print(resultArr);
+
+        clear(resultArr);
+        parallelWithForkJoinPool(resultArr);
+
+        clear(resultArr);
+        resultArr = declarativeParallelLoop();
+        print(resultArr);
+    }
+
+    private void parallelWithOnlyThreads(final int[] array) {
         var threads = new Thread[N_THREADS - 1];
         final var segmentLen = array.length / N_THREADS;
         var offset = 0;
@@ -48,7 +76,7 @@ public class ParallelLoop {
         }
     }
 
-    public void parallelWithThreadPool(final int[] array) {
+    private void parallelWithThreadPool(final int[] array) {
         var exec = Executors.newFixedThreadPool(N_THREADS - 1);
         final var segmentLen = array.length / N_THREADS;
         var offset = 0;
@@ -72,7 +100,7 @@ public class ParallelLoop {
         }
     }
 
-    public void parallelWithForkJoinPool(final int[] array) {
+    private void parallelWithForkJoinPool(final int[] array) {
         var pool = new ForkJoinPool(N_THREADS);
         pool.invoke(new ForEach(array, 0, array.length));
     }
@@ -83,9 +111,9 @@ public class ParallelLoop {
         private final int to;
 
         // In real world, don't have it below 10,000
-        public static final int TASK_LEN = 2;
+        static final int TASK_LEN = 2;
 
-        public ForEach(int[] array, int from, int to) {
+        ForEach(int[] array, int from, int to) {
             this.array = array;
             this.from = from;
             this.to = to;
@@ -104,7 +132,7 @@ public class ParallelLoop {
         }
     }
 
-    public int[] declarativeParallelLoop() {
+    private int[] declarativeParallelLoop() {
         return IntStream.iterate(0, i -> i + 1).limit(10)
                 .parallel()
                 .map(ele -> ele * 10)
@@ -112,28 +140,6 @@ public class ParallelLoop {
                 .mapToLong(Math::round)
                 .mapToInt(Math::toIntExact)
                 .toArray();
-    }
-
-    public void test() {
-        var resultArr = new int[10];
-
-        getSinTable(resultArr, 0, resultArr.length);
-        print(resultArr);
-
-        clear(resultArr);
-        parallelWithOnlyThreads(resultArr);
-        print(resultArr);
-
-        clear(resultArr);
-        parallelWithThreadPool(resultArr);
-        print(resultArr);
-
-        clear(resultArr);
-        parallelWithForkJoinPool(resultArr);
-
-        clear(resultArr);
-        resultArr = declarativeParallelLoop();
-        print(resultArr);
     }
 
     private void clear(int[] array) {
@@ -146,7 +152,4 @@ public class ParallelLoop {
         System.out.println(Arrays.toString(Arrays.copyOfRange(array, 0, 10)));
     }
 
-    public static void main(String[] args) {
-        new ParallelLoop().test();
-    }
 }

@@ -4,14 +4,13 @@
  * 	http://creativecommons.org/licenses/by-sa/4.0/
  */
 
-package enumLab;
-
+import enumLab.MyEnum;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-class MyEnumTest {
+class EnumLab {
     
     @Test
     void loopThroughValues() {

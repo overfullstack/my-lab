@@ -1,7 +1,11 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id "io.freefair.lombok" version "3.5.2"
+}
+
 group 'com.gakshintala.mylab'
 version '1.0-SNAPSHOT'
-
-apply plugin: 'java'
 
 repositories {
     mavenCentral()
@@ -22,6 +26,6 @@ dependencies {
     compile group: 'io.vavr', name: 'vavr', version: '0.10.0'
     compile group: 'com.oath.cyclops', name: 'cyclops', version: '10.3.0'
     compile group: 'com.oath.cyclops', name: 'cyclops-pure', version: '10.3.0'
-    compile group: 'com.oath.cyclops', name: 'cyclops-vavr-integration', version: '10.0.0-M7'
+    compile group: 'com.aol.cyclops', name: 'cyclops-vavr', version: '9.0.0-FINAL'
     
 }

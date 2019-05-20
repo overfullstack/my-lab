@@ -1,6 +1,6 @@
 package cyclops;
 
-import com.oath.cyclops.hkt.DataWitness.future;
+import com.oath.cyclops.hkt.DataWitness;
 import cyclops.arrow.Kleisli;
 import cyclops.control.Future;
 import cyclops.instances.control.FutureInstances;
@@ -34,11 +34,11 @@ public class KleisliLab {
         return null;
     }
 
-    public Kleisli<future, DAO, Data> load(long id) {
+    public Kleisli<DataWitness.future, DAO, Data> load(long id) {
         return Kleisli.of(FutureInstances.monad(), DAO -> DAO.load(id));
     }
 
-    public Kleisli<future, DAO, Boolean> save(long id, Data data) {
+    public Kleisli<DataWitness.future, DAO, Boolean> save(long id, Data data) {
         return Kleisli.of(FutureInstances.monad(), DAO -> DAO.save(id, new Data()));
     }
 

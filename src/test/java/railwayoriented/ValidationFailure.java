@@ -25,4 +25,11 @@ public enum ValidationFailure {
     static ValidationFailure withErrorMessage(String errorMessage) {
         return VALIDATION_FAILURE_WITH_EXCEPTION.setErrorMessage(errorMessage);
     }
+
+    @Override
+    public String toString() {
+        return "ValidationFailure{" +
+                "errorMessage='" + errorMessage + '\'' +
+                '}';
+    }
 }
