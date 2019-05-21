@@ -20,7 +20,7 @@ public class Egg {
 
     Yellow yellow;
 
-    public static List<Egg> getEggCarton() {
+    static List<Egg> getEggCarton() {
         List<Egg> eggList = new ArrayList<>();
         eggList.add(new Egg(1, new Yellow(GOOD)));
         eggList.add(new Egg(2, new Yellow(BAD)));

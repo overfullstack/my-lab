@@ -19,6 +19,27 @@ public class RailwayEggValidation {
         validationStream.forEach(System.out::println);
     }
 
+    private Validation<ValidationFailure, Egg> validate1(Validation<ValidationFailure, Egg> validatedEgg) {
+        return validatedEgg
+                .filter(this::isValid1)
+                .get()
+                .toValidation(VALIDATION_FAILURE_1);
+
+    }
+
+    private boolean isValid1(Egg eggTobeValidated) {
+        return true;
+    }
+
+    private Validation<ValidationFailure, Egg> validate2(Validation<ValidationFailure, Egg> validatedEgg) {
+        return Try.of(validatedEgg::get)
+                .filterTry(this::isValid2)
+                .toValidation(cause -> ValidationFailure.withErrorMessage(cause.getMessage()));
+    }
+
+    private boolean isValid2(Egg eggTobeValidated) throws Exception {
+        return true;
+    }
 
     private Validation<ValidationFailure, Egg> validate3(Validation<ValidationFailure, Egg> validatedEgg) {
         return Try.of(validatedEgg::get)
@@ -38,28 +59,6 @@ public class RailwayEggValidation {
     }
 
     private boolean isValid31(Egg eggTobeValidated) throws Exception {
-        return true;
-    }
-
-    private Validation<ValidationFailure, Egg> validate2(Validation<ValidationFailure, Egg> validatedEgg) {
-        return Try.of(validatedEgg::get)
-                .filterTry(this::isValid2)
-                .toValidation(cause -> ValidationFailure.withErrorMessage(cause.getMessage()));
-    }
-
-    private boolean isValid2(Egg eggTobeValidated) throws Exception {
-        return true;
-    }
-
-    private Validation<ValidationFailure, Egg> validate1(Validation<ValidationFailure, Egg> validatedEgg) {
-        return validatedEgg
-                .filter(this::isValid1)
-                .get()
-                .toValidation(VALIDATION_FAILURE_1);
-
-    }
-
-    private boolean isValid1(Egg eggTobeValidated) {
         return true;
     }
 

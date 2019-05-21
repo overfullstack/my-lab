@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+import static railwayoriented.Egg.Condition.BAD;
 import static railwayoriented.ValidationFailure.VALIDATION_FAILURE_1;
 import static railwayoriented.ValidationFailure.VALIDATION_FAILURE_2;
 import static railwayoriented.ValidationFailure.VALIDATION_FAILURE_32;
@@ -77,6 +78,8 @@ public class ImperativeEggValidation {
 
             validate3(badEggFailureBucketMap, eggIndex, iterator, eggTobeValidated);
         }
+
+        System.out.println(badEggFailureBucketMap);
     }
 
     private void validate3(Map<Integer, ValidationFailure> badEggFailureBucketMap, int eggIndex, Iterator<Egg> iterator, Egg eggTobeValidated) {
@@ -92,7 +95,6 @@ public class ImperativeEggValidation {
                     } catch (Exception e) {
                         iterator.remove();
                         badEggFailureBucketMap.put(eggIndex, ValidationFailure.withErrorMessage(e.getMessage()));
-                        return;
                     }
                 }
             } else {
@@ -102,7 +104,6 @@ public class ImperativeEggValidation {
         } catch (Exception e) {
             iterator.remove();
             badEggFailureBucketMap.put(eggIndex, ValidationFailure.withErrorMessage(e.getMessage()));
-            return;
         }
     }
 
@@ -131,7 +132,11 @@ public class ImperativeEggValidation {
     }
 
     private boolean isValid32(Yellow yellowTobeValidated) throws Exception {
-        return true;
+        if (yellowTobeValidated.getCondition() == BAD) {
+            throw new IllegalArgumentException("Yellow is Bad");
+        } else {
+            return true;
+        }
     }
 
     private boolean isValid31(Egg eggTobeValidated) throws Exception {
