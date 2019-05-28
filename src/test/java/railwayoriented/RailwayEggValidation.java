@@ -24,7 +24,6 @@ public class RailwayEggValidation {
                 .filter(this::isValid1)
                 .get()
                 .toValidation(VALIDATION_FAILURE_1);
-
     }
 
     private boolean isValid1(Egg eggTobeValidated) {
