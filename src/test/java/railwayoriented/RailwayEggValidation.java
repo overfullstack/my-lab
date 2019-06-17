@@ -21,35 +21,36 @@ public class RailwayEggValidation {
 
     private Validation<ValidationFailure, Egg> validate1(Validation<ValidationFailure, Egg> validatedEgg) {
         return validatedEgg
-                .filter(this::isValid1)
-                .get()
-                .toValidation(VALIDATION_FAILURE_1);
+                .filter(this::simpleValidation)
+                .getOrElse(() -> Validation.invalid(VALIDATION_FAILURE_1));
     }
 
-    private boolean isValid1(Egg eggTobeValidated) {
+    private boolean simpleValidation(Egg eggTobeValidated) {
         return true;
     }
 
     private Validation<ValidationFailure, Egg> validate2(Validation<ValidationFailure, Egg> validatedEgg) {
-        return Try.of(validatedEgg::get)
-                .filterTry(this::isValid2)
-                .toValidation(cause -> ValidationFailure.withErrorMessage(cause.getMessage()));
+        return validatedEgg
+                .flatMap(egg -> Try.of(() -> egg)
+                        .filterTry(this::throwableValidation)
+                        .toValidation(cause -> ValidationFailure.withErrorMessage(cause.getMessage())));
     }
 
-    private boolean isValid2(Egg eggTobeValidated) throws Exception {
-        return true;
+    private boolean throwableValidation(Egg eggTobeValidated) throws Exception {
+        return false;
     }
 
     private Validation<ValidationFailure, Egg> validate3(Validation<ValidationFailure, Egg> validatedEgg) {
-        return Try.of(validatedEgg::get)
-                .filterTry(this::isValid31)
-                .map(Egg::getYellow)
-                .filterTry(this::isValid32)
-                .toValidation(cause -> ValidationFailure.withErrorMessage(cause.getMessage()))
-                .flatMap(ignore -> validatedEgg);
+        return validatedEgg
+                .flatMap(egg -> Try.of(() -> egg)
+                        .filterTry(this::throwableValidation31)
+                        .map(Egg::getYellow)
+                        .filterTry(this::throwableAndNestedValidation32)
+                        .toValidation(cause -> ValidationFailure.withErrorMessage(cause.getMessage()))
+                        .flatMap(ignore -> validatedEgg));
     }
 
-    private boolean isValid32(Yellow yellowTobeValidated) throws Exception {
+    private boolean throwableAndNestedValidation32(Yellow yellowTobeValidated) throws Exception {
         if (yellowTobeValidated.getCondition() == BAD) {
             throw new IllegalArgumentException("Yellow is Bad");
         } else {
@@ -57,7 +58,7 @@ public class RailwayEggValidation {
         }
     }
 
-    private boolean isValid31(Egg eggTobeValidated) throws Exception {
+    private boolean throwableValidation31(Egg eggTobeValidated) throws Exception {
         return true;
     }
 

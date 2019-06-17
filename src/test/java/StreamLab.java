@@ -4,13 +4,25 @@
  * 	http://creativecommons.org/licenses/by-sa/4.0/
  */
 
-import java.util.*;
+import common.Bean;
+import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-import org.junit.jupiter.api.Test;
-
 class StreamLab {
+    
+    @Test
+    void mapAndFlatMap() {
+        List<Bean> beans = new ArrayList<>();
+        var mapped = beans.stream().map(bean -> bean.getBeans().stream());
+        var flatMapped = beans.stream().flatMap(bean -> bean.getBeans().stream());
+    }
 
     @Test
     void generate() {

@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 class GsonMapper {
@@ -19,9 +20,9 @@ class GsonMapper {
     @Test
     void testDeepCloneListOfBeans() {
         List<Bean> beans = new ArrayList<>();
-        var bean1 = new Bean("1");
-        var bean2 = new Bean("2");
-        var bean3 = new Bean("3");
+        var bean1 = new Bean("1", Collections.emptyList());
+        var bean2 = new Bean("2", Collections.emptyList());
+        var bean3 = new Bean("3", Collections.emptyList());
         beans.add(bean1);
         beans.add(bean2);
         beans.add(bean3);
@@ -37,7 +38,7 @@ class GsonMapper {
     
     @Test
     void testDeepCloneBean() {
-        var bean1 = new Bean("1");
+        var bean1 = new Bean("1", Collections.emptyList());
         System.out.println(bean1);
 
         var deepCopyBean1 = gson.fromJson(gson.toJson(bean1), Bean.class);

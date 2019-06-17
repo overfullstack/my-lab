@@ -21,14 +21,14 @@ public class ImperativeEggValidation {
         var eggIndex = 0;
         for (var iterator = eggList.iterator(); iterator.hasNext(); eggIndex++) {
             var eggTobeValidated = iterator.next();
-            if (!isValid1(eggTobeValidated)) {
+            if (!simpleValidation1(eggTobeValidated)) {
                 iterator.remove(); // Mutation
                 // How do you cleanly map validation-failure to which validation-method failed?
                 badEggFailureBucketMap.put(eggIndex, VALIDATION_FAILURE_1);
                 continue;
             }
             try {
-                if (!isValid2(eggTobeValidated)) {
+                if (!throwableValidation2(eggTobeValidated)) {
                     iterator.remove();
                     badEggFailureBucketMap.put(eggIndex, VALIDATION_FAILURE_2);
                 }
@@ -38,11 +38,11 @@ public class ImperativeEggValidation {
                 continue;
             }
             try { // Inter-dependent validations
-                if (isValid31(eggTobeValidated)) {
+                if (throwableValidation31(eggTobeValidated)) {
                     var yellowTobeValidated = eggTobeValidated.getYellow();
                     if (yellowTobeValidated != null) { // Nested-if for null checking nested objects
                         try {
-                            if (!isValid32(yellowTobeValidated)) {
+                            if (!throwableAndNestedValidation32(yellowTobeValidated)) {
                                 iterator.remove();
                                 badEggFailureBucketMap.put(eggIndex, VALIDATION_FAILURE_32);
                             }
@@ -84,11 +84,11 @@ public class ImperativeEggValidation {
 
     private void validate3(Map<Integer, ValidationFailure> badEggFailureBucketMap, int eggIndex, Iterator<Egg> iterator, Egg eggTobeValidated) {
         try { // Inter-dependent validations
-            if (isValid31(eggTobeValidated)) {
+            if (throwableValidation31(eggTobeValidated)) {
                 var yellowTobeValidated = eggTobeValidated.getYellow();
                 if (yellowTobeValidated != null) { // Nested-if for null checking nested objects
                     try {
-                        if (!isValid32(yellowTobeValidated)) {
+                        if (!throwableAndNestedValidation32(yellowTobeValidated)) {
                             iterator.remove();
                             badEggFailureBucketMap.put(eggIndex, VALIDATION_FAILURE_32);
                         }
@@ -109,7 +109,7 @@ public class ImperativeEggValidation {
 
     private boolean validate2(Map<Integer, ValidationFailure> badEggFailureBucketMap, int eggIndex, Iterator<Egg> iterator, Egg eggTobeValidated) {
         try {
-            if (!isValid2(eggTobeValidated)) {
+            if (!throwableValidation2(eggTobeValidated)) {
                 iterator.remove();
                 badEggFailureBucketMap.put(eggIndex, VALIDATION_FAILURE_2);
             }
@@ -122,7 +122,7 @@ public class ImperativeEggValidation {
     }
 
     private boolean validate1(Map<Integer, ValidationFailure> badEggFailureBucketMap, int eggIndex, Iterator<Egg> iterator, Egg eggTobeValidated) {
-        if (!isValid1(eggTobeValidated)) {
+        if (!simpleValidation1(eggTobeValidated)) {
             iterator.remove(); // Mutation
             // How do you cleanly map validation-failure to which validation-method failed?
             badEggFailureBucketMap.put(eggIndex, VALIDATION_FAILURE_1);
@@ -131,7 +131,7 @@ public class ImperativeEggValidation {
         return false;
     }
 
-    private boolean isValid32(Yellow yellowTobeValidated) throws Exception {
+    private boolean throwableAndNestedValidation32(Yellow yellowTobeValidated) throws Exception {
         if (yellowTobeValidated.getCondition() == BAD) {
             throw new IllegalArgumentException("Yellow is Bad");
         } else {
@@ -139,15 +139,15 @@ public class ImperativeEggValidation {
         }
     }
 
-    private boolean isValid31(Egg eggTobeValidated) throws Exception {
+    private boolean throwableValidation31(Egg eggTobeValidated) throws Exception {
         return true;
     }
 
-    private boolean isValid2(Egg eggTobeValidated) throws Exception {
+    private boolean throwableValidation2(Egg eggTobeValidated) throws Exception {
         return true;
     }
 
-    private boolean isValid1(Egg eggTobeValidated) {
+    private boolean simpleValidation1(Egg eggTobeValidated) {
         return true;
     }
 
