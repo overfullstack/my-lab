@@ -7,6 +7,7 @@ import railwayoriented.Egg.Yellow;
 
 import static railwayoriented.Egg.Condition.BAD;
 import static railwayoriented.ValidationFailure.VALIDATION_FAILURE_1;
+import static railwayoriented.ValidationFailure.VALIDATION_FAILURE_2;
 
 public class RailwayEggValidation {
     @Test
@@ -31,13 +32,18 @@ public class RailwayEggValidation {
 
     private Validation<ValidationFailure, Egg> validate2(Validation<ValidationFailure, Egg> validatedEgg) {
         return validatedEgg
-                .flatMap(egg -> Try.of(() -> egg)
-                        .filterTry(this::throwableValidation)
-                        .toValidation(cause -> ValidationFailure.withErrorMessage(cause.getMessage())));
+                .flatMap(eggTobeValidated -> throwableValidation(eggTobeValidated)
+                        .toValidation(cause -> ValidationFailure.withErrorMessage(cause.getMessage())))
+                .filter(Boolean::booleanValue)
+                .getOrElse(() -> Validation.invalid(VALIDATION_FAILURE_2))
+                .flatMap(ignore -> validatedEgg);
     }
 
-    private boolean throwableValidation(Egg eggTobeValidated) throws Exception {
-        return false;
+    private Try<Boolean> throwableValidation(Egg eggTobeValidated) {
+        return Try.of(() -> {
+            if (true) throw new RuntimeException("throwableValidation");
+            return false;
+        });
     }
 
     private Validation<ValidationFailure, Egg> validate3(Validation<ValidationFailure, Egg> validatedEgg) {
