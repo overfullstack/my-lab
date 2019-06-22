@@ -4,7 +4,7 @@
  * 	http://creativecommons.org/licenses/by-sa/4.0/
  */
 
-package concurrency;
+package parallel;
 
 import org.junit.jupiter.api.Test;
 
@@ -17,15 +17,7 @@ import java.util.stream.IntStream;
 
 public class ParallelLoop {
 
-    private static final int N_THREADS = Runtime.getRuntime().availableProcessors();
-
-    private void getSinTable(int[] array, int from, int to) {
-        for (var j = from; j < to; j++) {
-            var sinTheta = Math.sin(j * 10d);
-            var sinThetaRounded = Math.round(sinTheta);
-            array[j] = Math.toIntExact(sinThetaRounded);
-        }
-    }
+    private static final int AVAILABLE_CORES = Runtime.getRuntime().availableProcessors();
 
     @Test
     void test() {
@@ -34,27 +26,34 @@ public class ParallelLoop {
         getSinTable(resultArr, 0, resultArr.length);
         print(resultArr);
 
-        clear(resultArr);
+        resultArr = new int[10];
         parallelWithOnlyThreads(resultArr);
         print(resultArr);
 
-        clear(resultArr);
+        resultArr = new int[10];
         parallelWithThreadPool(resultArr);
         print(resultArr);
 
-        clear(resultArr);
+        resultArr = new int[10];
         parallelWithForkJoinPool(resultArr);
 
-        clear(resultArr);
         resultArr = declarativeParallelLoop();
         print(resultArr);
     }
 
+    private void getSinTable(int[] array, int from, int to) {
+        for (var i = from; i < to; i++) {
+            var sinTheta = Math.sin(i * 10d);
+            var sinThetaRounded = Math.round(sinTheta);
+            array[i] = Math.toIntExact(sinThetaRounded);
+        }
+    }
+
     private void parallelWithOnlyThreads(final int[] array) {
-        var threads = new Thread[N_THREADS - 1];
-        final var segmentLen = array.length / N_THREADS;
+        var threads = new Thread[AVAILABLE_CORES + 1];
+        final var segmentLen = array.length / AVAILABLE_CORES;
         var offset = 0;
-        for (var i = 0; i < N_THREADS - 1; i++) {
+        for (var i = 0; i <= AVAILABLE_CORES; i++) {
             final var from = offset;
             final var to = offset + segmentLen;
             threads[i] = new Thread(new Runnable() {
@@ -68,7 +67,7 @@ public class ParallelLoop {
         }
         getSinTable(array, array.length - segmentLen, array.length);
 
-        for (var i = 0; i < N_THREADS - 1; i++) {
+        for (var i = 0; i <= AVAILABLE_CORES; i++) {
             try {
                 threads[i].join();
             } catch (InterruptedException ignore) {
@@ -77,10 +76,14 @@ public class ParallelLoop {
     }
 
     private void parallelWithThreadPool(final int[] array) {
-        var exec = Executors.newFixedThreadPool(N_THREADS - 1);
-        final var segmentLen = array.length / N_THREADS;
+        var exec = Executors.newFixedThreadPool(AVAILABLE_CORES);
+        var segmentLen = array.length / AVAILABLE_CORES;
+        if (segmentLen == 0) {
+            segmentLen = array.length;
+        }
         var offset = 0;
-        for (var i = 0; i < N_THREADS - 1; i++) {
+        var noOfCores = AVAILABLE_CORES;
+        while (noOfCores-- >= 0) {
             final var from = offset;
             final var to = offset + segmentLen;
             exec.execute(new Runnable() {
@@ -101,7 +104,7 @@ public class ParallelLoop {
     }
 
     private void parallelWithForkJoinPool(final int[] array) {
-        var pool = new ForkJoinPool(N_THREADS);
+        var pool = new ForkJoinPool(AVAILABLE_CORES);
         pool.invoke(new ForEach(array, 0, array.length));
     }
 
@@ -140,12 +143,6 @@ public class ParallelLoop {
                 .mapToLong(Math::round)
                 .mapToInt(Math::toIntExact)
                 .toArray();
-    }
-
-    private void clear(int[] array) {
-        for (var i = 0; i < array.length; i++) {
-            array[i] = 0;
-        }
     }
 
     private void print(int[] array) {

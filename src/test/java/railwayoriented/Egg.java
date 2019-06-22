@@ -26,6 +26,10 @@ public class Egg {
         eggList.add(new Egg(2, new Yellow(BAD)));
         eggList.add(new Egg(3, new Yellow(GOOD)));
         eggList.add(new Egg(4, new Yellow(GOOD)));
+        eggList.add(new Egg(5, new Yellow(GOOD)));
+        eggList.add(new Egg(-1, new Yellow(GOOD)));
+        eggList.add(new Egg(0, new Yellow(BAD)));
+        eggList.add(new Egg(1, new Yellow(BAD)));
         return eggList;
     }
 
