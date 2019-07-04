@@ -17,7 +17,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
-public class ThreadPoolLastWord {
+public class ThreadPoolLastName {
 
     private static final List<String> TEAM = Arrays.asList(
             "Venky Viswanathan",

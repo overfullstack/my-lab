@@ -6,7 +6,6 @@
 
 package jsonMapper;
 
-import common.Bean;
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.StringEntity;
 import org.codehaus.jackson.map.ObjectMapper;
@@ -18,8 +17,8 @@ import static jsonMapper.Utils.stringToObject;
 public class JsonToString {
     public static void main(String[] args) throws IOException {
         var bean = stringToObject();
-        System.out.println(bean.getProp());
-        bean.setProp(null);
+        System.out.println(bean.getProp1());
+        bean.setProp1(null);
         var mapper = new ObjectMapper();
         System.out.println(mapper.writeValueAsString(bean));
         HttpEntity httpEntity = new StringEntity(mapper.writeValueAsString(bean));

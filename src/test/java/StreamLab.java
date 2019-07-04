@@ -5,6 +5,7 @@
  */
 
 import common.Bean;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -12,14 +13,26 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 class StreamLab {
+    private static List<Bean> beans;
+    @BeforeAll
+    static void setUp() {
+        beans = new ArrayList<>();
+        var bean1 = new Bean("1", "a", Collections.emptyList());
+        var bean2 = new Bean("2", "b", Collections.emptyList());
+        var bean3 = new Bean("3", "c", Collections.emptyList());
+        beans.add(bean1);
+        beans.add(bean2);
+        beans.add(bean3);
+    }
     
     @Test
     void mapAndFlatMap() {
-        List<Bean> beans = new ArrayList<>();
+        beans = new ArrayList<>();
         var mapped = beans.stream().map(bean -> bean.getBeans().stream());
         var flatMapped = beans.stream().flatMap(bean -> bean.getBeans().stream());
     }
@@ -60,6 +73,14 @@ class StreamLab {
                 .map(i -> i + 1)
                 .peek(i -> System.out.println("Map: " + i))
                 .forEach(i -> {});
+    }
+    
+    @Test
+    void unZip() {
+        final var beanList = beans.stream()
+                .collect(() -> new ArrayList<ArrayList<String>>(), List::add, (left, right) -> )
+                
+        System.out.println(beanList);
     }
 
 }

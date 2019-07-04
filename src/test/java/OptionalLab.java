@@ -20,14 +20,14 @@ public class OptionalLab {
     
     @Test
     void immutability() {
-        var bean = new Bean("str1", Collections.emptyList());
+        var bean = new Bean("str1", "str1", Collections.emptyList());
         var beanFromOptional = Optional.of(bean)
                 .map(b -> {
-                    b.setProp("str2");
+                    b.setProp1("str2");
                     return b;
                 })
                 .get();
-        System.out.println("Optional Mutates the value inside it" + bean.getProp());
+        System.out.println("Optional Mutates the value inside it" + bean.getProp1());
         Assertions.assertSame(bean, beanFromOptional);
     }
 }

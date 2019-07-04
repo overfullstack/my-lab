@@ -7,20 +7,14 @@
 package common;
 
 import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
+
 import java.util.List;
 
+@Data
 @AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
-@EqualsAndHashCode
-@ToString
 public class Bean {
-    private String prop;
+    private String prop1;
+    private String prop2;
     private List<Bean> beans;
 }
