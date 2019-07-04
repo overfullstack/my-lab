@@ -1,4 +1,4 @@
-/*
+package labs;/*
  * Copyright (c) 2019 - Present, Gopal S Akshintala
  * This source code is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
  * 	http://creativecommons.org/licenses/by-sa/4.0/
@@ -13,6 +13,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -76,11 +77,12 @@ class StreamLab {
     }
     
     @Test
-    void unZip() {
-        final var beanList = beans.stream()
-                .collect(() -> new ArrayList<ArrayList<String>>(), List::add, (left, right) -> )
-                
-        System.out.println(beanList);
+    void reduceOrder() {
+        beans.stream().reduce((prev, cur) -> {
+            System.out.println("Prev: " + prev);
+            System.out.println("Cur: " + cur);
+            return cur;
+        });
     }
-
+    
 }
