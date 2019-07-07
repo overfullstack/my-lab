@@ -17,7 +17,10 @@ public class CollectionsLab {
         beans = List.of(
                 new Bean("1", "a", Collections.emptyList()),
                 new Bean("2", "b", Collections.emptyList()),
-                new Bean("3", "c", Collections.emptyList())
+                new Bean("3", "c", Collections.emptyList()),
+                new Bean("1", "x", Collections.emptyList()),
+                new Bean("2", "y", Collections.emptyList()),
+                new Bean("3", "z", Collections.emptyList())
         );
     }
 
@@ -50,5 +53,17 @@ public class CollectionsLab {
             System.out.println("cur: " + cur);
             return cur;
         });
+    }
+    
+    @Test
+    void groupBy() {
+        System.out.println(
+                beans.groupBy(Bean::getProp1).mapValues(value -> value.map(Bean::getProp2))
+        );
+    }
+    
+    @Test
+    void toMap() {
+        System.out.println(beans.toMap(Bean::getProp1, Bean::getProp2));
     }
 }

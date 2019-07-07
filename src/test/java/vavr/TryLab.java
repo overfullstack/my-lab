@@ -43,11 +43,6 @@ public class TryLab {
             System.out.println("This won't be printed: " + result);
             return result;
         }).orElse(Try.failure(new RuntimeException("I threw it in or else")));
-
-        // Directly calling get() on try that throws exception also throws exception
-        // System.out.println(i_threw_it.get());
-        System.out.println(i_threw_it);
-        i_threw_it.onFailure(cause -> System.out.println(cause.getMessage()));
     }
 
     @Test
