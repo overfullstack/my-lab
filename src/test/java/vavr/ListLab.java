@@ -123,6 +123,11 @@ public class ListLab {
             return beans.size();
         });
         
+    void flatMap() {
+        String[] charArr = {"a","b","c"};
+        String[] numArr = {"1","2","3"};
+        var listOfArr = List.of(charArr, numArr);
+        System.out.println(listOfArr.flatMap(List::of).toSet());
     }
     
 }

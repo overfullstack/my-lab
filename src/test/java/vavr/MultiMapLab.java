@@ -37,9 +37,9 @@ public class MultiMapLab {
                 Tuple.of("nut1", "y"),
                 Tuple.of("nut2", "y"),
                 Tuple.of("nut3", "x"),
-                Tuple.of("nut4", "x"),
-                Tuple.of("nut5", "y"),
-                Tuple.of("nut6", "z"));
+                Tuple.of("nut1", "a"),
+                Tuple.of("nut2", "b"),
+                Tuple.of("nut3", "c"));
         beanMap = HashMap.ofEntries(beans);
     }
 
@@ -56,7 +56,7 @@ public class MultiMapLab {
         Multimap<String, String> multiMap =
                 HashMultimap.withSeq().ofEntries(tupleList);
 
-        System.out.println(multiMap.get("bar"));
+        System.out.println(multiMap.getOrElse("bar", List.empty()).toSet());
     }
 
     @Test
@@ -86,5 +86,17 @@ public class MultiMapLab {
         Multimap<String, String> beanMultiMap = HashMultimap.withSeq().ofEntries(beans);
         final var map = beanMultiMap.map((key, value) -> Tuple.of(key, Tuple.of(value, beanMap.getOrElse(key, ""))));
         System.out.println(map);
+    }
+    
+    @Test
+    void toMap(){
+        Multimap<String, String> nutsMultiMap = HashMultimap.withSet().ofEntries(nuts);
+        System.out.println(nutsMultiMap);
+        nutsMultiMap.values().forEach(System.out::println);
+    }
+    
+    @Test
+    void groupBy() {
+        System.out.println(nuts.groupBy(Tuple2::_1));
     }
 }
