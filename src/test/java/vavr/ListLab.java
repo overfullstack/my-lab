@@ -116,4 +116,13 @@ public class ListLab {
         beans.map(bean -> nuts.foldLeft(List.of(), (acc, nut) -> acc.append(bean.getProp1() + nut.getProp2()))).forEach(System.out::println);
     }
     
+    @Test
+    void transform() {
+        beans.transform(beans -> {
+            System.out.println(beans.size());
+            return beans.size();
+        });
+        
+    }
+    
 }
