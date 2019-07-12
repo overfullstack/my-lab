@@ -4,6 +4,7 @@ import io.vavr.Tuple;
 import io.vavr.Tuple2;
 import io.vavr.collection.HashMap;
 import io.vavr.collection.HashMultimap;
+import io.vavr.collection.HashSet;
 import io.vavr.collection.List;
 import io.vavr.collection.Map;
 import io.vavr.collection.Multimap;
@@ -20,7 +21,9 @@ public class MultiMapLab {
     @BeforeAll
     static void setUp() {
         beans = List.of(
-                Tuple.of("bean1", "y"),
+                Tuple.of("bean1", "a"),
+                Tuple.of("bean1", "b"),
+                Tuple.of("bean1", "c"),
                 Tuple.of("bean2", "y"),
                 Tuple.of("bean3", "x"),
                 Tuple.of("bean4", "x"),
@@ -91,12 +94,47 @@ public class MultiMapLab {
     @Test
     void toMap(){
         Multimap<String, String> nutsMultiMap = HashMultimap.withSet().ofEntries(nuts);
-        System.out.println(nutsMultiMap);
-        nutsMultiMap.values().forEach(System.out::println);
+        System.out.println(nutsMultiMap.toMap(Tuple2::_1, Tuple2::_2));
     }
     
     @Test
     void groupBy() {
         System.out.println(nuts.groupBy(Tuple2::_1));
     }
+    
+    @Test
+    void mergeMaps() {
+        Multimap<String, String> beanMultiMap = HashMultimap.withSet().ofEntries(beans);
+        Multimap<String, String> nutsMultiMap = HashMultimap.withSet().ofEntries(nuts);
+        //beanMultiMap.keySet().foldLeft(List.<Tuple2>of(), (mergedEntries, beanKey) -> nutsMultiMap.foldLeft(List.<Tuple2>of(), (mergedEntriesPerBean, nutKey) -> Tuple.of(Tuple.of(beanKey, nutKey), beanMultiMap.getor(beanKey).))
+    }
+    
+    @Test
+    void remove() {
+        Multimap<String, String> beanMultiMap = HashMultimap.withSet().ofEntries(beans);
+        beanMultiMap.get("bean1").get().toSet();
+        beanMultiMap.remove("bean1").forEach(System.out::println);
+        System.out.println("No Mutation of original Map");
+        beanMultiMap.forEach(System.out::println);
+        System.out.println("Assign it back");
+        beanMultiMap = beanMultiMap.remove("bean1");
+        beanMultiMap.forEach(System.out::println);
+    }
+    
+    @Test 
+    void removeWithSet() {
+        final Multimap<String, String> beanMultiMap = HashMultimap.withSet().ofEntries(beans);
+        HashSet.of("a", "b").map(valToRemove -> beanMultiMap.remove("bean1", valToRemove));
+    }
+    
+    @Test
+    void reject() {
+        Multimap<String, String> beanMultiMap = HashMultimap.withSet().ofEntries(beans);
+        System.out.println(beanMultiMap);
+        final var someList = List.of("a", "b");
+        beanMultiMap = beanMultiMap.reject((k, v) -> "bean1".equals(k) && someList.contains(v));
+        System.out.println("After rejecting");
+        beanMultiMap.forEach(System.out::println);
+    }
+    
 }
