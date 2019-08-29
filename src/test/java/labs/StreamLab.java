@@ -18,17 +18,18 @@ import java.util.stream.Stream;
 
 class StreamLab {
     private static List<Bean> beans;
+
     @BeforeAll
     static void setUp() {
         beans = new ArrayList<>();
-        var bean1 = new Bean("1", "a", Collections.emptyList());
-        var bean2 = new Bean("2", "b", Collections.emptyList());
-        var bean3 = new Bean("3", "c", Collections.emptyList());
+        var bean1 = new Bean("1", "a", null, Collections.emptyList());
+        var bean2 = new Bean("2", "b", null, Collections.emptyList());
+        var bean3 = new Bean("3", "c", null, Collections.emptyList());
         beans.add(bean1);
         beans.add(bean2);
         beans.add(bean3);
     }
-    
+
     @Test
     void mapAndFlatMap() {
         beans = new ArrayList<>();
@@ -53,7 +54,7 @@ class StreamLab {
     void findFirstForEmpty() {
         System.out.println(new ArrayList<>().stream().findFirst());
     }
-    
+
     @Test
     void lazyStreaming() {
         Stream.iterate(0, i -> i + 1)
@@ -61,7 +62,8 @@ class StreamLab {
                 .map(i -> i + 1)
                 .peek(i -> System.out.println("Map: " + i))
                 .limit(5)
-                .forEach(i -> {});
+                .forEach(i -> {
+                });
 
         System.out.println();
         System.out.println();
@@ -71,9 +73,10 @@ class StreamLab {
                 .limit(5)
                 .map(i -> i + 1)
                 .peek(i -> System.out.println("Map: " + i))
-                .forEach(i -> {});
+                .forEach(i -> {
+                });
     }
-    
+
     @Test
     void reduceOrder() {
         beans.stream().reduce((prev, cur) -> {
@@ -82,5 +85,5 @@ class StreamLab {
             return cur;
         });
     }
-    
+
 }

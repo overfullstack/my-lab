@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.function.Function;
 
-public class ListLab {
+public class IteratorLab {
 
     private static List<Bean> beans;
     private static Set<Bean> beansSet;
@@ -26,27 +26,26 @@ public class ListLab {
     @BeforeAll
     static void setUp() {
         beans = List.of(
-                new Bean("1", "a", null, Collections.emptyList()),
-                new Bean("1", "a", null, Collections.emptyList()),
-                new Bean("1", "b", null, Collections.emptyList()),
-                new Bean("2", "b", null, Collections.emptyList()),
-                new Bean("3", "c", null, Collections.emptyList()),
-                new Bean("4", "c", null, Collections.emptyList()),
-                new Bean("1", "x", null, Collections.emptyList()),
-                new Bean("2", "y", null, Collections.emptyList()),
-                new Bean("3", "z", null, Collections.emptyList())
+                new Bean("1", "a", Collections.emptyList()),
+                new Bean("1", "a", Collections.emptyList()),
+                new Bean("1", "b", Collections.emptyList()),
+                new Bean("2", "b", Collections.emptyList()),
+                new Bean("3", "c", Collections.emptyList()),
+                new Bean("4", "c", Collections.emptyList()),
+                new Bean("1", "x", Collections.emptyList()),
+                new Bean("2", "y", Collections.emptyList()),
+                new Bean("3", "z", Collections.emptyList())
         );
-
-        beansSet = HashSet.of(null,
-                new Bean("1", "a", null, Collections.emptyList()),
-                new Bean("1", "a", null, Collections.emptyList()),
-                new Bean("1", "b", null, Collections.emptyList()),
-                new Bean("2", "b", null, Collections.emptyList()),
-                new Bean("3", "c", null, Collections.emptyList()),
-                new Bean("4", "c", null, Collections.emptyList()),
-                new Bean("1", "x", null, Collections.emptyList()),
-                new Bean("2", "y", null, Collections.emptyList()),
-                new Bean("3", "z", null, Collections.emptyList())
+        beansSet = HashSet.of(
+                new Bean("1", "a", Collections.emptyList()),
+                new Bean("1", "a", Collections.emptyList()),
+                new Bean("1", "b", Collections.emptyList()),
+                new Bean("2", "b", Collections.emptyList()),
+                new Bean("3", "c", Collections.emptyList()),
+                new Bean("4", "c", Collections.emptyList()),
+                new Bean("1", "x", Collections.emptyList()),
+                new Bean("2", "y", Collections.emptyList()),
+                new Bean("3", "z", Collections.emptyList())
         );
         nuts = List.of(
                 new Nut("n1", "a", Collections.emptyList()),
@@ -54,20 +53,20 @@ public class ListLab {
                 new Nut("n3", "c", Collections.emptyList())
         );
         vavrBeans = List.of(
-                new Bean("v1", "a", null, Collections.emptyList()),
-                new Bean("v2", "b", null, Collections.emptyList()),
-                new Bean("v3", "c", null, Collections.emptyList())
+                new Bean("v1", "a", Collections.emptyList()),
+                new Bean("v2", "b", Collections.emptyList()),
+                new Bean("v3", "c", Collections.emptyList())
         );
         javaBeans = java.util.List.of(
-                new Bean("1", "a", null, Collections.emptyList()),
-                new Bean("2", "b", null, Collections.emptyList()),
-                new Bean("3", "c", null, Collections.emptyList())
+                new Bean("1", "a", Collections.emptyList()),
+                new Bean("2", "b", Collections.emptyList()),
+                new Bean("3", "c", Collections.emptyList())
         );
 
         javaBeansArrayList = new ArrayList<>();
-        var bean1 = new Bean("1", "a", null, Collections.emptyList());
-        var bean2 = new Bean("2", "b", null, Collections.emptyList());
-        var bean3 = new Bean("3", "c", null, Collections.emptyList());
+        var bean1 = new Bean("1", "a", Collections.emptyList());
+        var bean2 = new Bean("2", "b", Collections.emptyList());
+        var bean3 = new Bean("3", "c", Collections.emptyList());
         javaBeansArrayList.add(bean1);
         javaBeansArrayList.add(bean2);
         javaBeansArrayList.add(bean3);
@@ -115,8 +114,10 @@ public class ListLab {
 
     @Test
     void groupBy() {
-        beans.groupBy(Bean::getProp).forEach(System.out::println);
-        beans.groupBy(bean -> Tuple.of(bean.getProp(), bean.getProp2())).forEach(System.out::println);
+        /*beans.groupBy(Bean::getProp1).forEach(System.out::println);
+        System.out.println(beans.groupBy(Bean::getProp1).mapValues(value -> value.map(Bean::getProp2)));
+        beans.groupBy(bean -> Tuple.of(bean.getProp1(), bean.getProp2())).forEach(System.out::println);*/
+
         beansSet.groupBy(Bean::getProp).forEach(System.out::println);
     }
 
@@ -146,7 +147,7 @@ public class ListLab {
 
     @Test
     void transform() {
-        beans.transform(beans -> {
+        beans.iterator().transform(beans -> {
             System.out.println(beans.size());
             return beans.size();
         });
@@ -183,10 +184,5 @@ public class ListLab {
         final var listListTuple2 = beans.partition(bean -> "1".equalsIgnoreCase(bean.getProp()));
         System.out.println(listListTuple2._1);
         System.out.println(listListTuple2._2);
-    }
-
-    @Test
-    void push() {
-        List.of(1, 2, 3).push(4, 5, 6).forEach(System.out::println);
     }
 }

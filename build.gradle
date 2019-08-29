@@ -23,7 +23,7 @@ dependencies {
     compile group: 'com.google.code.gson', name: 'gson', version: '+'
     compile group: 'com.twitter', name:'twitter-text', version: '+'
     compile group: 'org.apache.commons', name: 'commons-text', version: '+'
-    compile group: 'io.vavr', name: 'vavr', version: '0.10.0'
+    compile group: 'io.vavr', name: 'vavr', version: '+'
     compile group: 'com.oath.cyclops', name: 'cyclops', version: '10.3.0'
     compile group: 'com.oath.cyclops', name: 'cyclops-pure', version: '10.3.0'
     compile group: 'com.aol.cyclops', name: 'cyclops-vavr', version: '9.0.0-FINAL'

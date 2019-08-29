@@ -17,8 +17,8 @@ import static jsonMapper.Utils.stringToObject;
 public class JsonToString {
     public static void main(String[] args) throws IOException {
         var bean = stringToObject();
-        System.out.println(bean.getProp1());
-        bean.setProp1(null);
+        System.out.println(bean.getProp());
+        bean.setProp(null);
         var mapper = new ObjectMapper();
         System.out.println(mapper.writeValueAsString(bean));
         HttpEntity httpEntity = new StringEntity(mapper.writeValueAsString(bean));
