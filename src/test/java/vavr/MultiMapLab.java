@@ -47,6 +47,14 @@ public class MultiMapLab {
     }
 
     @Test
+    void multiMapPut() {
+        var multiMap = HashMultimap.withSet().empty();
+        multiMap = multiMap.put("a", "1");
+        multiMap = multiMap.put("a", "2");
+        multiMap = multiMap.put("a", "3");
+    }
+
+    @Test
     void multiMapFromTuples() {
         var tupleList = List.of(
                 Tuple.of("foo", "x"),
@@ -74,7 +82,7 @@ public class MultiMapLab {
         Multimap<String, Integer> nutsMultiMap = HashMultimap.withSeq().ofEntries(beansNum);
         final var zip = beanMultiMap.zip(nutsMultiMap);
         //zip.forEach(System.out::println);
-        final var tuple2s = zip.groupBy(tuple2 -> tuple2._1._1).mapValues(vals -> vals.map(val -> Tuple.of(val._1._2, val._2._2)));
+        final var tuple2s = zip.groupBy(tuple2 -> tuple2._1._1).mapValues(values -> values.map(val -> Tuple.of(val._1._2, val._2._2)));
     }
 
     @Test
@@ -125,16 +133,6 @@ public class MultiMapLab {
     void removeWithSet() {
         final Multimap<String, String> beanMultiMap = HashMultimap.withSet().ofEntries(beans);
         HashSet.of("a", "b").map(valToRemove -> beanMultiMap.remove("bean1", valToRemove));
-    }
-    
-    @Test
-    void reject() {
-        Multimap<String, String> beanMultiMap = HashMultimap.withSet().ofEntries(beans);
-        System.out.println(beanMultiMap);
-        final var someList = List.of("a", "b");
-        beanMultiMap = beanMultiMap.reject((k, v) -> "bean1".equals(k) && someList.contains(v));
-        System.out.println("After rejecting");
-        beanMultiMap.forEach(System.out::println);
     }
     
 }

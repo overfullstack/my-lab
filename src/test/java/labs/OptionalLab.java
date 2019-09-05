@@ -8,7 +8,6 @@ import common.Bean;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.Collections;
 import java.util.Optional;
 
 public class OptionalLab {
@@ -20,7 +19,7 @@ public class OptionalLab {
 
     @Test
     void immutability() {
-        var bean = new Bean("str1", "str1", null, Collections.emptyList());
+        var bean = new Bean("str1", "str1", "");
         var beanFromOptional = Optional.of(bean)
                 .map(b -> {
                     b.setProp("str2");

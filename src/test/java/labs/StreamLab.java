@@ -11,23 +11,30 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.groupingBy;
 
 class StreamLab {
     private static List<Bean> beans;
 
     @BeforeAll
     static void setUp() {
-        beans = new ArrayList<>();
-        var bean1 = new Bean("1", "a", null, Collections.emptyList());
-        var bean2 = new Bean("2", "b", null, Collections.emptyList());
-        var bean3 = new Bean("3", "c", null, Collections.emptyList());
-        beans.add(bean1);
-        beans.add(bean2);
-        beans.add(bean3);
+        beans = List.of(
+                new Bean("1", "a", "A"),
+                new Bean("1", "b", "B"),
+                new Bean("2", "a", "C"),
+                new Bean("2", "b", "D"),
+                new Bean("3", "c", "E"),
+                new Bean("4", "c", "F")
+        );
     }
 
     @Test
@@ -86,4 +93,35 @@ class StreamLab {
         });
     }
 
+    @Test
+    void nestedGrouping() {
+        beans.stream().collect(groupingBy(Bean::getProp, groupingBy(Bean::getProp2)))
+                .entrySet().forEach(System.out::println);
+    }
+
+    @Test
+    void multiGroupingImperative() {
+        var prop1Group = new HashMap<String, Set<Bean>>();
+        var prop2Group = new HashMap<String, Set<Bean>>();
+        for (var bean : beans) {
+            prop1Group.computeIfAbsent(bean.getProp1(), key -> new HashSet<>()).add(bean);
+            prop2Group.computeIfAbsent(bean.getProp2(), key -> new HashSet<>()).add(bean);
+        }
+    }
+
+    @Test
+    void multiGroupingDeclarative() {
+        var prop1Group = beans.stream().collect(groupingBy(Bean::getProp1));
+        var prop2Group = beans.stream().collect(groupingBy(Bean::getProp2));
+    }
+
+    @Test
+    void teeing() {
+        beans.stream().collect(
+                Collectors.teeing(
+                        groupingBy(Bean::getProp1),
+                        groupingBy(Bean::getProp2),
+                        List::of))
+                .forEach(map -> map.entrySet().forEach(System.out::println));
+    }
 }

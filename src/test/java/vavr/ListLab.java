@@ -3,7 +3,6 @@ package vavr;
 import common.Bean;
 import common.Nut;
 import io.vavr.Tuple;
-import io.vavr.Tuple2;
 import io.vavr.collection.HashSet;
 import io.vavr.collection.List;
 import io.vavr.collection.Set;
@@ -26,27 +25,27 @@ public class ListLab {
     @BeforeAll
     static void setUp() {
         beans = List.of(
-                new Bean("1", "a", null, Collections.emptyList()),
-                new Bean("1", "a", null, Collections.emptyList()),
-                new Bean("1", "b", null, Collections.emptyList()),
-                new Bean("2", "b", null, Collections.emptyList()),
-                new Bean("3", "c", null, Collections.emptyList()),
-                new Bean("4", "c", null, Collections.emptyList()),
-                new Bean("1", "x", null, Collections.emptyList()),
-                new Bean("2", "y", null, Collections.emptyList()),
-                new Bean("3", "z", null, Collections.emptyList())
+                new Bean("1", "a"),
+                new Bean("1", "a"),
+                new Bean("1", "b"),
+                new Bean("2", "b"),
+                new Bean("3", "c"),
+                new Bean("4", "c"),
+                new Bean("1", "x"),
+                new Bean("2", "y"),
+                new Bean("3", "z")
         );
 
         beansSet = HashSet.of(null,
-                new Bean("1", "a", null, Collections.emptyList()),
-                new Bean("1", "a", null, Collections.emptyList()),
-                new Bean("1", "b", null, Collections.emptyList()),
-                new Bean("2", "b", null, Collections.emptyList()),
-                new Bean("3", "c", null, Collections.emptyList()),
-                new Bean("4", "c", null, Collections.emptyList()),
-                new Bean("1", "x", null, Collections.emptyList()),
-                new Bean("2", "y", null, Collections.emptyList()),
-                new Bean("3", "z", null, Collections.emptyList())
+                new Bean("1", "a"),
+                new Bean("1", "a"),
+                new Bean("1", "b"),
+                new Bean("2", "b"),
+                new Bean("3", "c"),
+                new Bean("4", "c"),
+                new Bean("1", "x"),
+                new Bean("2", "y"),
+                new Bean("3", "z")
         );
         nuts = List.of(
                 new Nut("n1", "a", Collections.emptyList()),
@@ -54,20 +53,20 @@ public class ListLab {
                 new Nut("n3", "c", Collections.emptyList())
         );
         vavrBeans = List.of(
-                new Bean("v1", "a", null, Collections.emptyList()),
-                new Bean("v2", "b", null, Collections.emptyList()),
-                new Bean("v3", "c", null, Collections.emptyList())
+                new Bean("v1", "a"),
+                new Bean("v2", "b"),
+                new Bean("v3", "c")
         );
         javaBeans = java.util.List.of(
-                new Bean("1", "a", null, Collections.emptyList()),
-                new Bean("2", "b", null, Collections.emptyList()),
-                new Bean("3", "c", null, Collections.emptyList())
+                new Bean("1", "a"),
+                new Bean("2", "b"),
+                new Bean("3", "c")
         );
 
         javaBeansArrayList = new ArrayList<>();
-        var bean1 = new Bean("1", "a", null, Collections.emptyList());
-        var bean2 = new Bean("2", "b", null, Collections.emptyList());
-        var bean3 = new Bean("3", "c", null, Collections.emptyList());
+        var bean1 = new Bean("1", "a");
+        var bean2 = new Bean("2", "b");
+        var bean3 = new Bean("3", "c");
         javaBeansArrayList.add(bean1);
         javaBeansArrayList.add(bean2);
         javaBeansArrayList.add(bean3);
@@ -116,8 +115,8 @@ public class ListLab {
     @Test
     void groupBy() {
         beans.groupBy(Bean::getProp).forEach(System.out::println);
-        beans.groupBy(bean -> Tuple.of(bean.getProp(), bean.getProp2())).forEach(System.out::println);
-        beansSet.groupBy(Bean::getProp).forEach(System.out::println);
+        /*beans.groupBy(bean -> Tuple.of(bean.getProp(), bean.getProp2())).forEach(System.out::println);
+        beansSet.groupBy(Bean::getProp).forEach(System.out::println);*/
     }
 
     @Test
@@ -129,7 +128,7 @@ public class ListLab {
     void unZip() {
         //Tuple2<List<String>, List<String>> tuple2ForVavr = List.ofAll(vavrBeans).unzip(bean -> Tuple.of(bean.getProp1(), bean.getProp2()));
         //Tuple2<List<String>, List<String>> tuple2ForJava = List.ofAll(javaBeans).unzip(bean -> Tuple.of(bean.getProp1(), bean.getProp2()));
-        Tuple2<List<String>, List<String>> tuple2ForJavaArrayList = List.ofAll(javaBeansArrayList).unzip(bean -> Tuple.of(bean.getProp(), bean.getProp2()));
+        List.ofAll(javaBeansArrayList).unzip(bean -> Tuple.of(bean.getProp(), bean.getProp2()));
     }
 
     @Test
@@ -189,4 +188,16 @@ public class ListLab {
     void push() {
         List.of(1, 2, 3).push(4, 5, 6).forEach(System.out::println);
     }
+
+    @Test
+    void crossProduct() {
+        List.of(1, 2, 3).crossProduct(3).forEach(System.out::println);
+    }
+
+    @Test
+    void intersperse() {
+        List.of(1, 2, 3, 4, 5).intersperse(3).forEach(System.out::println);
+    }
+
+    
 }
