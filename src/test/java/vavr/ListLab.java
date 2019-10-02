@@ -199,5 +199,10 @@ public class ListLab {
         List.of(1, 2, 3, 4, 5).intersperse(3).forEach(System.out::println);
     }
 
-    
+    @Test
+    void toSet() {
+        beans.toSet();
+    }
+
+
 }

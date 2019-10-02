@@ -5,7 +5,7 @@ package labs;/*
  */
 
 import common.Bean;
-import org.junit.jupiter.api.BeforeAll;
+import common.BeanType;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -20,22 +20,19 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
+import static common.BeanType.T1;
+import static common.BeanType.T12;
+import static common.BeanType.T2;
 import static java.util.stream.Collectors.groupingBy;
 
 class StreamLab {
-    private static List<Bean> beans;
-
-    @BeforeAll
-    static void setUp() {
-        beans = List.of(
-                new Bean("1", "a", "A"),
-                new Bean("1", "b", "B"),
-                new Bean("2", "a", "C"),
-                new Bean("2", "b", "D"),
-                new Bean("3", "c", "E"),
-                new Bean("4", "c", "F")
-        );
-    }
+    private static List<Bean> beans = List.of(
+            new Bean("1", "a", "A", T1),
+            new Bean("1", "b", "B", T1),
+            new Bean("2", "a", "C", T2),
+            new Bean("2", "b", "D", T12),
+            new Bean("3", "c", "E", T12),
+            new Bean("4", "c", "F", T2));
 
     @Test
     void mapAndFlatMap() {
@@ -123,5 +120,19 @@ class StreamLab {
                         groupingBy(Bean::getProp2),
                         List::of))
                 .forEach(map -> map.entrySet().forEach(System.out::println));
+    }
+
+    @Test
+    void groupBy() {
+        final var beansByType = beans.stream().collect(groupingBy(StreamLab::getType));
+        beansByType.values().forEach(System.out::println);
+    }
+
+    private static BeanType getType(Bean bean) {
+        return switch (bean.getType()) {
+            case T1 -> T1;
+            case T2 -> T2;
+            case T12 -> T12;
+        };
     }
 }

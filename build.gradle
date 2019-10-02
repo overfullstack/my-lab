@@ -12,8 +12,7 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:+'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:+'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.4.2'
     
     compile 'org.codehaus.jettison:jettison:+'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '+'

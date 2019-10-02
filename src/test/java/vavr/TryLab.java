@@ -27,7 +27,6 @@ public class TryLab {
             if (true) throw new RuntimeException("I threw it");
             return "try";
         }).orElse(Try.failure(new RuntimeException("I threw it in or else")));
-
         // Directly calling get() on try that throws exception also throws exception
         // System.out.println(i_threw_it.get());
         System.out.println(i_threw_it);
