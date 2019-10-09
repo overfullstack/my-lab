@@ -1,5 +1,6 @@
 package vavr;
 
+import common.ValidationFailure;
 import io.vavr.control.Try;
 import org.junit.jupiter.api.Test;
 
@@ -50,13 +51,28 @@ public class TryLab {
             System.out.println("Try outside");
             final var innerTry = Try.of(() -> {
                 System.out.println("Try inside");
-                if (true) throw new RuntimeException("I threw it");
+                throwRunTimeException("I threw it");
                 return "I m Tried and printed";
             });
             return innerTry.get();
         });
-
         // Outside Try holds inside try exception.
         System.out.println(outerTry.getOrElseGet(Throwable::getMessage));
+    }
+
+    static String throwRunTimeException(String msg) {
+        if (true) throw new RuntimeException("I threw it");
+        return msg;
+    }
+
+    @Test
+    void tryToEither() {
+        final var runTimeException = Try.of(() -> throwRunTimeException("runTimeException")).toEither()
+                .mapLeft(cause -> ValidationFailure.withErrorMessage(cause.getMessage()));
+        System.out.println(runTimeException);
+
+        final var noException = Try.of(() -> "right").toEither()
+                .mapLeft(cause -> ValidationFailure.withErrorMessage(cause.getMessage()));
+        System.out.println(noException);
     }
 }

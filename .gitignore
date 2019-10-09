@@ -50,3 +50,4 @@ out/test/classes/generated_tests/
 # Project exclude paths
 /out/
 /out/test/classes/
+/bin/

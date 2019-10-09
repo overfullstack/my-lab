@@ -12,6 +12,7 @@ import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
@@ -43,7 +44,7 @@ public class Utils {
     }*/
 
     public static Bean stringToObject() {
-        var bean = getObjectFromFile(RESOURCE_PATH + "bean.json", Bean.class);
+        var bean = getObjectFromFile(RESOURCE_PATH + "nested-bean.json", Bean.class);
         return bean;
     }
 
@@ -59,10 +60,10 @@ public class Utils {
 
     public static String fileToString(String filePath) {
         try {
-            return new String(Files.readAllBytes(Paths.get(filePath)), "UTF-8");
+            return new String(Files.readAllBytes(Paths.get(filePath)), StandardCharsets.UTF_8);
         } catch (IOException ignored) {
         }
-        return null;
+        return "";
     }
 
     private static void stringToJsonArray() throws JSONException {
@@ -74,7 +75,7 @@ public class Utils {
 
     public static List<Map<String, String>> readJsonFromFile(String filePath) throws JSONException {
         try {
-            var fileContent = new String(Files.readAllBytes(Paths.get(RESOURCE_PATH + filePath)), "UTF-8");
+            var fileContent = new String(Files.readAllBytes(Paths.get(RESOURCE_PATH + filePath)), StandardCharsets.UTF_8);
             var jsonObject = new JSONObject(fileContent);
             var jsonArray = (JSONArray) jsonObject.get("items");
 
@@ -92,7 +93,7 @@ public class Utils {
     }
 
     public static void manipulateJsonString() throws IOException, JSONException {
-        var fileContent = new String(Files.readAllBytes(Paths.get(RESOURCE_PATH + "bulkimportdef")), "UTF-8");
+        var fileContent = new String(Files.readAllBytes(Paths.get(RESOURCE_PATH + "bulkimportdef")), StandardCharsets.UTF_8);
         var jsonObject = new JSONObject(fileContent);
         /*JSONArray jsonArray = (JSONArray) jsonObject.get("syncActions");
         JSONObject syncActionsMap = (JSONObject) jsonArray.get(0);

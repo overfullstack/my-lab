@@ -1,13 +1,14 @@
 package labs;/*
  * Copyright (c) 2019 - Present, Gopal S Akshintala
  * This source code is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
- * 	http://creativecommons.org/licenses/by-sa/4.0/
+ * http://creativecommons.org/licenses/by-sa/4.0/
  */
 
 import common.Bean;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 public class OptionalLab {
@@ -77,5 +78,10 @@ public class OptionalLab {
 
     String optionalComposableNested() {
         return getMayBean().map(Bean::getNestedBean).map(Bean::getProp).orElse("");
+    }
+
+    @Test
+    void emptyGet() {
+        Assertions.assertThrows(NoSuchElementException.class, () -> Optional.empty().get());
     }
 }

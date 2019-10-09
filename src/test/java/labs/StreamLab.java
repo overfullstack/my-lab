@@ -135,4 +135,25 @@ class StreamLab {
             case T12 -> T12;
         };
     }
+
+    @Test
+    void mapValidation() {
+        var map = new HashMap<String, String>();
+        map(map);
+    }
+
+    private String map(HashMap<String, String> map) {
+        for (var entry : map.entrySet()) {
+            if (entry.getKey().length() > 10) {
+                return "invalid_key";
+            } else if (entry.getValue().length() > 10) {
+                return "invalid_value";
+            } else if (entry.getKey().isEmpty()) {
+                return "empty_key";
+            } else if (entry.getValue().isEmpty()) {
+                return "empty_value";
+            }
+        }
+        return "all_valid";
+    }
 }
