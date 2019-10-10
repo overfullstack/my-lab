@@ -15,12 +15,18 @@ public class ReaderLab {
 
     @Test
     void forComposition() {
-        var r2 = loadName(10).forEach2(str -> updateName(10, str),
-                (name, success) -> logIfFail(10, name, success));
+        var updateName1 = loadName(10)
+                .forEach2(
+                        name -> updateName(10, name),
+                        (name, success) -> logIfFail(10, name, success)
+                );
 
-        var updateName = findNextId().forEach3(id -> loadName(id),
-                (id1, name) -> updateName(id1, name),
-                (id2, name1, success) -> logIfFail(id2, name1, success));
+        var updateName2 = findNextId()
+                .forEach3(
+                        id -> loadName(id),
+                        (id, name) -> updateName(id, name),
+                        (id, name, success) -> logIfFail(id, name, success)
+                );
     }
 
     public Reader<DAO, String> loadName(long id) {
