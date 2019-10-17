@@ -91,6 +91,11 @@ class StreamLab {
     }
 
     @Test
+    void reduceEmptyList() {
+        Stream.<Integer>empty().reduce(Integer::sum);
+    }
+
+    @Test
     void nestedGrouping() {
         beans.stream().collect(groupingBy(Bean::getProp, groupingBy(Bean::getProp2)))
                 .entrySet().forEach(System.out::println);

@@ -1,15 +1,5 @@
 package vavr;
 
-import com.oath.cyclops.hkt.Higher;
-import com.oath.cyclops.vavr.hkt.FutureKind;
-import com.oath.cyclops.vavr.hkt.TryKind;
-import cyclops.monads.VavrWitness.future;
-import cyclops.monads.VavrWitness.tryType;
-import io.vavr.concurrent.Future;
-
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
 /**
  * Refer: https://medium.com/@johnmcclean/cyclops-java-the-monad-typeclass-with-vavrs-future-and-try-2732b002c1cd
  */
@@ -39,7 +29,7 @@ public class KleisliLab {
         }
     }*/
 
-    interface GenericWork<W> {
+    /*interface GenericWork<W> {
         Higher<W, String> get();
 
         Higher<W, Boolean> save(String data);
@@ -71,7 +61,7 @@ public class KleisliLab {
         public TryKind<Boolean> save(String data) {
             return TryKind.successful(true);
         }
-    }
+    }*/
 
 
 }
