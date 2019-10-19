@@ -144,6 +144,14 @@ public class ListLab {
     }
 
     @Test
+    void foldLeftForMutation() {
+        var emptyList = List.of();
+        beans.map(bean -> nuts.foldLeft(emptyList, (acc, nut) -> acc.append(bean.getProp() + nut.getProp2())));
+        // This remains as an emptyList, it won't be mutated. So you just supply a seed value
+        emptyList.forEach(System.out::println);
+    }
+
+    @Test
     void transform() {
         beans.transform(beans -> {
             System.out.println(beans.size());

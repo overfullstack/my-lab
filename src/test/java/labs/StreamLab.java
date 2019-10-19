@@ -96,6 +96,16 @@ class StreamLab {
     }
 
     @Test
+    void reduce() {
+        var listForSum = List.of(1, 2, 3, 4);
+        listForSum.stream().reduce((a, b) -> {
+            // a is a accumulator
+            System.out.print(" " + a + " " + b + " ");
+            return a + b;
+        });
+    }
+
+    @Test
     void nestedGrouping() {
         beans.stream().collect(groupingBy(Bean::getProp, groupingBy(Bean::getProp2)))
                 .entrySet().forEach(System.out::println);
