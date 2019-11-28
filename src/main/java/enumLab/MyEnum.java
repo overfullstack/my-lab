@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018 - Present, Gopal S Akshintala 
+ * Copyright (c) 2018 - Present, Gopal S Akshintala
  * This source code is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
  * 	http://creativecommons.org/licenses/by-sa/4.0/
  */
@@ -11,7 +11,7 @@ public enum MyEnum {
     ENUM2("enum2");
 
     private String value;
-    
+
     MyEnum(String value) {
         this.value = value;
     }

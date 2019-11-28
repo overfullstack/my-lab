@@ -3,7 +3,7 @@
  * 	http://creativecommons.org/licenses/by-sa/4.0/
  */
 
-package jsonMapper;
+package jsonmapper;
 
 import org.codehaus.jackson.annotate.JsonCreator;
 import org.codehaus.jackson.annotate.JsonProperty;

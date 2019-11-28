@@ -31,7 +31,7 @@ public class Client {
                     .resource(URL)
                     .type(MediaType.APPLICATION_JSON)
                     .accept(MediaType.APPLICATION_JSON)
-                    .method("POST",ClientResponse.class,"{}");
+                    .method("POST", ClientResponse.class, "{}");
 
             var code = response.getStatus();
 

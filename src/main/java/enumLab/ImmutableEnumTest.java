@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 - Present, Gopal S Akshintala 
+ * Copyright (c) 2019 - Present, Gopal S Akshintala
  * This source code is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
  * 	http://creativecommons.org/licenses/by-sa/4.0/
  */
@@ -11,7 +11,7 @@ public class ImmutableEnumTest {
         //testWithValue();
         //testWithEnum();
     }
-    
+
     private static void testWithValue() {
         var myEnum = MyEnum.ENUM1;
         var myEnum1 = myEnum.withValue("newValue");
@@ -26,7 +26,7 @@ public class ImmutableEnumTest {
 
         System.out.println(myEnum.getValue());
         System.out.println(myEnum1.getValue()); // This changes other enum as well
-        
+
         myEnum.setValue("otherValue");
         System.out.println(myEnum.getValue());
         System.out.println(myEnum1.getValue());

@@ -25,35 +25,35 @@ class FunctionLab {
                 .apply("x")
                 .apply("y"));
     }
-    
+
     @Test
     void multiInputFunction() {
         System.out.println(
                 wrapOptional("first")
-                .flatMap(first -> wrapOptional("second")
-                        .flatMap(second -> concat(first, second))
-                ).get()
+                        .flatMap(first -> wrapOptional("second")
+                                .flatMap(second -> concat(first, second))
+                        ).get()
         );
     }
-    
+
+    Optional<String> wrapOptional(String input) {
+        return Optional.of(input);
+    }
+
+    Optional<String> concat(String str1, String str2) {
+        return Optional.of(str1 + str2);
+    }
+
     @Test
     void multiInputWithCurrying() {
         System.out.println(
                 wrapOptional("first")
-                .map(this::curryConcat)
-                .flatMap(concat -> concat.apply("second"))
-                .get()
+                        .map(this::curryConcat)
+                        .flatMap(concat -> concat.apply("second"))
+                        .get()
         );
     }
-    
-    Optional<String> wrapOptional(String input) {
-        return Optional.of(input);
-    }
-    
-    Optional<String> concat(String str1, String str2) {
-        return Optional.of(str1 + str2);
-    }
-    
+
     Function<String, Optional<String>> curryConcat(String str1) {
         return str2 -> Optional.of(str1 + str2);
     }

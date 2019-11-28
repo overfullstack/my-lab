@@ -12,7 +12,7 @@ public class LazyLab {
                 System.out.println("Try is not Lazy");
                 return Try.of(() -> {
                     System.out.println("Try inside is not Lazy");
-                    if(true) throw new RuntimeException("I threw RuntimeException");
+                    if (true) throw new RuntimeException("I threw RuntimeException");
                     return null;
                 });
             });

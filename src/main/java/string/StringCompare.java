@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018 - Present, Gopal S Akshintala 
+ * Copyright (c) 2018 - Present, Gopal S Akshintala
  * This source code is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
  * 	http://creativecommons.org/licenses/by-sa/4.0/
  */
@@ -16,10 +16,10 @@ public class StringCompare {
         var myObject1 = new MyObject();
         var myObject2 = new MyObject();
         var myObject3 = new MyObject();
-        
+
         // This comparision results true only if both the references point to same object.
         System.out.println("Reference Comparision" + (myObject1 == myObject2));
-        
+
         // Arraylist doesn't use hashcode 
         List<MyObject> myObjectList = new ArrayList<>();
         myObjectList.add(myObject1);

@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static Utils.FileUtils.TEST_RESOURCE_PATH;
-import static jsonMapper.Utils.fileToString;
+import static jsonmapper.Utils.fileToString;
 
 /* gakshintala created on 10/9/19 */
 public class ObjectMapperLab {

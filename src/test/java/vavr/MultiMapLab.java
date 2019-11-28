@@ -91,32 +91,32 @@ public class MultiMapLab {
         Multimap<String, Integer> nutsMultiMap = HashMultimap.withSeq().ofEntries(beansNum);
         beanMultiMap.zipWith(nutsMultiMap, (tuple21, tuple22) -> Tuple.of(tuple21._1, tuple21._2, tuple22._2)).forEach(System.out::println);
     }
-    
+
     @Test
     void zipMapAndMultiMap() {
         Multimap<String, String> beanMultiMap = HashMultimap.withSeq().ofEntries(beans);
         final var map = beanMultiMap.map((key, value) -> Tuple.of(key, Tuple.of(value, beanMap.getOrElse(key, ""))));
         System.out.println(map);
     }
-    
+
     @Test
-    void toMap(){
+    void toMap() {
         Multimap<String, String> nutsMultiMap = HashMultimap.withSet().ofEntries(nuts);
         System.out.println(nutsMultiMap.toMap(Tuple2::_1, Tuple2::_2));
     }
-    
+
     @Test
     void groupBy() {
         System.out.println(nuts.groupBy(Tuple2::_1));
     }
-    
+
     @Test
     void mergeMaps() {
         Multimap<String, String> beanMultiMap = HashMultimap.withSet().ofEntries(beans);
         Multimap<String, String> nutsMultiMap = HashMultimap.withSet().ofEntries(nuts);
         //beanMultiMap.keySet().foldLeft(List.<Tuple2>of(), (mergedEntries, beanKey) -> nutsMultiMap.foldLeft(List.<Tuple2>of(), (mergedEntriesPerBean, nutKey) -> Tuple.of(Tuple.of(beanKey, nutKey), beanMultiMap.getor(beanKey).))
     }
-    
+
     @Test
     void remove() {
         Multimap<String, String> beanMultiMap = HashMultimap.withSet().ofEntries(beans);
@@ -128,11 +128,11 @@ public class MultiMapLab {
         beanMultiMap = beanMultiMap.remove("bean1");
         beanMultiMap.forEach(System.out::println);
     }
-    
-    @Test 
+
+    @Test
     void removeWithSet() {
         final Multimap<String, String> beanMultiMap = HashMultimap.withSet().ofEntries(beans);
         HashSet.of("a", "b").map(valToRemove -> beanMultiMap.remove("bean1", valToRemove));
     }
-    
+
 }

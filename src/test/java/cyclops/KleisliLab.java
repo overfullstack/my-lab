@@ -17,6 +17,18 @@ public class KleisliLab {
                         .map(success -> logIfFail(10, data, success)));
     }
 
+    public Future<Boolean> logIfFail(long id, Data name, boolean success) {
+        return null;
+    }
+
+    public Kleisli<future, DAO, Data> load(long id) {
+        return Kleisli.of(FutureInstances.monad(), DAO -> DAO.load(id));
+    }
+
+    public Kleisli<future, DAO, Boolean> save(long id, Data data) {
+        return Kleisli.of(FutureInstances.monad(), DAO -> DAO.save(id, new Data()));
+    }
+
     @Test
     void forCompositionWithKleisli() {
         // This is as fluent as the reader one, although the return types of the functions are Future.
@@ -29,18 +41,6 @@ public class KleisliLab {
 
     public Kleisli<future, DAO, Long> findNextId() {
         return null;
-    }
-
-    public Future<Boolean> logIfFail(long id, Data name, boolean success) {
-        return null;
-    }
-
-    public Kleisli<future, DAO, Data> load(long id) {
-        return Kleisli.of(FutureInstances.monad(), DAO -> DAO.load(id));
-    }
-
-    public Kleisli<future, DAO, Boolean> save(long id, Data data) {
-        return Kleisli.of(FutureInstances.monad(), DAO -> DAO.save(id, new Data()));
     }
 
     public Kleisli<future, DAO, Boolean> process(long id, Function<Data, Data> transformer) {

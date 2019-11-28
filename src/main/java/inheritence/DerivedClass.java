@@ -8,7 +8,7 @@ package inheritence;
 /**
  * Created by Gopala Akshintala on 08/09/17.
  */
-public class DerivedClass extends BaseClass{
+public class DerivedClass extends BaseClass {
     public static void main(String[] args) {
         BaseClass myClass = new DerivedClass();
         myClass.printClassName();

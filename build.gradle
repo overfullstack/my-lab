@@ -1,31 +1,49 @@
 plugins {
     id 'java'
     id 'idea'
-    id "io.freefair.lombok" version "4.1.2"
+    id "io.freefair.lombok" version "4.1.4"
 }
 
 group 'com.gakshintala.mylab'
 version '1.0-SNAPSHOT'
 
 repositories {
-    mavenCentral()
+    jcenter()
+}
+
+compileJava   {
+    sourceCompatibility = '13'
+    targetCompatibility = '13'
+}
+
+compileTestJava {
+    sourceCompatibility = '13'
+    targetCompatibility = '13'
+}
+
+tasks.withType(JavaCompile).each {
+    it.options.compilerArgs.add('--enable-preview')
+}
+
+test {
+    useJUnitPlatform()
+    jvmArgs '--enable-preview'
 }
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:+'
-    
-    compile 'org.codehaus.jettison:jettison:+'
-    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '+'
-    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '+'
-    compile group: 'com.sun.jersey', name: 'jersey-client', version: '+'
-    compile group: 'com.sun.jersey', name: 'jersey-json', version: '+'
-    compile group: 'com.google.code.gson', name: 'gson', version: '+'
-    compile group: 'com.twitter', name:'twitter-text', version: '+'
-    compile group: 'org.apache.commons', name: 'commons-text', version: '+'
-    compile group: 'io.vavr', name: 'vavr', version: '+'
-    compile group: 'com.oath.cyclops', name: 'cyclops', version: '10.3.0'
-    compile group: 'com.oath.cyclops', name: 'cyclops-pure', version: '10.3.0'
-    compile group: 'com.oath.cyclops', name: 'cyclops-vavr-integration', version: '10.0.0-M1'
-    compile group: 'com.oath.cyclops', name: 'cyclops-anym', version: '10.3.3'
 
+    implementation group: 'org.codehaus.jackson', name: 'jackson-mapper-asl', version: '+'
+    implementation group: 'com.google.code.gson', name: 'gson', version: '+'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '+'
+    implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '+'
+    implementation group: 'com.sun.jersey', name: 'jersey-client', version: '+'
+    implementation group: 'com.sun.jersey', name: 'jersey-json', version: '+'
+    implementation group: 'com.twitter', name: 'twitter-text', version: '+'
+    implementation group: 'org.apache.commons', name: 'commons-text', version: '+'
+    implementation group: 'io.vavr', name: 'vavr', version: '+'
+    implementation group: 'com.oath.cyclops', name: 'cyclops', version: '10.3.0'
+    implementation group: 'com.oath.cyclops', name: 'cyclops-pure', version: '10.3.0'
+    implementation group: 'com.oath.cyclops', name: 'cyclops-vavr-integration', version: '10.0.0-M1'
+    implementation group: 'com.oath.cyclops', name: 'cyclops-anym', version: '10.3.3'
 }

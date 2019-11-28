@@ -1,11 +1,7 @@
-package labs;/*
- * Copyright (c) 2019 - Present, Gopal S Akshintala
- * This source code is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
- * 	http://creativecommons.org/licenses/by-sa/4.0/
- */
+package labs;
 
 import common.Bean;
-import common.BeanType;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -16,6 +12,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
+import java.util.TreeSet;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -24,6 +22,7 @@ import static common.BeanType.T1;
 import static common.BeanType.T12;
 import static common.BeanType.T2;
 import static java.util.stream.Collectors.groupingBy;
+import static java.util.stream.Collectors.toCollection;
 
 class StreamLab {
     private static List<Bean> beans = List.of(
@@ -137,7 +136,7 @@ class StreamLab {
                 .forEach(map -> map.entrySet().forEach(System.out::println));
     }
 
-    @Test
+    /*@Test
     void groupBy() {
         final var beansByType = beans.stream().collect(groupingBy(StreamLab::getType));
         beansByType.values().forEach(System.out::println);
@@ -149,7 +148,7 @@ class StreamLab {
             case T2 -> T2;
             case T12 -> T12;
         };
-    }
+    }*/
 
     @Test
     void mapValidation() {
@@ -170,5 +169,27 @@ class StreamLab {
             }
         }
         return "all_valid";
+    }
+
+    @Test
+    void intStreamToTreeSet() {
+        final var treeSet = IntStream.rangeClosed(1, 5).boxed().collect(toCollection(TreeSet::new));
+        System.out.println(treeSet.size());
+        treeSet.remove(1);
+        System.out.println(treeSet.size());
+    }
+
+    @Test
+    void cloningWithSupplier() {
+        final Supplier<TreeSet<Integer>> treeSetSupplier = () -> IntStream.rangeClosed(1, 5).boxed().collect(toCollection(TreeSet::new));
+        final var treeSet1 = treeSetSupplier.get();
+        final var treeSet2 = treeSetSupplier.get();
+        Assertions.assertNotSame(treeSet1, treeSet2);
+    }
+
+    @Test
+    void OptionalIntStreamEmpty() {
+        Assertions.assertEquals(IntStream.range(0, 5).filter(num -> num > 5).findFirst().stream().mapToObj(String::valueOf),
+                IntStream.empty().mapToObj(String::valueOf));
     }
 }

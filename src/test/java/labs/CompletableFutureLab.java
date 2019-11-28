@@ -4,7 +4,6 @@ package labs;/*
  * 	http://creativecommons.org/licenses/by-sa/4.0/
  */
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.CompletableFuture;

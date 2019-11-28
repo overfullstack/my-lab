@@ -3,7 +3,7 @@
  * 	http://creativecommons.org/licenses/by-sa/4.0/
  */
 
-package jsonMapper;
+package jsonmapper;
 
 import common.Bean;
 import org.codehaus.jackson.map.ObjectMapper;
@@ -22,8 +22,9 @@ import java.util.Map;
  * Created by Gopala Akshintala on 28/09/16.
  */
 public class Utils {
-    private static final String RESOURCE_PATH = Paths.get(".").toAbsolutePath() + "/./src/main/resources/";
     public static final ObjectMapper mapper = new ObjectMapper();
+    private static final String RESOURCE_PATH = Paths.get(".").toAbsolutePath() + "/./src/main/resources/";
+
     public static void main(String[] args) throws IOException, JSONException {
         /*List<Map<String, String>> emails = readJsonFromFile("email.json");
         System.out.println(emails);
@@ -60,7 +61,7 @@ public class Utils {
 
     public static String fileToString(String filePath) {
         try {
-            return new String(Files.readAllBytes(Paths.get(filePath)), StandardCharsets.UTF_8);
+            return Files.readString(Paths.get(filePath));
         } catch (IOException ignored) {
         }
         return "";
@@ -75,7 +76,7 @@ public class Utils {
 
     public static List<Map<String, String>> readJsonFromFile(String filePath) throws JSONException {
         try {
-            var fileContent = new String(Files.readAllBytes(Paths.get(RESOURCE_PATH + filePath)), StandardCharsets.UTF_8);
+            var fileContent = Files.readString(Paths.get(RESOURCE_PATH + filePath));
             var jsonObject = new JSONObject(fileContent);
             var jsonArray = (JSONArray) jsonObject.get("items");
 
@@ -83,7 +84,7 @@ public class Utils {
             System.out.println(emailMap.get("EmailAddress"));
 
             return Arrays.asList(mapper.readValue(fileContent, Map[].class));*/
-        } catch (JSONException|IOException ignored) {
+        } catch (JSONException | IOException ignored) {
         }
         return null;
     }
@@ -104,7 +105,6 @@ public class Utils {
     }
 
     private static boolean isRequestBodyContainsContentService(JSONObject requestBody) throws JSONException {
-        return ((String)((JSONObject)((JSONArray)requestBody.get("syncActions")).get(0)).get("destination")).contains("ContentInstance");
+        return ((String) ((JSONObject) ((JSONArray) requestBody.get("syncActions")).get(0)).get("destination")).contains("ContentInstance");
     }
 }
-

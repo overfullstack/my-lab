@@ -13,6 +13,18 @@ public class ReaderLab {
                         .map(success -> logIfFail(10, s, success)));
     }
 
+    public Reader<DAO, String> loadName(long id) {
+        return null;
+    }
+
+    public Reader<DAO, Boolean> updateName(long id, String name) {
+        return null;
+    }
+
+    public boolean logIfFail(long id, String name, boolean success) {
+        return true;
+    }
+
     @Test
     void forComposition() {
         var updateName1 = loadName(10)
@@ -27,18 +39,6 @@ public class ReaderLab {
                         (id, name) -> updateName(id, name),
                         (id, name, success) -> logIfFail(id, name, success)
                 );
-    }
-
-    public Reader<DAO, String> loadName(long id) {
-        return null;
-    }
-
-    public Reader<DAO, Boolean> updateName(long id, String name) {
-        return null;
-    }
-
-    public boolean logIfFail(long id, String name, boolean success) {
-        return true;
     }
 
     public Reader<DAO, Long> findNextId() {
