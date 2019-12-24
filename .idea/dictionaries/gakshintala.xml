@@ -2,6 +2,7 @@
   <dictionary name="gakshintala">
     <words>
       <w>composable</w>
+      <w>gakshintala</w>
       <w>kleisli</w>
       <w>vavr</w>
     </words>

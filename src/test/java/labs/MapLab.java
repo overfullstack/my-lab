@@ -14,6 +14,19 @@ import java.util.stream.Stream;
 public class MapLab {
 
     @Test
+    void mapMerge() {
+        var map = new HashMap<Integer, Integer>();
+        map.put(1, 0);
+        map.merge(1, 10, (oldValue, ignore) -> oldValue + 1); // 10 here would be ignore
+
+        map.merge(2, 1, (ignore, val) -> val + 1);
+
+        var newVal = map.getOrDefault(3, 0) + 1;
+        map.put(3, newVal);
+        System.out.println(map);
+    }
+
+    @Test
     void testMutationOfMapReference() {
         var map = new HashMap<Integer, MyClass>();
         map.put(1, new MyClass(1));
@@ -23,7 +36,7 @@ public class MapLab {
     }
 
     @Test
-    void mapMerge() {
+    void mapMergeWithListCombiner() {
         var map = new HashMap<Integer, List<MyClass>>();
         map.put(1, List.of(new MyClass(1)));
         final BiFunction<List<MyClass>, List<MyClass>, List<MyClass>> listCombiner = (oldList, newList) ->
@@ -31,6 +44,14 @@ public class MapLab {
         map.merge(2, List.of(new MyClass(2)), listCombiner);
         map.merge(2, List.of(new MyClass(2)), listCombiner);
         map.get(2).forEach(System.out::println);
+    }
+
+    @Test
+    void computeIfAbsentVsPutIfAbsent() {
+        var map = new HashMap<Integer, List<MyClass>>();
+        map.putIfAbsent(1, List.of());
+        map.computeIfAbsent(2, ignore -> List.of());
+        System.out.println(map.size());
     }
 
     @Data
