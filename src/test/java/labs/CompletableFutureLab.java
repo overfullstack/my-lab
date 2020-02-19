@@ -15,7 +15,7 @@ public class CompletableFutureLab {
     void isNotLazy() throws ExecutionException, InterruptedException {
         final var handle = CompletableFuture
                 .supplyAsync(() -> {
-                    System.out.println("Hello - " + Thread.currentThread().getName()); // Runs on thread other than main.
+                    System.out.println("Hello - " + Thread.currentThread().getName()); // Runs on thread other than arrow.higherkinds.main.
                     return "Hello";
                 }).thenCompose(s ->
                         CompletableFuture

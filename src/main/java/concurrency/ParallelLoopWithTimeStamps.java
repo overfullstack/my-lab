@@ -95,7 +95,7 @@ public class ParallelLoopWithTimeStamps {
             threads[i].start();
             offset += segmentLen;
         }
-        // do last segment on main thread
+        // do last segment on arrow.higherkinds.main thread
         workToFindSin(array, array.length - segmentLen, array.length);
 
         // wait for completion
@@ -123,7 +123,7 @@ public class ParallelLoopWithTimeStamps {
             });
             offset += segmentLen;
         }
-        // do last segment on main thread
+        // do last segment on arrow.higherkinds.main thread
         workToFindSin(array, array.length - segmentLen, array.length);
 
         // wait for completion

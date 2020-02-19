@@ -1,3 +1,4 @@
+/*
 package cyclops;
 
 import com.oath.cyclops.hkt.DataWitness.future;
@@ -57,3 +58,4 @@ public class KleisliLab {
 
     }
 }
+*/

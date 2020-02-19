@@ -1,3 +1,4 @@
+/*
 package cyclops;
 
 import cyclops.control.Future;
@@ -34,3 +35,4 @@ public class ReaderBadLab {
     private static class DAO {
     }
 }
+*/

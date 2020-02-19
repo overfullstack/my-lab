@@ -23,7 +23,7 @@ import java.util.Map;
  */
 public class Utils {
     public static final ObjectMapper mapper = new ObjectMapper();
-    private static final String RESOURCE_PATH = Paths.get(".").toAbsolutePath() + "/./src/main/resources/";
+    private static final String RESOURCE_PATH = Paths.get(".").toAbsolutePath() + "/./src/arrow.higherkinds.main/resources/";
 
     public static void main(String[] args) throws IOException, JSONException {
         /*List<Map<String, String>> emails = readJsonFromFile("email.json");

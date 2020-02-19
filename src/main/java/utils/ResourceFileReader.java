@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.nio.file.Paths;
 
 public class ResourceFileReader {
-    private static final String RESOURCE_PATH = Paths.get(".").toAbsolutePath() + "/./src/main/resources/";
+    private static final String RESOURCE_PATH = Paths.get(".").toAbsolutePath() + "/./src/arrow.higherkinds.main/resources/";
     private BufferedReader reader;
 
     public ResourceFileReader(String filePath) {
