@@ -2,24 +2,47 @@ import arrow.Kind
 import arrow.fx.IO
 import arrow.fx.extensions.io.async.async
 import arrow.fx.fix
-import arrow.fx.reactor.MonoK
+import arrow.fx.reactor.k
 import arrow.fx.typeclasses.Async
+import arrow.typeclasses.Monad
+import reactor.core.publisher.Mono
 
-open class Repo<F>(
-        private val dbClient: DBClient,
+class RepoAsync<F>(
+        private val dbClient: ReactorDBClient,
         M: Async<F>
 ) : Async<F> by M {
     fun get(): Kind<F, String> = fx.async {
-        val s = !effect { dbClient.get().suspended() }
-        s!!
+        !effect { dbClient.get().k().suspended()!! }
+    }
+}
+
+class RepoSync<F>(
+        private val dbClient: SyncDBClient,
+        M: Monad<F>
+) : Monad<F> by M {
+    fun get(): Kind<F, String> = fx.monad {
+        dbClient.get()
     }
 }
 
 fun main() {
-    val repo = Repo(DBClient(), IO.async())
-    print(repo.get().fix().unsafeRunSync())
+    val repoAsync = RepoAsync(ReactorDBClient(), IO.async<Nothing>())
+    println(repoAsync.get().fix().unsafeRunSyncEither())
+
+    val repoSync = RepoSync(SyncDBClient(), IO.async<Nothing>())
+    println(repoAsync.get().fix().unsafeRunSyncEither())
 }
 
-class DBClient {
-    fun get() = MonoK { "abc" }
+interface AsyncDBClient<F> {
+    fun get(): Kind<F, String>
 }
+
+class ReactorDBClient {
+    fun get(): Mono<String> = Mono.just("from mono async")
+}
+
+class SyncDBClient {
+    fun get() = "from sync"
+}
+
+

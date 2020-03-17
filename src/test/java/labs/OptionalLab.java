@@ -19,6 +19,11 @@ public class OptionalLab {
     }
 
     @Test
+    void getOnEmpty() {
+        Optional.empty().orElse(null);
+    }
+
+    @Test
     void immutability() {
         var bean = new Bean("str1", "str1", "");
         var beanFromOptional = Optional.of(bean)
@@ -84,4 +89,5 @@ public class OptionalLab {
     void emptyGet() {
         Assertions.assertThrows(NoSuchElementException.class, () -> Optional.empty().get());
     }
+
 }

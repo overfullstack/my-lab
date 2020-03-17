@@ -7,7 +7,7 @@ sealed class ShapeOOP { // Subtype polymorphism.
 
     // If all we want is a different behaviour at run time, why are we tying it up with the data?
     data class Circle(val radius: Double) : ShapeOOP() {
-        override fun areaWithFormula() = Math.PI * radius * radius // Methods are bound to their types by where there are declaration
+        override fun areaWithFormula() = Math.PI * radius * radius // Methods are bound to their types by where they are declared.
         override fun circumferenceWithFormula() = 2 * Math.PI * radius
     }
 

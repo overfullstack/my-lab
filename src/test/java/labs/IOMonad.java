@@ -63,6 +63,17 @@ public class IOMonad {
             return () -> value;
         }
 
+        static IO<Void> print(Object s) {
+            return () -> {
+                System.out.println(s);
+                return null;
+            };
+        }
+
+        static IO<String> read() {
+            return () -> new Scanner(System.in).next();
+        }
+
         /**
          * Returns an IO operation that performs this operation, ignores its
          * result, and then performs the given operation and returns its
@@ -71,6 +82,9 @@ public class IOMonad {
         default <R> IO<R> andThen(IO<R> io) {
             return flatMap(ignoredResult -> io);
         }
+
+
+        // ------ the implementations of IO<T> ------
 
         /**
          * Combines this IO operation with another IO operation which depends
@@ -87,19 +101,5 @@ public class IOMonad {
          * Must only be called by the execution environment!
          */
         T performIO();
-
-
-        // ------ the implementations of IO<T> ------
-
-        static IO<Void> print(Object s) {
-            return () -> {
-                System.out.println(s);
-                return null;
-            };
-        }
-
-        static IO<String> read() {
-            return () -> new Scanner(System.in).next();
-        }
     }
 }

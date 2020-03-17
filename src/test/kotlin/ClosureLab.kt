@@ -16,7 +16,7 @@ class ClosureLab {
             }
         }
     }
-    
+
 
     @Test
     fun `closure wrapper as class member should access instance state`() {
@@ -50,7 +50,7 @@ class ClosureLab {
         println()
         repeat(3) { print(closure()) }
     }
-    
+
     @Test
     fun foo() {
         fooFun {
@@ -63,7 +63,7 @@ class ClosureLab {
     }
 
     private inline fun fooFun(forEachFn: (Int) -> Unit) {
-        listOf(1, 2, 3, 4, 5).forEach (forEachFn)
+        listOf(1, 2, 3, 4, 5).forEach(forEachFn)
         println("this point is unreachable")
     }
 }

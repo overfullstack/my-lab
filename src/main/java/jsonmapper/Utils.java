@@ -23,14 +23,14 @@ import java.util.Map;
  */
 public class Utils {
     public static final ObjectMapper mapper = new ObjectMapper();
-    private static final String RESOURCE_PATH = Paths.get(".").toAbsolutePath() + "/./src/arrow.higherkinds.main/resources/";
+    private static final String RESOURCE_PATH = Paths.get(".").toAbsolutePath() + "/./src/arrow.hk.main/resources/";
 
     public static void main(String[] args) throws IOException, JSONException {
         /*List<Map<String, String>> emails = readJsonFromFile("email.json");
         System.out.println(emails);
 
-        Map<String, String> parentMap = new HashMap<>();
-        Map<String, String> childMap = new HashMap<>();
+        Map<String, String> parentMap = decoupled HashMap<>();
+        Map<String, String> childMap = decoupled HashMap<>();
         childMap.put("email", "gopalakshintala@gmail.com");
         parentMap.put("emails", mapper.writeValueAsString(childMap));
         mapToString(parentMap);*/

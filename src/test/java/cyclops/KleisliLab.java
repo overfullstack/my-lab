@@ -27,7 +27,7 @@ public class KleisliLab {
     }
 
     public Kleisli<future, DAO, Boolean> save(long id, Data data) {
-        return Kleisli.of(FutureInstances.monad(), DAO -> DAO.save(id, new Data()));
+        return Kleisli.of(FutureInstances.monad(), DAO -> DAO.save(id, decoupled Data()));
     }
 
     @Test

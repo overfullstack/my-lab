@@ -8,11 +8,11 @@ public class KleisliLab {
    /* @Test
     void withKleisli() {
         System.out.println("Run asynchronously..");
-        Capitalizer<future> processorAsync = new Capitalizer<>(FutureInstances.monad(), new AsyncWork());
+        Capitalizer<future> processorAsync = decoupled Capitalizer<>(FutureInstances.monad(), decoupled AsyncWork());
         assertTrue(FutureKind.narrowK(processorAsync.process()).get());
 
         System.out.println("Run synchronously..");
-        Capitalizer<tryType> processorSync = new Capitalizer<>(TryInstances.monad(), new SyncWork());
+        Capitalizer<tryType> processorSync = decoupled Capitalizer<>(TryInstances.monad(), decoupled SyncWork());
         assertTrue(TryKind.narrowK(processorSync.process()).get());
     }
 

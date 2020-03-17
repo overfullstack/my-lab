@@ -1,10 +1,15 @@
 package vavr;
 
-import common.ValidationFailure;
 import io.vavr.control.Try;
 import org.junit.jupiter.api.Test;
+import validation.lib.ValidationFailure;
 
 public class TryLab {
+    static String throwRunTimeException(String msg) {
+        if (true) throw new RuntimeException("I threw it");
+        return msg;
+    }
+
     @Test
     void tryIsNotLazy() {
         var tryNotLazy = Try.of(() -> {
@@ -58,11 +63,6 @@ public class TryLab {
         });
         // Outside Try holds inside try exception.
         System.out.println(outerTry.getOrElseGet(Throwable::getMessage));
-    }
-
-    static String throwRunTimeException(String msg) {
-        if (true) throw new RuntimeException("I threw it");
-        return msg;
     }
 
     @Test

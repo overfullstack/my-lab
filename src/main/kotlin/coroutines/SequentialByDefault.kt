@@ -4,7 +4,7 @@ package coroutines
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 
-fun main() = runBlocking {  
+fun main() = runBlocking {
     println("Main Start")
     delayFor(1, 2000L)
     println("After-1")

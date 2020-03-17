@@ -4,9 +4,14 @@ import arrow.Kind
 import arrow.core.Option
 import arrow.core.left
 import arrow.core.right
-import arrow.fx.rx2.SingleK
+import arrow.fx.IO
+import arrow.fx.extensions.io.async.async
+import arrow.fx.fix
+import arrow.fx.rx2.*
+import arrow.fx.rx2.extensions.flowablek.async.async
+import arrow.fx.rx2.extensions.maybek.async.async
+import arrow.fx.rx2.extensions.observablek.async.async
 import arrow.fx.rx2.extensions.singlek.async.async
-import arrow.fx.rx2.fix
 import arrow.fx.typeclasses.Async
 import arrow.typeclasses.ApplicativeError
 import arrow.typeclasses.User
@@ -19,8 +24,8 @@ data class UnknownError(val underlying: Throwable) : UserLookupError()
 
 
 /**
- * Both ways of using TypeClasses depicted below. 
- * Implementation by Delegation through Class and Inheriting through interface. 
+ * Both ways of using TypeClasses depicted below.
+ * Implementation by Delegation through Class and Inheriting through interface.
  */
 
 class LocalDataSource<F>(A: ApplicativeError<F, Throwable>)
@@ -67,7 +72,7 @@ class Module<F>(A: Async<F>) {
     private val remoteDataSource: RemoteDataSource<F> = object : RemoteDataSource<F>, Async<F> by A {
         override val internetStorage = mapOf(User(UserId("user2")) to listOf(Task("Remote Task assigned to user2")))
     }
-    
+
     val repository: TaskRepository<F> = TaskRepository(localDataSource, remoteDataSource, A)
 }
 
@@ -87,7 +92,7 @@ object Test {
             repository.allTasksByUser(user3).fix().single.subscribe({ println(it) }, { println(it) })
         }
 
-        /*val maybeModule = Module(MaybeK.async())
+        val maybeModule = Module(MaybeK.async())
         maybeModule.run {
             repository.allTasksByUser(user1).fix().maybe.subscribe({ println(it) }, { println(it) })
             repository.allTasksByUser(user2).fix().maybe.subscribe({ println(it) }, { println(it) })
@@ -108,7 +113,7 @@ object Test {
             repository.allTasksByUser(user3).fix().flowable.subscribe({ println(it) }, { println(it) })
         }
 
-        *//*val deferredModule = Module(DeferredK.async())
+        /*val deferredModule = Module(DeferredK.async())
         deferredModule.run {
             runBlocking {
                 try {
@@ -119,13 +124,13 @@ object Test {
                     println(e)
                 }
             }
-        }*//*
-
-        val ioModule = Module(IO.async())
-        ioModule.run {
-            println(repository.allTasksByUser(user1).fix().attempt().unsafeRunSync())
-            println(repository.allTasksByUser(user2).fix().attempt().unsafeRunSync())
-            println(repository.allTasksByUser(user3).fix().attempt().unsafeRunSync())
         }*/
+
+        val ioModule = Module(IO.async<Nothing>())
+        ioModule.run {
+            println(repository.allTasksByUser(user1).fix().attempt().unsafeRunSyncEither())
+            println(repository.allTasksByUser(user2).fix().attempt().unsafeRunSyncEither())
+            println(repository.allTasksByUser(user3).fix().attempt().unsafeRunSyncEither())
+        }
     }
 }

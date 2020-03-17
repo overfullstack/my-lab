@@ -11,7 +11,7 @@ fun main() = runBlocking {
         longer.await() // while waiting on this, thread is freed and hops to shorter 
         shorter.await()
     }
-    
+
     println("Main stop")
 }
 
