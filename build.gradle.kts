@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.3.61"
+    kotlin("jvm") version "1.3.71"
     idea
     java
     id("io.freefair.lombok") version "4.1.6"
@@ -21,7 +21,7 @@ val arrowSnapshotVersion = "0.11.0-SNAPSHOT"
 val arrowVersion = "0.10.4"
 
 dependencies {
-    implementation(kotlin("stdlib-jdk8"))
+    implementation(kotlin("stdlib-jdk8"))    
 
     implementation("io.arrow-kt:arrow-core:$arrowSnapshotVersion")
     implementation("io.arrow-kt:arrow-fx:$arrowSnapshotVersion")
@@ -36,8 +36,12 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.3")
     implementation("io.reactivex.rxjava2:rxjava:+")
 
-    testImplementation("org.junit.jupiter:junit-jupiter:+")
-    testImplementation("org.amshove.kluent:kluent:+")
+    testImplementation("org.junit.jupiter:junit-jupiter:+") {
+        exclude(group="junit", module="junit")
+    }
+    testImplementation("org.amshove.kluent:kluent:+") {
+        exclude(group="junit", module="junit")
+    }
 
     implementation("org.codehaus.jackson:jackson-mapper-asl:+")
     implementation("com.google.code.gson:gson:+")

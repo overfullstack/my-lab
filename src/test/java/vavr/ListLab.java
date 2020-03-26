@@ -212,5 +212,14 @@ public class ListLab {
         beans.toSet();
     }
 
+    @Test
+    void findFirstWithGet() {
+        System.out.println(
+                List.of(1, 2, 3, 4, 5).iterator()
+                        .peek(System.out::println)
+                        .filter(i -> i >= 6)
+                        .getOrElse(0) // short-circuits
+        ); 
+    }
 
 }

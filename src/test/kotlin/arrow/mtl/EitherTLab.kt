@@ -5,6 +5,7 @@ import arrow.core.left
 import arrow.core.right
 import arrow.fx.IO
 import arrow.fx.IOPartialOf
+import arrow.fx.extensions.fx
 import arrow.fx.extensions.io.monad.monad
 import arrow.fx.fix
 import arrow.mtl.extensions.eithert.monad.monad
@@ -36,4 +37,5 @@ class EitherTLab {
     private fun iOEither() = IO.just(
             if (sendFalse()) "rightX".right() else "leftX".left()
     )
+    
 }

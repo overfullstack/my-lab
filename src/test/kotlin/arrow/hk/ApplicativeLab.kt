@@ -9,17 +9,22 @@ import arrow.core.right
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
-class Product {
+class ApplicativeLab {
 
     @Test
     fun `Left * Right`() {
         val product = Either.applicative<String>().run {
             mapN(
                     "left".left(),
-                    "right".right()
+                    getRight()
             ) {}
         }.fix()
         product.fold({ assertEquals("left", it) }, {})
+    }
+
+    private fun getRight(): Either<String, String> {
+        println("This should not be printed")
+        return "right".right()
     }
 
     @Test
