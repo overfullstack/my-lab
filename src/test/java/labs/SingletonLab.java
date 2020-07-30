@@ -16,4 +16,5 @@ public class SingletonLab {
         var singletonBean2 = SingletonBean.INSTANCE;
         Assertions.assertEquals(singletonBean1, singletonBean2);
     }
+
 }

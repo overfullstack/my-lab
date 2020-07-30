@@ -14,8 +14,8 @@ import arrow.fx.rx2.extensions.observablek.async.async
 import arrow.fx.rx2.extensions.singlek.async.async
 import arrow.fx.typeclasses.Async
 import arrow.typeclasses.ApplicativeError
-import arrow.typeclasses.User
-import arrow.typeclasses.UserId
+import common.User
+import common.UserId
 
 sealed class UserLookupError : RuntimeException() //assuming you are using exceptions
 data class UserNotInLocalStorage(val user: User) : UserLookupError()
@@ -79,7 +79,7 @@ class Module<F>(A: Async<F>) {
 object Test {
 
     @JvmStatic
-    fun main(args: Array<String>): Unit {
+    fun main(): Unit {
         val user1 = User(UserId("user1"))
         val user2 = User(UserId("user2"))
         val user3 = User(UserId("unknown user"))
@@ -126,11 +126,11 @@ object Test {
             }
         }*/
 
-        val ioModule = Module(IO.async<Nothing>())
+        val ioModule = Module(IO.async())
         ioModule.run {
-            println(repository.allTasksByUser(user1).fix().attempt().unsafeRunSyncEither())
-            println(repository.allTasksByUser(user2).fix().attempt().unsafeRunSyncEither())
-            println(repository.allTasksByUser(user3).fix().attempt().unsafeRunSyncEither())
+            println(repository.allTasksByUser(user1).fix().attempt().unsafeRunSync())
+            println(repository.allTasksByUser(user2).fix().attempt().unsafeRunSync())
+            println(repository.allTasksByUser(user3).fix().attempt().unsafeRunSync())
         }
     }
 }

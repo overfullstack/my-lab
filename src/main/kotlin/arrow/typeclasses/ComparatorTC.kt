@@ -3,10 +3,14 @@ package arrow.typeclasses
 
 data class Apple(val weight: Int)
 
-val apple = Comparator<Apple> { o1, o2 ->
-    o1?.let { first ->
-        o2?.let { second ->
+val appleComparator = Comparator<Apple> { apple1, apple2 ->
+    apple1?.let { first ->
+        apple2?.let { second ->
             first.weight.compareTo(second.weight)
         } ?: 1
     } ?: 0
+}
+
+fun main() {
+    println(listOf(Apple(3), Apple(1), Apple(2)).sortedWith(appleComparator))
 }

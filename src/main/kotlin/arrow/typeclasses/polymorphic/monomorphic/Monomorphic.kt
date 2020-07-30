@@ -1,7 +1,7 @@
 package arrow.typeclasses.polymorphic.monomorphic
 
-import arrow.typeclasses.User
-import arrow.typeclasses.UserId
+import common.User
+import common.UserId
 import arrow.typeclasses.polymorphic.Task
 import io.reactivex.Observable
 import io.reactivex.schedulers.Schedulers
@@ -60,7 +60,7 @@ class Module {
 object Test {
 
     @JvmStatic
-    fun main(args: Array<String>): Unit {
+    fun main(): Unit {
         val user1 = User(UserId("user1"))
         val user2 = User(UserId("user2"))
         val user3 = User(UserId("unknown user"))

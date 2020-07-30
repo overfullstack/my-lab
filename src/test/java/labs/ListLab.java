@@ -35,4 +35,10 @@ public class ListLab {
                 .collect(Collectors.joining(","))
         );
     }
+
+    @Test
+    void sumWithReduce() {
+        var list = List.of(1, 2, 3);
+        System.out.println(list.stream().reduce(Integer::sum)); // Reduce expects the same data type in return.
+    }
 }

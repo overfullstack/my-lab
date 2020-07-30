@@ -73,6 +73,13 @@ public class IteratorLab {
     }
 
     @Test
+    void testLazy() {
+        final var peek = beans.iterator().peek(System.out::println).filter(bean -> bean.getProp().equals("1"));
+        System.out.println("Printed only after this, as Iterator is lazy");
+        peek.get();
+    }
+
+    @Test
     void foldApply() {
         List<Function<Bean, Bean>> functionList = List.of(
                 bean -> {

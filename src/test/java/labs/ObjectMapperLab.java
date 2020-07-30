@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static Utils.FileUtils.TEST_RESOURCE_PATH;
+import static utils.FileUtils.TEST_RESOURCE_PATH;
 import static jsonmapper.Utils.fileToString;
 
 /* gakshintala created on 10/9/19 */

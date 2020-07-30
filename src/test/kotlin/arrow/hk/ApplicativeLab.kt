@@ -6,8 +6,8 @@ import arrow.core.extensions.either.applicative.applicative
 import arrow.core.fix
 import arrow.core.left
 import arrow.core.right
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class ApplicativeLab {
 

@@ -6,6 +6,7 @@ import io.vavr.Tuple;
 import io.vavr.collection.HashSet;
 import io.vavr.collection.List;
 import io.vavr.collection.Set;
+import io.vavr.control.Either;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -218,8 +219,18 @@ public class ListLab {
                 List.of(1, 2, 3, 4, 5).iterator()
                         .peek(System.out::println)
                         .filter(i -> i >= 6)
-                        .getOrElse(0) // short-circuits
+                        .getOrElse(0) // short-circuits. Using `get()` here throws `NoSuchElementException`
         ); 
+    }
+
+
+    void someOtherFun() {
+        Either<String, ?> abc = Either.right("");
+        somefun(abc);
+    }
+
+    <T> void somefun(T list) {
+
     }
 
 }

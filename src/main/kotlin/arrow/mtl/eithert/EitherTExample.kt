@@ -41,7 +41,7 @@ val personDB: Map<Int, Person> = mapOf(
         )
 )
 
-val adressDB: Map<Int, Address> = mapOf(
+val addressDB: Map<Int, Address> = mapOf(
         1 to Address(
                 id = 1,
                 country = Some(
@@ -54,12 +54,17 @@ val adressDB: Map<Int, Address> = mapOf(
 
 fun findPerson(personId: Int): ObservableK<Either<BizError, Person>> =
         ObservableK.just(
-                Option.fromNullable(personDB.get(personId)).toEither { PersonNotFound(personId) }
+                Option.fromNullable(personDB[personId]).toEither { PersonNotFound(personId) }
         ) //mock impl for simplicity
+
+fun findPerson2(personId: Int): ObservableK<Either<BizError, Person>> =
+        ObservableK.just(
+                PersonNotFound(personId).left()
+        )
 
 fun findCountry(addressId: Int): ObservableK<Either<BizError, Country>> =
         ObservableK.just(
-                Option.fromNullable(adressDB.get(addressId))
+                Option.fromNullable(addressDB[addressId])
                         .flatMap { it.country }
                         .toEither { CountryNotFound(addressId) }
         ) //mock impl for simplicity
@@ -83,8 +88,8 @@ fun getCountryCode(personId: Int): ObservableK<Either<BizError, String>> =
         }
 
 fun getCountryCodeWithMonadTransformer(personId: Int): ObservableK<Either<BizError, String>> =
-        EitherT.monad<ForObservableK, BizError>(ObservableK.monad()).fx.monad {
-            val person = !EitherT(findPerson(personId))
+        EitherT.monad<BizError, ForObservableK>(ObservableK.monad()).fx.monad {
+            val person = !EitherT(findPerson2(personId))
             val address = !EitherT(ObservableK.just(
                     person.address.toEither { AddressNotFound(personId) }
             ))
@@ -93,3 +98,6 @@ fun getCountryCodeWithMonadTransformer(personId: Int): ObservableK<Either<BizErr
             country.code
         }.value().fix()
 
+fun main() {
+    println(getCountryCodeWithMonadTransformer(1).observable.blockingFirst())
+}

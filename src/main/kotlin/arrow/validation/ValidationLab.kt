@@ -40,6 +40,7 @@ interface FormFieldValidation<F, M : FFType> : ApplicativeError<F, Nel<Validatio
             ) {
                 Email(value)
             }.handleErrorWith { raiseError(ValidationError.NotAnEmail(it).nel()) }
+    
 }
 
 sealed class Rules2<F, M : FFType>(A: ApplicativeError<F, Nel<ValidationError>>) :

@@ -1,6 +1,6 @@
 package arrow.typeclasses.polymorphic.monomorphic
 
-import arrow.typeclasses.User
+import common.User
 import arrow.typeclasses.polymorphic.Task
 import io.reactivex.Observable
 

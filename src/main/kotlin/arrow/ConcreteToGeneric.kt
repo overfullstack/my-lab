@@ -26,11 +26,11 @@ class RepoSync<F>(
 }
 
 fun main() {
-    val repoAsync = RepoAsync(ReactorDBClient(), IO.async<Nothing>())
-    println(repoAsync.get().fix().unsafeRunSyncEither())
+    val repoAsync = RepoAsync(ReactorDBClient(), IO.async())
+    println(repoAsync.get().fix().unsafeRunSync())
 
-    val repoSync = RepoSync(SyncDBClient(), IO.async<Nothing>())
-    println(repoAsync.get().fix().unsafeRunSyncEither())
+    val repoSync = RepoSync(SyncDBClient(), IO.async())
+    println(repoAsync.get().fix().unsafeRunSync())
 }
 
 interface AsyncDBClient<F> {

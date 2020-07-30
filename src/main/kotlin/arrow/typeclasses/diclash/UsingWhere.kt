@@ -3,8 +3,8 @@ package arrow.typeclasses.diclash
 import arrow.Kind
 import arrow.typeclasses.Applicative
 import arrow.typeclasses.Show
-import arrow.typeclasses.User
-import arrow.typeclasses.UserId
+import common.User
+import common.UserId
 
 fun <F> Applicative<F>.findUserName(S: Show<User>, id: Kind<F, UserId>): Kind<F, String> = S.run {
     id.map { fetchUser(it) }.map { it.show() }

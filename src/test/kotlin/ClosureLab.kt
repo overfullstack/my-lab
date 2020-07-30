@@ -1,3 +1,5 @@
+import arrow.core.Option
+import arrow.core.some
 import org.junit.jupiter.api.Test
 
 /* gakshintala created on 12/24/19 */
@@ -27,6 +29,7 @@ class ClosureLab {
         println(state.result)
         repeat(3) { state.closureWrapper()() }
         println(state.result)
+        Option("a").flatMap { Option(it.toUpperCase()) }
     }
 
     private inline fun someOtherFun(closure: () -> Unit) {
