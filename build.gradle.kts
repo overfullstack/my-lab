@@ -3,16 +3,14 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     kotlin("jvm")
     java
-    id("io.freefair.lombok") version "5.1.0"
+    id("io.freefair.lombok") version "5.3.3.3"
 }
 
 group = "com.gakshintala.mylab"
 version = "1.0-SNAPSHOT"
 
 repositories {
-    jcenter()
-    maven("https://dl.bintray.com/arrow-kt/arrow-kt/")
-    maven("https://oss.jfrog.org/artifactory/oss-snapshot-local/")
+    mavenCentral()
 }
 
 val arrowSnapshotVersion = "latest.integration"
@@ -31,13 +29,9 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:+")
     implementation("io.reactivex.rxjava2:rxjava:+")
 
-    testImplementation("org.junit.jupiter:junit-jupiter-api:+")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:+")
-
-    /*testImplementation("org.amshove.kluent:kluent:+") {
-        exclude("junit", "junit")
-        exclude("org.junit.vintage", "junit-vintage-engine")
-    }*/
+    testImplementation(platform("org.junit:junit-bom:5.8.0-M1"))
+    testImplementation("org.junit.jupiter:junit-jupiter-api")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 
     implementation("org.codehaus.jackson:jackson-mapper-asl:+")
     implementation("com.google.code.gson:gson:+")
@@ -49,21 +43,13 @@ dependencies {
     implementation("org.apache.commons:commons-text:+")
     implementation("io.vavr:vavr:+")
 
-    /*implementation("com.oath.cyclops:cyclops:10.3.0")
-    implementation("com.oath.cyclops:cyclops-pure:10.3.0")
-    implementation("com.oath.cyclops:cyclops-vavr-integration:10.0.0-M1")
-    implementation("com.oath.cyclops:cyclops-anym:10.3.3")*/
+    testImplementation("org.hamcrest:hamcrest:2.2")
 
-    /*compileOnly("org.projectlombok:lombok:+")
-    annotationProcessor("org.projectlombok:lombok:+")
-
-    testCompileOnly("org.projectlombok:lombok:+")
-    testAnnotationProcessor("org.projectlombok:lombok:+")*/
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_14
-    targetCompatibility = JavaVersion.VERSION_14
+    sourceCompatibility = JavaVersion.VERSION_16
+    targetCompatibility = JavaVersion.VERSION_16
 }
 
 tasks.withType<JavaCompile> {
@@ -73,7 +59,7 @@ tasks.withType<JavaCompile> {
 
 tasks.withType<KotlinCompile> {
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_14.toString()
+        jvmTarget = JavaVersion.VERSION_15.toString()
         freeCompilerArgs = listOf("-Xjsr305=strict", "-Xjvm-default=enable") // These are related to Java Kotlin interop
         suppressWarnings = true
     }
@@ -81,9 +67,6 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Test> {
     ignoreFailures = true
-    useJUnitPlatform {
-        includeEngines("junit-jupiter")
-        excludeEngines("junit-vintage")
-    }
+    useJUnitPlatform()
     jvmArgs("--enable-preview")
 }

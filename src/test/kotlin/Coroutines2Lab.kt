@@ -1,9 +1,10 @@
 import common.User
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
 import org.junit.jupiter.api.Test
 import kotlin.concurrent.thread
 
@@ -43,7 +44,7 @@ class Coroutines2Lab {
         println("done in main")
     }
 
-    suspend fun getUserStandardSuspended(userId: String, callback: (User) -> Unit) {
+    private suspend fun getUserStandardSuspended(userId: String, callback: (User) -> Unit) {
         println(Thread.currentThread().name)
         delay(1000)
         throw RuntimeException("throwing exception from thread")
@@ -55,18 +56,19 @@ class Coroutines2Lab {
         val userId = 992
         GlobalScope.launch {
             println("about to call await " + Thread.currentThread().name)
-            println(getUserByIdFromNetwork(userId).await())
+            println(getUserByIdFromNetwork(userId))
             println("await Called " + Thread.currentThread().name)
         }
         println("Main done")
         Thread.sleep(4000)
     }
 
-    private fun getUserByIdFromNetwork(userId: Int) = GlobalScope.async {
-        println("inside async " + Thread.currentThread().name)
-        delay(3000)
-        User(userId)
-    }
+    private suspend fun getUserByIdFromNetwork(userId: Int): User =
+        withContext(Dispatchers.Default) {
+            println("inside async " + Thread.currentThread().name)
+            delay(3000)
+            User(userId)
+        }
 
 }
 

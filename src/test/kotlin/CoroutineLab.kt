@@ -9,6 +9,23 @@ import kotlin.system.measureTimeMillis
 
 /* gakshintala created on 4/19/20 */
 class CoroutineLab {
+    
+    @Test
+    fun `main thread is suspended when no launch is used`() = runBlocking {
+        println("Main Start")
+        delayFor(1, 2000L)
+        println("After-1")
+        delayFor(2, 1000L)
+        println("After-2")
+        println("Main End")
+    }
+
+    private suspend fun delayFor(id: Int, delayTime: Long) {
+        println("Delay-$id Start")
+        delay(delayTime) // This suspends main thread
+        println("Delay-$id End")
+    }
+    
     @Test
     fun `launch starts concurrent coroutine on main thread`() = runBlocking<Unit> {
         launch { 
@@ -107,6 +124,35 @@ class CoroutineLab {
     
     private suspend fun workWithContext(i: Int) = withContext(Dispatchers.Default) {
         work(i)
+    }
+    
+    @Test
+    fun `withDispatchers vs launch`() = runBlocking {
+        println("Main start")
+        withContext(Dispatchers.Default) { // This runs on ThreadPool, same as starting a fork-join pool
+            val longer = async { delayFun(1, 2000) }
+            val shorter = async { delayFun(2) }
+            longer.await() // while waiting on this, thread is freed and hops to shorter 
+            shorter.await()
+        }
+
+        println("Dispatcher end")
+
+        launch { // This runs on main (Test Worker), but doesn't block main thread
+            val longer = async { delayFun(1, 2000) }
+            val shorter = async { delayFun(2) }
+            longer.await()
+            shorter.await()
+        }
+
+        println("Main end")
+    }
+
+    private suspend fun delayFun(id: Int, delay: Long = 1000) {
+        println("$id - Delay start in Thread: ${Thread.currentThread().name}") // It doesn't block the main thread.
+        delay(delay) // Thread freed here.
+        //Thread.sleep(1000)
+        println("$id - Delay end   in Thread: ${Thread.currentThread().name}") // ! It can be started and ended by different thread.
     }
     
 }
