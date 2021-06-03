@@ -1,7 +1,7 @@
 package generics
 
-import generics.reified.SomeJava
-import generics.reified.SomeOther
+import reified.SomeJava
+import reified.SomeOther
 
 /*class SomeClass<T>(val someOther: SomeOther<T>) {
 }*/

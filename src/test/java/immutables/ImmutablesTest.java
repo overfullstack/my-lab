@@ -1,20 +1,15 @@
 package immutables;
 
-import lombok.Value;
-import lombok.val;
+import io.vavr.CheckedFunction1;
 import org.junit.jupiter.api.Test;
-
-import java.util.List;
 
 class ImmutablesTest {
     @Test
     void headerConfig() {
-        System.out.println(new Bean(List.of()));
-        System.out.println(Point.toBuild().x("").y(0.0).prepare());
-    }
-
-    @Value
-    private static class Bean {
-        List<String> batch;
+        ImmutablePerson.builder()
+                .age(33)
+                .isEmployed(false)
+                .addName("Billy Bounce")
+                .build();
     }
 }

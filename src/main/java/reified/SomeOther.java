@@ -1,4 +1,4 @@
-package generics.reified;
+package reified;
 
 public class SomeOther<T> {
 }

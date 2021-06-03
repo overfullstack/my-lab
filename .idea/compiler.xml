@@ -3,14 +3,6 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
-      <profile name="Gradle Imported" enabled="true">
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$USER_HOME$/.m2/repository/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar" />
-        </processorPath>
-        <module name="my-lab.main" />
-        <module name="my-lab.test" />
-      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="16" />
   </component>

@@ -1,25 +1,25 @@
 package immutables;
 
 import org.immutables.value.Value;
-import org.immutables.value.Value.Style.ImplementationVisibility;
 
-import java.util.List;
-
-@Value.Style(visibility = ImplementationVisibility.PACKAGE, build = "prepare", depluralize = true, add = "")
+@Value.Style(visibility = Value.Style.ImplementationVisibility.PACKAGE)
 @Value.Immutable
-public abstract class Point {
-  public abstract List<String> xs();
-  public abstract double y();
+public interface Point {
+  @Value.Parameter public abstract double x();
+  @Value.Parameter public abstract double y();
 
-  public static Builder toBuild() {
+  public static Point of(double x, double y) {
+    return ImmutablePoint.of(x, y);
+  }
+
+  public static Builder builder() {
     return ImmutablePoint.builder();
   }
   // Signatures of abstract methods should match to be
   // overridden by implementation builder
-  public interface Builder {
-    Builder xs(Iterable<String> x);
-    Builder x(String x);
+  interface Builder {
+    Builder x(double x);
     Builder y(double y);
-    Point prepare();
+    Point build();
   }
 }

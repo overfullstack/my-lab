@@ -1,3 +1,4 @@
+import arrow.core.Either
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
@@ -18,6 +19,7 @@ class CoroutineLab {
         delayFor(2, 1000L)
         println("After-2")
         println("Main End")
+        Either
     }
 
     private suspend fun delayFor(id: Int, delayTime: Long) {

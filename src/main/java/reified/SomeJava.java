@@ -1,4 +1,4 @@
-package generics.reified;
+package reified;
 
 
 import org.jetbrains.annotations.NotNull;
