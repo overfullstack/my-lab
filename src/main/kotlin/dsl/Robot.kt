@@ -11,11 +11,11 @@ class Robot {
   }
 }
 
-enum class Direction { left, right }
-enum class Speed { fast }
+enum class Direction { LEFT, RIGHT }
+enum class Speed { FAST }
 
 object DirectionSpeedReceiver {
-  val left = Direction.left
-  val right = Direction.right
-  val fast = Speed.fast
+  val left = Direction.LEFT
+  val right = Direction.RIGHT
+  val fast = Speed.FAST
 }
