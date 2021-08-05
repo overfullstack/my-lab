@@ -2,9 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
   kotlin("jvm")
-  kotlin("kapt")
   java
-  //id("io.freefair.lombok") version "6.1.0-m3"
   id("com.adarshr.test-logger") version "3.0.0"
 }
 
@@ -13,39 +11,20 @@ version = "1.0-SNAPSHOT"
 
 repositories {
   mavenCentral()
-  maven("https://oss.sonatype.org/content/repositories/snapshots/")
 }
 
-//val lombokVersion = "1.18.20"
-val immutablesVersion = "2.8.8"
 dependencies {
-  /*kapt("org.projectlombok:lombok:$lombokVersion")
-  compileOnly("org.projectlombok:lombok:$lombokVersion")
-  testCompileOnly("org.projectlombok:lombok:$lombokVersion")*/
-
-  kapt("org.immutables:value:$immutablesVersion")
-  compileOnly("org.immutables:builder:$immutablesVersion")
-  compileOnly("org.immutables:value-annotations:$immutablesVersion")
-
-  kaptTest("org.immutables:value:$immutablesVersion")
-  testCompileOnly("org.immutables:builder:$immutablesVersion")
-  testCompileOnly("org.immutables:value-annotations:$immutablesVersion")
-
+  
   implementation("com.squareup.moshi:moshi:+")
   runtimeOnly("com.squareup.moshi:moshi-adapters:+")
 
   compileOnly("org.jetbrains:annotations:+")
   testCompileOnly("org.jetbrains:annotations:+")
-
-  // ARROW --->
-  implementation(platform("io.arrow-kt:arrow-stack:1.0.0-SNAPSHOT"))
-  implementation("io.arrow-kt:arrow-core")
-  implementation("io.arrow-kt:arrow-fx-coroutines")
-  implementation("io.arrow-kt:arrow-optics")
-
-  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:+")
+  
   implementation("io.vavr:vavr:+")
   implementation("io.vavr:vavr-kotlin:+")
+
+  testImplementation("org.hamcrest:java-hamcrest:+")
 
   testImplementation(platform("org.junit:junit-bom:+"))
   testImplementation("org.junit.jupiter:junit-jupiter-api")

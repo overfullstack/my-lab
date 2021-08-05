@@ -1,3 +1,4 @@
+@file:JvmName("Utils")
 package utils
 
 import java.io.File

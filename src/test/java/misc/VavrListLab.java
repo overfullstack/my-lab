@@ -19,6 +19,11 @@ class VavrListLab {
     var list2 = List.of(1,2,3);
     return Tuple.of(list1, list2);
   }
+
+  @Test
+  void optionalTest() {
+    Optional.empty().or(() -> null);
+  }
   
   @Test
   void zipit2() {

@@ -11,3 +11,6 @@ pluginManagement {
 }
 
 rootProject.name = "my-lab"
+include("apt")
+include("arrow")
+include("lombok")

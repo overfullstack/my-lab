@@ -1,4 +1,4 @@
-package misc;
+package eggservice;
 
 import org.immutables.value.Value;
 import org.junit.jupiter.api.Assertions;
