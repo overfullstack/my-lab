@@ -31,6 +31,9 @@ dependencies {
   testImplementation(platform("org.junit:junit-bom:+"))
   testImplementation("org.junit.jupiter:junit-jupiter-api")
   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+
+  implementation("org.slf4j:slf4j-api:+")
+  runtimeOnly("org.apache.logging.log4j:log4j-slf4j18-impl:+")
 }
 
 tasks.getByName<Test>("test") {

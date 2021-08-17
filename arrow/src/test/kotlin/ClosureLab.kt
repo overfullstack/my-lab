@@ -28,7 +28,7 @@ class ClosureLab {
         println(state.result)
         repeat(3) { state.closureWrapper()() }
         println(state.result)
-        Option("a").flatMap { Option(it.toUpperCase()) }
+        Option("a").flatMap { Option(it.uppercase()) }
     }
 
     private inline fun someOtherFun(closure: () -> Unit) {

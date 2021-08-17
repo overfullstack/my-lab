@@ -3,7 +3,7 @@ import io.freefair.gradle.plugins.lombok.LombokExtension.LOMBOK_VERSION
 plugins {
   kotlin("jvm")
   java
-  id("io.freefair.lombok") version "6.1.0-m3"
+  id("io.freefair.lombok") version "6.1.0"
   id("org.sonarqube") version "3.3"
 }
 

@@ -14,7 +14,6 @@ repositories {
 }
 
 dependencies {
-  
   implementation("com.squareup.moshi:moshi:+")
   runtimeOnly("com.squareup.moshi:moshi-adapters:+")
 
