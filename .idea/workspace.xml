@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="gitignore added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="my-lab" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="my-lab" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="my-lab" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="my-lab" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="my-lab" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="my-lab" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Kotlin File" />
+        <option value="Kotlin Script" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.sdkman/candidates/java/16.0.1.9.1-ms/lib/src.zip!/java.base/java/time/LocalDate.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/cartesian/IntArgumentsProvider.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/apt/src/test/java/eggservice/Egg2ServiceDeclarativeTest.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/apt/src/test/java/immutables/ImmutablesTest.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.editorconfig" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/arrow/src/test/kotlin/ExtensionLab.kt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.vavr/vavr/1.0.0-SNAPSHOT/14a3351689941f717183d8bfcd5b163068c225fc/vavr-1.0.0-SNAPSHOT-sources.jar!/io/vavr/collection/List.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/cartesian/Cartesian.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.vavr/vavr/1.0.0-SNAPSHOT/14a3351689941f717183d8bfcd5b163068c225fc/vavr-1.0.0-SNAPSHOT-sources.jar!/io/vavr/Function1.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/test/kotlin/dsl/RobotTest.kt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$USER_HOME$/.sdkman/candidates/java/16.0.1.9.1-ms/lib/src.zip!/java.base/java/util/stream/Stream.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/cartesian/CartesianIntSource.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.vavr/vavr/1.0.0-SNAPSHOT/14a3351689941f717183d8bfcd5b163068c225fc/vavr-1.0.0-SNAPSHOT-sources.jar!/io/vavr/control/Either.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/test/resources/bean.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/settings.gradle.kts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/gradle.properties" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$USER_HOME$/.sdkman/candidates/java/16.0.1.9.1-ms/lib/src.zip!/java.base/java/util/stream/Collectors.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.sdkman/candidates/java/16.0.1.9.1-ms/lib/src.zip!/java.base/java/util/Map.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/kotlin/dsl/Robot.kt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/misc/VavrListLab.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/misc/NotNullTest.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.immutables/value-annotations/2.8.8/7a9c741e38874c7dd35b05057149a7e8b1576d47/value-annotations-2.8.8-sources.jar!/org/immutables/value/Value.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/moshi/MoshiLab.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/reified/Generics.kt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/apt/src/main/java/immutables/Point.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/arrow/src/test/kotlin/ClosureLab.kt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/arrow/src/test/kotlin/CoroutineLab.kt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/kotlin/misc/NotNull.kt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/reified/SomeJava.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.freefair.gradle/lombok-plugin/6.0.0-m2/317f15e77ea3f09abc7bb7b7a66ec2d059188fc5/lombok-plugin-6.0.0-m2-sources.jar!/io/freefair/gradle/plugins/lombok/tasks/Delombok.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/dsl/RobotJTest.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/apt/src/test/java/eggservice/EggServiceTest2.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/utils/Utils.kt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/arrow/src/test/kotlin/Coroutines2Lab.kt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/build.gradle.kts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/ExtensionContext.kt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/ReifiedLab.kt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/apt/src/test/java/eggservice/Egg2ServiceTest.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1rhAs1mSOs9P04dgKIqL0uZ9bcO" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="flattenModules" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/build/tmp/kapt3/stubs/main/immutables/PlayerInfo.java" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="ignore.preview.features.used" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/kotlin/dsl" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="ml.local.models.training.notification.expired" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="Push.Settings">
+    <force-push-targets>
+      <force-push-target remote-path="origin" branch="master" />
+    </force-push-targets>
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/test/java/misc" />
+      <recent name="$PROJECT_DIR$/src/test/java" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/arrow/src/test/kotlin" />
+      <recent name="$PROJECT_DIR$/apt/src/test/java" />
+      <recent name="$PROJECT_DIR$/apt/src/main/java" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="eggservice" />
+      <recent name="misc" />
+      <recent name="immutables" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="dsl" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="misc" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.ValueClassTest.testValueClass">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BuilderWithCustomSetterUnitTest.givenBuilderWithCustomSetter_TestTextOnly" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;ga.overfullstack.BuilderWithCustomSetterUnitTest.givenBuilderWithCustomSetter_TestTextOnly&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":lombok:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CustomSuperBuilderTest.testCustomBuilder" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;ga.overfullstack.CustomSuperBuilderTest.testCustomBuilder&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":lombok:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="MoshiLab.testReadJson" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;moshi.MoshiLab.testReadJson&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ValueClassTest.testValueClass" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;misc.ValueClassTest.testValueClass&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="VavrListLab.optionalTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;misc.VavrListLab.optionalTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.ValueClassTest.testValueClass" />
+        <item itemvalue="Gradle.CustomSuperBuilderTest.testCustomBuilder" />
+        <item itemvalue="Gradle.BuilderWithCustomSetterUnitTest.givenBuilderWithCustomSetter_TestTextOnly" />
+        <item itemvalue="Gradle.VavrListLab.optionalTest" />
+        <item itemvalue="Gradle.MoshiLab.testReadJson" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="" />
+      <created>1619418150520</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619418150520</updated>
+      <workItem from="1619418151885" duration="1448000" />
+      <workItem from="1619427208492" duration="1687000" />
+      <workItem from="1619434970949" duration="2943000" />
+      <workItem from="1619441430833" duration="3899000" />
+      <workItem from="1619501228652" duration="1166000" />
+      <workItem from="1619508340363" duration="2361000" />
+      <workItem from="1619666807774" duration="504000" />
+      <workItem from="1619891386344" duration="3957000" />
+      <workItem from="1620014674133" duration="189000" />
+      <workItem from="1620027198861" duration="4986000" />
+      <workItem from="1620116068610" duration="2241000" />
+      <workItem from="1620131207503" duration="2871000" />
+      <workItem from="1620373248351" duration="55000" />
+      <workItem from="1620374668544" duration="4968000" />
+      <workItem from="1620382376823" duration="3538000" />
+      <workItem from="1620386255072" duration="468000" />
+      <workItem from="1620386775119" duration="6247000" />
+      <workItem from="1620402998382" duration="8644000" />
+      <workItem from="1620464468592" duration="370000" />
+      <workItem from="1620469287984" duration="145000" />
+      <workItem from="1620476223300" duration="300000" />
+      <workItem from="1620476629700" duration="8355000" />
+      <workItem from="1620632941177" duration="1613000" />
+      <workItem from="1620716162759" duration="601000" />
+      <workItem from="1620982972561" duration="2427000" />
+      <workItem from="1621063703030" duration="1160000" />
+      <workItem from="1621233161308" duration="391000" />
+      <workItem from="1621514822061" duration="2077000" />
+      <workItem from="1621524036161" duration="1435000" />
+      <workItem from="1622631018917" duration="1580000" />
+      <workItem from="1622684862753" duration="932000" />
+      <workItem from="1623409161575" duration="1760000" />
+      <workItem from="1623416904107" duration="868000" />
+      <workItem from="1623429384909" duration="3428000" />
+      <workItem from="1623484917809" duration="3577000" />
+      <workItem from="1623562474093" duration="36766000" />
+      <workItem from="1623840751844" duration="7880000" />
+      <workItem from="1623928140718" duration="2745000" />
+      <workItem from="1623999345249" duration="1317000" />
+      <workItem from="1624014745541" duration="5477000" />
+      <workItem from="1624022076832" duration="4445000" />
+      <workItem from="1624093475531" duration="2798000" />
+      <workItem from="1624163417791" duration="2161000" />
+      <workItem from="1624179188442" duration="2773000" />
+      <workItem from="1624291823443" duration="600000" />
+      <workItem from="1624431086847" duration="888000" />
+      <workItem from="1624432004866" duration="126000" />
+      <workItem from="1624432147877" duration="6895000" />
+      <workItem from="1624517128110" duration="7945000" />
+      <workItem from="1626010661022" duration="627000" />
+      <workItem from="1626350405796" duration="30000" />
+      <workItem from="1626951045521" duration="716000" />
+      <workItem from="1627287680069" duration="5923000" />
+      <workItem from="1627439446622" duration="865000" />
+      <workItem from="1627440414994" duration="122000" />
+      <workItem from="1627440556397" duration="4712000" />
+      <workItem from="1627447178460" duration="1993000" />
+      <workItem from="1627467007034" duration="146000" />
+      <workItem from="1627582989424" duration="522000" />
+      <workItem from="1627628697915" duration="921000" />
+      <workItem from="1627652045712" duration="643000" />
+      <workItem from="1627886723811" duration="1244000" />
+      <workItem from="1627887988132" duration="3488000" />
+      <workItem from="1627896589765" duration="1712000" />
+      <workItem from="1627921778154" duration="669000" />
+      <workItem from="1628166692577" duration="1901000" />
+      <workItem from="1628329968840" duration="639000" />
+      <workItem from="1629096798867" duration="10161000" />
+      <workItem from="1629186000363" duration="1215000" />
+    </task>
+    <task id="LOCAL-00001" summary="Kapt working with Kotlin 1.5.0, Java 16.0.1">
+      <created>1620381138496</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1620381138496</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Kapt working with Kotlin 1.5.0, Java 16.0.1">
+      <created>1620462549496</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1620462549496</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Kapt working with Kotlin 1.5.0, Java 16.0.1">
+      <created>1620462577710</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1620462577710</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Kapt working with Kotlin 1.5.0, Java 16.0.1">
+      <created>1620463538593</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1620463538593</updated>
+    </task>
+    <task id="LOCAL-00005" summary="commit">
+      <created>1622684954599</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1622684954599</updated>
+    </task>
+    <task id="LOCAL-00006" summary="commit">
+      <created>1622684999159</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1622684999159</updated>
+    </task>
+    <task id="LOCAL-00007" summary="commit">
+      <created>1622685130787</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1622685130787</updated>
+    </task>
+    <task id="LOCAL-00008" summary="commit">
+      <created>1627452785921</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1627452785921</updated>
+    </task>
+    <task id="LOCAL-00009" summary="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
+      <created>1627583016664</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1627583016665</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Split into modules">
+      <created>1628168585770</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1628168585771</updated>
+    </task>
+    <task id="LOCAL-00011" summary="commit">
+      <created>1629187045185</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1629187045185</updated>
+    </task>
+    <task id="LOCAL-00012" summary="gitignore added">
+      <created>1629187188902</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1629187188902</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="c78c070f-866a-4cd0-a019-e49ac65e5469">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/Users/gopala.akshintala/code-clones/my-github/my-lab/lombok/src/test/java" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="ee8dbf12-34fc-4bc9-9513-94e8b6d32f4f">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/Users/gopala.akshintala/code-clones/my-github/my-lab/src/test/java" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="c78c070f-866a-4cd0-a019-e49ac65e5469" value="TOOL_WINDOW" />
+        <entry key="ee8dbf12-34fc-4bc9-9513-94e8b6d32f4f" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Kapt working with Kotlin 1.5.0, Java 16.0.1" />
+    <MESSAGE value="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <MESSAGE value="Split into modules" />
+    <MESSAGE value="commit" />
+    <MESSAGE value="gitignore added" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore added" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.sdkman/candidates/java/16.0.0.hs-adpt/lib/src.zip!/java.base/java/util/stream/ForEachOps.java</url>
+          <line>182</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
