@@ -1,4 +1,4 @@
-package dsl;
+package dsllab;
 
 import kotlin.Unit;
 import org.junit.jupiter.api.Test;

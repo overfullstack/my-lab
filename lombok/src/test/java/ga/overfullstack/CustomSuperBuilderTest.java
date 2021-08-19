@@ -1,19 +1,18 @@
 package ga.overfullstack;
 
-import ga.overfullstack.customsuperbuilder.Employee;
 import ga.overfullstack.customsuperbuilder.Manager;
 import org.junit.jupiter.api.Test;
+import java.util.List;
 
 class CustomSuperBuilderTest {
 
   @Test
   void testCustomBuilder() {
-    Employee.<String>builder()
+    final var manager = Manager.<String>builder()
         .id("001")
+        .files(List.of("file"))
         .build();
-    Manager.<String>builder()
-        .id("001")
-        .build();
+    System.out.println(manager);
   }
 
 }

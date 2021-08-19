@@ -1,22 +1,25 @@
 package ga.overfullstack.customsuperbuilder;
 
+import java.time.LocalDate;
+import java.util.List;
+import java.util.Map;
+import ga.overfullstack.custombuilder.Message.MessageBuilder;
 import lombok.Getter;
 import lombok.experimental.SuperBuilder;
-
-import java.time.LocalDate;
-import java.util.Map;
 
 /**
  * Represents an employee in the company.
  */
 @Getter
 @SuperBuilder
-public class Employee<IDT> {
+public abstract class Employee<IDT> {
 
   /**
    * Id of the employee
    */
   private final IDT id;
+
+  private List<?> files;
 
   /**
    * Employees name
@@ -31,18 +34,14 @@ public class Employee<IDT> {
   private final Map<?, ?> promotionDates;
 
   public static abstract class EmployeeBuilder<IDT, C extends Employee<IDT>, B extends EmployeeBuilder<IDT, C, B>> {
-
-    private IDT id;
-
     public B id(IDT id) {
       this.id = id;
       return self();
     }
-    
-  }
 
-  public static <IDT> EmployeeBuilder<IDT, ?, ?> builder() {
-    return (EmployeeBuilder<IDT, ?, ?>) new EmployeeBuilderImpl<IDT>();
+    public <FileT> B files(List<FileT> files) {
+      this.files = files;
+      return self();
+    }
   }
-
 }

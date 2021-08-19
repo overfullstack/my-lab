@@ -1,30 +1,41 @@
 package ga.overfullstack;
 
 import ga.overfullstack.custombuilder.Message;
-import org.junit.jupiter.api.Test;
-
-import java.io.File;
 import java.util.List;
+import org.junit.jupiter.api.Test;
 
 class CustomBuilderTest {
 
   @Test
-  public void givenBuilderWithCustomSetter_TestTextOnly() {
-    Message message = Message.builder()
+  void customMessageBuilder1() {
+    final var msg = Message.builder()
         .sender("user@somedomain.com")
         .recipient("someuser@otherdomain.com")
         .text("How are you today?")
-        .<String>files(List.of("1"))
+        .files(List.of("file1", "file2"))
         .build();
+    System.out.println(msg);
   }
 
   @Test
-  public void givenBuilderWithCustomSetter_TestFileOnly() {
-    Message message = Message.builder()
+  void customMessageBuilder2() {
+    final var msg = Message.builder()
         .sender("user@somedomain.com")
         .recipient("someuser@otherdomain.com")
-        .file(new File("/path/to/file"))
+        .file("file1")
+        .file("file2")
         .build();
+    System.out.println(msg);
+  }
+
+  @Test
+  void customMessageBuilderWithVarargs() {
+    final var msg = Message.builder()
+        .sender("user@somedomain.com")
+        .recipient("someuser@otherdomain.com")
+        .files("file1", "file2")
+        .build();
+    System.out.println(msg);
   }
 
 }

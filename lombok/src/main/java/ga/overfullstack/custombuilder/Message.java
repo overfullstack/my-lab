@@ -1,9 +1,11 @@
 package ga.overfullstack.custombuilder;
 
-import java.io.File;
-import java.util.List;
 import lombok.Builder;
 import lombok.Data;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 @Builder
 @Data
@@ -12,35 +14,36 @@ public class Message {
   private String sender;
   private String recipient;
   private String text;
-  private File file;
   private List<?> files;
 
   public static class MessageBuilder {
-    private String text;
-    private File file;
-    private List<?> files;
 
-    public MessageBuilder text(String text) {
-      this.text = text;
-      verifyTextOrFile();
+    public <FileT> MessageBuilder files(FileT ...files) {
+      this.files = List.of(files);
       return this;
     }
 
-    public <FileT> MessageBuilder files(List<FileT> files) {
-      this.files = files;
-      return this;
-    }
-
-    public MessageBuilder file(File file) {
-      this.file = file;
-      verifyTextOrFile();
-      return this;
-    }
-
-    private void verifyTextOrFile() {
-      if (text != null && file != null) {
-        throw new IllegalStateException("Cannot send 'text' and 'file'.");
+    public <FileT> MessageBuilder file(FileT file) {
+      if (this.files == null) {
+        this.files = new ArrayList<FileT>();
       }
+      ((Collection<? super FileT>) this.files).add(file);
+      return this;
+    }
+
+    public <FileT> MessageBuilder files(Collection<FileT> files) {
+      if (this.files == null) {
+        this.files = new ArrayList<FileT>();
+      }
+      ((Collection<? super FileT>) this.files).addAll(files);
+      return this;
+    }
+
+    public MessageBuilder clearFiles() {
+      if (this.files != null) {
+        this.files.clear();
+      }
+      return this;
     }
   }
 }

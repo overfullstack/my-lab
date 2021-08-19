@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ga.overfullstack.CustomSuperBuilderTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-17T07:52:42" hostname="akshintala-ltm.internal.salesforce.com" time="0.029">
-  <properties/>
-  <testcase name="testCustomBuilder()" classname="ga.overfullstack.CustomSuperBuilderTest" time="0.029"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

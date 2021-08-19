@@ -24,7 +24,7 @@ dependencies {
   implementation("io.vavr:vavr-kotlin:+")
 
   testImplementation("org.hamcrest:java-hamcrest:+")
-
+  
   testImplementation(platform("org.junit:junit-bom:+"))
   testImplementation("org.junit.jupiter:junit-jupiter-api")
   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
@@ -40,17 +40,14 @@ dependencies {
 java.sourceCompatibility = JavaVersion.VERSION_16
 
 tasks {
-  withType<JavaCompile> {
+  compileJava {
     options.compilerArgs.add("--enable-preview")
     options.isWarnings = false
   }
 
-  withType<KotlinCompile> {
+  compileKotlin {
     kotlinOptions {
       jvmTarget = JavaVersion.VERSION_16.toString()
-      freeCompilerArgs =
-        listOf("-Xjsr305=strict", "-Xjvm-default=enable") // These are related to Java Kotlin interop
-      suppressWarnings = true
     }
   }
 

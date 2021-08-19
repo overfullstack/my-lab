@@ -1,6 +1,7 @@
 package ga.overfullstack.customsuperbuilder;
 
 import lombok.Getter;
+import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDate;
@@ -10,6 +11,7 @@ import java.util.List;
  * Manager is a type of Employee
  */
 @Getter
+@ToString(callSuper = true)
 @SuperBuilder
 public class Manager<IDT> extends Employee<IDT> {
 
