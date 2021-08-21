@@ -42,9 +42,9 @@ class Egg2ServiceDeclarativeTest {
                           + ageOfAllEggsInGroup
                           + " Expiry should be before: "
                           + LocalDate.of(
-                              expiryDateForAllInGroup.getYear(),
-                              expiryDateForAllInGroup.getMonth(),
-                              15);
+                          expiryDateForAllInGroup.getYear(),
+                          expiryDateForAllInGroup.getMonth(),
+                          15);
                   return eggGroupWithSameExpiryDate.stream()
                       .map(ignore -> ImmutableFailure.of(msg));
                 });

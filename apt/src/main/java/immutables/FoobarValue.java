@@ -7,11 +7,11 @@ import java.util.Set;
 
 @Value.Immutable
 public abstract class FoobarValue {
-    public abstract int foo();
+  public abstract int foo();
 
-    public abstract String bar();
+  public abstract String bar();
 
-    public abstract List<Integer> buz();
+  public abstract List<Integer> buz();
 
-    public abstract Set<Long> crux();
+  public abstract Set<Long> crux();
 }

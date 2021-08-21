@@ -4,19 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="Builder customization">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="Builder customization&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/ktlint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/lombok-lab/com.gakshintala.mylab.my-lab.lombok-lab.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/lombok/my-lab.lombok.main.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lombok/build/reports/tests/test/classes/ga.overfullstack.CustomSuperBuilderTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lombok/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/lombok/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lombok/build/reports/tests/test/packages/ga.overfullstack.html" beforeDir="false" afterPath="$PROJECT_DIR$/lombok/build/reports/tests/test/packages/ga.overfullstack.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lombok/build/test-results/test/TEST-ga.overfullstack.CustomSuperBuilderTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lombok/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lombok/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lombok/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lombok/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lombok/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lombok/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lombok/src/main/java/ga/overfullstack/custombuilder/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/lombok/src/main/java/ga/overfullstack/custombuilder/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lombok/src/main/java/ga/overfullstack/customsuperbuilder/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/lombok/src/main/java/ga/overfullstack/customsuperbuilder/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lombok/src/test/java/ga/overfullstack/CustomBuilderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lombok/src/test/java/ga/overfullstack/CustomBuilderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apt/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/apt/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apt/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/apt/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arrow/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/arrow/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arrow/src/test/kotlin/Coroutines2Lab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/arrow/src/test/kotlin/Coroutines2Lab.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lombok/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lombok/src/main/java/ga/overfullstack/custombuilder/Message.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lombok/src/main/java/ga/overfullstack/customsuperbuilder/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lombok/src/main/java/ga/overfullstack/customsuperbuilder/Manager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lombok/src/test/java/ga/overfullstack/CustomBuilderTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lombok/src/test/java/ga/overfullstack/CustomSuperBuilderTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ExtensionContext.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ImplByDelegation.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ReifiedLab.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reified/Generics.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reified/SomeJava.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reified/SomeOther.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Utils.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cartesian/Cartesian.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cartesian/CartesianIntSource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cartesian/IntArgumentsProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dsllab/RobotJTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/failure/ValidationFailure.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/failure/ValidationFailureMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/misc/ListTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/misc/NotNullTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/misc/VavrListLab.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/moshi/MoshiLab.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/misc/NotNull.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/bean.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/junit-platform.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/nested-bean.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,37 +143,23 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$USER_HOME$/.sdkman/candidates/java/16.0.1.9.1-ms/lib/src.zip!/java.base/java/time/LocalDate.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/test/java/cartesian/IntArgumentsProvider.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/apt/src/test/java/eggservice/Egg2ServiceDeclarativeTest.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/apt/src/main/java/immutables/Point.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/apt/src/test/java/immutables/ImmutablesTest.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/.editorconfig" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/arrow/src/test/kotlin/ClosureLab.kt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/arrow/src/test/kotlin/ExtensionLab.kt" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/test/java/cartesian/Cartesian.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/arrow/src/test/kotlin/CoroutineLab.kt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$USER_HOME$/.sdkman/candidates/java/current/lib/src.zip!/java.base/java/util/Collection.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.sdkman/candidates/java/16.0.1.9.1-ms/lib/src.zip!/java.base/java/util/stream/Stream.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/test/java/cartesian/CartesianIntSource.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/test/resources/bean.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/settings.gradle.kts" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/gradle.properties" root0="FORCE_HIGHLIGHTING" />
     <setting file="jar://$USER_HOME$/.sdkman/candidates/java/16.0.1.9.1-ms/lib/src.zip!/java.base/java/util/stream/Collectors.java" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.sdkman/candidates/java/16.0.1.9.1-ms/lib/src.zip!/java.base/java/util/Map.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/test/java/misc/VavrListLab.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/test/java/misc/NotNullTest.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/test/java/moshi/MoshiLab.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/reified/Generics.kt" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/apt/src/main/java/immutables/Point.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/arrow/src/test/kotlin/ClosureLab.kt" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/arrow/src/test/kotlin/CoroutineLab.kt" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/test/kotlin/misc/NotNull.kt" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/reified/SomeJava.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/test/java/dsllab/RobotJTest.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/apt/src/test/java/eggservice/EggServiceTest2.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/utils/Utils.kt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$USER_HOME$/.sdkman/candidates/java/16.0.1.9.1-ms/lib/src.zip!/java.base/java/util/Map.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/arrow/src/test/kotlin/Coroutines2Lab.kt" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/build.gradle.kts" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/ExtensionContext.kt" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/ReifiedLab.kt" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/apt/src/test/java/eggservice/Egg2ServiceTest.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
@@ -168,7 +186,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="ignore.preview.features.used" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/kotlin/dsl" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="ml.local.models.training.notification.expired" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -190,9 +208,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/test/resources" />
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/test/java/misc" />
       <recent name="$PROJECT_DIR$/src/test/java" />
     </key>
@@ -429,7 +447,11 @@
       <workItem from="1628329968840" duration="639000" />
       <workItem from="1629096798867" duration="10161000" />
       <workItem from="1629186000363" duration="1309000" />
-      <workItem from="1629302121080" duration="8503000" />
+      <workItem from="1629302121080" duration="11642000" />
+      <workItem from="1629368971733" duration="202000" />
+      <workItem from="1629451610804" duration="2492000" />
+      <workItem from="1629506747649" duration="4303000" />
+      <workItem from="1629550180955" duration="1172000" />
     </task>
     <task id="LOCAL-00001" summary="Kapt working with Kotlin 1.5.0, Java 16.0.1">
       <created>1620381138496</created>
@@ -529,7 +551,28 @@
       <option name="project" value="LOCAL" />
       <updated>1629339675767</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Builder customization&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
+      <created>1629345794297</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1629345794297</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Builder customization&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
+      <created>1629345835160</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1629345835160</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Builder customization&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
+      <created>1629345866976</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1629345866976</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -613,7 +656,8 @@
     <MESSAGE value="gitignore added" />
     <MESSAGE value="gitignore added&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="Builder customization" />
-    <option name="LAST_COMMIT_MESSAGE" value="Builder customization" />
+    <MESSAGE value="Builder customization&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Builder customization&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

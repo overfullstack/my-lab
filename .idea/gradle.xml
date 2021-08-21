@@ -15,7 +15,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/apt" />
             <option value="$PROJECT_DIR$/arrow" />
-            <option value="$PROJECT_DIR$/lombok" />
+            <option value="$PROJECT_DIR$/lombok-lab" />
           </set>
         </option>
       </GradleProjectSettings>

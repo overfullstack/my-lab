@@ -10,7 +10,6 @@ import java.util.List;
 @Builder
 @Data
 public class Message {
-
   private String sender;
   private String recipient;
   private String text;
@@ -18,7 +17,7 @@ public class Message {
 
   public static class MessageBuilder {
 
-    public <FileT> MessageBuilder files(FileT ...files) {
+    public <FileT> MessageBuilder files(FileT... files) {
       this.files = List.of(files);
       return this;
     }

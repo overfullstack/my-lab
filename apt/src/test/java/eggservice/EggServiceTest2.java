@@ -33,7 +33,9 @@ class EggServiceTest2 {
     logger.debug("Expired Eggs: ---\n" + expiredGroupToLog);
   }
 
-  /** There is no difference from Functional approach */
+  /**
+   * There is no difference from Functional approach
+   */
   @Test
   void eggService3() {
     var sharedMap = new HashMap<Integer, Failure>();

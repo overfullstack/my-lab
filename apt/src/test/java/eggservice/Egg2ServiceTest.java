@@ -18,7 +18,9 @@ class Egg2ServiceTest {
 
   private static final Logger logger = LoggerFactory.getLogger(Egg2ServiceTest.class);
 
-  /** I can't represent the same in FP. Plus I can't avoid `diffCache`. */
+  /**
+   * I can't represent the same in FP. Plus I can't avoid `diffCache`.
+   */
   @Test
   void eggService1() {
     var failureMap = new HashMap<Integer, Failure>();
