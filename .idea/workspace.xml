@@ -5,50 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="Builder customization&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/ktlint.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/lombok-lab/com.gakshintala.mylab.my-lab.lombok-lab.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/lombok/my-lab.lombok.main.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/apt/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apt/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/apt/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arrow/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/arrow/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arrow/src/test/kotlin/Coroutines2Lab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/arrow/src/test/kotlin/Coroutines2Lab.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lombok/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lombok/src/main/java/ga/overfullstack/custombuilder/Message.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lombok/src/main/java/ga/overfullstack/customsuperbuilder/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lombok/src/main/java/ga/overfullstack/customsuperbuilder/Manager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lombok/src/test/java/ga/overfullstack/CustomBuilderTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lombok/src/test/java/ga/overfullstack/CustomSuperBuilderTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ExtensionContext.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ImplByDelegation.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ReifiedLab.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reified/Generics.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reified/SomeJava.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reified/SomeOther.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Utils.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cartesian/Cartesian.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cartesian/CartesianIntSource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cartesian/IntArgumentsProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dsllab/RobotJTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/failure/ValidationFailure.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/failure/ValidationFailureMessage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/misc/ListTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/misc/NotNullTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/misc/VavrListLab.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/moshi/MoshiLab.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/misc/NotNull.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/bean.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/junit-platform.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/log4j2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/nested-bean.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +132,6 @@
     <option name="autoscrollToSource" value="true" />
     <option name="flattenModules" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -196,7 +156,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="FoldableProjectViewConfigurable" />
   </component>
   <component name="Push.Settings">
     <force-push-targets>
@@ -452,6 +412,8 @@
       <workItem from="1629451610804" duration="2492000" />
       <workItem from="1629506747649" duration="4303000" />
       <workItem from="1629550180955" duration="1172000" />
+      <workItem from="1629555861413" duration="1261000" />
+      <workItem from="1629613929734" duration="1415000" />
     </task>
     <task id="LOCAL-00001" summary="Kapt working with Kotlin 1.5.0, Java 16.0.1">
       <created>1620381138496</created>

@@ -30,3 +30,5 @@ rootProject.name = "my-lab"
 include("apt")
 include("arrow")
 include("lombok-lab")
+include("kotlin-java-interop")
+include("java-lab")
