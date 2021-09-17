@@ -17,11 +17,15 @@ enableFeaturePreview("VERSION_CATALOGS")
 dependencyResolutionManagement {
   versionCatalogs {
     create("libs") {
-      alias("hamcrest-core").to("org.hamcrest:hamcrest:2.2")
-      alias("hamcrest-date").to("org.exparity:hamcrest-date:2.0.7")
-      alias("java-vavr").to("io.vavr:vavr:0.10.4")
-      alias("kotlin-vavr").to("io.vavr:vavr-kotlin:0.10.2")
-      alias("jetbrains-annotations").to("org.jetbrains:annotations:21.0.1")
+      alias("hamcrest-core").to("org.hamcrest:hamcrest:+")
+      alias("hamcrest-date").to("org.exparity:hamcrest-date:+")
+      alias("java-vavr").to("io.vavr:vavr:+")
+      alias("kotlin-vavr").to("io.vavr:vavr-kotlin:+")
+      alias("jetbrains-annotations").to("org.jetbrains:annotations:+")
+      alias("moshi").to("com.squareup.moshi:moshi:+")
+      alias("jackson-databind").to("com.fasterxml.jackson.core:jackson-databind:+")
+      alias("commons-collections").to("org.apache.commons:commons-collections4:+")
+      alias("commons-lang3").to("org.apache.commons:commons-lang3:+")
     }
   }
 }

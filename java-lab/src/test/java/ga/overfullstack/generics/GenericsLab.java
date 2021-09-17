@@ -1,4 +1,4 @@
-package generics;
+package ga.overfullstack.generics;
 
 import org.junit.jupiter.api.Test;
 import java.util.List;
