@@ -4,28 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="New modules">
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinScripting.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/java-lab/my-lab.java-lab.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/kotlin-java-interop/my-lab.kotlin-java-interop.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/StackWalkerLab.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/ApacheCommonsLab.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/WalkerLab1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kotlin-java-interop/src/main/java/ga/overfullstack/Container.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kotlin-java-interop/src/main/java/ga/overfullstack/Member.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kotlin-java-interop/src/main/kotlin/ga/overfullstack/ConfigToValidator.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kotlin-java-interop/src/test/java/ga/overfullstack/ListLab.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kotlin-java-interop/src/test/kotlin/ga/overfullstack/CrossInline.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kotlin-java-interop/src/test/kotlin/ga/overfullstack/Misc.kt" afterDir="false" />
+    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="commit">
+      <change afterPath="$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/utils/Utils.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/MoshiLab.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-lab/src/test/resources/bean.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kotlin-java-interop/src/test/resources/bean.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arrow/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/arrow/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apt/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/apt/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java-lab/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/src/test/java/generics/GenericsLab.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/generics/GenericsLab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/StackWalkerLab.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/StackWalkerLab.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kotlin-java-interop/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-java-interop/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lombok-lab/lombok.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lombok.config" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +44,9 @@
         <task path="$PROJECT_DIR$">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/lombok-lab">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -60,29 +57,20 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="my-lab" type="f1a62948:ProjectNode" />
+                <item name="lombok-lab" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="my-lab" type="f1a62948:ProjectNode" />
+                <item name="lombok-lab" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="my-lab" type="f1a62948:ProjectNode" />
+                <item name="lombok-lab" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="my-lab" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="other" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="my-lab" type="f1a62948:ProjectNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="my-lab" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+                <item name="lombok" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -97,8 +85,8 @@
         <option value="Kotlin Interface" />
         <option value="JUnit5 Test Class" />
         <option value="Kotlin Script" />
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
         <option value="Class" />
       </list>
     </option>
@@ -121,27 +109,41 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/apt/src/test/java/immutables/ImmutablesTest.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/arrow/src/test/kotlin/CoroutineLab.kt" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/arrow/src/test/kotlin/Coroutines2Lab.kt" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/settings.gradle.kts" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/kotlin-java-interop/src/main/kotlin/ga/overfullstack/ConfigToValidator.kt" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/java-lab/build.gradle.kts" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/arrow/src/test/kotlin/ExtensionLab.kt" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/apt/src/test/java/eggservice/Egg2ServiceDeclarativeTest.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/arrow/src/test/kotlin/ClosureLab.kt" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/kotlin-java-interop/src/test/java/ga/overfullstack/ListLab.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/apt/src/main/java/immutables/Point.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/kotlin-java-interop/src/main/java/ga/overfullstack/Member.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="jar://$USER_HOME$/.sdkman/candidates/java/current/lib/src.zip!/java.base/java/util/Collection.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/apt/src/test/java/eggservice/Egg2ServiceTest.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/apt/src/test/java/eggservice/EggServiceTest2.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/arrow/src/test/kotlin/ClosureLab.kt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/settings.gradle.kts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/apt/src/test/java/eggservice/Egg2ServiceDeclarativeTest.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/build.gradle.kts" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/kotlin-java-interop/src/test/kotlin/ga/overfullstack/CrossInline.kt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/arrow/src/test/kotlin/CoroutineLab.kt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/apt/src/test/java/immutables/ImmutablesTest.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/ApacheCommonsLab.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/arrow/src/test/kotlin/Coroutines2Lab.kt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/utils/Utils.kt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/StackWalkerLab.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/kotlin-java-interop/src/test/kotlin/ga/overfullstack/Misc.kt" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/gradle.properties" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/MoshiLab.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/arrow/src/test/kotlin/ExtensionLab.kt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/apt/src/test/java/eggservice/EggServiceTest2.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$USER_HOME$/.sdkman/candidates/java/current/lib/src.zip!/java.base/java/util/Collection.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/WalkerLab1.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/kotlin-java-interop/src/test/kotlin/ga/overfullstack/CrossInline.kt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/kotlin-java-interop/src/test/java/ga/overfullstack/ListLab.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/java-lab/src/test/resources/bean.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/java-lab/build.gradle.kts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/kotlin-java-interop/build.gradle.kts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/apt/src/main/java/immutables/Point.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/kotlin-java-interop/src/main/kotlin/ga/overfullstack/ConfigToValidator.kt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lombok-lab/build.gradle.kts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/kotlin-java-interop/src/main/java/ga/overfullstack/Member.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
@@ -166,7 +168,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="ignore.preview.features.used" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/kotlin/dsl" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lombok-lab" />
     <property name="ml.local.models.training.notification.expired" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -174,9 +176,9 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="ics" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="Push.Settings">
     <force-push-targets>
@@ -188,11 +190,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lombok-lab" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/test/resources" />
       <recent name="$PROJECT_DIR$/src/test/java/misc" />
-      <recent name="$PROJECT_DIR$/src/test/java" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -223,7 +225,7 @@
       <command value="gradle clean build" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.my-lab:lombok-lab [delombok]">
+  <component name="RunManager" selected="Gradle.MoshiLab.customListAdapter">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -237,39 +239,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApacheCommonsLab.stringUtilsLab1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MoshiLab.customListAdapter" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ga.overfullstack.ApacheCommonsLab.stringUtilsLab1&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ga.overfullstack.MoshiLab.customListAdapter&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
             <option value=":java-lab:test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="ListLab.chunking" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ga.overfullstack.ListLab.chunking&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":kotlin-java-interop:test" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -296,6 +277,28 @@
         <option name="vmOptions" />
       </ExternalSystemSettings>
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="my-lab [clean build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
@@ -330,11 +333,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.my-lab:lombok-lab [delombok]" />
-        <item itemvalue="Gradle.ApacheCommonsLab.stringUtilsLab1" />
-        <item itemvalue="Gradle.WalkerLab1.callWalker" />
+        <item itemvalue="Gradle.MoshiLab.customListAdapter" />
+        <item itemvalue="Gradle.my-lab [clean build]" />
         <item itemvalue="Kotlin.MiscKt" />
-        <item itemvalue="Gradle.ListLab.chunking" />
+        <item itemvalue="Gradle.my-lab:lombok-lab [delombok]" />
+        <item itemvalue="Gradle.WalkerLab1.callWalker" />
       </list>
     </recent_temporary>
   </component>
@@ -444,6 +447,12 @@
       <workItem from="1631799841838" duration="599000" />
       <workItem from="1631870737169" duration="268000" />
       <workItem from="1631873213222" duration="578000" />
+      <workItem from="1631879478569" duration="741000" />
+      <workItem from="1631931554553" duration="1547000" />
+      <workItem from="1632038782006" duration="53000" />
+      <workItem from="1632221287459" duration="606000" />
+      <workItem from="1632383694581" duration="200000" />
+      <workItem from="1632818678258" duration="4850000" />
     </task>
     <task id="LOCAL-00001" summary="Kapt working with Kotlin 1.5.0, Java 16.0.1">
       <created>1620381138496</created>
@@ -571,7 +580,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629617883921</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="commit">
+      <created>1631879765994</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1631879765994</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -651,13 +667,13 @@
     <MESSAGE value="Kapt working with Kotlin 1.5.0, Java 16.0.1" />
     <MESSAGE value="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="Split into modules" />
-    <MESSAGE value="commit" />
     <MESSAGE value="gitignore added" />
     <MESSAGE value="gitignore added&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="Builder customization" />
     <MESSAGE value="Builder customization&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="New modules" />
-    <option name="LAST_COMMIT_MESSAGE" value="New modules" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -4,12 +4,6 @@ plugins {
   kotlin("jvm")
 }
 
-dependencies {
-  implementation(libs.moshi)
-  implementation(libs.java.vavr)
-  implementation(libs.kotlin.vavr)
-}
-
 tasks {
   withType<KotlinCompile> {
     kotlinOptions {

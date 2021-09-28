@@ -9,12 +9,13 @@
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleHome" value="$USER_HOME$/.sdkman/candidates/gradle/current" />
-        <option name="gradleJvm" value="sdkman-current" />
+        <option name="gradleJvm" value="16" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/apt" />
             <option value="$PROJECT_DIR$/arrow" />
+            <option value="$PROJECT_DIR$/common" />
             <option value="$PROJECT_DIR$/java-lab" />
             <option value="$PROJECT_DIR$/kotlin-java-interop" />
             <option value="$PROJECT_DIR$/lombok-lab" />
