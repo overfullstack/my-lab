@@ -17,23 +17,23 @@ allprojects {
 subprojects {
   apply(plugin = "application")
   apply(plugin = "com.adarshr.test-logger")
-  java.sourceCompatibility = JavaVersion.VERSION_16
+  java.sourceCompatibility = JavaVersion.VERSION_17
   dependencies {
-    testImplementation(platform("org.junit:junit-bom:+"))
+    testImplementation(platform("org.junit:junit-bom:5.8.1"))
     testImplementation("org.junit.jupiter:junit-jupiter-api")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 
-    implementation("org.slf4j:slf4j-api:+")
-    runtimeOnly("org.apache.logging.log4j:log4j-slf4j18-impl:+")
+    implementation("org.slf4j:slf4j-api:2.0.0-alpha5")
+    runtimeOnly("org.apache.logging.log4j:log4j-slf4j18-impl:2.14.1")
   }
   tasks {
     withType<JavaCompile>().configureEach {
-      options.compilerArgs.add("--enable-preview")
+      //options.compilerArgs.add("--enable-preview")
     }
     test {
       useJUnitPlatform()
       ignoreFailures = true
-      jvmArgs("--enable-preview")
+      //jvmArgs("--enable-preview")
     }
     testlogger {
       theme = MOCHA_PARALLEL

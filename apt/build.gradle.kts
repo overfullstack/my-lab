@@ -3,7 +3,7 @@ plugins {
   kotlin("kapt")
 }
 
-val immutablesVersion = "2.8.8"
+val immutablesVersion = "2.9.0-rc1"
 dependencies {
   kapt("org.immutables:value:$immutablesVersion")
   compileOnly("org.immutables:builder:$immutablesVersion")
@@ -16,8 +16,6 @@ dependencies {
   implementation(libs.java.vavr)
   implementation(libs.kotlin.vavr)
 }
-
-java.sourceCompatibility = JavaVersion.VERSION_16
 
 tasks {
   withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {

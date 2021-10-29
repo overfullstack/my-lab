@@ -3,12 +3,12 @@ plugins {
 }
 
 dependencies {
-  implementation(platform("io.arrow-kt:arrow-stack:0.13.2"))
+  implementation(platform("io.arrow-kt:arrow-stack:1.0.0"))
   implementation("io.arrow-kt:arrow-core")
   implementation("io.arrow-kt:arrow-fx-coroutines")
   implementation("io.arrow-kt:arrow-optics")
 
-  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:+")
+  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
 }
 
 tasks {

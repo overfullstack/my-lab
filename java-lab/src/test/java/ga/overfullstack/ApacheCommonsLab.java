@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 import java.util.Map;
 
-public class ApacheCommonsLab {
+class ApacheCommonsLab {
 
   @Test
   void stringUtilsLab1() {
