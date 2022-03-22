@@ -12,20 +12,16 @@ pluginManagement {
   }
 }
 
-enableFeaturePreview("VERSION_CATALOGS")
-
 dependencyResolutionManagement {
   versionCatalogs {
     create("libs") {
-      alias("hamcrest-core").to("org.hamcrest:hamcrest:+")
-      alias("hamcrest-date").to("org.exparity:hamcrest-date:+")
-      alias("java-vavr").to("io.vavr:vavr:+")
-      alias("kotlin-vavr").to("io.vavr:vavr-kotlin:+")
-      alias("jetbrains-annotations").to("org.jetbrains:annotations:+")
-      alias("moshi").to("com.squareup.moshi:moshi:+")
-      alias("jackson-databind").to("com.fasterxml.jackson.core:jackson-databind:+")
-      alias("commons-collections").to("org.apache.commons:commons-collections4:+")
-      alias("commons-lang3").to("org.apache.commons:commons-lang3:+")
+      library("hamcrest-core", "org.hamcrest:hamcrest:2.2")
+      library("hamcrest-date", "org.exparity:hamcrest-date:2.0.8")
+      library("java-vavr", "io.vavr:vavr:0.10.4")
+      library("kotlin-vavr", "io.vavr:vavr-kotlin:0.10.2")
+      library("jetbrains-annotations", "org.jetbrains:annotations:23.0.0")
+      library("moshi", "com.squareup.moshi:moshi:1.13.0")
+      library("jackson-databind", "com.fasterxml.jackson.core:jackson-databind:2.13.2")
     }
   }
 }

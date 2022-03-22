@@ -1,5 +1,7 @@
 package ga.overfullstack;
 
+import static arrow.core.NonEmptyListKt.nonEmptyListOf;
+import static ga.overfullstack.ConfigToValidator.entityObjIdRandomGenerator;
 import static kotlin.collections.CollectionsKt.chunked;
 
 import java.util.List;
@@ -18,5 +20,15 @@ class ListLab {
       i++;
       return i.toString();
     }, 3);
+  }
+
+  @Test
+  void neList() {
+    final var integers = nonEmptyListOf(1, 2, 3);
+    System.out.println(integers);
+    entityObjIdRandomGenerator.invoke("a");
+    entityObjIdRandomGenerator.invoke(2);
+    System.out.println(entityObjIdRandomGenerator.invoke("a"));
+    System.out.println(entityObjIdRandomGenerator.invoke(2));
   }
 }

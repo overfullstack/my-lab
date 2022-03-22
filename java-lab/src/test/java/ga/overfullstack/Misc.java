@@ -9,9 +9,9 @@ class Misc {
     try {
       someThrowingFun();
     } catch (Exception e) {
-      throw new RuntimeException();
     } finally {
       System.out.println("finally");
+      throw new RuntimeException();
     }
   }
   

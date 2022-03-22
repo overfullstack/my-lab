@@ -7,6 +7,4 @@ dependencies {
   implementation(project(":common"))
   implementation(libs.moshi)
   implementation(libs.jackson.databind)
-  implementation(libs.commons.collections)
-  implementation(libs.commons.lang3)
 }

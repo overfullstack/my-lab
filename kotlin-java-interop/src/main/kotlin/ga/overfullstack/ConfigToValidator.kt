@@ -1,26 +1,14 @@
+@file:JvmName("ConfigToValidator")
+
 package ga.overfullstack
 
-import java.util.AbstractMap.SimpleImmutableEntry
-import java.util.function.Function
+import arrow.core.memoize
 
-fun <T> someFun(
-  entry: SimpleImmutableEntry<out String, out T>,
-  fn1: Function<in T, out String>
-) {
-  TODO()
-}
 
-fun <T> someFun(
-  member: Member<T>
-) {
-  val entry: SimpleImmutableEntry<String, T> = member.entry;
-  val fn1: Function<T, String> = member.fn1;
-  TODO()
-}
+private val idToEntityObj: MutableMap<Any, String> = mutableMapOf()
 
-fun caller(container: Container) {
-  //someFun(container.member.entry, container.member.fn1)
-  someFun(container.member)
-  listOf(1,2,3).chunked(2)
-}
+@JvmField
+val entityObjIdRandomGenerator: (Any) -> String = { id: Any ->
+  idToEntityObj.computeIfAbsent(id) { "1$id" }
+}.memoize()
 
