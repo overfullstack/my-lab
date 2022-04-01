@@ -2,7 +2,7 @@ plugins {
   kotlin("jvm")
 }
 
-val http4kVersion = "4.25.5.2"
+val http4kVersion = "4.25.7.0"
 dependencies {
   implementation("org.http4k:http4k-format-moshi:$http4kVersion")
   implementation("org.http4k:http4k-format-jackson:$http4kVersion")
