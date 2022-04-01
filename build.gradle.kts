@@ -6,7 +6,7 @@ plugins {
 }
 
 allprojects {
-  group = "com.gakshintala.mylab"
+  group = "ga.overfullstack.mylab"
   version = "1.0-SNAPSHOT"
 
   repositories {
