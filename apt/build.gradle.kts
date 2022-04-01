@@ -3,7 +3,7 @@ plugins {
   kotlin("kapt")
 }
 
-val immutablesVersion = "2.9.0-rc1"
+val immutablesVersion = "2.9.0"
 dependencies {
   kapt("org.immutables:value:$immutablesVersion")
   compileOnly("org.immutables:builder:$immutablesVersion")
