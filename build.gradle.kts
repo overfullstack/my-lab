@@ -1,7 +1,7 @@
 import com.adarshr.gradle.testlogger.theme.ThemeType.MOCHA_PARALLEL
 
 plugins {
-  id("com.adarshr.test-logger") version "3.1.0"
+  id("com.adarshr.test-logger") version "3.2.0"
   application
 }
 
