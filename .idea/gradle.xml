@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/apt" />
             <option value="$PROJECT_DIR$/arrow" />
             <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/http4k" />
             <option value="$PROJECT_DIR$/java-lab" />
             <option value="$PROJECT_DIR$/kotlin-java-interop" />
             <option value="$PROJECT_DIR$/lombok-lab" />

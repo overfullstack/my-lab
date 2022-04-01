@@ -37,7 +37,7 @@ class MoshiLab {
   
   static class BeanAdapter {
     @FromJson
-    List<String> fromJson(List<String> items) throws IOException {
+    List<String> fromJson(List<String> items) {
       return Collections.emptyList();
     }
   }

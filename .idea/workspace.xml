@@ -5,67 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="commit">
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/5/0516f48eff1e89d3eaec9f2ae570c85b660b773a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/7/0777d6f10b3a564a815eba66baf7fbba08998917" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/9/090f1faec65a866bd3d802f2a7afd3c9d5d94efb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12a6ada7100098069bf0058e9e4a1e89004d0337" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/d/1da9201e29eec7ff83b237fc6fe928da87b281bf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/9/29bef955cfd731d276546fd2b478862e34875b7a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/2/325c85c59c155f2016d748c1ea6d29a8db46025a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/6/36e55adaae910258554c4110c1060b196da72d4d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/e/3ed839449989d61895d30c527723b72aa9dc016d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/0/409af5fba38f1887253e9c019ef2676cb4473022" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/1/4111c32f7880332b54c6aebeca6c4771610d4c0c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/3/438cffc96c294f9eb43645d9a5c518db65bb623e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/44ce6b32ea955e58ac12e8f6234520ff107e5a5a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/8/4828c67429d16f1f8ca4375662f349704f18e17d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/9/496a238a6afa168dbaf6efd37bb459331589579c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/d/4dccbb175927dac0397ae83fe3c2f656e145e4ba" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/4/54895c30fc1c65a0b40e631d6de9910a3cdb78d1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/f/5fb68ab377c6d62f68a5f9304d6ed862a53f9675" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/2/6218abade8bcb4dce046e43b44d7a0c565dc898a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/2/626a747c8694eaae66f2afb3d1a745b045782c70" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/8/6837ad231e9323fa0cac98db71f26188bd086fc3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6ecd6000a7b6f4a2884412ff19f74193ed089648" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/f/6f92156b4f781255431f5e4b8beea9c93f4b3807" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/4/7474d791ed7711696425b7df94c2476475aa9003" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/7/773d22be9f810ba93efcf4b7338ba09d854c67c9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/8/785cdbc5cc54329ee9200956871f93044cfc27a7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/e/7e5a247548e24893552f10c25d88925a862bec40" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/d/8def917ceb669a2c7fc893a694365d65b6396a91" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8e9afd0d820d36278d5b80af3b1218eb74c70c03" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/905f10663bfa7d93f4cfd4cef85e52cc6a726706" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/6/a6626a2a0179f990d156991099b34bc94177f830" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aa8291beb9d60de3ab1e879af144f2e02aad8ae3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/0/b0ea832a7ee381571c1e960aeff079f1921f1cf9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/5/b5cbc404ab465e4f1015c0d6df328cfa81a6ec35" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c3cfcd810da141d34e05e61a1eb25ec7ad4096bc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cd9ed0c1cf5ddde4ce1d662f5678cba6a248a117" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/1/d1584bc77e0676184e7bfdc9bad7383621fe1aa9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/2/d2504d5fc7f1179171b1ceec9b455f9a96d599c5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/d/dd7b3350c29c49497756c7f32c69a3bed18b1cba" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/8/e8dede2a0a421db7c2a4339a8a714e1e06598e02" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/a/ea5243abb21a9a950295f2fcd04baad08d97ebf3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/8/f87ee53b4fb0c421f6b4af4d4de8c586f5cbb847" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/8/f8b41ce76d7b80d2b47e91b5f92c15f00eccf187" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/e/fe62ab60ea6823001bde122b8fe0f2d1ee56e1b3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/ExceptionLab.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/MapLab.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/VavrLab.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http4k/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http4k/src/main/java/Email.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/0/409af5fba38f1887253e9c019ef2676cb4473022" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/7/773d22be9f810ba93efcf4b7338ba09d854c67c9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/apt/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arrow/bin/main/common/User.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/arrow/bin/test/ClosureLab.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/arrow/bin/test/CoroutineLab.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/arrow/bin/test/Coroutines2Lab.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/arrow/bin/test/ExtensionLab.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/arrow/bin/test/FlowLab.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/arrow/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/arrow/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/common/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/Misc.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/Misc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-java-interop/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-java-interop/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-java-interop/src/main/kotlin/ga/overfullstack/ConfigToValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-java-interop/src/main/kotlin/ga/overfullstack/ConfigToValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-java-interop/src/test/java/ga/overfullstack/ListLab.java" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-java-interop/src/test/java/ga/overfullstack/ListLab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/bin/main/ga/overfullstack/utils/Utils.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/MoshiLab.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/MoshiLab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-java-interop/bin/main/ga/overfullstack/ConfigToValidator.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-java-interop/bin/test/bean.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-java-interop/bin/test/ga/overfullstack/CrossInline.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-java-interop/bin/test/ga/overfullstack/Misc.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renovate.json" beforeDir="false" afterPath="$PROJECT_DIR$/renovate.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,6 +99,8 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.vavr/vavr/1.0.0-SNAPSHOT/14a3351689941f717183d8bfcd5b163068c225fc/vavr-1.0.0-SNAPSHOT-sources.jar!/io/vavr/collection/List.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-core/4.25.5.2/9022e1324e6bdfb6777b70f97633c2a9391fe55d/http4k-core-4.25.5.2-sources.jar!/org/http4k/core/http.kt" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.sdkman/candidates/java/current/lib/src.zip!/java.base/java/util/Collection.java" root0="SKIP_INSPECTION" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.java" root0="FORCE_HIGHLIGHTING" />
@@ -156,14 +120,12 @@
     <setting file="file://$PROJECT_DIR$/arrow/src/test/kotlin/Coroutines2Lab.kt" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/arrow/src/test/kotlin/ExtensionLab.kt" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/build.gradle.kts" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/common/bin/main/ga/overfullstack/utils/Utils.kt" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/utils/Utils.kt" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/gradle.properties" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/java-lab/build.gradle.kts" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/ExceptionLab.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/Person.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/StackWalkerLab.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/ApacheCommonsLab.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/MapLab.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/Misc.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/MoshiLab.java" root0="FORCE_HIGHLIGHTING" />
@@ -202,7 +164,9 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;sdkman-current&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -264,7 +228,7 @@
       <command value="gradle clean build" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.my-lab [clean build]">
+  <component name="RunManager" selected="Kotlin.EmailKt">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -362,20 +326,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ga.overfullstack.MainKt" />
-      <module name="my-lab.kotlin-java-interop.main" />
+    <configuration name="EmailKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="EmailKt" />
+      <module name="my-lab.http4k.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.EmailKt" />
         <item itemvalue="Gradle.my-lab [clean build]" />
         <item itemvalue="Gradle.Misc.exceptionInCatch" />
         <item itemvalue="Gradle.MapLab.testRemoveKeySet" />
         <item itemvalue="JUnit.MapLab.testRemoveKeySet" />
-        <item itemvalue="Kotlin.MainKt" />
       </list>
     </recent_temporary>
   </component>
@@ -533,7 +497,12 @@
       <workItem from="1647596300129" duration="454000" />
       <workItem from="1647606687825" duration="1027000" />
       <workItem from="1647675606922" duration="1859000" />
-      <workItem from="1647946854791" duration="2578000" />
+      <workItem from="1647946854791" duration="2907000" />
+      <workItem from="1648531398201" duration="746000" />
+      <workItem from="1648643902485" duration="2708000" />
+      <workItem from="1648713444298" duration="1063000" />
+      <workItem from="1648731289724" duration="103000" />
+      <workItem from="1648816130591" duration="344000" />
     </task>
     <task id="LOCAL-00001" summary="Kapt working with Kotlin 1.5.0, Java 16.0.1">
       <created>1620381138496</created>
@@ -682,7 +651,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635481076941</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="commit">
+      <created>1647959993251</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1647959993251</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
