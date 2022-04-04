@@ -8,7 +8,7 @@ dependencies {
   implementation(libs.moshi)
   implementation("dev.zacsweers.moshix:moshi-adapters:0.17.1")
 
-  val kotestVersion = "5.2.1"
+  val kotestVersion = "5.2.2"
   testImplementation("io.kotest:kotest-runner-junit5:$kotestVersion")
   testImplementation("io.kotest:kotest-assertions-core-jvm:$kotestVersion")
 }
