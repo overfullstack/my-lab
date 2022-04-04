@@ -2,7 +2,6 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
   kotlin("jvm")
-  application // This is need to run main method of Kotlin or Java
 }
 
 dependencies {

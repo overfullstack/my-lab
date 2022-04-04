@@ -8,6 +8,7 @@ pluginManagement {
   plugins {
     kotlin("jvm") version kotlinVersion // This is handy if there are multiple modules. This lets you declare version at one place.
     kotlin("kapt") version kotlinVersion
+    kotlin("js") version kotlinVersion
     id("io.freefair.lombok") version lombokGradlePluginVersion
   }
 }
@@ -35,3 +36,4 @@ include("java-lab")
 include("common")
 include("http4k")
 include("moshi-lab")
+include("kotlin-js-interop")

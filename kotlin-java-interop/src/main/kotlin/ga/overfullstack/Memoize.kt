@@ -1,4 +1,4 @@
-@file:JvmName("ConfigToValidator")
+@file:JvmName("Memoize")
 
 package ga.overfullstack
 

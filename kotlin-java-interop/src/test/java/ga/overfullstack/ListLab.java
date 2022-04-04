@@ -1,7 +1,7 @@
 package ga.overfullstack;
 
 import static arrow.core.NonEmptyListKt.nonEmptyListOf;
-import static ga.overfullstack.ConfigToValidator.entityObjIdRandomGenerator;
+import static ga.overfullstack.Memoize.entityObjIdRandomGenerator;
 import static kotlin.collections.CollectionsKt.chunked;
 
 import java.util.List;

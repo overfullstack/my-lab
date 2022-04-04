@@ -4,14 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="commit">
+    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="moshi-lab">
+      <change afterPath="$PROJECT_DIR$/http4k/src/main/kotlin/Pokemon.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/MoshiLab.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_04_22__18_01__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12a6ada7100098069bf0058e9e4a1e89004d0337" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/8/4828c67429d16f1f8ca4375662f349704f18e17d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/MoshiLab.java" beforeDir="false" afterPath="$PROJECT_DIR$/moshi-lab/src/test/java/ga/overfullstack/MoshiLab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/src/test/resources/bean.json" beforeDir="false" afterPath="$PROJECT_DIR$/moshi-lab/src/test/resources/bean.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http4k/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/http4k/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http4k/src/main/java/Email.kt" beforeDir="false" afterPath="$PROJECT_DIR$/http4k/src/main/kotlin/BiDiLens.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-java-interop/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-java-interop/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-java-interop/src/main/kotlin/ga/overfullstack/ConfigToValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-java-interop/src/main/kotlin/ga/overfullstack/Memoize.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-java-interop/src/test/java/ga/overfullstack/ListLab.java" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-java-interop/src/test/java/ga/overfullstack/ListLab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi-lab/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/moshi-lab/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi-lab/src/test/java/ga/overfullstack/MoshiLab.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi-lab/src/test/resources/bean.json" beforeDir="false" afterPath="$PROJECT_DIR$/moshi-lab/src/test/resources/nested-bean.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renovate.json" beforeDir="false" afterPath="$PROJECT_DIR$/renovate.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,12 +48,33 @@
         <task path="$PROJECT_DIR$/lombok-lab">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/kotlin-js-interop">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="my-lab" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="my-lab" type="f1a62948:ProjectNode" />
+                <item name="kotlin-js-interop" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="my-lab" type="f1a62948:ProjectNode" />
+                <item name="kotlin-js-interop" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="my-lab" type="f1a62948:ProjectNode" />
+                <item name="kotlin-js-interop" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -59,15 +89,16 @@
         <option value="Kotlin Interface" />
         <option value="JUnit5 Test Class" />
         <option value="Kotlin Script" />
-        <option value="Kotlin Class" />
         <option value="Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
         <option value="Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;" />
       </list>
     </option>
@@ -83,8 +114,17 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi/1.13.0/e2f718e52cdb2dc17b457d75f0947e2959903959/moshi-1.13.0-sources.jar!/com/squareup/moshi/JsonAdapter.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi/1.13.0/e2f718e52cdb2dc17b457d75f0947e2959903959/moshi-1.13.0-sources.jar!/com/squareup/moshi/Moshi.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.vavr/vavr/1.0.0-SNAPSHOT/14a3351689941f717183d8bfcd5b163068c225fc/vavr-1.0.0-SNAPSHOT-sources.jar!/io/vavr/collection/List.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-core/4.25.5.2/9022e1324e6bdfb6777b70f97633c2a9391fe55d/http4k-core-4.25.5.2-sources.jar!/org/http4k/core/http.kt" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-core/4.25.5.2/9022e1324e6bdfb6777b70f97633c2a9391fe55d/http4k-core-4.25.5.2-sources.jar!/org/http4k/lens/body.kt" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-format-moshi/4.25.5.2/4a42a3220698408a730a1074066b6dc169beaa3b/http4k-format-moshi-4.25.5.2-sources.jar!/org/http4k/format/ConfigurableMoshi.kt" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-format-moshi/4.25.5.2/4a42a3220698408a730a1074066b6dc169beaa3b/http4k-format-moshi-4.25.5.2-sources.jar!/org/http4k/format/Moshi.kt" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.6.20-RC/e81e108a2817747538df29b32a151db38e5da5a2/kotlin-stdlib-common-1.6.20-RC-sources.jar!/kotlin/collections/Maps.kt" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.6.20-RC/bc58085192d5abb48080e3670915133715a33ce0/kotlin-stdlib-1.6.20-RC-sources.jar!/kotlin/Throws.kt" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.6.20-RC/bc58085192d5abb48080e3670915133715a33ce0/kotlin-stdlib-1.6.20-RC-sources.jar!/kotlin/jvm/annotations/JvmPlatformAnnotations.kt" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-kotlin-dsl-7.4.jar!/org/gradle/kotlin/dsl/KotlinDependencyExtensionsKt.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.sdkman/candidates/java/current/lib/src.zip!/java.base/java/util/Collection.java" root0="SKIP_INSPECTION" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.java" root0="FORCE_HIGHLIGHTING" />
@@ -116,7 +156,7 @@
     <setting file="file://$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/WalkerLab1.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/kotlin-java-interop/build.gradle.kts" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/kotlin-java-interop/src/main/java/ga/overfullstack/Member.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/kotlin-java-interop/src/main/kotlin/ga/overfullstack/ConfigToValidator.kt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/kotlin-java-interop/src/main/kotlin/ga/overfullstack/Memoize.kt" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/kotlin-java-interop/src/test/java/ga/overfullstack/ListLab.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/kotlin-java-interop/src/test/kotlin/ga/overfullstack/CrossInline.kt" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/kotlin-java-interop/src/test/kotlin/ga/overfullstack/Misc.kt" root0="FORCE_HIGHLIGHTING" />
@@ -143,29 +183,29 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "sdkman-current",
-    "last_opened_file_path": "/Users/gopala.akshintala/code-clones/my-github/my-lab/moshi-lab/src/test/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;sdkman-current&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/gopala.akshintala/code-clones/my-github/my-lab/moshi-lab/src/test/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JAVA"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JAVA&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="master" />
@@ -214,7 +254,7 @@
       <command value="gradle clean build" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.MoshiLab.customListAdapter">
+  <component name="RunManager" selected="Kotlin.PokemonKt">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -227,52 +267,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="MapLab.testRemoveKeySet" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":java-lab:test" />
-            <option value="--tests" />
-            <option value="&quot;ga.overfullstack.MapLab.testRemoveKeySet&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="Misc.exceptionInCatch" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":java-lab:test" />
-            <option value="--tests" />
-            <option value="&quot;ga.overfullstack.Misc.exceptionInCatch&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
     </configuration>
     <configuration name="MoshiLab.customListAdapter" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -288,6 +282,29 @@
             <option value=":moshi-lab:test" />
             <option value="--tests" />
             <option value="&quot;ga.overfullstack.MoshiLab.customListAdapter&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="MoshiLab.regexFactory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":moshi-lab:test" />
+            <option value="--tests" />
+            <option value="&quot;ga.overfullstack.MoshiLab.regexFactory&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -319,8 +336,15 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="EmailKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="EmailKt" />
+    <configuration name="BiDiLensKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BiDiLensKt" />
+      <module name="my-lab.http4k.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PokemonKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PokemonKt" />
       <module name="my-lab.http4k.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -328,11 +352,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.PokemonKt" />
+        <item itemvalue="Gradle.MoshiLab.regexFactory" />
         <item itemvalue="Gradle.MoshiLab.customListAdapter" />
-        <item itemvalue="Kotlin.EmailKt" />
+        <item itemvalue="Kotlin.BiDiLensKt" />
         <item itemvalue="Gradle.my-lab [clean build]" />
-        <item itemvalue="Gradle.Misc.exceptionInCatch" />
-        <item itemvalue="Gradle.MapLab.testRemoveKeySet" />
       </list>
     </recent_temporary>
   </component>
@@ -495,7 +519,11 @@
       <workItem from="1648643902485" duration="2708000" />
       <workItem from="1648713444298" duration="1063000" />
       <workItem from="1648731289724" duration="103000" />
-      <workItem from="1648816130591" duration="1628000" />
+      <workItem from="1648816130591" duration="7383000" />
+      <workItem from="1648892166313" duration="209000" />
+      <workItem from="1648898202139" duration="6524000" />
+      <workItem from="1648950087856" duration="6415000" />
+      <workItem from="1648980862676" duration="2471000" />
     </task>
     <task id="LOCAL-00001" summary="Kapt working with Kotlin 1.5.0, Java 16.0.1">
       <created>1620381138496</created>
@@ -658,7 +686,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648816606331</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="moshi-lab">
+      <created>1648817831245</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1648817831245</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -744,7 +779,8 @@
     <MESSAGE value="New modules" />
     <MESSAGE value="Moshi lab" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="moshi-lab" />
+    <option name="LAST_COMMIT_MESSAGE" value="moshi-lab" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -753,11 +789,6 @@
           <url>jar://$USER_HOME$/.sdkman/candidates/java/16.0.0.hs-adpt/lib/src.zip!/java.base/java/util/stream/ForEachOps.java</url>
           <line>182</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/moshi-lab/src/test/java/ga/overfullstack/MoshiLab.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
