@@ -6,7 +6,7 @@ pluginManagement {
   val kotlinVersion: String by settings
   val lombokGradlePluginVersion: String by settings
   plugins {
-    kotlin("jvm") version kotlinVersion // This is handy if there are multiple modules1.7.0-dev-3190 This lets you declare version at one place.
+    kotlin("jvm") version kotlinVersion // This is handy if there are multiple modules1.7.0-dev-3266 This lets you declare version at one place.
     kotlin("kapt") version kotlinVersion
     kotlin("js") version kotlinVersion
     id("io.freefair.lombok") version lombokGradlePluginVersion
