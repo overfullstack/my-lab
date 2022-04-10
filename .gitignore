@@ -4,6 +4,8 @@
 **/bin/
 !src/**/build/
 
+**/node_modules/
+
 # Ignore Gradle GUI config
 gradle-app.setting
 
@@ -69,4 +71,5 @@ Temporary Items
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-.idea/sonarlint/
+**/sonarlint/
+.idea/shelf/

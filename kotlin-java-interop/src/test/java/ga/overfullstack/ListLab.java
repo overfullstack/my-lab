@@ -24,6 +24,8 @@ class ListLab {
 
   @Test
   void neList() {
+    final var bean = new Bean();
+    bean.setName("name");
     final var integers = nonEmptyListOf(1, 2, 3);
     System.out.println(integers);
     entityObjIdRandomGenerator.invoke("a");
