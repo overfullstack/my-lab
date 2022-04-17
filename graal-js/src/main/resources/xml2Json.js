@@ -11,7 +11,6 @@ const xml2js = require('xml2js'),
         trim: true,
         mergeAttrs: false
     };
-console.log("Revoman")
 module.exports = function (string) {
     var JSON = {};
 
