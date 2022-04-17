@@ -5,6 +5,7 @@ fun buildContext(): Context {
   val options: MutableMap<String, String> = mutableMapOf()
   options["js.commonjs-require"] = "true"
   options["js.commonjs-require-cwd"] = "graal-js"
+  options["js.esm-eval-returns-exports"] =  "true"
   options["js.commonjs-core-modules-replacements"] =
     "buffer:buffer/, path:path-browserify"
   return Context.newBuilder("js")
