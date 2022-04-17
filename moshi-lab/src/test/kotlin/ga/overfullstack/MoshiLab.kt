@@ -6,13 +6,16 @@ import com.squareup.moshi.JsonReader
 import com.squareup.moshi.JsonWriter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.internal.Util
+import dev.zacsweers.moshix.adapters.AdaptedBy
+import dev.zacsweers.moshix.adapters.JsonString
 import ga.overfullstack.utils.readFileFromTestResource
+import okio.BufferedSource
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import java.io.IOException
 import java.lang.reflect.Type
-import java.util.*
+import java.util.Locale
 
 internal class MoshiLab {
   @Test
@@ -43,6 +46,17 @@ internal class MoshiLab {
     assertEquals(2, nestedBean?.bean?.items?.size)
     assertEquals("{{item1}}".uppercase(), nestedBean?.bean?.items?.get(0))
     assertEquals("item2", nestedBean?.bean?.items?.get(1))
+  }
+
+  @Test
+  fun jsonString() {
+    val collectionJsonStr = readFileFromTestResource("collection.json")
+    val collectionAdapter = Moshi.Builder()
+      .add(JsonString.Factory())
+      .add(AdaptedBy.Factory())
+      .build()
+      .adapter(Collection::class.java)
+    println(collectionAdapter.fromJson(collectionJsonStr))
   }
 
   @JsonClass(generateAdapter = true)
@@ -93,4 +107,22 @@ internal class MoshiLab {
       }
     }
   }
+
+  @JsonClass(generateAdapter = true)
+  @AdaptedBy(ItemDataAdapter::class)
+  internal data class ItemData(val data: String)
+
+  class ItemDataAdapter : JsonAdapter<ItemData>() {
+    override fun fromJson(reader: JsonReader): ItemData {
+      return ItemData(reader.nextSource().use(BufferedSource::readUtf8))
+    }
+
+    override fun toJson(writer: JsonWriter, itemData: ItemData?) {
+      writer.valueSink().use { sink -> sink.writeUtf8(checkNotNull(itemData?.data)) }
+    }
+  }
+
+  @JsonClass(generateAdapter = true)
+  internal data class Collection(val name: String, val itemData: List<ItemData>)
+
 }

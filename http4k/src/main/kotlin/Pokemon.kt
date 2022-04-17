@@ -1,15 +1,16 @@
 import org.http4k.client.JavaHttpClient
 import org.http4k.core.Method
 import org.http4k.core.Request
+import org.http4k.core.Response
 import org.http4k.format.Moshi
 
 fun main() {
   println(callout(mapOf("https://pokeapi.co/api/v2/pokemon?limit=10" to Results::class.java)))
 }
 
-private fun callout(map: Map<String, Class<out Any>>): List<Any?> =
-  map.map { (url, clazz) ->
-    val result = JavaHttpClient()(Request(Method.GET, url))
+private fun callout(urlToClass: Map<String, Class<out Any>>): List<Any?> =
+  urlToClass.map { (url, clazz) ->
+    val result: Response = JavaHttpClient()(Request(Method.GET, url))
     Moshi.asA(result.bodyString(), clazz.kotlin)
   }.toList()
 
