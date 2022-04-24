@@ -2,12 +2,12 @@ import org.graalvm.polyglot.Context
 import org.graalvm.polyglot.HostAccess
 
 fun buildContext(): Context {
-  val options: MutableMap<String, String> = mutableMapOf()
-  options["js.commonjs-require"] = "true"
-  options["js.commonjs-require-cwd"] = "graal-js"
-  options["js.esm-eval-returns-exports"] =  "true"
-  options["js.commonjs-core-modules-replacements"] =
-    "buffer:buffer/, path:path-browserify"
+  val options = mutableMapOf(
+    "js.commonjs-require" to "true",
+    "js.commonjs-require-cwd" to "graal-js",
+    "js.esm-eval-returns-exports" to "true",
+    "js.commonjs-core-modules-replacements" to "buffer:buffer/, path:path-browserify",
+  )
   return Context.newBuilder("js")
     .allowExperimentalOptions(true)
     .allowIO(true)

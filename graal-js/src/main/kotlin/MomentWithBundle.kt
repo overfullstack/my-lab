@@ -6,5 +6,6 @@ fun main() {
   val language = Source.findLanguage(momentJs)
   val context = buildContext()
   val exports = context.eval(Source.newBuilder(language, momentJs).mimeType("application/javascript+module").build())
-  println(exports.getMember("default"))
+  val moment = exports.getMember("default")
+  println(moment.execute().invokeMember("format", "dddd"))
 }

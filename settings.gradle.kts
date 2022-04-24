@@ -6,9 +6,9 @@ pluginManagement {
   val kotlinVersion: String by settings
   val lombokGradlePluginVersion: String by settings
   plugins {
-    kotlin("jvm") version kotlinVersion
-    kotlin("kapt") version kotlinVersion
-    id("io.freefair.lombok") version lombokGradlePluginVersion
+    kotlin("jvm") version kotlinVersion apply false
+    kotlin("kapt") version kotlinVersion apply false
+    id("io.freefair.lombok") version lombokGradlePluginVersion apply false
   }
 }
 

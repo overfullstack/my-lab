@@ -28,15 +28,15 @@ subprojects {
   }
   tasks {
     withType<JavaCompile>().configureEach {
-      //options.compilerArgs.add("--enable-preview")
+      options.compilerArgs.add("--enable-preview")
     }
-    test {
+    withType<Test>().configureEach {
       useJUnitPlatform()
       ignoreFailures = true
-      //jvmArgs("--enable-preview")
-    }
-    testlogger {
-      theme = MOCHA_PARALLEL
     }
   }
+}
+
+testlogger {
+  theme = MOCHA_PARALLEL
 }
