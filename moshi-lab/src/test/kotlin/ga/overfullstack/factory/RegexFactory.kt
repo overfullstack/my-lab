@@ -1,4 +1,4 @@
-package ga.overfullstack
+package ga.overfullstack.factory
 
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.JsonReader
@@ -6,6 +6,7 @@ import com.squareup.moshi.JsonWriter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
 import com.squareup.moshi.internal.Util
+import ga.overfullstack.state.NestedBean
 import ga.overfullstack.utils.readFileFromTestResource
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
@@ -38,14 +39,12 @@ class RegexFactory {
       }
       val stringAdapter = moshi.nextAdapter<String>(this, String::class.java, Util.NO_ANNOTATIONS)
       return object : JsonAdapter<String>() {
-        @Throws(IOException::class)
         override fun fromJson(reader: JsonReader): String? {
           val s = stringAdapter.fromJson(reader)
           val postManExp = "\\{\\{[^}]+}}".toRegex()
           return s?.let { postManExp.replace(s) { matchResult -> matchResult.value.uppercase() } }
         }
 
-        @Throws(IOException::class)
         override fun toJson(writer: JsonWriter, value: String?) {
           stringAdapter.toJson(writer, value?.uppercase(Locale.getDefault()))
         }

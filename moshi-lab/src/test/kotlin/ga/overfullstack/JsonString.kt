@@ -27,7 +27,7 @@ class JsonString {
   @AdaptedBy(ItemDataAdapter::class)
   internal data class ItemData(val data: String)
 
-  private class ItemDataAdapter : JsonAdapter<ItemData>() {
+  internal class ItemDataAdapter : JsonAdapter<ItemData>() {
     override fun fromJson(reader: JsonReader): ItemData {
       return ItemData(reader.nextSource().use(BufferedSource::readUtf8))
     }

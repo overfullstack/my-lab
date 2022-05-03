@@ -6,6 +6,8 @@ import com.squareup.moshi.JsonWriter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
 import com.squareup.moshi.internal.Util
+import ga.overfullstack.state.Bean
+import ga.overfullstack.state.NestedBean
 import org.junit.jupiter.api.Test
 import java.lang.reflect.Type
 import java.nio.charset.Charset

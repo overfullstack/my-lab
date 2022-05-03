@@ -30,12 +30,29 @@ data class Data(val x: Int, val y: Int)
 
 fun main() {
   // val callingScript = "state.callback({x: 1, y: 2})"
-  val callingScript = "pm.environment.set('x', '1'); pm.environment.set('y', '2'); console.log(pm.environment);"
-  val context = buildContext()
+  val responseBody = """
+    {
+      "x": "1",
+      "y": [
+        "2"
+      ]
+    }
+  """.trimIndent()
+  val callingScript = """
+    var jsonData=JSON.parse(responseBody);
+    console.log(jsonData);
+    pm.environment.set('x', jsonData.x); 
+    pm.environment.set('y', jsonData.y[0]);
+    console.log(pm.environment);
+    
+  """.trimIndent()
+  val context = buildContext(useRequireJs = false)
   val source = Source.newBuilder("js", callingScript, "myScript.js").build()
   // val state = State()
   val pm = PostmanAPI()
-  context.getBindings("js").putMember("pm", pm)
+  val jsBindings = context.getBindings("js")
+  jsBindings.putMember("pm", pm)
+  jsBindings.putMember("responseBody", responseBody)
   context.eval(source)
   println(pm.environment)
 }

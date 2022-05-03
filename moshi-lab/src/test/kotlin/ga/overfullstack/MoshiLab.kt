@@ -9,7 +9,7 @@ internal class MoshiLab {
   @OptIn(ExperimentalStdlibApi::class)
   @Test
   fun readJsonToMap() {
-    val beanStr = readFileFromTestResource("bean.json")
+    val beanStr = readFileFromTestResource("map.json")
     val mapAdapter = Moshi.Builder().build().adapter<Map<String, String>>()
     val map = mapAdapter.fromJson(beanStr)
     println(map)

@@ -27,9 +27,6 @@ subprojects {
     runtimeOnly("org.apache.logging.log4j:log4j-slf4j18-impl:2.17.2")
   }
   tasks {
-    withType<JavaCompile>().configureEach {
-      options.compilerArgs.add("--enable-preview")
-    }
     withType<Test>().configureEach {
       useJUnitPlatform()
       ignoreFailures = true

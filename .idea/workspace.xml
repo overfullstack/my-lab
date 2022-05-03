@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;">
-      <change afterPath="$PROJECT_DIR$/.idea/GitLink.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/JsonString.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/RegexFactory.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/SealedLab.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/State.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/UpperCaseFactory.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/ValueSink.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moshi-lab/src/test/resources/bean-with-regex.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moshi-lab/src/test/resources/bean.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moshi-lab/src/test/resources/sealed/error.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moshi-lab/src/test/resources/sealed/success.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graal-js/src/main/kotlin/MomentWithBundle2.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graal-js/src/main/resources/revoman-root.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moshi-lab/src/test/java/ga/overfullstack/JSONInheritanceJ.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/AdapterConvenience.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/JSONInheritance.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moshi-lab/src/test/resources/inheritance.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moshi-lab/src/test/resources/map.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graal-js/src/main/kotlin/ContextBuilder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graal-js/src/main/kotlin/ContextBuilder.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graal-js/src/main/kotlin/MomentWithBundle.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graal-js/src/main/kotlin/MomentWithBundle.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graal-js/src/main/kotlin/MomentWithRequireJs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graal-js/src/main/kotlin/MomentWithRequireJs.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi-lab/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/moshi-lab/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graal-js/src/main/kotlin/Polyglot.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graal-js/src/main/kotlin/Polyglot.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/Regex.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/Regex.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/JsonString.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/JsonString.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/MoshiLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/MoshiLab.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi-lab/src/test/resources/nested-bean.json" beforeDir="false" afterPath="$PROJECT_DIR$/moshi-lab/src/test/resources/nested-bean.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/RegexFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/factory/RegexFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/State.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/state/State.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/UpperCaseFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/factory/UpperCaseFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/ValueSink.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/ValueSink.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi-lab/src/test/resources/bean.json" beforeDir="false" afterPath="$PROJECT_DIR$/moshi-lab/src/test/resources/bean.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,9 +76,9 @@
         <option value="Kotlin Interface" />
         <option value="JUnit5 Test Class" />
         <option value="Kotlin Script" />
+        <option value="Kotlin Class" />
         <option value="Class" />
         <option value="Kotlin File" />
-        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -107,7 +107,6 @@
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi/1.13.0/e2f718e52cdb2dc17b457d75f0947e2959903959/moshi-1.13.0-sources.jar!/com/squareup/moshi/Moshi.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/2.10.0/9600a13b3037fe9548bc0af13cb6ffa7414a99a1/okio-2.10.0-sources.jar!/jvmMain/okio/Buffer.kt" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/dev.zacsweers.moshix/moshi-adapters/0.17.1/e820d1b0c21d72d92d4d97518d04e5dfd82d7652/moshi-adapters-0.17.1-sources.jar!/dev/zacsweers/moshix/adapters/JsonString.kt" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.vavr/vavr/1.0.0-SNAPSHOT/14a3351689941f717183d8bfcd5b163068c225fc/vavr-1.0.0-SNAPSHOT-sources.jar!/io/vavr/collection/List.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.graalvm.sdk/graal-sdk/22.0.0.2/96d13e497a1642b340fe365f5a32ce8272f948ad/graal-sdk-22.0.0.2-sources.jar!/org/graalvm/polyglot/Source.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.graalvm.sdk/graal-sdk/22.0.0.2/96d13e497a1642b340fe365f5a32ce8272f948ad/graal-sdk-22.0.0.2-sources.jar!/org/graalvm/polyglot/Value.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-core/4.25.5.2/9022e1324e6bdfb6777b70f97633c2a9391fe55d/http4k-core-4.25.5.2-sources.jar!/org/http4k/core/http.kt" root0="SKIP_INSPECTION" />
@@ -119,6 +118,7 @@
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-format-moshi/4.25.8.0/455ef731db2980d2cfa60240ea5b28918e26e8e3/http4k-format-moshi-4.25.8.0-sources.jar!/org/http4k/format/ConfigurableMoshi.kt" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-format-moshi/4.25.8.0/455ef731db2980d2cfa60240ea5b28918e26e8e3/http4k-format-moshi-4.25.8.0-sources.jar!/org/http4k/format/Moshi.kt" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.6.20-RC/e81e108a2817747538df29b32a151db38e5da5a2/kotlin-stdlib-common-1.6.20-RC-sources.jar!/kotlin/collections/Maps.kt" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.6.21/4161056305b7cdaf52a6fd0c051b06ad03f9bd49/kotlin-stdlib-common-1.6.21-sources.jar!/kotlin/collections/Maps.kt" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.6.20-RC/bc58085192d5abb48080e3670915133715a33ce0/kotlin-stdlib-1.6.20-RC-sources.jar!/kotlin/Throws.kt" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.6.20-RC/bc58085192d5abb48080e3670915133715a33ce0/kotlin-stdlib-1.6.20-RC-sources.jar!/kotlin/jvm/annotations/JvmPlatformAnnotations.kt" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.sdkman/candidates/java/current/lib/src.zip!/java.base/java/nio/charset/Charset.java" root0="SKIP_INSPECTION" />
@@ -195,6 +195,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable&quot;: &quot;ALL&quot;,
     &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.14.2&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.11.26&quot;,
@@ -209,7 +210,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;build.tools&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
@@ -243,6 +244,7 @@
       <recent name="$PROJECT_DIR$/apt/src/main/java" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="ga.overfullstack.factory" />
       <recent name="ga.overfullstack" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -267,7 +269,7 @@
       <command value="gradle clean build" />
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.MomentWithBundleKt">
+  <component name="RunManager" selected="Kotlin.Xml2JsonWithBundleKt">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -281,7 +283,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MoshiLab.readJsonToAny" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="JSONInheritanceJ.inheritance" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -294,7 +296,7 @@
           <list>
             <option value=":moshi-lab:test" />
             <option value="--tests" />
-            <option value="&quot;ga.overfullstack.MoshiLab.readJsonToAny&quot;" />
+            <option value="&quot;ga.overfullstack.JSONInheritanceJ.inheritance&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -304,51 +306,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="UpperCaseFactory.upperCaseFactoryToJson (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":moshi-lab:test" />
-            <option value="--tests" />
-            <option value="&quot;ga.overfullstack.UpperCaseFactory.upperCaseFactoryToJson&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="ValueSink.upperCaseFactoryToJson" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":moshi-lab:test" />
-            <option value="--tests" />
-            <option value="&quot;ga.overfullstack.ValueSink.upperCaseFactoryToJson&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
+    <configuration name="MiscKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MiscKt" />
+      <module name="my-lab.kotlin-lab.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="MomentWithBundleKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MomentWithBundleKt" />
@@ -357,8 +320,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MomentWithRequireJsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MomentWithRequireJsKt" />
+    <configuration name="ValidatorWithRequireJsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ValidatorWithRequireJsKt" />
+      <module name="my-lab.graal-js.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Xml2JsonWithBundleKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Xml2JsonWithBundleKt" />
       <module name="my-lab.graal-js.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -366,11 +336,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.Xml2JsonWithBundleKt" />
+        <item itemvalue="Kotlin.MiscKt" />
+        <item itemvalue="Kotlin.ValidatorWithRequireJsKt" />
         <item itemvalue="Kotlin.MomentWithBundleKt" />
-        <item itemvalue="Kotlin.MomentWithRequireJsKt" />
-        <item itemvalue="Gradle.MoshiLab.readJsonToAny" />
-        <item itemvalue="Gradle.ValueSink.upperCaseFactoryToJson" />
-        <item itemvalue="Gradle.UpperCaseFactory.upperCaseFactoryToJson (1)" />
+        <item itemvalue="Gradle.JSONInheritanceJ.inheritance" />
       </list>
     </recent_temporary>
   </component>
@@ -562,7 +532,14 @@
       <workItem from="1650528793056" duration="1238000" />
       <workItem from="1650698605167" duration="14372000" />
       <workItem from="1650732682784" duration="1768000" />
-      <workItem from="1650796356585" duration="610000" />
+      <workItem from="1650796356585" duration="954000" />
+      <workItem from="1650817270178" duration="658000" />
+      <workItem from="1650953651197" duration="5645000" />
+      <workItem from="1650981368872" duration="5349000" />
+      <workItem from="1651045282053" duration="6458000" />
+      <workItem from="1651052805906" duration="890000" />
+      <workItem from="1651058216566" duration="3401000" />
+      <workItem from="1651581820773" duration="1720000" />
     </task>
     <task id="LOCAL-00001" summary="Kapt working with Kotlin 1.5.0, Java 16.0.1">
       <created>1620381138496</created>
@@ -781,11 +758,29 @@
       <option name="project" value="LOCAL" />
       <updated>1650218977824</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;">
+      <created>1650796972930</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1650796972930</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -850,7 +845,6 @@
     <option name="OPEN_GENERIC_TABS">
       <map>
         <entry key="c78c070f-866a-4cd0-a019-e49ac65e5469" value="TOOL_WINDOW" />
-        <entry key="ee8dbf12-34fc-4bc9-9513-94e8b6d32f4f" value="TOOL_WINDOW" />
       </map>
     </option>
   </component>
@@ -880,9 +874,9 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/graal-js/src/main/kotlin/ValidatorWithBundle.kt</url>
-          <line>15</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/JSONInheritance.kt</url>
+          <line>23</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

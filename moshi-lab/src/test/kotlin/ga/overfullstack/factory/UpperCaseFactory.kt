@@ -1,4 +1,4 @@
-package ga.overfullstack
+package ga.overfullstack.factory
 
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.JsonReader
@@ -6,6 +6,8 @@ import com.squareup.moshi.JsonWriter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
 import com.squareup.moshi.internal.Util
+import ga.overfullstack.state.Bean
+import ga.overfullstack.state.NestedBean
 import ga.overfullstack.utils.readFileFromTestResource
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertEquals
