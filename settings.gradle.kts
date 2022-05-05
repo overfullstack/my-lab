@@ -7,7 +7,7 @@ pluginManagement {
   val lombokGradlePluginVersion: String by settings
   plugins {
     kotlin("jvm") version kotlinVersion apply false
-    kotlin("ka6.4.3") version kotl1.7.20-dev-762 apply false
+    kotlin("ka6.4.3") version kotl1.7.20-dev-853 apply false
     id("io.freefair.lombok") version lombokGradlePluginVersion apply false
   }
 }
