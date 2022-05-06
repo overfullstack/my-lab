@@ -46,7 +46,7 @@ fun main() {
     console.log(pm.environment);
     
   """.trimIndent()
-  val context = buildContext(useRequireJs = false)
+  val context = buildContext(useCommonjsRequire = false)
   val source = Source.newBuilder("js", callingScript, "myScript.js").build()
   // val state = State()
   val pm = PostmanAPI()

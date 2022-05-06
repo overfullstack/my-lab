@@ -1,9 +1,9 @@
 import org.graalvm.polyglot.Context
 import org.graalvm.polyglot.HostAccess
 
-fun buildContext(useRequireJs: Boolean = true): Context {
+fun buildContext(useCommonjsRequire: Boolean = true): Context {
   val options = buildMap {
-    if (useRequireJs) {
+    if (useCommonjsRequire) {
       put("js.commonjs-require", "true")
       put("js.commonjs-require-cwd", "graal-js")
       put("js.commonjs-core-modules-replacements", "buffer:buffer/, path:path-browserify")
