@@ -11,8 +11,6 @@ R
 "graal-js/src/main/kotlin/Newman.kt,1/a/1a61238880a9525c00048ddfb22d331d4b291e16
 \
 ,graal-js/src/main/kotlin/NewmanWithBundle.kt,6/6/6698cb249f80c98491a9938824b9f8a5410a59fa
-=
-renovate.json,d/c/dc6f0bbca55a3ed08e5a507be2cc18dcdc034386
 v
 Fmoshi-lab/src/test/kotlin/ga/overfullstack/factory/UpperCaseFactory.kt,2/e/2e9d145fea50d7494e0adbc4fc22229f42061abf
 p
@@ -37,3 +35,7 @@ b
 2graal-js/src/main/kotlin/ValidatorWithRequireJs.kt,c/7/c78ab8a1dd9d5e62749d6b586e6ebfcd9062e678
 ]
 -graal-js/src/main/kotlin/MomentWithBundle2.kt,8/1/815fe6bf468e221e173c5d6c73892c303178a310
+n
+>moshi-lab/src/test/java/ga/overfullstack/JSONInheritanceJ.java,d/2/d21df307d8579a101ba5f794c1578e20085b914a
+^
+.graal-js/src/main/kotlin/Xml2JsonWithBundle.kt,2/5/25f23c94713fb486fd9af2af672d3a69da536fc0
