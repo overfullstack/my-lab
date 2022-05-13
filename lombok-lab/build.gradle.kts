@@ -1,6 +1,6 @@
 plugins {
   id("io.freefair.lombok")
-  id("com.github.spotbugs") version "5.0.6"
+  id("com.github.spotbugs") version "5.0.7"
 }
 
 tasks {
