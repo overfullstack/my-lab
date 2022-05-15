@@ -1,3 +1,5 @@
+package withbundle
+
 import io.vavr.Function2
 import org.graalvm.polyglot.Context
 import org.graalvm.polyglot.Source
@@ -11,7 +13,7 @@ fun main() {
 private val context = Context.newBuilder("js").build()
 
 private fun readAndEvaluateJavaScriptSource() {
-  val validatorBundleJs = File("graal-js/src/main/resources/validator_bundle.js")
+  val validatorBundleJs = File("graal-js/src/withbundle/main/resources/validator_bundle.js")
   context.eval(Source.newBuilder("js", validatorBundleJs).build())
   println("All functions available: ${context.getBindings("js").getMember("default").memberKeys}")
 }

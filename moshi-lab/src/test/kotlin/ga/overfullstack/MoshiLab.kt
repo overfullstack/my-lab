@@ -3,6 +3,7 @@ package ga.overfullstack
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
 import ga.overfullstack.utils.readFileFromTestResource
+import io.kotest.matchers.maps.shouldContainExactly
 import org.junit.jupiter.api.Test
 
 internal class MoshiLab {
@@ -19,8 +20,8 @@ internal class MoshiLab {
   @Test
   fun readJsonToAny() {
     val beanStr = readFileFromTestResource("nested-bean.json")
-    val anyAdapter = Moshi.Builder().build().adapter<Any>()
-    val any = anyAdapter.fromJson(beanStr)
-    println(any) // It reads to map like javascript JSON
+    val anyAdapter = Moshi.Builder().build().adapter<Map<*, *>>()
+    val any = anyAdapter.fromJson(beanStr)!! // It reads to LinkedHashTreeMap like javascript JSON
+    (any["bean"] as Map<String, *>) shouldContainExactly mapOf("name" to "member", "items" to listOf("item1", "item2"))
   }
 }

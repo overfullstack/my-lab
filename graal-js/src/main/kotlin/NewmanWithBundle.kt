@@ -12,7 +12,7 @@ fun main() {
 
 @Throws(IOException::class)
 private fun readAndEvaluateJavaScriptSource() {
-  val jsFile = File("graal-js/src/main/resources/newman.js")
+  val jsFile = File("graal-js/src/withbundle.withbundle.withbundle.main/resources/newman.js")
   // load output from WebPack for Validator Module - a single bundled JS file
   val context = buildContext()
   context.eval(Source.newBuilder("js", jsFile).build())

@@ -17,7 +17,7 @@ tasks {
   withType<KotlinCompile> {
     kotlinOptions {
       jvmTarget = JavaVersion.VERSION_17.toString()
-      freeCompilerArgs += "-Xopt-in=kotlin.RequiresOptIn" + "-Xbackend-threads=0"
+      freeCompilerArgs = listOf("-opt-in=kotlin.RequiresOptIn")
     }
   }
 }
