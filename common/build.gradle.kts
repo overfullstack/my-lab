@@ -7,7 +7,7 @@ plugins {
 
 dependencies {
   implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-  val http4kVersion = "4.25.13.0"
+  val http4kVersion = "4.25.15.0"
   api("org.http4k:http4k-core:$http4kVersion")
   api("org.http4k:http4k-format-moshi:$http4kVersion")
   api("dev.zacsweers.moshix:moshi-adapters:0.17.1")
