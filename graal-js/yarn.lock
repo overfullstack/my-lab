@@ -854,10 +854,19 @@ postman-runtime@7.29.0, postman-runtime@^7.29.0:
     tough-cookie "3.0.1"
     uuid "8.3.2"
 
-postman-sandbox@4.0.6, postman-sandbox@^4.0.6:
+postman-sandbox@4.0.6:
   version "4.0.6"
   resolved "https://registry.npmjs.org/postman-sandbox/-/postman-sandbox-4.0.6.tgz"
   integrity sha512-PPRanSNEE4zy3kO7CeSBHmAfJnGdD9ecHY/Mjh26CQuZZarGkNO8c0U/n+xX3+5M1BRNc82UYq6YCtdsSDqcng==
+  dependencies:
+    lodash "4.17.21"
+    teleport-javascript "1.0.0"
+    uvm "2.0.2"
+
+postman-sandbox@4.0.7:
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/postman-sandbox/-/postman-sandbox-4.0.7.tgz#a5bc2fbdcb08d22094016c8813417f8478cf9b76"
+  integrity sha512-DDa5mXZdU+GgXYOBd9B4nxviwHZyePz+wchV/KfWih3xfmSDCyvIP6v5y0AeyzIdwTfkpBi6/yuiwyQGebMluw==
   dependencies:
     lodash "4.17.21"
     teleport-javascript "1.0.0"
