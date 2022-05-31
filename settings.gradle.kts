@@ -22,6 +22,7 @@ dependencyResolutionManagement {
       library("jetbrains-annotations", "org.jetbrains:annotations:23.0.0")
       library("moshi", "com.squareup.moshi:moshi:1.13.0")
       library("jackson-databind", "com.fasterxml.jackson.core:jackson-databind:2.13.2.2")
+      library("apache-commons-lang3", "org.apache.commons:commons-lang3:3.12.0")
     }
   }
 }

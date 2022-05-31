@@ -18,10 +18,19 @@ internal class MoshiLab {
 
   @OptIn(ExperimentalStdlibApi::class)
   @Test
+  fun readJsonToAnyMap() {
+    val beanStr = readFileFromTestResource("nested-bean.json")
+    val mapAdapter = Moshi.Builder().build().adapter<Map<*, *>>()
+    val any = mapAdapter.fromJson(beanStr)!! 
+    (any["bean"] as Map<String, *>) shouldContainExactly mapOf("name" to "member", "items" to listOf("item1", "item2"))
+  }
+
+  @OptIn(ExperimentalStdlibApi::class)
+  @Test
   fun readJsonToAny() {
     val beanStr = readFileFromTestResource("nested-bean.json")
-    val anyAdapter = Moshi.Builder().build().adapter<Map<*, *>>()
+    val anyAdapter = Moshi.Builder().build().adapter<Any>()
     val any = anyAdapter.fromJson(beanStr)!! // It reads to LinkedHashTreeMap like javascript JSON
-    (any["bean"] as Map<String, *>) shouldContainExactly mapOf("name" to "member", "items" to listOf("item1", "item2"))
+    println(any)
   }
 }

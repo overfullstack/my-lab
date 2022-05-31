@@ -1,11 +1,23 @@
 package ga.overfullstack;
 
-import io.vavr.collection.List;
+import io.vavr.control.Either;
+import io.vavr.control.Try;
 import org.junit.jupiter.api.Test;
+import java.util.Optional;
 
 class VavrLab {
   
   @Test
-  public void test() {
+  void either() {
+    final var right = Optional.of(Either.<Integer, Integer>left(1));
+    System.out.println(right.map(etr -> etr.map(v -> v == 1).getOrElse(false)).orElse(false));
   }
+
+  @Test
+  void tryOf() {
+    final Either<IllegalArgumentException, Object> either = Try.of(() -> {
+      throw new IllegalArgumentException();
+    }).toEither();
+  }
+  
 }
