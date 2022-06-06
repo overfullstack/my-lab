@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@faker-js/faker@6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@faker-js/faker/-/faker-6.0.0.tgz#b613ebf5f5ebb2ab987afb567d8b7fe860199c13"
-  integrity sha512-10zLCKhp3YEmBuko71ivcMoIZcCLXgQVck6aNswX+AWwaek/L8S3yz9i8m3tHigRkcF6F2vI+qtdtyySHK+bGA==
+"@faker-js/faker@5.5.3":
+  version "5.5.3"
+  resolved "https://registry.yarnpkg.com/@faker-js/faker/-/faker-5.5.3.tgz#18e3af6b8eae7984072bbeb0c0858474d7c4cefe"
+  integrity sha512-R11tGE6yIFwqpaIqcfkcg7AICXzFg14+5h5v0TfF/9+RMDL6jhzCy/pxHVOfbALGdtVYdt6JdR21tuxEgl34dw==
 
 "@postman/form-data@~3.1.1":
   version "3.1.1"
@@ -787,12 +787,12 @@ postman-collection@4.1.1:
     semver "7.3.5"
     uuid "8.3.2"
 
-postman-collection@^4.1.2:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/postman-collection/-/postman-collection-4.1.2.tgz#977f702a68d680743628938259d72e31f3ff476f"
-  integrity sha512-nRYgzeo2VwQZZXF8YUMUvG8wKXPmjQ+BZPMXix+tNRWBHWAdqa191AwBL80LQxvHzECYp8Lp1JXMpg4OMXHLnw==
+postman-collection@4.1.4:
+  version "4.1.4"
+  resolved "https://registry.yarnpkg.com/postman-collection/-/postman-collection-4.1.4.tgz#f04b64fec6d8cdd417f1e8d89185a44e4ee0b84c"
+  integrity sha512-3b/ZUrCIXRG3Eh3P6usiBYSZbCHTwMsJJ1l2RID/rdv/EC8YyhVS5PKGKdpYrRB69F/fETD9lOAuhvCwj0h71w==
   dependencies:
-    "@faker-js/faker" "6.0.0"
+    "@faker-js/faker" "5.5.3"
     file-type "3.9.0"
     http-reasons "0.1.0"
     iconv-lite "0.6.3"
@@ -801,7 +801,7 @@ postman-collection@^4.1.2:
     mime-format "2.0.1"
     mime-types "2.1.35"
     postman-url-encoder "3.0.5"
-    semver "7.3.5"
+    semver "7.3.7"
     uuid "8.3.2"
 
 postman-request@2.88.1-postman.31:
@@ -955,6 +955,13 @@ semver@7.3.5:
   version "7.3.5"
   resolved "https://registry.npmjs.org/semver/-/semver-7.3.5.tgz"
   integrity sha512-PoeGJYh8HK4BTO/a9Tf6ZG3veo/A7ZVsYrSA6J8ny9nb3B1VrpkuN+z9OE5wfE5p6H4LchYZsegiQgbJD94ZFQ==
+  dependencies:
+    lru-cache "^6.0.0"
+
+semver@7.3.7:
+  version "7.3.7"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.7.tgz#12c5b649afdbf9049707796e22a4028814ce523f"
+  integrity sha512-QlYTucUYOews+WeEujDoEGziz4K6c47V/Bd+LjSSYcA94p+DmINdf7ncaUinThfvZyu13lN9OY1XDxt8C0Tw0g==
   dependencies:
     lru-cache "^6.0.0"
 
