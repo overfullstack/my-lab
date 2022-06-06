@@ -876,7 +876,7 @@ postman-runtime@7.29.2:
     tough-cookie "3.0.1"
     uuid "8.3.2"
 
-postman-sandbox@4.0.6, postman-sandbox@^4.0.6:
+postman-sandbox@4.0.6:
   version "4.0.6"
   resolved "https://registry.npmjs.org/postman-sandbox/-/postman-sandbox-4.0.6.tgz"
   integrity sha512-PPRanSNEE4zy3kO7CeSBHmAfJnGdD9ecHY/Mjh26CQuZZarGkNO8c0U/n+xX3+5M1BRNc82UYq6YCtdsSDqcng==
