@@ -832,7 +832,7 @@ postman-request@2.88.1-postman.31:
     tough-cookie "~2.5.0"
     uuid "^3.3.2"
 
-postman-runtime@7.29.0, postman-runtime@^7.29.0:
+postman-runtime@7.29.0:
   version "7.29.0"
   resolved "https://registry.npmjs.org/postman-runtime/-/postman-runtime-7.29.0.tgz"
   integrity sha512-eXxHREE/fUpohkGPRgBY1YccSGx9cyW3mtGiPyIE4zD5fYzasgBHqW6kbEND3Xrd3yf/uht/YI1H8O7J1+A1+w==
@@ -854,10 +854,41 @@ postman-runtime@7.29.0, postman-runtime@^7.29.0:
     tough-cookie "3.0.1"
     uuid "8.3.2"
 
+postman-runtime@7.29.2:
+  version "7.29.2"
+  resolved "https://registry.yarnpkg.com/postman-runtime/-/postman-runtime-7.29.2.tgz#6a5f3a3e54e9100536f6f2db3062211463d82ec8"
+  integrity sha512-rKQSe3QbjDyVqJMXsU0t3MseE3rVdsVlDj8UMBgcknqiQPJQpCky/3jkhgXKXDMXjy5XXiKTSFy32xYCkOfRYg==
+  dependencies:
+    async "3.2.3"
+    aws4 "1.11.0"
+    handlebars "4.7.7"
+    httpntlm "1.7.7"
+    js-sha512 "0.8.0"
+    lodash "4.17.21"
+    mime-types "2.1.35"
+    node-oauth1 "1.3.0"
+    performance-now "2.1.0"
+    postman-collection "4.1.4"
+    postman-request "2.88.1-postman.31"
+    postman-sandbox "4.0.8"
+    postman-url-encoder "3.0.5"
+    serialised-error "1.1.3"
+    tough-cookie "3.0.1"
+    uuid "8.3.2"
+
 postman-sandbox@4.0.6, postman-sandbox@^4.0.6:
   version "4.0.6"
   resolved "https://registry.npmjs.org/postman-sandbox/-/postman-sandbox-4.0.6.tgz"
   integrity sha512-PPRanSNEE4zy3kO7CeSBHmAfJnGdD9ecHY/Mjh26CQuZZarGkNO8c0U/n+xX3+5M1BRNc82UYq6YCtdsSDqcng==
+  dependencies:
+    lodash "4.17.21"
+    teleport-javascript "1.0.0"
+    uvm "2.0.2"
+
+postman-sandbox@4.0.8:
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/postman-sandbox/-/postman-sandbox-4.0.8.tgz#2e577c43124a0a52f4e2b36886b313732282ca2e"
+  integrity sha512-wY1x5Cd3u97WBX/cC6UsiLZgSkjW9xHJHuC9vr9YbsXlwVW06mAdiaHv+aF9r3yWJkdWQt6Bfq8fi4cRxFM/5Q==
   dependencies:
     lodash "4.17.21"
     teleport-javascript "1.0.0"

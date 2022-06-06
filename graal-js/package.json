@@ -9,7 +9,7 @@
     "newman": "^5.3.2",
     "path-browserify": "^1.0.1",
     "postman-collection": "4.1.4",
-    "postman-runtime": "^7.29.0",
+    "postman-runtime": "7.29.2",
     "postman-sandbox": "^4.0.6",
     "randombytes": "^2.1.0",
     "timers": "^0.1.1",
