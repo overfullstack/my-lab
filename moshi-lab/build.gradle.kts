@@ -9,7 +9,7 @@ dependencies {
   implementation(project(":common"))
   implementation(libs.moshi)
   
-  val moshiXVersion = "0.17.1"
+  val moshiXVersion = "0.18.0"
   implementation("dev.zacsweers.moshix:moshi-adapters:$moshiXVersion")
 
   val kotestVersion = "5.3.0"
