@@ -12,7 +12,7 @@ dependencies {
   api("org.http4k:http4k-format-moshi:$http4kVersion")
   api("dev.zacsweers.moshix:moshi-adapters:0.18.3")
   api("org.slf4j:slf4j-api:1.7.36")
-  val graalVersion = "22.1.0"
+  val graalVersion = "22.2.0"
   api("org.graalvm.sdk:graal-sdk:$graalVersion")
   api("org.graalvm.js:js:$graalVersion")
   api("io.github.serpro69:kotlin-faker:1.10.0")
