@@ -1,14 +1,16 @@
 package ga.overfullstack;
 
-import org.junit.jupiter.api.Test;
+import static java.util.function.Function.identity;
 
+import io.vavr.Function2;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.function.Function;
 import java.util.stream.Collectors;
-
-import static java.util.function.Function.identity;
+import org.junit.jupiter.api.Test;
 
 class MapLab {
   @Test
@@ -31,5 +33,25 @@ class MapLab {
     final var list = List.of("a", "b", "c");
     list.forEach(mutableMap::remove);
     System.out.println(mutableMap);
+  }
+
+  @Test
+  void lambdaAsKey() {
+    final var bean = new FakeBean() {};
+    final Function2<Integer, String, Integer> getInt = bean::getInt;
+    FakeBean.map.put(getInt, new IllegalArgumentException("For getInt"));
+    System.out.println(FakeBean.map.get(getInt));
+  }
+
+  interface FakeBean {
+    Map<? super Object, ? super Exception> map = new HashMap<>();
+
+    default int getInt(int a, String b) {
+      return 1;
+    }
+
+    default String getIntString(int a) {
+      return "a";
+    }
   }
 }

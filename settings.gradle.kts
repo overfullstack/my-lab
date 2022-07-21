@@ -23,6 +23,7 @@ dependencyResolutionManagement {
       library("moshi", "com.squareup.moshi:moshi:1.13.0")
       library("jackson-databind", "com.fasterxml.jackson.core:jackson-databind:2.13.2.2")
       library("apache-commons-lang3", "org.apache.commons:commons-lang3:3.12.0")
+      library("apache-commons-collections4", "org.apache.commons:commons-collections4:4.4")
     }
   }
 }

@@ -1,7 +1,8 @@
 dependencies {
+  implementation(project(":common"))
   implementation(libs.java.vavr)
   implementation(libs.kotlin.vavr)
-  implementation(project(":common"))
   implementation(libs.moshi)
   implementation(libs.jackson.databind)
+  implementation(libs.apache.commons.collections4)
 }

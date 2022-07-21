@@ -3,7 +3,7 @@ plugins {
 }
 
 dependencies {
-  val http4kVersion = "4.25.13.0"
+  val http4kVersion = "4.25.16.2"
   implementation("org.http4k:http4k-core:$http4kVersion")
   implementation("org.http4k:http4k-format-moshi:$http4kVersion")
   implementation("org.http4k:http4k-format-jackson:$http4kVersion")
