@@ -11,7 +11,7 @@ dependencies {
   implementation(libs.kotlin.vavr)
   implementation("com.fasterxml.jackson.core:jackson-databind:2.13.3")
   implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.3")
-  implementation("com.github.javadev:underscore:1.78")
+  implementation("com.github.javadev:underscore:1.80")
   implementation(libs.moshi)
   implementation(libs.apache.commons.lang3)
 }
