@@ -423,6 +423,11 @@ flatted@3.1.1:
   resolved "https://registry.npmjs.org/flatted/-/flatted-3.1.1.tgz"
   integrity sha512-zAoAQiudy+r5SvnSw3KJy5os/oRJYHzrzja/tBDqrZtNhUw8bt6y8OBzMWcjWr+8liV8Eb6yOhw8WZ7VFZ5ZzA==
 
+flatted@3.2.6:
+  version "3.2.6"
+  resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.6.tgz#022e9218c637f9f3fc9c35ab9c9193f05add60b2"
+  integrity sha512-0sQoMh9s0BYsm+12Huy/rkKxVu4R1+r96YX5cG44rHV0pQ6iC3Q+mkoMFaGWObMFYQxCVT+ssG1ksneA2MI9KQ==
+
 forever-agent@~0.6.1:
   version "0.6.1"
   resolved "https://registry.npmjs.org/forever-agent/-/forever-agent-0.6.1.tgz"
@@ -854,7 +859,7 @@ postman-runtime@7.29.0, postman-runtime@^7.29.0:
     tough-cookie "3.0.1"
     uuid "8.3.2"
 
-postman-sandbox@4.0.6, postman-sandbox@^4.0.6:
+postman-sandbox@4.0.6:
   version "4.0.6"
   resolved "https://registry.npmjs.org/postman-sandbox/-/postman-sandbox-4.0.6.tgz"
   integrity sha512-PPRanSNEE4zy3kO7CeSBHmAfJnGdD9ecHY/Mjh26CQuZZarGkNO8c0U/n+xX3+5M1BRNc82UYq6YCtdsSDqcng==
@@ -862,6 +867,16 @@ postman-sandbox@4.0.6, postman-sandbox@^4.0.6:
     lodash "4.17.21"
     teleport-javascript "1.0.0"
     uvm "2.0.2"
+
+postman-sandbox@4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/postman-sandbox/-/postman-sandbox-4.1.2.tgz#8edbbaa3739e9515aa245f5a21253301642c9184"
+  integrity sha512-IFdjys4pwTOXkhskF2X50V97XEzh5nEu0ctv/P083Sr6+QQl0zKZYp7qV8SYiDBObnDvnh6sIVrVWp99ynz9SQ==
+  dependencies:
+    lodash "4.17.21"
+    postman-collection "4.1.5"
+    teleport-javascript "1.0.0"
+    uvm "2.1.1"
 
 postman-url-encoder@3.0.5:
   version "3.0.5"
@@ -1117,6 +1132,13 @@ uvm@2.0.2:
   integrity sha512-Ra+aPiS5GXAbwXmyNExqdS42sTqmmx4XWEDF8uJlsTfOkKf9Rd9xNgav1Yckv4HfVEZg4iOFODWHFYuJ+9Fzfg==
   dependencies:
     flatted "3.1.1"
+
+uvm@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/uvm/-/uvm-2.1.1.tgz#4287db012666215700130a135b25771cae8083e1"
+  integrity sha512-BZ5w8adTpNNr+zczOBRpaX/hH8UPKAf7fmCnidrcsqt3bn8KT9bDIfuS7hgRU9RXgiN01su2pwysBONY6w8W5w==
+  dependencies:
+    flatted "3.2.6"
 
 validator@^13.7.0:
   version "13.7.0"
