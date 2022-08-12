@@ -23,7 +23,7 @@ subprojects {
     testImplementation("org.junit.jupiter:junit-jupiter-api")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 
-    implementation("org.slf4j:slf4j-api:2.0.0-alpha7")
+    implementation("org.slf4j:slf4j-api:2.0.0-beta1")
     runtimeOnly("org.apache.logging.log4j:log4j-slf4j18-impl:2.17.2")
   }
   tasks {
