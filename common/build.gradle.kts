@@ -11,7 +11,7 @@ dependencies {
   api("org.http4k:http4k-core:$http4kVersion")
   api("org.http4k:http4k-format-moshi:$http4kVersion")
   api("dev.zacsweers.moshix:moshi-adapters:0.17.1")
-  api("org.slf4j:slf4j-api:1.7.36")
+  api("org.slf4j:slf4j-api:2.0.0")
   val graalVersion = "22.1.0"
   api("org.graalvm.sdk:graal-sdk:$graalVersion")
   api("org.graalvm.js:js:$graalVersion")
