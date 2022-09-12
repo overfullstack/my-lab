@@ -5,13 +5,13 @@ plugins {
 }
 
 dependencies {
-  val graalVersion = "22.1.0"
+  val graalVersion = "22.0.0.2-1.3"
   implementation("org.graalvm.sdk:graal-sdk:$graalVersion")
   implementation("org.graalvm.js:js:$graalVersion")
   implementation(libs.kotlin.vavr)
-  implementation("com.fasterxml.jackson.core:jackson-databind:2.13.3")
-  implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.3")
-  implementation("com.github.javadev:underscore:1.78")
+  implementation("com.fasterxml.jackson.core:jackson-databind:2.13.4")
+  implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.4")
+  implementation("com.github.javadev:underscore:1.81")
   implementation(libs.moshi)
   implementation(libs.apache.commons.lang3)
 }

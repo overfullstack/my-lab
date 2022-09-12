@@ -5,10 +5,13 @@ pluginManagement {
   }
   val kotlinVersion: String by settings
   val lombokGradlePluginVersion: String by settings
+  val moshiXVersion: String by settings
   plugins {
     kotlin("jvm") version kotlinVersion apply false
+    kotlin("plugin.lombok") version kotlinVersion apply false
     id("io.freefair.lombok") version lombokGradlePluginVersion apply false
     kotlin("kapt") version kotlinVersion apply false
+    id("dev.zacsweers.moshix") version moshiXVersion apply false
   }
 }
 
@@ -24,6 +27,7 @@ dependencyResolutionManagement {
       library("jackson-databind", "com.fasterxml.jackson.core:jackson-databind:2.13.2.2")
       library("apache-commons-lang3", "org.apache.commons:commons-lang3:3.12.0")
       library("apache-commons-collections4", "org.apache.commons:commons-collections4:4.4")
+      library("guava", "com.google.guava:guava:31.1-jre")
     }
   }
 }
@@ -31,7 +35,6 @@ dependencyResolutionManagement {
 rootProject.name = "my-lab"
 include("apt")
 include("arrow")
-include("lombok-lab")
 include("kotlin-java-interop")
 include("java-lab")
 include("common")

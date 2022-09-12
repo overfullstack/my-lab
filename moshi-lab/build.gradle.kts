@@ -2,14 +2,14 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
   kotlin("jvm")
-  id("dev.zacsweers.moshix") version "0.17.1"
+  id("dev.zacsweers.moshix")
 }
 
 dependencies {
   implementation(project(":common"))
   implementation(libs.moshi)
   
-  val moshiXVersion = "0.17.1"
+  val moshiXVersion: String by project
   implementation("dev.zacsweers.moshix:moshi-adapters:$moshiXVersion")
 
   val kotestVersion: String by project

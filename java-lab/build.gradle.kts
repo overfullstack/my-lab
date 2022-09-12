@@ -5,4 +5,5 @@ dependencies {
   implementation(libs.moshi)
   implementation(libs.jackson.databind)
   implementation(libs.apache.commons.collections4)
+  implementation(libs.guava)
 }

@@ -12,13 +12,7 @@ import java.util.function.Consumer;
 class Misc {
   @Test
   void exceptionInCatch() {
-    try {
-      someThrowingFun();
-    } catch (Exception e) {
-    } finally {
-      System.out.println("finally");
-      throw new RuntimeException();
-    }
+    someThrowingFun();
   }
 
   @Test
@@ -31,7 +25,10 @@ class Misc {
 
   void someThrowingFun() {
     try {
-      throw new RuntimeException();
+      throw new IllegalArgumentException("test");
+    } catch (Exception e) {
+      System.out.println("something");
+      throw e;
     } finally {
       System.out.println("finally - someFun");
     }

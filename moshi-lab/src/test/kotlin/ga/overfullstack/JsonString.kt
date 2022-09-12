@@ -14,7 +14,7 @@ import org.junit.jupiter.api.Test
 class JsonString {
   @Test
   fun jsonString() {
-    val collectionJsonStr = readFileFromTestResource("collection.json")
+    val collectionJsonStr = readFileFromTestResource("collection-in-obj.json")
     val collectionAdapter = Moshi.Builder()
       .add(JsonString.Factory())
       .add(AdaptedBy.Factory())

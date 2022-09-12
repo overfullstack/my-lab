@@ -1,10 +1,20 @@
 plugins {
   kotlin("jvm")
   kotlin("kapt")
+  kotlin("plugin.lombok")
+  id("io.freefair.lombok")
 }
-
-val immutablesVersion = "2.9.0"
+kapt {
+  keepJavacAnnotationProcessors = true
+}
+kotlinLombok {
+  lombokConfigurationFile(file("lombok.config"))
+}
 dependencies {
+  val autoValueVersion = "1.9"
+  compileOnly("com.google.auto.value:auto-value-annotations:${autoValueVersion}")
+  kapt("com.google.auto.value:auto-value:${autoValueVersion}")
+  val immutablesVersion: String by project
   kapt("org.immutables:value:$immutablesVersion")
   compileOnly("org.immutables:builder:$immutablesVersion")
   compileOnly("org.immutables:value-annotations:$immutablesVersion")
@@ -15,6 +25,7 @@ dependencies {
 
   implementation(libs.java.vavr)
   implementation(libs.kotlin.vavr)
+  implementation(libs.guava)
 }
 
 tasks {

@@ -8,7 +8,6 @@ public class StackWalkerLab {
   static Runnable runnable = () -> System.out.println(WALKER.getCallerClass());
   
   public static void someMethod() {
-    
     System.out.println(WALKER.getCallerClass());
   }
 }
