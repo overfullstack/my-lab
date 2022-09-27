@@ -8,7 +8,7 @@ dependencies {
   implementation("io.arrow-kt:arrow-fx-coroutines")
   implementation("io.arrow-kt:arrow-optics")
 
-  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1")
+  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
   implementation("com.google.guava:guava:31.1-jre")
   implementation(libs.apache.commons.lang3)
 
