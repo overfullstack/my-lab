@@ -23,7 +23,7 @@ dependencyResolutionManagement {
       library("java-vavr", "io.vavr:vavr:0.10.4")
       library("kotlin-vavr", "io.vavr:vavr-kotlin:0.10.2")
       library("jetbrains-annotations", "org.jetbrains:annotations:23.0.0")
-      library("moshi", "com.squareup.moshi:moshi:1.13.0")
+      library("moshi", "com.squareup.moshi:moshi:1.14.0")
       library("jackson-databind", "com.fasterxml.jackson.core:jackson-databind:2.13.4")
       library("apache-commons-lang3", "org.apache.commons:commons-lang3:3.12.0")
       library("apache-commons-collections4", "org.apache.commons:commons-collections4:4.4")
