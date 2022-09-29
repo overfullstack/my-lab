@@ -10,7 +10,7 @@ dependencies {
   val http4kVersion = "4.31.0.0"
   api("org.http4k:http4k-core:$http4kVersion")
   api("org.http4k:http4k-format-moshi:$http4kVersion")
-  api("dev.zacsweers.moshix:moshi-adapters:0.18.3")
+  api("dev.zacsweers.moshix:moshi-adapters:0.19.0")
   api("org.slf4j:slf4j-api:1.7.36")
   val graalVersion = "22.1.0"
   api("org.graalvm.sdk:graal-sdk:$graalVersion")
