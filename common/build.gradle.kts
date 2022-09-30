@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
   kotlin("jvm")
-  id("dev.zacsweers.moshix") version "0.17.1"
+  id("dev.zacsweers.moshix") version "0.19.0"
 }
 
 dependencies {
