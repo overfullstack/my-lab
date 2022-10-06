@@ -11,7 +11,7 @@ kotlinLombok {
   lombokConfigurationFile(file("lombok.config"))
 }
 dependencies {
-  val autoValueVersion = "1.9"
+  val autoValueVersion = "1.10"
   compileOnly("com.google.auto.value:auto-value-annotations:${autoValueVersion}")
   kapt("com.google.auto.value:auto-value:${autoValueVersion}")
   val immutablesVersion: String by project
