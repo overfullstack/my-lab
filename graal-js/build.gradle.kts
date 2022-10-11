@@ -5,7 +5,7 @@ plugins {
 }
 
 dependencies {
-  val graalVersion = "22.0.0.2-1.3"
+  val graalVersion = "22.2.0.1"
   implementation("org.graalvm.sdk:graal-sdk:$graalVersion")
   implementation("org.graalvm.js:js:$graalVersion")
   implementation(libs.kotlin.vavr)
