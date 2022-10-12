@@ -9,7 +9,7 @@ dependencies {
   implementation("org.graalvm.sdk:graal-sdk:$graalVersion")
   implementation("org.graalvm.js:js:$graalVersion")
   implementation(libs.kotlin.vavr)
-  implementation("com.fasterxml.jackson.core:jackson-databind:2.13.4")
+  implementation("com.fasterxml.jackson.core:jackson-databind:2.13.4.1")
   implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.4")
   implementation("com.github.javadev:underscore:1.82")
   implementation(libs.moshi)
