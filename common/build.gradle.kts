@@ -15,7 +15,7 @@ dependencies {
   val graalVersion = "22.2.0.1"
   api("org.graalvm.sdk:graal-sdk:$graalVersion")
   api("org.graalvm.js:js:$graalVersion")
-  api("io.github.serpro69:kotlin-faker:1.10.0")
+  api("io.github.serpro69:kotlin-faker:1.12.0")
 }
 
 tasks {
