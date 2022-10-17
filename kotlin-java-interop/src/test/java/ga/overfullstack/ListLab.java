@@ -1,11 +1,10 @@
 package ga.overfullstack;
 
-import static arrow.core.NonEmptyListKt.nonEmptyListOf;
-import static ga.overfullstack.Memoize.entityObjIdRandomGenerator;
-import static kotlin.collections.CollectionsKt.chunked;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
-import org.junit.jupiter.api.Test;
+
+import static kotlin.collections.CollectionsKt.chunked;
 
 class ListLab {
   @Test
@@ -22,15 +21,4 @@ class ListLab {
     }, 3);
   }
 
-  @Test
-  void neList() {
-    final var bean = new Bean();
-    bean.setName("name");
-    final var integers = nonEmptyListOf(1, 2, 3);
-    System.out.println(integers);
-    entityObjIdRandomGenerator.invoke("a");
-    entityObjIdRandomGenerator.invoke(2);
-    System.out.println(entityObjIdRandomGenerator.invoke("a"));
-    System.out.println(entityObjIdRandomGenerator.invoke(2));
-  }
 }

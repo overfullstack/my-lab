@@ -1,7 +1,8 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-  kotlin("jvm")
+  id(libs.plugins.kotlin.jvm.pluginId)
 }
 
 tasks {

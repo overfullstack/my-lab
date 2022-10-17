@@ -9,20 +9,21 @@
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleHome" value="$USER_HOME$/.sdkman/candidates/gradle/current" />
-        <option name="gradleJvm" value="sdkman-current" />
+        <option name="gradleJvm" value="zulu-17" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/apt" />
             <option value="$PROJECT_DIR$/arrow" />
+            <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/common" />
             <option value="$PROJECT_DIR$/graal-js" />
             <option value="$PROJECT_DIR$/http4k" />
             <option value="$PROJECT_DIR$/java-lab" />
             <option value="$PROJECT_DIR$/kotlin-java-interop" />
             <option value="$PROJECT_DIR$/kotlin-lab" />
-            <option value="$PROJECT_DIR$/lombok-lab" />
             <option value="$PROJECT_DIR$/moshi-lab" />
+            <option value="$PROJECT_DIR$/vador-lab" />
           </set>
         </option>
       </GradleProjectSettings>

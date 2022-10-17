@@ -1,21 +1,16 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-  kotlin("jvm")
-  id("dev.zacsweers.moshix")
+  id(libs.plugins.kotlin.jvm.pluginId)
+  alias(libs.plugins.moshix)
 }
 
 dependencies {
   implementation(project(":common"))
   implementation(libs.moshi)
-  
-  val moshiXVersion: String by project
-  implementation("dev.zacsweers.moshix:moshi-adapters:$moshiXVersion")
-
-  val kotestVersion: String by project
-  testImplementation(platform("io.kotest:kotest-bom:$kotestVersion"))
-  testImplementation("io.kotest:kotest-runner-junit5:$kotestVersion")
-  testImplementation("io.kotest:kotest-assertions-core:$kotestVersion")
+  implementation(libs.moshix.adapters)
+  testImplementation(libs.bundles.kotest)
 }
 
 moshi {

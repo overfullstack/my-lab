@@ -1,8 +1,9 @@
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-  kotlin("jvm")
-  kotlin("kapt")
-  kotlin("plugin.lombok")
-  id("io.freefair.lombok")
+  id(libs.plugins.kotlin.kapt.pluginId)
+  id(libs.plugins.kotlin.jvm.pluginId)
+  alias(libs.plugins.kotlin.lombok)
+  alias(libs.plugins.lombok)
 }
 kapt {
   keepJavacAnnotationProcessors = true
@@ -14,14 +15,13 @@ dependencies {
   val autoValueVersion = "1.9"
   compileOnly("com.google.auto.value:auto-value-annotations:${autoValueVersion}")
   kapt("com.google.auto.value:auto-value:${autoValueVersion}")
-  val immutablesVersion: String by project
-  kapt("org.immutables:value:$immutablesVersion")
-  compileOnly("org.immutables:builder:$immutablesVersion")
-  compileOnly("org.immutables:value-annotations:$immutablesVersion")
+  kapt(libs.immutables.value)
+  compileOnly(libs.immutables.builder)
+  compileOnly(libs.immutables.value.annotations)
 
-  kaptTest("org.immutables:value:$immutablesVersion")
-  testCompileOnly("org.immutables:builder:$immutablesVersion")
-  testCompileOnly("org.immutables:value-annotations:$immutablesVersion")
+  kaptTest(libs.immutables.value)
+  testCompileOnly(libs.immutables.builder)
+  testCompileOnly(libs.immutables.value.annotations)
 
   implementation(libs.java.vavr)
   implementation(libs.kotlin.vavr)

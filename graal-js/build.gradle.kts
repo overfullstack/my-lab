@@ -1,17 +1,17 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-  kotlin("jvm")
+  id(libs.plugins.kotlin.jvm.pluginId)
 }
 
 dependencies {
-  val graalVersion = "22.0.0.2-1.3"
-  implementation("org.graalvm.sdk:graal-sdk:$graalVersion")
-  implementation("org.graalvm.js:js:$graalVersion")
+  implementation(libs.graal.sdk)
+  implementation(libs.graal.js)
   implementation(libs.kotlin.vavr)
   implementation("com.fasterxml.jackson.core:jackson-databind:2.13.4")
   implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.4")
-  implementation("com.github.javadev:underscore:1.81")
+  implementation("com.github.javadev:underscore:1.82")
   implementation(libs.moshi)
   implementation(libs.apache.commons.lang3)
 }

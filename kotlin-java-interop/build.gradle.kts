@@ -1,16 +1,14 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-  kotlin("jvm")
+  id(libs.plugins.kotlin.jvm.pluginId)
 }
 
 dependencies {
   implementation(libs.moshi)
   implementation(libs.java.vavr)
   implementation(libs.kotlin.vavr)
-
-  implementation(platform("io.arrow-kt:arrow-stack:1.1.2"))
-  implementation("io.arrow-kt:arrow-core")
 }
 
 tasks {

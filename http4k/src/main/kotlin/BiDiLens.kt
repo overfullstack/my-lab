@@ -2,6 +2,7 @@ import org.http4k.core.Body
 import org.http4k.core.Method.GET
 import org.http4k.core.Request
 import org.http4k.format.Jackson.auto
+import org.http4k.lens.BiDiBodyLens
 
 data class Email(val value: String)
 data class Message(val subject: String, val from: Email, val to: Email)
@@ -9,7 +10,7 @@ data class Message(val subject: String, val from: Email, val to: Email)
 fun main() {
     // We can use the auto method here from either Jackson, Gson or the Xml message format objects.
     // Note that the auto() method needs to be manually imported as IntelliJ won't pick it up automatically.
-    val messageLens = Body.auto<Message>().toLens()
+    val messageLens: BiDiBodyLens<Message> = Body.auto<Message>().toLens()
 
     val myMessage = Message("hello", Email("bob@git.com"), Email("sue@git.com"))
 

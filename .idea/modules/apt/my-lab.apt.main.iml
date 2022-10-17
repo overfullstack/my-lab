@@ -5,4 +5,9 @@
       <map />
     </option>
   </component>
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$/../../../apt/build/generated/sources/annotationProcessor/java/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../../apt/build/generated/sources/annotationProcessor/java/main" isTestSource="false" generated="true" />
+    </content>
+  </component>
 </module>

@@ -3,10 +3,9 @@ plugins {
 }
 
 dependencies {
-  val http4kVersion = "4.25.16.2"
-  implementation("org.http4k:http4k-core:$http4kVersion")
-  implementation("org.http4k:http4k-format-moshi:$http4kVersion")
-  implementation("org.http4k:http4k-format-jackson:$http4kVersion")
+  implementation(libs.http4k.core)
+  implementation(libs.http4k.format.moshi)
+  implementation(libs.http4k.format.jackson)
 }
 
 tasks {

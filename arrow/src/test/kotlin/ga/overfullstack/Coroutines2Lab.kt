@@ -1,6 +1,6 @@
 package ga.overfullstack
 
-import common.User
+import ga.overfullstack.common.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
