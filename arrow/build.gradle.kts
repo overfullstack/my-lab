@@ -5,7 +5,7 @@ plugins {
 }
 
 dependencies {
-  implementation(platform("io.arrow-kt:arrow-stack:1.1.4-alpha.8"))
+  implementation(platform("io.arrow-kt:arrow-stack:1.1.4-alpha.10"))
   implementation("io.arrow-kt:arrow-core")
   implementation("io.arrow-kt:arrow-fx-coroutines")
   implementation("io.arrow-kt:arrow-optics")
