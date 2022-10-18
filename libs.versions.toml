@@ -28,7 +28,7 @@ apache-commons-collections4="4.4"
 vador = "1.0.0"
 http4k = "4.32.3.0"
 moshix = "1.7.20-Beta-0.18.3"
-graal-sdk = "22.2.0.1"
+graal-sdk = "22.3.0"
 immutables = "2.9.2"
 
 [libraries]
