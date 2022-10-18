@@ -1,28 +1,21 @@
 package ga.overfullstack.lombok.customsuperbuilder;
 
+import java.time.LocalDate;
+import java.util.List;
 import lombok.Getter;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
-import java.time.LocalDate;
-import java.util.List;
-
-/**
- * Manager is a type of Employee
- */
+/** Manager is a type of Employee */
 @Getter
 @ToString(callSuper = true)
 @SuperBuilder
 public class Manager<IDT> extends Employee<IDT> {
 
-  /**
-   * Employees managed by the Manager
-   */
+  /** Employees managed by the Manager */
   private final List<Employee<IDT>> teamMembers;
 
-  /**
-   * Date on which this employee became Manager
-   */
+  /** Date on which this employee became Manager */
   private final LocalDate promotionDate;
 
   /**
@@ -31,7 +24,8 @@ public class Manager<IDT> extends Employee<IDT> {
    * @param <C>
    * @param <B>
    */
-  public abstract static class ManagerBuilder<IDT, C extends Manager<IDT>, B extends ManagerBuilder<IDT, C, B>>
+  public abstract static class ManagerBuilder<
+          IDT, C extends Manager<IDT>, B extends ManagerBuilder<IDT, C, B>>
       extends EmployeeBuilder<IDT, C, B> {
 
     private LocalDate promotionDate;

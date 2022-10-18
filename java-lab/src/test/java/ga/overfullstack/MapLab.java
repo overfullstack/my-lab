@@ -3,12 +3,10 @@ package ga.overfullstack;
 import static java.util.function.Function.identity;
 
 import io.vavr.Function2;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 import org.junit.jupiter.api.Test;
 
@@ -17,10 +15,14 @@ class MapLab {
   void testMapLab() {
     final var bsId = List.of("a", "b", "c");
     final var bsBPIs = Map.of("a", List.of(1, 2, 3), "b", List.of(4, 5, 6), "c", List.of(7, 8, 9));
-    final var bsBPIList = bsBPIs.entrySet().stream()
-        .map(entry -> entry.getValue().stream().collect(Collectors.toMap(identity(), ignore -> entry.getKey())))
-        .flatMap(map -> map.entrySet().stream())
-        .collect(Collectors.toMap(Entry::getKey, Entry::getValue));
+    final var bsBPIList =
+        bsBPIs.entrySet().stream()
+            .map(
+                entry ->
+                    entry.getValue().stream()
+                        .collect(Collectors.toMap(identity(), ignore -> entry.getKey())))
+            .flatMap(map -> map.entrySet().stream())
+            .collect(Collectors.toMap(Entry::getKey, Entry::getValue));
     System.out.println(bsBPIList);
   }
 

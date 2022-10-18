@@ -2,19 +2,19 @@ package ga.overfullstack;
 
 /** A person class with name and age accessors. */
 public class Person {
-    private String name;
-    private int age;
+  private String name;
+  private int age;
 
-    public Person(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
+  public Person(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }
 
-    public String getName() {
-        return name;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public int getAge() {
-        return age;
-    }
+  public int getAge() {
+    return age;
+  }
 }

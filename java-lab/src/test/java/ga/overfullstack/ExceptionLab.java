@@ -17,15 +17,14 @@ class ExceptionLab {
     final var rte = new RuntimeException(new MyException("my-exception"));
     System.out.printf(String.valueOf(rte.getCause()));
   }
-  
+
   static void someFunThrows() throws Throwable {
     throw new MyException("my-exception");
   }
-  
+
   private static class MyException extends Exception {
     public MyException(String msg) {
       super(msg);
     }
   }
 }
-

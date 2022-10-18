@@ -1,14 +1,13 @@
 package ga.overfullstack;
 
-import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import com.salesforce.vador.config.ValidationConfig;
 import com.salesforce.vador.execution.Vador;
 import com.salesforce.vador.types.Validator;
-
 import java.util.Collections;
 import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.api.Test;
 
 class VaderLab {
   @Test
@@ -31,6 +30,5 @@ class VaderLab {
     assertThat(result).contains("UNKNOWN_EXCEPTION");
   }
 
-  private record RecursiveBean(int id, List<RecursiveBean> recursiveBeans) {
-  }
+  private record RecursiveBean(int id, List<RecursiveBean> recursiveBeans) {}
 }

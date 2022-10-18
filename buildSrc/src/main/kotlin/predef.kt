@@ -17,6 +17,9 @@ internal val VersionCatalog.kotestBundle: Provider<ExternalModuleDependencyBundl
 internal val VersionCatalog.testLogger
     get() = getPlugin("testLogger")
 
+internal val VersionCatalog.kotlinJVM
+    get() = getPlugin("kotlin-jvm")
+
 internal val VersionCatalog.junitBom
         get() = getLibrary("junit-bom")
 

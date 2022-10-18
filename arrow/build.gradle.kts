@@ -1,6 +1,6 @@
 @Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-  id(libs.plugins.kotlin.jvm.pluginId)
+  id("mylab.kt-conventions")
   alias(libs.plugins.ksp)
 }
 
@@ -14,8 +14,4 @@ dependencies {
   implementation("com.google.guava:guava:31.1-jre")
   implementation(libs.apache.commons.lang3)
   implementation(libs.bundles.kotest)
-}
-
-tasks {
-  compileKotlin.get().kotlinOptions.jvmTarget = JavaVersion.VERSION_17.toString()
 }

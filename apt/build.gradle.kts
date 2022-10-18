@@ -1,7 +1,7 @@
 @Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-  id(libs.plugins.kotlin.kapt.pluginId)
   id(libs.plugins.kotlin.jvm.pluginId)
+  id(libs.plugins.kotlin.kapt.pluginId)
   alias(libs.plugins.kotlin.lombok)
   alias(libs.plugins.lombok)
 }
@@ -13,8 +13,8 @@ kotlinLombok {
 }
 dependencies {
   val autoValueVersion = "1.9"
-  compileOnly("com.google.auto.value:auto-value-annotations:${autoValueVersion}")
-  kapt("com.google.auto.value:auto-value:${autoValueVersion}")
+  compileOnly("com.google.auto.value:auto-value-annotations:$autoValueVersion")
+  kapt("com.google.auto.value:auto-value:$autoValueVersion")
   kapt(libs.immutables.value)
   compileOnly(libs.immutables.builder)
   compileOnly(libs.immutables.value.annotations)

@@ -15,9 +15,7 @@ public interface Person {
     return false;
   }
 
-  /**
-   * Control what gets exposed
-   */
+  /** Control what gets exposed */
   static Builder configure() {
     return ImmutablePerson.configure();
   }

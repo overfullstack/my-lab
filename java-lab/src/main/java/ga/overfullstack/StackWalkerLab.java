@@ -6,7 +6,7 @@ public class StackWalkerLab {
   private static final StackWalker WALKER = StackWalker.getInstance(RETAIN_CLASS_REFERENCE);
 
   static Runnable runnable = () -> System.out.println(WALKER.getCallerClass());
-  
+
   public static void someMethod() {
     System.out.println(WALKER.getCallerClass());
   }

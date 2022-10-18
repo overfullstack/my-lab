@@ -1,4 +1,3 @@
 package ga.overfullstack;
 
-class VadorLab {
-}
+class VadorLab {}

@@ -1,7 +1,7 @@
 package ga.overfullstack.generics;
 
-import org.junit.jupiter.api.Test;
 import java.util.List;
+import org.junit.jupiter.api.Test;
 
 class GenericsLab {
   @Test
@@ -10,4 +10,3 @@ class GenericsLab {
     final var obj = strList.get(0);
   }
 }
-
