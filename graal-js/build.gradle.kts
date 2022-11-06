@@ -10,7 +10,7 @@ dependencies {
   implementation(libs.graal.js)
   implementation(libs.kotlin.vavr)
   implementation("com.fasterxml.jackson.core:jackson-databind:2.14.0")
-  implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.4")
+  implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.14.0")
   implementation("com.github.javadev:underscore:1.83")
   implementation(libs.moshi)
   implementation(libs.apache.commons.lang3)
