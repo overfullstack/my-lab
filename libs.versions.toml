@@ -6,7 +6,7 @@ kotlin-vavr = "0.10.2"
 jetbrains-annotations = "23.0.0"
 typeTools = "0.6.3"
 kover = "0.6.1"
-kotlin = "1.8.20-mercury-607"
+kotlin = "1.7.20"
 ksp = "1.7.20-1.0.8"
 detekt = "1.22.0-RC3"
 kotest = "5.5.4"
@@ -23,13 +23,14 @@ jupiter = "5.9.1"
 guava = "31.1-jre"
 moshi = "1.14.0"
 jackson-databind = "2.14.0"
-apache-commons-lang3="3.12.0"
-apache-commons-collections4="4.4"
+apache-commons-lang3 = "3.12.0"
+apache-commons-collections4 = "4.4"
 vador = "1.0.0"
 http4k = "4.33.3.0"
 moshix = "1.7.20-Beta-0.18.3"
 graal-sdk = "22.3.0"
 immutables = "2.9.2"
+apache-log4j = "2.19.0"
 
 [libraries]
 hamcrest-core = { module = "org.hamcrest:hamcrest", version.ref = "hamcrest-core" }
@@ -57,32 +58,36 @@ junit-bom = { module = "org.junit:junit-bom", version.ref = "jupiter" }
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "jupiter" }
 junit-engine = { module = "org.junit.jupiter:junit-jupiter-engine" }
 guava = { module = "com.google.guava:guava", version.ref = "guava" }
-moshi = {module = "com.squareup.moshi:moshi", version.ref="moshi" }
-jackson-databind = {module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson-databind" }
-apache-commons-lang3 = {module = "org.apache.commons:commons-lang3", version.ref = "apache-commons-lang3" }
-apache-commons-collections4 = {module = "org.apache.commons:commons-collections4", version.ref = "apache-commons-collections4" }
+moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
+jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson-databind" }
+apache-commons-lang3 = { module = "org.apache.commons:commons-lang3", version.ref = "apache-commons-lang3" }
+apache-commons-collections4 = { module = "org.apache.commons:commons-collections4", version.ref = "apache-commons-collections4" }
 vador = { module = "com.salesforce.vador:vador", version.ref = "vador" }
 vador-matchers = { module = "com.salesforce.vador:vador-matcher", version.ref = "vador" }
-http4k-bom = {module = "org.http4k:http4k-bom", version.ref = "http4k" }
-http4k-core = {module = "org.http4k:http4k-core", version.ref = "http4k" }
-http4k-format-moshi = {module = "org.http4k:http4k-format-moshi", version.ref = "http4k" }
-http4k-format-jackson = {module = "org.http4k:http4k-format-jackson", version.ref = "http4k" }
-moshix-adapters = { module="dev.zacsweers.moshix:moshi-adapters", version.ref = "moshix" }
+http4k-bom = { module = "org.http4k:http4k-bom", version.ref = "http4k" }
+http4k-core = { module = "org.http4k:http4k-core", version.ref = "http4k" }
+http4k-format-moshi = { module = "org.http4k:http4k-format-moshi", version.ref = "http4k" }
+http4k-format-jackson = { module = "org.http4k:http4k-format-jackson", version.ref = "http4k" }
+moshix-adapters = { module = "dev.zacsweers.moshix:moshi-adapters", version.ref = "moshix" }
 graal-sdk = { module = "org.graalvm.sdk:graal-sdk", version.ref = "graal-sdk" }
 graal-js = { module = "org.graalvm.js:js", version.ref = "graal-sdk" }
-immutables-value = {module = "org.immutables:value", version.ref = "immutables" }
+immutables-value = { module = "org.immutables:value", version.ref = "immutables" }
 immutables-builder = { module = "org.immutables:builder", version.ref = "immutables" }
 immutables-value-annotations = { module = "org.immutables:value-annotations", version.ref = "immutables" }
+log4j-slf4j-impl = { module = "org.apache.logging.log4j:log4j-slf4j-impl", version.ref = "apache-log4j" }
+log4j-api = { module = "org.apache.logging.log4j:log4j-api", version.ref = "apache-log4j" }
+log4j-core = { module = "org.apache.logging.log4j:log4j-core", version.ref = "apache-log4j" }
 
 [bundles]
 kotest = [
-    "kotest-assertionsCore",
-    "kotest-frameworkEngine",
-    "kotest-property",
-    "kotest-runnerJUnit5",
+  "kotest-assertionsCore",
+  "kotest-frameworkEngine",
+  "kotest-property",
+  "kotest-runnerJUnit5",
 ]
 junit = ["junit-jupiter", "junit-engine"]
 vador = ["vador", "vador-matchers"]
+apache-log4j = ["log4j-slf4j-impl", "log4j-api", "log4j-core"]
 
 [plugins]
 kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
@@ -95,4 +100,4 @@ testLogger = { id = "com.adarshr.test-logger", version.ref = "testLogger" }
 moshix = { id = "dev.zacsweers.moshix", version.ref = "moshix" }
 kotlin-lombok = { id = "org.jetbrains.kotlin.plugin.lombok", version.ref = "kotlin" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
-ksp = {id = "com.google.devtools.ksp", version.ref = "ksp" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }

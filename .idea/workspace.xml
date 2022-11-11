@@ -4,56 +4,26 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="Major: Migrated to Version catalogs&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;">
-      <change afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.kt-conventions.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="Defined kt-conventions&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;">
+      <change afterPath="$PROJECT_DIR$/.idea/modules/java-lab/my-lab.java-lab.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/kotlin-lab/my-lab.kotlin-lab.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.detekt-conventions.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/detekt/baseline.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/detekt/detekt.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/generics/TypesLab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/apt/my-lab.apt.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/apt/my-lab.apt.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/apt/my-lab.apt.test.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/apt/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/src/main/java/ga/overfullstack/immutables/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/apt/src/main/java/ga/overfullstack/immutables/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/src/main/java/ga/overfullstack/immutables/PersonStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/apt/src/main/java/ga/overfullstack/immutables/PersonStyle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/src/main/java/ga/overfullstack/immutables/generics/TreeElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/apt/src/main/java/ga/overfullstack/immutables/generics/TreeElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/src/main/java/ga/overfullstack/lombok/SomePojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/apt/src/main/java/ga/overfullstack/lombok/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/src/main/java/ga/overfullstack/lombok/customsuperbuilder/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/apt/src/main/java/ga/overfullstack/lombok/customsuperbuilder/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/src/main/java/ga/overfullstack/lombok/customsuperbuilder/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/apt/src/main/java/ga/overfullstack/lombok/customsuperbuilder/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/src/main/java/ga/overfullstack/lombok/generics/BaseValidationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/apt/src/main/java/ga/overfullstack/lombok/generics/BaseValidationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/src/main/java/ga/overfullstack/lombok/generics/ValidationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/apt/src/main/java/ga/overfullstack/lombok/generics/ValidationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/src/test/java/eggservice/Egg2ServiceDeclarativeTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/src/test/java/eggservice/Egg2ServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/src/test/java/eggservice/EggServiceTest2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/src/test/java/eggservice/MiscLab.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/src/test/java/ga/overfullstack/immutables/ImmutablesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/apt/src/test/java/ga/overfullstack/immutables/ImmutablesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/src/test/java/ga/overfullstack/lombok/CustomBuilderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/apt/src/test/java/ga/overfullstack/lombok/CustomBuilderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/src/test/java/ga/overfullstack/lombok/CustomSuperBuilderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/apt/src/test/java/ga/overfullstack/lombok/CustomSuperBuilderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/src/test/kotlin/ga/overfullstack/lombok/LombokTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/apt/src/test/kotlin/ga/overfullstack/lombok/LombokTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apt/src/main/java/ga/overfullstack/lombok/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/apt/src/main/java/ga/overfullstack/lombok/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/arrow/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/arrow/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.root-conventions.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.root-conventions.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.sub-conventions.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.sub-conventions.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/kotlin/predef.kt" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/predef.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/test/java/ga/overfullstack/ReVomanTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/test/resources/Traveler.postman_collection.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http4k/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/http4k/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/ClassWithParametricTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/ClassWithParametricTypes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/StackWalkerLab.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/StackWalkerLab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/Collections4Lab.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/Collections4Lab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/ExceptionLab.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/ExceptionLab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/MapLab.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/MapLab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/Misc.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/Misc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/VadorLab.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/VadorLab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/VavrLab.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/VavrLab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/generics/GenericsLab.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/generics/GenericsLab.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kotlin-java-interop/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-java-interop/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-java-interop/src/main/java/ga/overfullstack/Container.java" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-java-interop/src/main/java/ga/overfullstack/Container.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-java-interop/src/test/java/ga/overfullstack/ListLab.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-lab/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-lab/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi-lab/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/moshi-lab/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi-lab/src/main/java/ga/overfullstack/AnyAdapterFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi-lab/src/main/java/ga/overfullstack/AnyAdapterFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi-lab/src/main/java/ga/overfullstack/ObjOrListAdapterFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi-lab/src/main/java/ga/overfullstack/ObjOrListAdapterFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi-lab/src/main/java/ga/overfullstack/SingleOrListAdapterFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi-lab/src/main/java/ga/overfullstack/SingleOrListAdapterFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi-lab/src/test/java/ga/overfullstack/JSONInheritanceJ.java" beforeDir="false" afterPath="$PROJECT_DIR$/moshi-lab/src/test/java/ga/overfullstack/JSONInheritanceJ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/AdapterConvenience.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/libs.versions.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi-lab/src/test/java/ga/overfullstack/JSONInheritanceJTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vador-lab/src/test/java/ga/overfullstack/VaderLab.java" beforeDir="false" afterPath="$PROJECT_DIR$/vador-lab/src/test/java/ga/overfullstack/VaderLab.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +90,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SIGN_OFF_COMMIT" value="true" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -141,15 +110,16 @@
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi/1.13.0/e2f718e52cdb2dc17b457d75f0947e2959903959/moshi-1.13.0-sources.jar!/com/squareup/moshi/StandardJsonAdapters.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi/1.13.0/e2f718e52cdb2dc17b457d75f0947e2959903959/moshi-1.13.0-sources.jar!/com/squareup/moshi/Types.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi/1.13.0/e2f718e52cdb2dc17b457d75f0947e2959903959/moshi-1.13.0-sources.jar!/com/squareup/moshi/internal/Util.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi/1.14.0/cae460a3498d2375721e5ecb3b8e15e3131c72a3/moshi-1.14.0-sources.jar!/com/squareup/moshi/Types.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi/1.14.0/cae460a3498d2375721e5ecb3b8e15e3131c72a3/moshi-1.14.0-sources.jar!/com/squareup/moshi/internal/Util.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.vavr/vavr/0.10.4/b6509f9114d0354893803668e58b97965a41f2f6/vavr-0.10.4-sources.jar!/io/vavr/control/Try.java" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-core/4.30.6.0/8c87df6b1496e632d458ad586333defd2b24ba22/http4k-core-4.30.6.0-sources.jar!/org/http4k/lens/header.kt" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-core/4.30.6.0/8c87df6b1496e632d458ad586333defd2b24ba22/http4k-core-4.30.6.0-sources.jar!/org/http4k/lens/lens.kt" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.sdkman/candidates/java/current/lib/src.zip!/java.base/java/lang/reflect/Type.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.sdkman/candidates/java/current/lib/src.zip!/java.base/java/nio/charset/Charset.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.sdkman/candidates/java/current/lib/src.zip!/java.base/java/util/Collection.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.sdkman/candidates/java/current/lib/src.zip!/java.base/java/util/Collections.java" root0="SKIP_INSPECTION" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$USER_HOME$/blt/tools/Darwin/jdk/openjdk_17.0.3_17.34.20_x64/zulu-17.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Class.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/apt/build.gradle.kts" root0="FORCE_HIGHLIGHTING" />
@@ -161,6 +131,9 @@
     <setting file="file://$PROJECT_DIR$/arrow/src/test/kotlin/ga/overfullstack/ExtensionLab.kt" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/arrow/src/test/kotlin/ga/overfullstack/MemoizedLab.kt" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/build.gradle.kts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.kt-conventions.gradle.kts" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.root-conventions.gradle.kts" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.sub-conventions.gradle.kts" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/utils/Utils.kt" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/graal-js/build.gradle.kts" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/graal-js/node_modules/crypto-browserify/index.js" root0="SKIP_INSPECTION" />
@@ -211,6 +184,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
@@ -246,7 +222,7 @@
     &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Kotlin&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.rainbow.brackets&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -300,6 +276,7 @@
       <recent name="dsl" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="" />
       <recent name="ga.overfullstack" />
       <recent name="misc" />
     </key>
@@ -313,11 +290,12 @@
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
+      <command value="gradle clean build --no-build-cache" />
       <command value="gradle spotlessApply" />
       <command value="gradle clean build" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.LombokTest.lombokJava">
+  <component name="RunManager" selected="Gradle.TypesLab.parametricTest">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -377,6 +355,29 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="TypesLab.parametricTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":java-lab:test" />
+            <option value="--tests" />
+            <option value="&quot;ga.overfullstack.generics.TypesLab.parametricTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="VaderLab.failFastRecursively" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -396,28 +397,6 @@
         <option name="vmOptions" />
       </ExternalSystemSettings>
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="my-lab [clean build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
@@ -445,11 +424,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.TypesLab.parametricTest" />
         <item itemvalue="Gradle.LombokTest.lombokJava" />
         <item itemvalue="Gradle.LombokTest.lombokKt" />
         <item itemvalue="Gradle.my-lab [spotlessApply]" />
         <item itemvalue="Gradle.VaderLab.failFastRecursively" />
-        <item itemvalue="Gradle.my-lab [clean build]" />
       </list>
     </recent_temporary>
   </component>
@@ -711,7 +690,22 @@
       <workItem from="1666004688977" duration="3077000" />
       <workItem from="1666007780817" duration="2489000" />
       <workItem from="1666021284825" duration="2437000" />
-      <workItem from="1666093651882" duration="2735000" />
+      <workItem from="1666093651882" duration="3030000" />
+      <workItem from="1666097091724" duration="23000" />
+      <workItem from="1666097679631" duration="1449000" />
+      <workItem from="1666715248451" duration="1634000" />
+      <workItem from="1666774359318" duration="2693000" />
+      <workItem from="1666803389753" duration="1387000" />
+      <workItem from="1666858967600" duration="13000" />
+      <workItem from="1666859596852" duration="1228000" />
+      <workItem from="1666860998284" duration="1443000" />
+      <workItem from="1666863801701" duration="41000" />
+      <workItem from="1666864016221" duration="5000" />
+      <workItem from="1666864240271" duration="2505000" />
+      <workItem from="1667384667738" duration="1074000" />
+      <workItem from="1667724957011" duration="1566000" />
+      <workItem from="1667839235304" duration="2221000" />
+      <workItem from="1667987483581" duration="2155000" />
     </task>
     <task id="LOCAL-00001" summary="Kapt working with Kotlin 1.5.0, Java 16.0.1">
       <created>1620381138496</created>
@@ -993,7 +987,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666021317844</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Defined kt-conventions&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;">
+      <created>1666097053630</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1666097053630</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1093,7 +1094,8 @@
     <MESSAGE value="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;" />
     <MESSAGE value="kotlin lombok&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;" />
     <MESSAGE value="Major: Migrated to Version catalogs&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Major: Migrated to Version catalogs&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;" />
+    <MESSAGE value="Defined kt-conventions&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Defined kt-conventions&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1119,24 +1121,9 @@
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/moshi-lab/src/main/java/ga/overfullstack/SingleOrListAdapterFactory.kt</url>
-          <line>41</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/moshi-lab/src/main/java/ga/overfullstack/SingleOrListAdapterFactory.kt</url>
-          <line>40</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/SingleOrListAdapterTest.kt</url>
           <line>17</line>
           <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/moshi-lab/src/main/java/ga/overfullstack/SingleOrListAdapterFactory.kt</url>
-          <line>25</line>
-          <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/SingleOrListAdapterTest.kt</url>

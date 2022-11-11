@@ -9,6 +9,7 @@ plugins {
   id("com.diffplug.spotless")
   id("org.jetbrains.kotlinx.kover")
   id("com.adarshr.test-logger")
+  id("io.gitlab.arturbosch.detekt")
   id("com.github.spotbugs") apply false
 }
 
@@ -64,6 +65,12 @@ spotless {
     indentWithSpaces(2)
     endWithNewline()
   }
+}
+detekt {
+  parallel = true
+  buildUponDefaultConfig = true
+  baseline = file("$rootDir/detekt/baseline.xml")
+  config = files("$rootDir/detekt/detekt.yml")
 }
 tasks {
   spotbugsMain.get().enabled = false
