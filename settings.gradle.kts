@@ -6,7 +6,6 @@ dependencyResolutionManagement {
       from(files("libs.versions.toml"))
     }
   }
-
   repositories {
     mavenCentral()
     gradlePluginPortal()

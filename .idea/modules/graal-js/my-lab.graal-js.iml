@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$/../../../arrow">
-      <excludeFolder url="file://$MODULE_DIR$/../../../arrow/bin" />
+    <content url="file://$MODULE_DIR$/../../../graal-js">
+      <excludeFolder url="file://$MODULE_DIR$/../../../graal-js/bin" />
     </content>
   </component>
 </module>

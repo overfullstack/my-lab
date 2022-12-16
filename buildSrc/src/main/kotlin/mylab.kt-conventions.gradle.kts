@@ -1,12 +1,14 @@
-import org.gradle.api.artifacts.VersionCatalog
-import org.gradle.api.artifacts.VersionCatalogsExtension
-import org.gradle.kotlin.dsl.getByType
-import org.gradle.kotlin.dsl.invoke
-import org.gradle.kotlin.dsl.withType
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
   kotlin("jvm")
+}
+
+val libs: VersionCatalog =
+  extensions.getByType<VersionCatalogsExtension>().named("libs")
+
+dependencies {
+  testImplementation(libs.kotestBundle)
 }
 
 tasks {

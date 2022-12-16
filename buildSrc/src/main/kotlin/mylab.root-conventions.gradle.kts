@@ -70,7 +70,7 @@ detekt {
   parallel = true
   buildUponDefaultConfig = true
   baseline = file("$rootDir/detekt/baseline.xml")
-  config = files("$rootDir/detekt/detekt.yml")
+  config = files("$rootDir/detekt/config.yml")
 }
 tasks {
   spotbugsMain.get().enabled = false

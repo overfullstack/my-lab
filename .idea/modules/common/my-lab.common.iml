@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$/../../../moshi-lab">
-      <excludeFolder url="file://$MODULE_DIR$/../../../moshi-lab/bin" />
+    <content url="file://$MODULE_DIR$/../../../common">
+      <excludeFolder url="file://$MODULE_DIR$/../../../common/bin" />
     </content>
   </component>
 </module>

@@ -6,20 +6,20 @@ kotlin-vavr = "0.10.2"
 jetbrains-annotations = "23.0.0"
 typeTools = "0.6.3"
 kover = "0.6.1"
-kotlin = "1.7.21"
-ksp = "1.7.20-1.0.8"
-detekt = "1.22.0-RC3"
+kotlin = "1.8.0-Beta"
+ksp = "1.8.0-Beta-1.0.8"
+detekt = "1.22.0"
 kotest = "5.5.4"
 spotless = "6.11.0"
 spotbugs = "5.0.13"
-lombok = "6.5.1"
+lombok-gradle = "6.5.1"
 testLogger = "3.2.0"
 assertj-core = "3.23.1"
 assertj-vavr = "0.4.2"
 slf4j-api = "2.0.3"
 log4j-slf4j18-impl = "2.18.0"
 reflection-util = "2.14.0"
-jupiter = "5.9.1"
+junit = "5.9.1"
 guava = "31.1-jre"
 moshi = "1.14.0"
 jackson-databind = "2.14.0"
@@ -31,6 +31,8 @@ moshix = "1.7.20-Beta-0.18.3"
 graal-sdk = "22.3.0"
 immutables = "2.9.2"
 apache-log4j = "2.19.0"
+arrow = "1.1.4-alpha.15"
+kotlinx-coroutines-core = "1.6.4"
 
 [libraries]
 hamcrest-core = { module = "org.hamcrest:hamcrest", version.ref = "hamcrest-core" }
@@ -54,8 +56,8 @@ assertj-core = { module = "org.assertj:assertj-core", version.ref = "assertj-cor
 assertj-vavr = { module = "org.assertj:assertj-vavr", version.ref = "assertj-vavr" }
 slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j-api" }
 log4j-slf4j18-impl = { module = "org.apache.logging.log4j:log4j-slf4j18-impl", version.ref = "log4j-slf4j18-impl" }
-junit-bom = { module = "org.junit:junit-bom", version.ref = "jupiter" }
-junit-jupiter = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "jupiter" }
+junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }
 junit-engine = { module = "org.junit.jupiter:junit-jupiter-engine" }
 guava = { module = "com.google.guava:guava", version.ref = "guava" }
 moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
@@ -63,7 +65,7 @@ jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", ver
 apache-commons-lang3 = { module = "org.apache.commons:commons-lang3", version.ref = "apache-commons-lang3" }
 apache-commons-collections4 = { module = "org.apache.commons:commons-collections4", version.ref = "apache-commons-collections4" }
 vador = { module = "com.salesforce.vador:vador", version.ref = "vador" }
-vador-matchers = { module = "com.salesforce.vador:vador-matcher", version.ref = "vador" }
+vador-matchers = { module = "com.salesforce.vador:vador-matchers", version.ref = "vador" }
 http4k-bom = { module = "org.http4k:http4k-bom", version.ref = "http4k" }
 http4k-core = { module = "org.http4k:http4k-core", version.ref = "http4k" }
 http4k-format-moshi = { module = "org.http4k:http4k-format-moshi", version.ref = "http4k" }
@@ -77,6 +79,10 @@ immutables-value-annotations = { module = "org.immutables:value-annotations", ve
 log4j-slf4j-impl = { module = "org.apache.logging.log4j:log4j-slf4j-impl", version.ref = "apache-log4j" }
 log4j-api = { module = "org.apache.logging.log4j:log4j-api", version.ref = "apache-log4j" }
 log4j-core = { module = "org.apache.logging.log4j:log4j-core", version.ref = "apache-log4j" }
+arrow-core = { module = "io.arrow-kt:arrow-core", version.ref = "arrow" }
+arrow-optics = { module = "io.arrow-kt:arrow-optics", version.ref = "arrow" }
+arrow-fx-coroutines = { module = "io.arrow-kt:arrow-fx-coroutines", version.ref = "arrow" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines-core"}
 
 [bundles]
 kotest = [
@@ -88,6 +94,13 @@ kotest = [
 junit = ["junit-jupiter", "junit-engine"]
 vador = ["vador", "vador-matchers"]
 apache-log4j = ["log4j-slf4j-impl", "log4j-api", "log4j-core"]
+arrow = ["arrow-core", "arrow-optics", "arrow-fx-coroutines"]
+http4k = [
+  "http4k-bom",
+  "http4k-core",
+  "http4k-format-moshi",
+  "http4k-format-jackson"
+]
 
 [plugins]
 kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
@@ -95,7 +108,7 @@ kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
 spotbugs = { id = "com.github.spotbugs", version.ref = "spotbugs" }
-lombok = { id = "io.freefair.lombok", version.ref = "lombok" }
+lombok = { id = "io.freefair.lombok", version.ref = "lombok-gradle" }
 testLogger = { id = "com.adarshr.test-logger", version.ref = "testLogger" }
 moshix = { id = "dev.zacsweers.moshix", version.ref = "moshix" }
 kotlin-lombok = { id = "org.jetbrains.kotlin.plugin.lombok", version.ref = "kotlin" }
