@@ -14,3 +14,12 @@ dependencies {
 moshi {
   enableSealed.set(true)
 }
+// moshix plugin not compatible with k2 compiler
+tasks {
+  withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    kotlinOptions {
+      jvmTarget = JavaVersion.VERSION_17.toString()
+      freeCompilerArgs = listOf("-opt-in=kotlin.RequiresOptIn")
+    }
+  }
+}

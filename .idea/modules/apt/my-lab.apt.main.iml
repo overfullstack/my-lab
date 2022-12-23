@@ -6,6 +6,9 @@
     </option>
   </component>
   <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$/../../../apt/build/generated/sources/annotationProcessor/java/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../../apt/build/generated/sources/annotationProcessor/java/main" isTestSource="false" generated="true" />
+    </content>
     <content url="file://$MODULE_DIR$/../../../apt/src/main">
       <excludeFolder url="file://$MODULE_DIR$/../../../apt/src/main/generated" />
     </content>

@@ -4,41 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="Kotlin to 1.7.21&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/common/my-lab.common.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/http4k/my-lab.http4k.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/vador-lab/ga.overfullstack.my-lab.vador-lab.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/vador-lab/ga.overfullstack.my-lab.vador-lab.test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http4k/src/main/kotlin/LensLab.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/GuavaLab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/apt/my-lab.apt.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/apt/my-lab.apt.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/arrow/my-lab.arrow.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/java-lab/my-lab.java-lab.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/graal-js/my-lab.graal-js.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/kotlin-java-interop/my-lab.kotlin-java-interop.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/kotlin-lab/my-lab.kotlin-lab.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/moshi-lab/my-lab.moshi-lab.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/my-lab.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/my-lab.iml" afterDir="false" />
+    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="Use JVM Test suite for sub projects&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/apt/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arrow/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/arrow/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.detekt-conventions.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.kt-conventions.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.kt-conventions.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.root-conventions.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.root-conventions.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/common/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/ContextBuilder.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/Xml2JsonWithBundle.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graal-js/src/main/kotlin/Xml2JsonWithBundle.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detekt/detekt.yml" beforeDir="false" afterPath="$PROJECT_DIR$/detekt/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/generics/TypesLab.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/generics/TypesLab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-lab/src/test/java/ga/overfullstack/Misc.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/Misc.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/libs.versions.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/coroutines/ClosureLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/ClosureLab.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/coroutines/CoroutineLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/coroutines/CoroutineLab.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +188,7 @@
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.11.0&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;sdkman-current&quot;,
     &quot;last_directory_selection&quot;: &quot;/Users/gopala.akshintala/code-clones/my-github/my-lab/apt/src/test/java/ga/overfullstack&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/gopala.akshintala/code-clones/my-github/my-lab/buildSrc/src/main/kotlin&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/gopala.akshintala/code-clones/my-github/my-lab/kotlin-lab/src/test/kotlin/ga/overfullstack/coroutines&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -248,11 +217,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/coroutines" />
       <recent name="$PROJECT_DIR$/buildSrc/src/main/kotlin" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/buildSrc" />
       <recent name="$PROJECT_DIR$/apt/src/test/java/ga/overfullstack/lombok" />
-      <recent name="$PROJECT_DIR$/apt/src/main/java/ga/overfullstack/lombok" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -265,8 +234,8 @@
       <recent name="$PROJECT_DIR$/apt/src/test/java" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
-      <recent name="ga.overfullstack.immutables" />
       <recent name="ga.overfullstack" />
+      <recent name="ga.overfullstack.immutables" />
       <recent name="ga.overfullstack.factory" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -303,7 +272,7 @@
       <command value="gradle clean build" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.my-lab [clean build]">
+  <component name="RunManager" selected="Gradle.CoroutineLab.withDispatchers vs launch">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -317,7 +286,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GuavaLab.givenTable_whenGet_returnsSuccessfully" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CoroutineLab.launch starts concurrent coroutine on main thread" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -328,9 +297,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":java-lab:test" />
+            <option value=":kotlin-lab:test" />
             <option value="--tests" />
-            <option value="&quot;ga.overfullstack.GuavaLab.givenTable_whenGet_returnsSuccessfully&quot;" />
+            <option value="&quot;ga.overfullstack.coroutines.CoroutineLab.launch starts concurrent coroutine on main thread&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -340,7 +309,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="my-lab [clean build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CoroutineLab.runBlocking with Dispatcher and blocking thread" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -351,13 +320,60 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
-            <option value="build" />
+            <option value=":kotlin-lab:test" />
+            <option value="--tests" />
+            <option value="&quot;ga.overfullstack.coroutines.CoroutineLab.runBlocking with Dispatcher and blocking thread&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CoroutineLab.runBlocking with blocking thread inside withContext" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":kotlin-lab:test" />
+            <option value="--tests" />
+            <option value="&quot;ga.overfullstack.coroutines.CoroutineLab.runBlocking with blocking thread inside withContext&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CoroutineLab.withDispatchers vs launch" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":kotlin-lab:test" />
+            <option value="--tests" />
+            <option value="&quot;ga.overfullstack.coroutines.CoroutineLab.withDispatchers vs launch&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
@@ -383,41 +399,13 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="my-lab [spotlessApply]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="spotlessApply" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="LensLabKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="LensLabKt" />
-      <module name="my-lab.http4k.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CoroutineLab.withDispatchers vs launch" />
+        <item itemvalue="Gradle.CoroutineLab.runBlocking with blocking thread inside withContext" />
+        <item itemvalue="Gradle.CoroutineLab.runBlocking with Dispatcher and blocking thread" />
+        <item itemvalue="Gradle.CoroutineLab.launch starts concurrent coroutine on main thread" />
         <item itemvalue="Gradle.my-lab [detekt]" />
-        <item itemvalue="Gradle.GuavaLab.givenTable_whenGet_returnsSuccessfully" />
-        <item itemvalue="Kotlin.LensLabKt" />
-        <item itemvalue="Gradle.my-lab [spotlessApply]" />
-        <item itemvalue="Gradle.my-lab [clean build]" />
       </list>
     </recent_temporary>
   </component>
@@ -704,6 +692,8 @@
       <workItem from="1669873940500" duration="837000" />
       <workItem from="1669876853581" duration="4392000" />
       <workItem from="1669889386543" duration="9122000" />
+      <workItem from="1671690446011" duration="2167000" />
+      <workItem from="1671778978669" duration="5107000" />
     </task>
     <task id="LOCAL-00001" summary="Kapt working with Kotlin 1.5.0, Java 16.0.1">
       <created>1620381138496</created>
@@ -999,7 +989,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668230918460</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Use JVM Test suite for sub projects&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;">
+      <created>1671781927991</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1671781927991</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1101,7 +1098,8 @@
     <MESSAGE value="Major: Migrated to Version catalogs&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;" />
     <MESSAGE value="Defined kt-conventions&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;" />
     <MESSAGE value="Kotlin to 1.7.21&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Kotlin to 1.7.21&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;" />
+    <MESSAGE value="Use JVM Test suite for sub projects&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Use JVM Test suite for sub projects&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -23,9 +23,13 @@ internal val VersionCatalog.kotlinJVM
 internal val VersionCatalog.junitBom
         get() = getLibrary("junit-bom")
 
-internal val VersionCatalog.junit
+internal val VersionCatalog.junitBundle
         get() = getBundle("junit")
+
+internal val VersionCatalog.junitVersion
+  get() = getVersion("junit")
 
 private fun VersionCatalog.getLibrary(library: String) = findLibrary(library).get()
 private fun VersionCatalog.getBundle(bundle: String) = findBundle(bundle).get()
 private fun VersionCatalog.getPlugin(plugin: String) = findPlugin(plugin).get()
+private fun VersionCatalog.getVersion(plugin: String) = findVersion(plugin).get()
