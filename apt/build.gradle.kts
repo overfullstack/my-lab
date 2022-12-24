@@ -8,7 +8,7 @@ kotlinLombok {
   lombokConfigurationFile(file("lombok.config"))
 }
 dependencies {
-  val autoValueVersion = "1.9"
+  val autoValueVersion = "1.10.1"
   compileOnly("com.google.auto.value:auto-value-annotations:$autoValueVersion")
   annotationProcessor("com.google.auto.value:auto-value:$autoValueVersion")
   annotationProcessor(libs.immutables.value)
