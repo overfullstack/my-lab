@@ -590,6 +590,11 @@ isstream@~0.1.2:
   resolved "https://registry.npmjs.org/isstream/-/isstream-0.1.2.tgz"
   integrity sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=
 
+jose@4.11.2:
+  version "4.11.2"
+  resolved "https://registry.yarnpkg.com/jose/-/jose-4.11.2.tgz#d9699307c02e18ff56825843ba90e2fae9f09e23"
+  integrity sha512-njj0VL2TsIxCtgzhO+9RRobBvws4oYyCM8TpvoUQwl/MbIM3NFJRR9+e6x0sS5xXaP1t6OCBkaBME98OV9zU5A==
+
 js-sha512@0.8.0:
   version "0.8.0"
   resolved "https://registry.npmjs.org/js-sha512/-/js-sha512-0.8.0.tgz"
@@ -922,16 +927,17 @@ postman-runtime@7.29.0:
     tough-cookie "3.0.1"
     uuid "8.3.2"
 
-postman-runtime@7.30.1:
-  version "7.30.1"
-  resolved "https://registry.yarnpkg.com/postman-runtime/-/postman-runtime-7.30.1.tgz#cb5ab203a16a58b1f5df6ac9fe0b0b2a6f128f7a"
-  integrity sha512-mqNHLTot/ZTWixDV9qSI6r8pLQyEA/BVxlCQX4ut0gn/ZtdiNAJe/+D5L6JKbW/TdU+e68ysVodFadeFbOsydQ==
+postman-runtime@7.31.0:
+  version "7.31.0"
+  resolved "https://registry.yarnpkg.com/postman-runtime/-/postman-runtime-7.31.0.tgz#e3297f55aa8dfeceeeacd680b1b88bcf6b2e1f02"
+  integrity sha512-A9ELXsp5PUY2Ytes1mbqdBmVRV3KFpNGE7wQdGZ85ZEVmNGWf5+37DBjkSdYcZ7cEm6tI6kdUR8eWYVev3jjvA==
   dependencies:
     "@postman/tough-cookie" "4.1.2-postman.1"
     async "3.2.4"
     aws4 "1.12.0"
     handlebars "4.7.7"
     httpntlm "1.8.2"
+    jose "4.11.2"
     js-sha512 "0.8.0"
     lodash "4.17.21"
     mime-types "2.1.35"
