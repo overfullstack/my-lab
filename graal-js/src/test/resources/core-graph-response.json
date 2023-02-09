@@ -1,0 +1,114 @@
+{
+  "graphs" : [
+    {
+      "graphId" : "1",
+      "graphResponse" : {
+        "compositeResponse" : [
+          {
+            "body" : {
+              "id" : "01txx0000006iSGAAY",
+              "success" : true,
+              "errors" : []
+            },
+            "httpHeaders" : {
+              "Location" : "/services/data/v58.0/sobjects/Product2/01txx0000006iSGAAY"
+            },
+            "httpStatusCode" : 201,
+            "referenceId" : "product"
+          },
+          {
+            "body" : {
+              "id" : "01sxx0000005r3JAAQ",
+              "success" : true,
+              "errors" : []
+            },
+            "httpHeaders" : {
+              "Location" : "/services/data/v58.0/sobjects/Pricebook2/01sxx0000005r3JAAQ"
+            },
+            "httpStatusCode" : 201,
+            "referenceId" : "pricebook"
+          },
+          {
+            "body" : {
+              "id" : "001xx000003Ga7nAAC",
+              "success" : true,
+              "errors" : []
+            },
+            "httpHeaders" : {
+              "Location" : "/services/data/v58.0/sobjects/Account/001xx000003Ga7nAAC"
+            },
+            "httpStatusCode" : 201,
+            "referenceId" : "account"
+          },
+          {
+            "body" : {
+              "id" : "2OXxx0000004CSOGA2",
+              "success" : true,
+              "errors" : []
+            },
+            "httpHeaders" : {
+              "Location" : "/services/data/v58.0/sobjects/PaymentTerm/2OXxx0000004CSOGA2"
+            },
+            "httpStatusCode" : 201,
+            "referenceId" : "paymentTerm"
+          },
+          {
+            "body" : {
+              "id" : "01uxx0000008yqMAAQ",
+              "success" : true,
+              "errors" : []
+            },
+            "httpHeaders" : {
+              "Location" : "/services/data/v58.0/sobjects/PricebookEntry/01uxx0000008yqMAAQ"
+            },
+            "httpStatusCode" : 201,
+            "referenceId" : "standardPricebookEntry"
+          },
+          {
+            "body" : {
+              "id" : "01uxx0000008yqNAAQ",
+              "success" : true,
+              "errors" : []
+            },
+            "httpHeaders" : {
+              "Location" : "/services/data/v58.0/sobjects/PricebookEntry/01uxx0000008yqNAAQ"
+            },
+            "httpStatusCode" : 201,
+            "referenceId" : "pricebookEntry"
+          },
+          {
+            "body" : {
+              "id" : "003xx000004WhpoAAC",
+              "success" : true,
+              "errors" : []
+            },
+            "httpHeaders" : {
+              "Location" : "/services/data/v58.0/sobjects/Contact/003xx000004WhpoAAC"
+            },
+            "httpStatusCode" : 201,
+            "referenceId" : "contact"
+          },
+          {
+            "body" : {
+              "id" : "2gaxx00000000JNAAY",
+              "success" : true,
+              "errors" : []
+            },
+            "httpHeaders" : {
+              "Location" : "/services/data/v58.0/sobjects/PaymentTermItem/2gaxx00000000JNAAY"
+            },
+            "httpStatusCode" : 201,
+            "referenceId" : "paymentTermItem"
+          },
+          {
+            "body" : null,
+            "httpHeaders" : {},
+            "httpStatusCode" : 204,
+            "referenceId" : "activatePaymentTerm"
+          }
+        ]
+      },
+      "isSuccessful" : true
+    }
+  ]
+}

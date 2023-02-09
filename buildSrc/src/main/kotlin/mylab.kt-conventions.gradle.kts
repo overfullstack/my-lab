@@ -14,7 +14,7 @@ dependencies {
 tasks {
   withType<KotlinCompile> {
     kotlinOptions {
-      freeCompilerArgs = listOf("-opt-in=kotlin.RequiresOptIn", "-Xuse-k2")
+      freeCompilerArgs = listOf("-opt-in=kotlin.RequiresOptIn")
     }
   }
 }

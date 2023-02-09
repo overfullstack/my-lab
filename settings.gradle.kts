@@ -1,16 +1,16 @@
-enableFeaturePreview("VERSION_CATALOGS")
-
 dependencyResolutionManagement {
   versionCatalogs {
     create("libs") {
       from(files("libs.versions.toml"))
     }
   }
-  repositories {
-    mavenCentral()
-    gradlePluginPortal()
-    google()
-    // maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/dev")
+  pluginManagement {
+    repositories {
+      mavenCentral()
+      gradlePluginPortal()
+      google()
+      maven("https://oss.sonatype.org/content/repositories/snapshots")
+    }
   }
 }
 

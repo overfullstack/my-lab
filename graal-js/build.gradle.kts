@@ -6,6 +6,7 @@ plugins {
 }
 
 dependencies {
+  implementation(project(":common"))
   implementation(libs.graal.sdk)
   implementation(libs.graal.js)
   implementation(libs.kotlin.vavr)

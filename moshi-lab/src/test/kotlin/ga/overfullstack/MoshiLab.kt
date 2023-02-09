@@ -1,6 +1,7 @@
 package ga.overfullstack
 
 import com.squareup.moshi.Moshi
+import com.squareup.moshi.Types
 import com.squareup.moshi.adapter
 import ga.overfullstack.utils.readFileFromTestResource
 import io.kotest.matchers.maps.shouldContainExactly
@@ -41,5 +42,11 @@ internal class MoshiLab {
     val anyAdapter = Moshi.Builder().build().adapter<Any>()
     val any = anyAdapter.fromJson(nestedBeanStr)!! // It reads to LinkedHashTreeMap like javascript JSON
     println(any)
+  }
+
+  @Test
+  fun collectionElementType() {
+    val strList = listOf("a", "b");
+    println(Types.collectionElementType(strList::class.java, List::class.java))
   }
 }

@@ -34,7 +34,7 @@ class CoroutineLab {
       delay(1000)
       println("World ${Thread.currentThread().name}") // @coroutine#2
     }
-    print("Hello,")
+    print("Hello,") // This prints first
   }
 
   @Test

@@ -1,0 +1,25 @@
+{
+  "compositeResponse": [{
+    "body": {
+      "id": "005xx000001X9kPAAS",
+      "success": true,
+      "errors": []
+    },
+    "httpHeaders": {
+      "Location": "/services/data/v58.0/sobjects/User/005xx000001X9kPAAS"
+    },
+    "httpStatusCode": 201,
+    "referenceId": "refUser"
+  }, {
+    "body": {
+      "id": "0Paxx0000004E89CAE",
+      "success": true,
+      "errors": []
+    },
+    "httpHeaders": {
+      "Location": "/services/data/v58.0/sobjects/PermissionSetAssignment/0Paxx0000004E89CAE"
+    },
+    "httpStatusCode": 201,
+    "referenceId": "salesOpsRepPsgAssignment"
+  }]
+}

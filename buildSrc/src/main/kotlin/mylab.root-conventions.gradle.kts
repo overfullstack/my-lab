@@ -16,8 +16,10 @@ plugins {
 version = "1.0.0"
 group = "ga.overfullstack"
 description = "My Lab"
+// This is needed to declare repositories on each module
 repositories {
   mavenCentral()
+  maven("https://oss.sonatype.org/content/repositories/snapshots")
 }
 kover {
   isDisabled.set(false)

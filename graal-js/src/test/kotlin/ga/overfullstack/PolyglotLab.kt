@@ -9,12 +9,69 @@ import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
 import ga.overfullstack.PolyglotLab.UpperCase
 import ga.overfullstack.PolyglotLab.Xml2Json
-import org.apache.commons.lang3.StringUtils
+import ga.overfullstack.utils.readFileFromTestResource
 import org.graalvm.polyglot.Source
 import org.junit.jupiter.api.Test
-import java.util.Locale
+import java.util.*
 
 class PolyglotLab {
+  
+  @Test
+  fun jsonParse() {
+    val responseBody = readFileFromTestResource("core-user-creation-response.json")
+    val context = buildContext(useCommonjsRequire = false)
+    val callingScript = """
+      var jsonData = JSON.parse(responseBody);
+      var statusCode = jsonData.compositeResponse[0].httpStatusCode;
+      if (statusCode === 201) {
+          jsonData.compositeResponse.forEach(function(response) {
+              if (response.referenceId === "refUser") {
+                  pm.environment.set("salesOpsRepUserId", response.body.id);
+              } 
+          })
+      }
+    """.trimIndent()
+    val source = Source.newBuilder("js", callingScript, "myScript.js").build()
+    val pm = PostmanAPI()
+    val jsBindings = context.getBindings("js")
+    jsBindings.putMember("pm", pm)
+    jsBindings.putMember("responseBody", responseBody)
+    context.eval(source)
+    println(pm.environment)
+  }
+
+  @Test
+  fun jsonParse2() {
+    val responseBody = readFileFromTestResource("core-user-creation-response.json")
+    val context = buildContext(useCommonjsRequire = false)
+    val callingScript = """
+      var jsonData = JSON.parse(responseBody);
+      var statusCode = jsonData.compositeResponse[0].httpStatusCode;
+      
+      if (statusCode === 201) {
+          jsonData.compositeResponse.forEach(function(response) {
+              var referenceId = response.referenceId;
+              if(referenceId === "refOrder") {
+                  pm.environment.set("orderId", response.body.id);
+              } else if(response.referenceId === "refOnetimeOrderItem") {
+                  pm.environment.set("oneTimeOrderItemId", response.body.id);
+              } else if(response.referenceId === "refEvergreenOrderItem") {
+                  pm.environment.set("evergreenOrderItemId", response.body.id);
+              } else if(response.referenceId === "refTermedOrderItem") {
+                  pm.environment.set("termedOrderItemId", response.body.id);
+              }
+          });  
+      }
+    """.trimIndent()
+    val source = Source.newBuilder("js", callingScript, "myScript.js").build()
+    val pm = PostmanAPI()
+    val jsBindings = context.getBindings("js")
+    jsBindings.putMember("pm", pm)
+    jsBindings.putMember("responseBody", responseBody)
+    context.eval(source)
+    println(pm.environment)
+  }
+
   @Test
   fun jsonParseWithCallback() {
     val responseBody = """
@@ -109,7 +166,7 @@ class PolyglotLab {
     context.eval(source)
     println(pm.environment)
   }
-  
+
   @OptIn(ExperimentalStdlibApi::class)
   val xml2Json = Xml2Json { xml ->
     Moshi.Builder().build().adapter<Map<*, *>>().fromJson(U.xmlToJson(xml))
@@ -120,6 +177,7 @@ class PolyglotLab {
     val randomTag = getRandomString(5)
     XmlMapper().readValue("<$randomTag>$trimmedXml</$randomTag>", Map::class.java)
   }
+
   private fun getRandomString(length: Int): String {
     val allowedChars = ('a'..'z')
     return (1..length)

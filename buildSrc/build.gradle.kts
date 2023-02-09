@@ -1,15 +1,12 @@
 plugins {
-    `kotlin-dsl`
+  `kotlin-dsl`
 }
-repositories {
-    mavenCentral()
-    gradlePluginPortal()
-}
+// These are the list of gradle plugins used inside the buildSrc
 dependencies {
-    implementation(libs.kotlin.gradle)
-    implementation(libs.spotless.gradle)
-    implementation(libs.detekt.gradle)
-    implementation(libs.kover.gradle)
-    implementation(libs.spotbugs.gradle)
-    implementation(libs.testLogger.gradle)
+  implementation(libs.kotlin.gradle)
+  implementation(libs.spotless.gradle)
+  implementation(libs.detekt.gradle)
+  implementation(libs.kover.gradle)
+  implementation(libs.spotbugs.gradle)
+  implementation(libs.testLogger.gradle)
 }

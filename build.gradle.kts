@@ -8,9 +8,6 @@ plugins {
 }
 allprojects {
   apply(plugin = "mylab.root-conventions")
-  repositories {
-    mavenCentral()
-  }
 }
 val detektReportMerge by tasks.registering(ReportMergeTask::class) {
   output.set(rootProject.buildDir.resolve("reports/detekt/merge.xml"))
