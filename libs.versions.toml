@@ -31,7 +31,7 @@ vador = "1.0.0"
 graal-sdk = "22.3.1"
 immutables = "2.9.3"
 apache-log4j = "2.19.0"
-mockito = "5.0.0"
+mockito = "5.1.1"
 
 [libraries]
 hamcrest-core = { module = "org.hamcrest:hamcrest", version.ref = "hamcrest-core" }
