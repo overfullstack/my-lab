@@ -927,10 +927,10 @@ postman-runtime@7.29.0:
     tough-cookie "3.0.1"
     uuid "8.3.2"
 
-postman-runtime@7.31.1:
-  version "7.31.1"
-  resolved "https://registry.yarnpkg.com/postman-runtime/-/postman-runtime-7.31.1.tgz#eded02ccd1f7a5ab0154b1098dc554114459668e"
-  integrity sha512-uAnjsF3DpRGUH8YZbhbKHma8WSUr8YhNFtE2lZonjYvpyWTZsqxmq2cpVeLu1AYm96dCslDECUq9adX6uxJAAQ==
+postman-runtime@7.31.3:
+  version "7.31.3"
+  resolved "https://registry.yarnpkg.com/postman-runtime/-/postman-runtime-7.31.3.tgz#4415fccbf72e5b8c928f756560ce9b2f5f614e4d"
+  integrity sha512-+3GuUQdWREY4Msx/MIbha/ywDKhA4bsoseXb++NnXbxrObOp/U8kRXAHfLVk0060tqyjiOraEJpAKpfKEaiZ4w==
   dependencies:
     "@postman/tough-cookie" "4.1.2-postman.1"
     async "3.2.4"
@@ -945,7 +945,7 @@ postman-runtime@7.31.1:
     performance-now "2.1.0"
     postman-collection "4.1.7"
     postman-request "2.88.1-postman.32"
-    postman-sandbox "4.2.3"
+    postman-sandbox "4.2.4"
     postman-url-encoder "3.0.5"
     serialised-error "1.1.3"
     uuid "8.3.2"
@@ -959,10 +959,10 @@ postman-sandbox@4.0.6:
     teleport-javascript "1.0.0"
     uvm "2.0.2"
 
-postman-sandbox@4.2.3:
-  version "4.2.3"
-  resolved "https://registry.yarnpkg.com/postman-sandbox/-/postman-sandbox-4.2.3.tgz#ee4b4e37768d95f28f72897f841a42a7054a1ab5"
-  integrity sha512-JNpVxXabp3ltWDfef9aXM2I1BhAIpYo7QRGMAkvOfFFNnu9fc9IoRRGTYosCA5G/j99WQNLWwbBBrBGqdjYMQg==
+postman-sandbox@4.2.4:
+  version "4.2.4"
+  resolved "https://registry.yarnpkg.com/postman-sandbox/-/postman-sandbox-4.2.4.tgz#7b1a30c277d58e39904608d493118655ffbd962e"
+  integrity sha512-Yisdiz02+cW4hkFnpRF6milP7ZG7tfcRewrwFpYmNkswYrCeoHzeTZ9ozrf3tyLRmC6a6qf2ex+8wjWTcgni3Q==
   dependencies:
     lodash "4.17.21"
     postman-collection "4.1.7"
