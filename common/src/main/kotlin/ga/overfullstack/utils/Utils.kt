@@ -5,3 +5,6 @@ import java.io.File
 
 fun readFileFromTestResource(fileRelativePath: String): String =
   File("src/test/resources/$fileRelativePath").readText()
+
+fun readFileFromResource(fileAbsolutePath: String): String =
+  File("fileAbsolutePath").readText()

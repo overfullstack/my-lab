@@ -10,4 +10,10 @@ class DateTimeLab {
     val current = LocalDate.now()
     println(current)
   }
+
+  @Test
+  fun epoch() {
+    val epoch = System.currentTimeMillis()
+    println(epoch)
+  }
 }

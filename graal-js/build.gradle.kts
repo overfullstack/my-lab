@@ -1,8 +1,5 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
-@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-  id(libs.plugins.kotlin.jvm.pluginId)
+  id("mylab.kt-conventions")
 }
 
 dependencies {
@@ -15,13 +12,4 @@ dependencies {
   implementation("com.github.javadev:underscore:1.87")
   implementation(libs.moshi)
   implementation(libs.apache.commons.lang3)
-}
-
-tasks {
-  withType<KotlinCompile> {
-    kotlinOptions {
-      jvmTarget = JavaVersion.VERSION_17.toString()
-      freeCompilerArgs = listOf("-opt-in=kotlin.RequiresOptIn")
-    }
-  }
 }

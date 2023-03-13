@@ -2,6 +2,7 @@ package ga.overfullstack;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.function.Consumer;
 import org.junit.jupiter.api.DisplayName;
@@ -39,6 +40,12 @@ class Misc {
     System.out.println(i);
     add(1, 2, System.out::println);
     add(1, 2, result -> assertEquals(3, result));
+  }
+
+  @Test
+  @DisplayName("String Join")
+  void stringJoin() {
+    System.out.println(String.join("', '", List.of("a", "b", "c")));
   }
 
   static void add(int a, int b) {
