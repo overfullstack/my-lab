@@ -1,6 +1,6 @@
 [versions]
 kotlin = "1.8.20-RC"
-ksp = "1.8.20-RC-1.0.9"
+ksp = "1.8.20-RC-1.0.10-SNAPSHOT"
 kover = "0.6.1"
 kotlinx-coroutines-core = "1.6.4"
 hamcrest-core = "2.2"
@@ -31,7 +31,7 @@ mockito = "5.2.0"
 # Common dependencies
 junit = "5.9.2"
 detekt = "1.22.0"
-spotless = "6.16.0"
+spotless = "6.17.0"
 apache-log4j = "2.20.0"
 
 [libraries]
