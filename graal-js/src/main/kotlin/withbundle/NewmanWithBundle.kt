@@ -1,3 +1,7 @@
+package withbundle
+
+import buildContext
+import org.graalvm.polyglot.Context
 import org.graalvm.polyglot.Source
 import java.io.File
 import java.io.IOException
@@ -17,4 +21,9 @@ private fun readAndEvaluateJavaScriptSource() {
   val context = buildContext()
   context.eval(Source.newBuilder("js", jsFile).build())
   println("All functions available: ${context.getBindings("js").memberKeys}")
+}
+
+fun readAndEvaluateWithBundle() {
+  val cx: Context = buildContext()
+  cx.eval("js", "const newman = require('newman');")
 }

@@ -1,3 +1,6 @@
+package withRequireJs
+
+import buildContext
 import org.graalvm.polyglot.Context
 
 fun main() {

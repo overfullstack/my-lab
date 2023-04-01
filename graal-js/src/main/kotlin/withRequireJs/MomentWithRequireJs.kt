@@ -1,3 +1,7 @@
+package withRequireJs
+
+import buildContext
+
 fun main() {
   val context = buildContext()
   context.eval(
