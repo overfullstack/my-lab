@@ -6,6 +6,8 @@ dependencies {
   implementation(libs.jackson.databind)
   implementation(libs.apache.commons.collections4)
   implementation(libs.guava)
+  implementation(libs.vador)
 
+  testImplementation(libs.assertj.vavr)
   testImplementation(libs.assertj.core)
 }

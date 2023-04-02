@@ -20,6 +20,7 @@ description = "My Lab"
 repositories {
   mavenCentral()
   maven("https://oss.sonatype.org/content/repositories/snapshots")
+  maven("https://repo.spring.io/milestone")
 }
 kover {
   isDisabled.set(false)

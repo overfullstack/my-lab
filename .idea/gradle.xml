@@ -29,10 +29,9 @@
             <option value="$PROJECT_DIR$/graal-js" />
             <option value="$PROJECT_DIR$/http4k" />
             <option value="$PROJECT_DIR$/java-lab" />
-            <option value="$PROJECT_DIR$/kotlin-java-interop" />
             <option value="$PROJECT_DIR$/kotlin-lab" />
-            <option value="$PROJECT_DIR$/moshi-lab" />
-            <option value="$PROJECT_DIR$/vador-lab" />
+            <option value="$PROJECT_DIR$/moshi" />
+            <option value="$PROJECT_DIR$/spring" />
           </set>
         </option>
       </GradleProjectSettings>

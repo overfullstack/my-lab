@@ -2,7 +2,6 @@ import io.gitlab.arturbosch.detekt.Detekt
 import io.gitlab.arturbosch.detekt.DetektPlugin
 import io.gitlab.arturbosch.detekt.report.ReportMergeTask
 
-@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
   id(libs.plugins.detekt.pluginId) apply false
 }

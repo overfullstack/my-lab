@@ -1,6 +1,5 @@
 package ga.overfullstack
 
-import deepFlattenList
 import org.junit.jupiter.api.Test
 
 class DeepFlattenTest {

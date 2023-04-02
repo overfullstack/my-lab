@@ -1,7 +1,7 @@
 package ga.overfullstack
 
-import SuccessConfig.Companion.successType
-import SuccessConfig.Companion.validateIfSuccess
+import ga.overfullstack.SuccessConfig.Companion.successType
+import ga.overfullstack.SuccessConfig.Companion.validateIfSuccess
 import org.junit.jupiter.api.Test
 
 class SuccessConfigTest {

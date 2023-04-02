@@ -1,4 +1,3 @@
-@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
   id("mylab.kt-conventions")
   alias(libs.plugins.kotlin.lombok)

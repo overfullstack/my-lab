@@ -8,5 +8,6 @@ dependencyResolutionManagement {
     gradlePluginPortal()
     google()
     maven("https://oss.sonatype.org/content/repositories/snapshots")
+    maven("https://repo.spring.io/milestone")
   }
 }
