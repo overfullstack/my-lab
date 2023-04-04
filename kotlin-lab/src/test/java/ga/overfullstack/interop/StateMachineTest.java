@@ -15,6 +15,9 @@ class StateMachineTest {
     final var sm = StateMachine.Companion.create(
         gb -> {
           gb.initialState(Solid.INSTANCE);
+          gb.<State.State.Solid>state(s -> {
+            s.on();
+          });
           return Unit.INSTANCE;
         });
     Assertions.assertThat(sm).isNotNull();

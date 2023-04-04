@@ -3,8 +3,10 @@ package ga.overfullstack
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
 import com.squareup.moshi.adapter
+import ga.overfullstack.state.NestedBean
 import ga.overfullstack.utils.readFileFromTestResource
 import io.kotest.matchers.maps.shouldContainExactly
+import io.kotest.matchers.shouldNotBe
 import org.junit.jupiter.api.Test
 
 internal class MoshiLab {
@@ -33,6 +35,15 @@ internal class MoshiLab {
     val mapAdapter = Moshi.Builder().build().adapter<Map<*, *>>()
     val any = mapAdapter.fromJson(nestedBeanStr)!! 
     (any["bean"] as Map<String, *>) shouldContainExactly mapOf("name" to "member", "items" to listOf("item1", "item2"))
+  }
+
+  @OptIn(ExperimentalStdlibApi::class)
+  @Test
+  fun readJsonToPojo() {
+    val nestedBeanStr = readFileFromTestResource("nested-bean.json")
+    val mapAdapter = Moshi.Builder().build().adapter<NestedBean>()
+    val nestedBean = mapAdapter.fromJson(nestedBeanStr)!!
+    nestedBean.bean shouldNotBe null
   }
 
   @OptIn(ExperimentalStdlibApi::class)
