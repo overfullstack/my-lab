@@ -934,10 +934,10 @@ postman-runtime@7.29.0:
     tough-cookie "3.0.1"
     uuid "8.3.2"
 
-postman-runtime@7.32.0:
-  version "7.32.0"
-  resolved "https://registry.yarnpkg.com/postman-runtime/-/postman-runtime-7.32.0.tgz#e9aa5578fddb146acc130855eb51532c59788661"
-  integrity sha512-kpT6f/5swjOtTOlByX/oU6f98BC1/VHxqqJeobG4aLB6t8nOiZbjFF+0T4X2rMAjYSVOFu04rhnnqAP04jAE/Q==
+postman-runtime@7.32.1:
+  version "7.32.1"
+  resolved "https://registry.yarnpkg.com/postman-runtime/-/postman-runtime-7.32.1.tgz#00819219d096bd89b3693e7f7315fdf2899824ed"
+  integrity sha512-EVQrMze+Y8InphdVJcwGh9r6xhPFMkbQPN2x0yyVQkwEHTRU8zt79iUE6YExFVGQJJOEyy2O9DivoO4BiCbKsg==
   dependencies:
     "@postman/tough-cookie" "4.1.2-postman.1"
     async "3.2.4"
