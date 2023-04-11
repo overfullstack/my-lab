@@ -1,4 +1,4 @@
-package ga.overfullstack.immutables
+package ga.overfullstack.immutables.style
 
 import org.immutables.value.Value
 
@@ -8,8 +8,8 @@ import org.immutables.value.Value
   typeImmutable = "*",
   typeAbstract = ["*Def"],
   builder = "configure",
-  build = "done",
+  build = "off",
   depluralize = true,
   add = "",
-  visibility = Value.Style.ImplementationVisibility.PACKAGE)
+  visibility = Value.Style.ImplementationVisibility.PUBLIC)
 annotation class MyStyle

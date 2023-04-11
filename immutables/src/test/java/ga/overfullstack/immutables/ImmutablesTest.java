@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 class ImmutablesTest {
   @Test
   void person() {
-    final var person = Person.configure().age(33).isEmployed(false).done();
+    final var person = Person.configure().age(33).isEmployed(false).isMarried(true).done();
     System.out.println(person);
   }
 
@@ -16,4 +16,8 @@ class ImmutablesTest {
     final var point = Point.origin();
     System.out.println(point);
   }
+
+  @Test
+  @DisplayName("Kotlin Builder")
+  void kotlinBuilder() {}
 }

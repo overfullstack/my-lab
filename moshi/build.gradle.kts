@@ -9,15 +9,7 @@ dependencies {
   implementation(libs.moshix.adapters)
   testImplementation(libs.bundles.kotest)
 }
-
 moshi {
-  enableSealed.set(true)
-}
-// moshix plugin not compatible with k2 compiler
-kotlin {
-  sourceSets.all {
-    languageSettings {
-      languageVersion = "1.8"
-    }
-  }
+  enableSealed by true
+  generateProguardRules by false
 }
