@@ -1,16 +1,14 @@
-package ga.overfullstack.immutables
+package ga.overfullstack.immutable
 
-import ga.overfullstack.immutables.style.MyStyle
+import ga.overfullstack.immutable.style.MyStyle
 import org.immutables.value.Value
-import org.jetbrains.annotations.Nullable
 import java.lang.reflect.Type
 
 @MyStyle
 @Value.Immutable
 internal interface KickDef {
-  fun templatePath(): String
+  fun templatePath(): String?
 
-  @Nullable
   fun environmentPath(): String?
 
   @SkipNulls
@@ -27,10 +25,20 @@ internal interface KickDef {
 
   @SkipNulls
   fun typesInResponseToIgnore(): Set<Class<out Any>>
-  
+
   @Value.Default
   fun insecureHttp(): Boolean = false
-  
+
+  fun stepConfig(): StepConfigDef
+
+}
+
+@MyStyle
+@Value.Immutable
+internal interface StepConfigDef {
+  fun folder(): String
+
+  fun step(): String?
 }
 
 enum class ValidationStrategy {

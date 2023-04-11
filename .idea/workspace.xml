@@ -4,36 +4,13 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="upgrade arrow&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
-      <change afterPath="$PROJECT_DIR$/immutables/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/immutables/src/main/kotlin/ga.overfullstack.immutables/KickDef.kt" afterDir="false" />
+    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="Extracted Immutables to different module&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/apt/my-lab.apt.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/apt/my-lab.apt.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/apt/my-lab.apt.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/apt/my-lab.apt.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/my-lab.buildSrc.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/my-lab.buildSrc.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/my-lab.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/my-lab.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/my-lab.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/my-lab.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/vador-lab/ga.overfullstack.my-lab.vador-lab.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/vador-lab/ga.overfullstack.my-lab.vador-lab.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/vador-lab/ga.overfullstack.my-lab.vador-lab.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/vador-lab/ga.overfullstack.my-lab.vador-lab.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/vador-lab/my-lab.vador-lab.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/vador-lab/my-lab.vador-lab.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/vador-lab/my-lab.vador-lab.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/vador-lab/my-lab.vador-lab.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/apt/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/src/main/java/ga/overfullstack/immutables/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/immutables/src/main/java/ga/overfullstack/immutables/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/src/main/java/ga/overfullstack/immutables/PersonStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/immutables/src/main/java/ga/overfullstack/immutables/PersonStyle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/src/main/java/ga/overfullstack/immutables/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/immutables/src/main/java/ga/overfullstack/immutables/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/src/main/java/ga/overfullstack/immutables/generics/TreeElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/immutables/src/main/java/ga/overfullstack/immutables/generics/TreeElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/src/main/kotlin/ga/overfullstack/immutables/MyStyle.kt" beforeDir="false" afterPath="$PROJECT_DIR$/immutables/src/main/kotlin/ga.overfullstack.immutables/style/MyStyle.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/src/test/java/ga/overfullstack/immutables/ImmutablesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/immutables/src/test/java/ga/overfullstack/immutables/ImmutablesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apt/src/test/java/ga/overfullstack/immutables/generics/TreeElementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/immutables/src/main/java/ga/overfullstack/immutables/generics/TreeElementTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-lab/src/test/java/ga/overfullstack/interop/StateMachineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-lab/src/test/java/ga/overfullstack/interop/StateMachineTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/test/kotlin/ga/overfullstack/spring/ApplicationTests.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/immutables/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/immutables/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/immutables/src/main/kotlin/ga.overfullstack.immutables/KickDef.kt" beforeDir="false" afterPath="$PROJECT_DIR$/immutables/src/main/kotlin/ga/overfullstack/immutable/KickDef.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/immutables/src/main/kotlin/ga.overfullstack.immutables/style/MyStyle.kt" beforeDir="false" afterPath="$PROJECT_DIR$/immutables/src/main/kotlin/ga/overfullstack/immutable/style/MyStyle.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/immutables/src/test/java/ga/overfullstack/immutables/ImmutablesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/immutables/src/test/java/ga/overfullstack/immutables/ImmutablesTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,44 +186,44 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Notification.DisplayName-DoNotAsk-Dependencies from package.json": "Dependencies from package.json available",
-    "Notification.DoNotAsk-Dependencies from package.json": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "false",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable": "ALL",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
-    "ignore.preview.features.used": "true",
-    "javascript.nodejs.core.library.configured.version": "19.8.1",
-    "javascript.nodejs.core.library.typings.version": "18.15.11",
-    "jdk.selected.JAVA_MODULE": "sfdc-zulu-11",
-    "last_directory_selection": "/Users/gopala.akshintala/code-clones/my-github/my-lab/kotlin-lab/src/test/java",
-    "last_opened_file_path": "/Users/gopala.akshintala/code-clones/my-github/my-lab/immutables/src/test/java/ga/overfullstack",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "yarn",
-    "prettierjs.PrettierConfiguration.Package": "/Users/gopala.akshintala/.config/yarn/global/node_modules/prettier",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "6e697ef780714c0f816b57bef39ecdfe",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Notification.DisplayName-DoNotAsk-Dependencies from package.json&quot;: &quot;Dependencies from package.json available&quot;,
+    &quot;Notification.DoNotAsk-Dependencies from package.json&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable&quot;: &quot;ALL&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;19.8.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.15.11&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;sfdc-zulu-11&quot;,
+    &quot;last_directory_selection&quot;: &quot;/Users/gopala.akshintala/code-clones/my-github/my-lab/kotlin-lab/src/test/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/gopala.akshintala/code-clones/my-github/my-lab/immutables/src/test/java/ga/overfullstack&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/gopala.akshintala/.config/yarn/global/node_modules/prettier&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;6e697ef780714c0f816b57bef39ecdfe&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JAVA"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JAVA&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="master" />
@@ -326,7 +303,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.TreeElementTest.treeElement">
+  <component name="RunManager" selected="Gradle.ImmutablesTest.kotlinBuilder">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -339,6 +316,30 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="ImmutablesTest.kotlinBuilder" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":immutables:test" />
+            <option value="--tests" />
+            <option value="&quot;ga.overfullstack.immutables.ImmutablesTest.kotlinBuilder&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
     </configuration>
     <configuration name="ImmutablesTest.person" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -354,30 +355,6 @@
             <option value=":apt:test" />
             <option value="--tests" />
             <option value="&quot;ga.overfullstack.immutables.ImmutablesTest.person&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="MoshiLab.readJsonToPojo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":moshi:test" />
-            <option value="--tests" />
-            <option value="&quot;ga.overfullstack.MoshiLab.readJsonToPojo&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -473,11 +450,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ImmutablesTest.kotlinBuilder" />
         <item itemvalue="Gradle.TreeElementTest.treeElement" />
         <item itemvalue="Gradle.my-lab [spotlessApply]" />
         <item itemvalue="Gradle.my-lab [clean build]" />
         <item itemvalue="Gradle.ImmutablesTest.person" />
-        <item itemvalue="Gradle.MoshiLab.readJsonToPojo" />
       </list>
     </recent_temporary>
   </component>
@@ -816,14 +793,8 @@
       <workItem from="1680512813823" duration="1295000" />
       <workItem from="1680586462915" duration="2385000" />
       <workItem from="1680691016218" duration="1175000" />
-      <workItem from="1681224958514" duration="9542000" />
-    </task>
-    <task id="LOCAL-00003" summary="Kapt working with Kotlin 1.5.0, Java 16.0.1">
-      <created>1620462577710</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1620462577710</updated>
+      <workItem from="1681224958514" duration="9752000" />
+      <workItem from="1681236009823" duration="1484000" />
     </task>
     <task id="LOCAL-00004" summary="Kapt working with Kotlin 1.5.0, Java 16.0.1">
       <created>1620463538593</created>
@@ -1161,7 +1132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680674942322</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Extracted Immutables to different module&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
+      <created>1681236000029</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1681236000029</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1270,7 +1248,8 @@
     <MESSAGE value="Major: Merge modules and create new module &quot;spring&quot;&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="upgrade arrow&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="upgrade arrow&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <MESSAGE value="Extracted Immutables to different module&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Extracted Immutables to different module&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

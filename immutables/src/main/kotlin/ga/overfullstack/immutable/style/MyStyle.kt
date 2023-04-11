@@ -1,4 +1,4 @@
-package ga.overfullstack.immutables.style
+package ga.overfullstack.immutable.style
 
 import org.immutables.value.Value
 

@@ -1,5 +1,7 @@
 package ga.overfullstack.immutables;
 
+import ga.overfullstack.immutable.Kick;
+import ga.overfullstack.immutable.StepConfig;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -19,5 +21,10 @@ class ImmutablesTest {
 
   @Test
   @DisplayName("Kotlin Builder")
-  void kotlinBuilder() {}
+  void kotlinBuilder() {
+    final var kick = Kick.configure()
+        .stepConfig(StepConfig.configure().folder("").step("").off())
+        .off();
+    System.out.println(kick);
+  }
 }
