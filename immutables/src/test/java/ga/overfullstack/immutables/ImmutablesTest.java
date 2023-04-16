@@ -22,9 +22,8 @@ class ImmutablesTest {
   @Test
   @DisplayName("Kotlin Builder")
   void kotlinBuilder() {
-    final var kick = Kick.configure()
-        .stepConfig(StepConfig.configure().folder("").step("").off())
-        .off();
+    final var kick =
+        Kick.configure().stepConfig(StepConfig.configure().folder("").step("").off()).off();
     System.out.println(kick);
   }
 }

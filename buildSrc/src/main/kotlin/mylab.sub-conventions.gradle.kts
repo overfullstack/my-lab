@@ -2,6 +2,7 @@ import org.gradle.kotlin.dsl.invoke
 
 plugins {
   application
+  id("org.jetbrains.kotlinx.kover")
 }
 java {
   toolchain {

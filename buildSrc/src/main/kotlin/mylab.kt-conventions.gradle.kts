@@ -10,7 +10,6 @@ val libs: VersionCatalog =
 dependencies {
   testImplementation(libs.kotestBundle)
 }
-
 tasks {
   withType<KotlinCompile> {
     kotlinOptions {

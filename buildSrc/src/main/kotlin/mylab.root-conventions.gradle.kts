@@ -1,18 +1,14 @@
 import com.adarshr.gradle.testlogger.theme.ThemeType
 import com.diffplug.spotless.extra.wtp.EclipseWtpFormatterStep.XML
-import kotlinx.kover.api.DefaultJacocoEngine
-import kotlinx.kover.api.KoverTaskExtension
 
 plugins {
   java
   idea
   id("com.diffplug.spotless")
-  id("org.jetbrains.kotlinx.kover")
   id("com.adarshr.test-logger")
   id("io.gitlab.arturbosch.detekt")
   id("com.github.spotbugs") apply false
 }
-
 version = "1.0.0"
 group = "ga.overfullstack"
 description = "My Lab"
@@ -21,16 +17,6 @@ repositories {
   mavenCentral()
   maven("https://oss.sonatype.org/content/repositories/snapshots")
   maven("https://repo.spring.io/milestone")
-}
-kover {
-  isDisabled.set(false)
-  engine.set(DefaultJacocoEngine)
-}
-koverMerged {
-  enable()
-  xmlReport {
-    onCheck.set(true)
-  }
 }
 spotless {
   kotlin {
@@ -79,10 +65,5 @@ tasks {
   spotbugsMain.get().enabled = false
   spotbugsTest.get().enabled = false
   spotbugs.ignoreFailures.set(true)
-  test {
-    extensions.configure(KoverTaskExtension::class) {
-      isEnabled = true
-    }
-  }
   testlogger.theme = ThemeType.MOCHA
 }

@@ -1,7 +1,7 @@
 [versions]
 kotlin = "1.8.20"
 ksp = "1.8.20-1.0.10"
-kover = "0.6.1"
+kover = "0.7.0-Alpha"
 kotlinx-coroutines-core = "1.6.4"
 hamcrest-core = "2.2"
 hamcrest-date = "2.0.8"
@@ -96,7 +96,7 @@ kotlin-spring-gradle = { module = "org.jetbrains.kotlin.plugin.spring:org.jetbra
 spring-dependency-management-gradle = { module = "io.spring.dependency-management:io.spring.dependency-management.gradle.plugin", version.ref = "spring-dependency-management" }
 spring-boot-gradle = { module = "org.springframework.boot:spring-boot-gradle-plugin", version.ref = "spring-boot" }
 detekt-gradle = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
-kover-gradle = { module = "org.jetbrains.kotlinx:kover", version.ref = "kover" }
+kover-gradle = { module = "org.jetbrains.kotlinx.kover:org.jetbrains.kotlinx.kover.gradle.plugin", version.ref = "kover" }
 spotless-gradle = { module = "com.diffplug.spotless:spotless-plugin-gradle", version.ref = "spotless" }
 # moshix-gradle = { module = "dev.zacsweers.moshix:moshi-gradle-plugin", version.ref = "moshix" }
 spotbugs-gradle = { module = "com.github.spotbugs.snom:spotbugs-gradle-plugin", version.ref = "spotbugs" }
