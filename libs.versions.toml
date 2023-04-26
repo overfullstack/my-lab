@@ -30,7 +30,7 @@ spring-boot = "3.1.0-RC1"
 spring-batch = "5.0.1"
 
 # Common dependencies
-junit = "5.9.2"
+junit = "5.9.3"
 kotest = "5.6.1"
 assertj-core = "3.24.2"
 detekt = "1.22.0"
