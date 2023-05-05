@@ -26,7 +26,7 @@ immutables = "2.9.3"
 mockito = "5.3.1"
 state-machine = "0.2.0"
 spring-dependency-management = "1.1.0"
-spring-boot = "3.1.0-RC1"
+spring-boot = "3.1.0-RC2"
 spring-batch = "5.0.1"
 
 # Common dependencies
