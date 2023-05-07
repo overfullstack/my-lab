@@ -7,5 +7,8 @@ dependencies {
   implementation(libs.java.vavr)
   implementation(libs.kotlin.vavr)
   implementation(libs.state.machine)
+  implementation(libs.rabbitmq.client)
+  implementation(libs.bundles.apache.log4j)
+  
   testImplementation(libs.assertj.core)
 }

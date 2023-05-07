@@ -4,7 +4,9 @@ import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
 import com.squareup.moshi.adapter
 import ga.overfullstack.state.NestedBean
+import ga.overfullstack.state.Obj
 import ga.overfullstack.utils.readFileFromTestResource
+import io.kotest.matchers.equals.shouldBeEqual
 import io.kotest.matchers.maps.shouldContainExactly
 import io.kotest.matchers.shouldNotBe
 import org.junit.jupiter.api.Test
@@ -44,6 +46,15 @@ internal class MoshiLab {
     val mapAdapter = Moshi.Builder().build().adapter<NestedBean>()
     val nestedBean = mapAdapter.fromJson(nestedBeanStr)!!
     nestedBean.bean shouldNotBe null
+  }
+
+  @OptIn(ExperimentalStdlibApi::class)
+  @Test
+  fun readJsonToPojo2() {
+    val objStr = readFileFromTestResource("obj.json")
+    val mapAdapter = Moshi.Builder().build().adapter<Obj>()
+    val obj = mapAdapter.fromJson(objStr)!!
+    obj.a shouldBeEqual "1"
   }
 
   @OptIn(ExperimentalStdlibApi::class)

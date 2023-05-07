@@ -3,8 +3,8 @@ import io.gitlab.arturbosch.detekt.DetektPlugin
 import io.gitlab.arturbosch.detekt.report.ReportMergeTask
 
 plugins {
-  id(libs.plugins.detekt.pluginId) apply false
   id(libs.plugins.kover.pluginId)
+  id(libs.plugins.detekt.pluginId) apply false
 }
 allprojects {
   apply(plugin = "mylab.root-conventions")
@@ -16,8 +16,10 @@ dependencies {
   }
 }
 koverReport {
-  html {
-    onCheck = true
+  defaults {
+    html {
+      onCheck = true
+    }
   }
 }
 val detektReportMerge by tasks.registering(ReportMergeTask::class) {

@@ -1,5 +1,3 @@
-import org.gradle.kotlin.dsl.invoke
-
 plugins {
   application
   id("org.jetbrains.kotlinx.kover")
@@ -12,7 +10,7 @@ java {
 testing {
   suites {
     val test by getting(JvmTestSuite::class) {
-      useJUnitJupiter("5.9.2")
+      useJUnitJupiter("5.9.3")
     }
   }
 }

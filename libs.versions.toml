@@ -27,7 +27,7 @@ mockito = "5.3.1"
 state-machine = "0.2.0"
 spring-dependency-management = "1.1.0"
 spring-boot = "3.1.0-RC1"
-spring-batch = "5.0.1"
+rabbitmq-client = "5.17.0"
 
 # Common dependencies
 junit = "5.9.3"
@@ -80,15 +80,16 @@ log4j-slf4j2-impl = { module = "org.apache.logging.log4j:log4j-slf4j2-impl", ver
 arrow-core = { module = "io.arrow-kt:arrow-core", version.ref = "arrow" }
 arrow-optics = { module = "io.arrow-kt:arrow-optics", version.ref = "arrow" }
 arrow-fx-coroutines = { module = "io.arrow-kt:arrow-fx-coroutines", version.ref = "arrow" }
-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines-core"}
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines-core" }
 mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
-state-machine = {module = "com.tinder.statemachine:statemachine", version.ref = "state-machine"}
-kotlin-reflect = {module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin"}
+state-machine = { module = "com.tinder.statemachine:statemachine", version.ref = "state-machine" }
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
+rabbitmq-client = { module = "com.rabbitmq:amqp-client", version.ref = "rabbitmq-client" }
 
 # Spring (version managed by spring-dependency-management)
-spring-boot-starter-batch = {module = "org.springframework.boot:spring-boot-starter-batch"}
-spring-boot-starter-test = {module = "org.springframework.boot:spring-boot-starter-test"}
-spring-batch-test = {module = "org.springframework.batch:spring-batch-test"}
+spring-boot-starter-batch = { module = "org.springframework.boot:spring-boot-starter-batch" }
+spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
+spring-batch-test = { module = "org.springframework.batch:spring-batch-test" }
 
 # Gradle plugins
 kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
