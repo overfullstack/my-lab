@@ -1,0 +1,14 @@
+{
+  "sObjectName": "Quote",
+  "sObjectDomain": "Quote",
+  "contextMappingName": "QuoteEntitiesMapping",
+  "match" : [
+    {
+      "contextNodeAttributeName" : "Pricebook",
+      "queryAttribute" : "Pricebook2Id"
+    }
+  ],
+  "exclude" : [
+    "Address"
+  ]
+}

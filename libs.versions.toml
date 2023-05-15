@@ -59,6 +59,7 @@ junit-jupiter = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = 
 junit-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit" }
 guava = { module = "com.google.guava:guava", version.ref = "guava" }
 moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
+moshi-kotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" }
 jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson-databind" }
 apache-commons-lang3 = { module = "org.apache.commons:commons-lang3", version.ref = "apache-commons-lang3" }
 apache-commons-collections4 = { module = "org.apache.commons:commons-collections4", version.ref = "apache-commons-collections4" }
@@ -79,6 +80,7 @@ log4j-core = { module = "org.apache.logging.log4j:log4j-core", version.ref = "ap
 log4j-slf4j2-impl = { module = "org.apache.logging.log4j:log4j-slf4j2-impl", version.ref = "apache-log4j" }
 arrow-core = { module = "io.arrow-kt:arrow-core", version.ref = "arrow" }
 arrow-optics = { module = "io.arrow-kt:arrow-optics", version.ref = "arrow" }
+arrow-optics-ksp-plugin = { module = "io.arrow-kt:arrow-optics-ksp-plugin", version.ref = "arrow" }
 arrow-fx-coroutines = { module = "io.arrow-kt:arrow-fx-coroutines", version.ref = "arrow" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines-core" }
 mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }

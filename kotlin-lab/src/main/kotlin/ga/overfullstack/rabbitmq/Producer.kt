@@ -12,8 +12,8 @@ fun main() {
       channel.queueDeclare(QUEUE_NAME, false, false, false, null)
       val message = "Hello Rabbit!"
       channel.basicPublish(
-        "",
-        QUEUE_NAME,
+        "", // default exchange
+        QUEUE_NAME, // by default routing key = queue_name
         null,
         message.toByteArray(StandardCharsets.UTF_8)
       )

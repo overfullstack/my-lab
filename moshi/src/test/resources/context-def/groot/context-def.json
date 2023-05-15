@@ -1,0 +1,54 @@
+{
+  "manifest": {
+    "name": "SalesTransactionContext",
+    "version": "0.1",
+    "label": "Sales Transaction Context",
+    "description": "Context definition to map sales transaction entities"
+  },
+  "payload": {
+    "contextDefinition": {
+      "name": "Sales Transaction Context",
+      "description": "Context definition to map sales transaction entities",
+      "developerName": "SalesTransactionContext",
+      "contextDefinitionVersionList": [
+        {
+          "contextDefinitionVersion": {
+            "versionNumber": "1",
+            "isActive": "false",
+            "startDate": "2023-05-10T00:00:00.000Z",
+            "contextNodes": [
+              {
+                "name": "SalesTransaction",
+                "contextNodeId": "$param_salesTransactionNodeId",
+                "nodeAttributes": [
+                  {
+                    "name": "Account",
+                    "dataType": "STRING",
+                    "type": "INPUTOUTPUT",
+                    "contextAttributeId": "$param_accountAttrId",
+                    "contextTagList": [
+                      {
+                        "name": "AccountIdTag"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Pricebook",
+                    "dataType": "STRING",
+                    "type": "INPUTOUTPUT",
+                    "contextAttributeId": "$param_pricebookAttrId",
+                    "contextTagList": [
+                      {
+                        "name": "PricebookIdTag"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

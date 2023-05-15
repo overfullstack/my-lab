@@ -1,0 +1,16 @@
+{
+  "contextNodeId" : "{{contextNodeId}}",
+  "sObjectName" : "{{sObjectName}}",
+  "contextAttributeMappingList" : [
+    {
+      "contextAttributeId" : "{{contextAttributeId}}",
+      "hydrationSource" : "SObject",
+      "contextSObjectHydrationInfoList" : [
+        {
+          "sObjectDomain" : "{{sObjectDomain}}",
+          "queryAttribute" : "{{queryAttribute}}"
+        }
+      ]
+    }
+  ]
+}

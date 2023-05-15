@@ -1,4 +1,4 @@
-package ga.overfullstack.state
+package pojo
 
 import com.squareup.moshi.JsonClass
 
@@ -12,5 +12,4 @@ data class NestedBean(val name: String, val bean: Bean)
 data class Obj(val a: String, val b: String, val c: String)
 
 @JsonClass(generateAdapter = true)
-@JvmInline
-value class Message(val message: String)
+data class Message(val message: String)

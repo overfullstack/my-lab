@@ -6,12 +6,12 @@ import com.squareup.moshi.JsonWriter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
 import com.squareup.moshi.internal.Util
-import ga.overfullstack.state.Bean
-import ga.overfullstack.state.NestedBean
 import ga.overfullstack.utils.readFileFromTestResource
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
+import pojo.Bean
+import pojo.NestedBean
 import java.lang.reflect.Type
 import java.util.Locale
 
