@@ -15,7 +15,7 @@ import ga.overfullstack.utils.readFileFromTestResource
 import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.Test
 
-class ContextDefGeneratorTest {
+class ContextMappingGeneratorTest {
 
   @OptIn(ExperimentalStdlibApi::class)
   @Test
@@ -43,8 +43,8 @@ class ContextDefGeneratorTest {
     val contextDef = contextDefAdapter.fromJson(readFileFromTestResource("context-def/groot/context-def.json"))!!.payload.contextDefinition.contextDefinitionVersionList[0].contextDefinitionVersion
 
     val salesTxnNode = contextDef.contextNodes[0]
-    val quoteMapperConfig = Moshi.Builder().build().adapter<MapperConfig>().fromJson(readFileFromTestResource("context-def/groot/quote-mapper.json"))!!
-    val quoteFields = Udd.getFieldsForAPIName("Quote")!!
+    val quoteMapperConfig = Moshi.Builder().build().adapter<MapperConfig>().fromJson(readFileFromTestResource("context-def/groot/quote-mapper-config.json"))!!
+    val quoteFields = Udd.getFieldsForAPIName(quoteMapperConfig.sObjectName)!!
 
     val contextMapping = Moshi.Builder()
       .add(ContextMappingAdapter(quoteMapperConfig, quoteFields, salesTxnNode))
@@ -63,7 +63,7 @@ class ContextDefGeneratorTest {
       val contextAttributeMapping = contextNodeMapping.contextAttributeMappingList[0]
       val contextSObjectHydrationInfo = contextAttributeMapping.contextSObjectHydrationInfoList[0]
       
-      val contextAttrMappings = fields.filterNot { mapperConfig.exclude.contains(it) }.map { field ->
+      val contextAttrMappings = fields.filterNot { mapperConfig.excludeFields.contains(it) }.map { field ->
         contextAttributeMapping.copy(
           contextAttributeId = nameToAttrId[fieldMatch[field] ?: field] ?: "",
           contextSObjectHydrationInfoList = listOf(contextSObjectHydrationInfo.copy(queryAttribute = field, sObjectDomain = mapperConfig.sObjectName))

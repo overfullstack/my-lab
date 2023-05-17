@@ -8,7 +8,7 @@
       "queryAttribute" : "Pricebook2Id"
     }
   ],
-  "exclude" : [
+  "excludeFields" : [
     "Address"
   ]
 }

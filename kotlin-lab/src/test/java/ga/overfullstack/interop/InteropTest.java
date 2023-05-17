@@ -3,7 +3,7 @@ package ga.overfullstack.interop;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-class JInteropTest {
+class InteropTest {
   @Test
   @DisplayName("Function literals with receiver")
   void functionLiteralsWithReceiver() {
