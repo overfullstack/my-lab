@@ -1,7 +1,9 @@
 package ga.overfullstack
 
 import arrow.core.Either
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -14,7 +16,7 @@ import kotlin.system.measureTimeMillis
 class CoroutineLab {
 
   @Test
-  fun `main thread is suspended when no launch is used`() = runBlocking {
+  fun `main thread is suspended when no launch is used`(): Unit = runBlocking {
     println("Main Start")
     delayFor(1, 2000L)
     println("After-1")
@@ -30,8 +32,18 @@ class CoroutineLab {
     println("Delay-$id End")
   }
 
+  @OptIn(DelicateCoroutinesApi::class)
   @Test
-  fun `launch starts concurrent coroutine on main thread`() = runBlocking<Unit> {
+  fun `launch won't execute without runBlocking`() {
+    GlobalScope.launch {
+      delay(1000)
+      println("This won't print ${Thread.currentThread().name}") // @coroutine#2
+    }
+    print("Hello,")
+  }
+
+  @Test
+  fun `launch starts concurrent coroutine on main thread`() = runBlocking {
     launch {
       delay(1000)
       println("World ${Thread.currentThread().name}") // @coroutine#2
@@ -40,7 +52,7 @@ class CoroutineLab {
   }
 
   @Test
-  fun `async starts concurrent coroutine on main thread`() = runBlocking<Unit> {
+  fun `async starts concurrent coroutine on main thread`() = runBlocking {
     val async = async {
       delay(1000)
       println("World ${Thread.currentThread().name}") // @coroutine#2

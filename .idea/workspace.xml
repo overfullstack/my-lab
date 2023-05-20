@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="Groot V1 with ContextMapping Generator working">
+      <change afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-lab/src/test/java/ga/overfullstack/interop/JInteropTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-lab/src/test/java/ga/overfullstack/interop/InteropTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/groot/MapperConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/groot/MapperConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/contextdef/ContextDefGeneratorTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/contextdef/ContextMappingGeneratorTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/test/resources/context-def/groot/quote-mapper.json" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/resources/context-def/groot/quote-mapper-config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arrow/src/test/kotlin/ga/overfullstack/CoroutineLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/arrow/src/test/kotlin/ga/overfullstack/CoroutineLab.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,10 +63,10 @@
         <option value="Kotlin Annotation" />
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Kotlin Object" />
         <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -179,7 +179,7 @@
     "ignore.preview.features.used": "true",
     "javascript.nodejs.core.library.configured.version": "18.16.0",
     "javascript.nodejs.core.library.typings.version": "18.16.0",
-    "jdk.selected.JAVA_MODULE": "sfdc-zulu-11",
+    "jdk.selected.JAVA_MODULE": "17",
     "ktor.last.update.timestamp": "1684333206939",
     "last_directory_selection": "/Users/gopala.akshintala/code-clones/my-github/my-lab/kotlin-lab/src/test/java",
     "last_opened_file_path": "/Users/gopala.akshintala/code-clones/my-github/my-lab/common/src/main/kotlin/ga/overfullstack/utils",
@@ -284,7 +284,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ContextMappingGeneratorTest.Context mapping generator">
+  <component name="RunManager" selected="Gradle.CoroutineLab.launch won't execute without runBlocking">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -370,7 +370,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="OpticsTest.optics composition" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CoroutineLab.launch starts concurrent coroutine on main thread" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -383,7 +383,7 @@
           <list>
             <option value=":arrow:test" />
             <option value="--tests" />
-            <option value="&quot;ga.overfullstack.optics.OpticsTest.optics composition&quot;" />
+            <option value="&quot;ga.overfullstack.CoroutineLab.launch starts concurrent coroutine on main thread&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -394,7 +394,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="OpticsTest.optics" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CoroutineLab.launch won't execute without runBlocking" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -407,7 +407,7 @@
           <list>
             <option value=":arrow:test" />
             <option value="--tests" />
-            <option value="&quot;ga.overfullstack.optics.OpticsTest.optics&quot;" />
+            <option value="&quot;ga.overfullstack.CoroutineLab.launch won't execute without runBlocking&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -434,11 +434,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CoroutineLab.launch won't execute without runBlocking" />
+        <item itemvalue="Gradle.CoroutineLab.launch starts concurrent coroutine on main thread" />
         <item itemvalue="Gradle.ContextMappingGeneratorTest.Context mapping generator" />
         <item itemvalue="Gradle.ContextDefGeneratorTest.Context mapping generator" />
         <item itemvalue="Gradle.ContextDefValidatorTest.Context mapping generator" />
-        <item itemvalue="Gradle.OpticsTest.optics composition" />
-        <item itemvalue="Gradle.OpticsTest.optics" />
       </list>
     </recent_temporary>
   </component>
@@ -806,14 +806,9 @@
       <workItem from="1684039261911" duration="87000" />
       <workItem from="1684047184520" duration="18000" />
       <workItem from="1684047220749" duration="25659000" />
-      <workItem from="1684333209093" duration="1000" />
-    </task>
-    <task id="LOCAL-00008" summary="commit">
-      <created>1627452785921</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1627452785921</updated>
+      <workItem from="1684333209093" duration="346000" />
+      <workItem from="1684405090896" duration="954000" />
+      <workItem from="1684560897099" duration="880000" />
     </task>
     <task id="LOCAL-00009" summary="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
       <created>1627583016664</created>
@@ -1151,7 +1146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684130607204</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Groot V1 with ContextMapping Generator working">
+      <created>1684333262542</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1684333262543</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
