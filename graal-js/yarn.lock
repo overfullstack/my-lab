@@ -16,10 +16,10 @@
     combined-stream "^1.0.8"
     mime-types "^2.1.12"
 
-"@postman/tough-cookie@4.1.2-postman.1", "@postman/tough-cookie@~4.1.2-postman.1":
-  version "4.1.2-postman.1"
-  resolved "https://registry.yarnpkg.com/@postman/tough-cookie/-/tough-cookie-4.1.2-postman.1.tgz#98cc3370674bbaca0f8919fc5ef801fd3cd59d00"
-  integrity sha512-keOKL3RQohnH5K4GNGSV7JE8+SU/ktWJ3h9ulqttOGUWCZWcbUOtMNXkC3PQ/R1hIa+2qEfh0/5NCcAhWqeMTQ==
+"@postman/tough-cookie@4.1.3-postman.1", "@postman/tough-cookie@~4.1.3-postman.1":
+  version "4.1.3-postman.1"
+  resolved "https://registry.yarnpkg.com/@postman/tough-cookie/-/tough-cookie-4.1.3-postman.1.tgz#9b2aa98f0b42f7e8381ee7e66277cd0253a91f11"
+  integrity sha512-txpgUqZOnWYnUHZpHjkfb0IwVH4qJmyq77pPnJLlfhMtdCLMFTEeQHlzQiK906aaNCe4NEB5fGJHo9uzGbFMeA==
   dependencies:
     psl "^1.1.33"
     punycode "^2.1.1"
@@ -592,10 +592,10 @@ isstream@~0.1.2:
   resolved "https://registry.npmjs.org/isstream/-/isstream-0.1.2.tgz"
   integrity sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=
 
-jose@4.13.1:
-  version "4.13.1"
-  resolved "https://registry.yarnpkg.com/jose/-/jose-4.13.1.tgz#449111bb5ab171db85c03f1bd2cb1647ca06db1c"
-  integrity sha512-MSJQC5vXco5Br38mzaQKiq9mwt7lwj2eXpgpRyQYNHYt2lq1PjkWa7DLXX0WVcQLE9HhMh3jPiufS7fhJf+CLQ==
+jose@4.14.4:
+  version "4.14.4"
+  resolved "https://registry.yarnpkg.com/jose/-/jose-4.14.4.tgz#59e09204e2670c3164ee24cbfe7115c6f8bff9ca"
+  integrity sha512-j8GhLiKmUAh+dsFXlX1aJCbt5KMibuKb+d7j1JaOJG6s2UjX1PQlW+OKB/sD4a/5ZYF4RcmYmLSndOoU3Lt/3g==
 
 js-md4@^0.3.2:
   version "0.3.2"
@@ -884,13 +884,13 @@ postman-request@2.88.1-postman.31:
     tough-cookie "~2.5.0"
     uuid "^3.3.2"
 
-postman-request@2.88.1-postman.32:
-  version "2.88.1-postman.32"
-  resolved "https://registry.yarnpkg.com/postman-request/-/postman-request-2.88.1-postman.32.tgz#2bba21ee3039973abb876b2209fc93a126980d98"
-  integrity sha512-Zf5D0b2G/UmnmjRwQKhYy4TBkuahwD0AMNyWwFK3atxU1u5GS38gdd7aw3vyR6E7Ii+gD//hREpflj2dmpbE7w==
+postman-request@2.88.1-postman.33:
+  version "2.88.1-postman.33"
+  resolved "https://registry.yarnpkg.com/postman-request/-/postman-request-2.88.1-postman.33.tgz#684147d61c9a263a28f148d3207b1593e0f01ec5"
+  integrity sha512-uL9sCML4gPH6Z4hreDWbeinKU0p0Ke261nU7OvII95NU22HN6Dk7T/SaVPaj6T4TsQqGKIFw6/woLZnH7ugFNA==
   dependencies:
     "@postman/form-data" "~3.1.1"
-    "@postman/tough-cookie" "~4.1.2-postman.1"
+    "@postman/tough-cookie" "~4.1.3-postman.1"
     "@postman/tunnel-agent" "^0.6.3"
     aws-sign2 "~0.7.0"
     aws4 "^1.12.0"
@@ -934,25 +934,25 @@ postman-runtime@7.29.0:
     tough-cookie "3.0.1"
     uuid "8.3.2"
 
-postman-runtime@7.32.2:
-  version "7.32.2"
-  resolved "https://registry.yarnpkg.com/postman-runtime/-/postman-runtime-7.32.2.tgz#fbde2e91875197c6a4a8d9da198eb35430aebd0e"
-  integrity sha512-GX0JoMor0hiqNYFYhTl8wfe267ublG7L6Euulsr1Fzdv5cG1sE6CdzMnT7l8CmdfV/nts49Ary+NuDWquMCTLg==
+postman-runtime@7.32.3:
+  version "7.32.3"
+  resolved "https://registry.yarnpkg.com/postman-runtime/-/postman-runtime-7.32.3.tgz#319575f79200f9f0d5f73822e839273f2af43f8f"
+  integrity sha512-aeyXxriDjRIZfojX2umXBFh3Vih+VV5mKJS8uJbYBMvNkGcm/dZlcUxIH8Yf0ysk4dzcsfFbkYFDfXuZnKpd6g==
   dependencies:
-    "@postman/tough-cookie" "4.1.2-postman.1"
+    "@postman/tough-cookie" "4.1.3-postman.1"
     async "3.2.4"
     aws4 "1.12.0"
     handlebars "4.7.7"
     httpntlm "1.8.12"
-    jose "4.13.1"
+    jose "4.14.4"
     js-sha512 "0.8.0"
     lodash "4.17.21"
     mime-types "2.1.35"
     node-oauth1 "1.3.0"
     performance-now "2.1.0"
     postman-collection "4.1.7"
-    postman-request "2.88.1-postman.32"
-    postman-sandbox "4.2.5"
+    postman-request "2.88.1-postman.33"
+    postman-sandbox "4.2.6"
     postman-url-encoder "3.0.5"
     serialised-error "1.1.3"
     strip-json-comments "3.1.1"
@@ -967,10 +967,10 @@ postman-sandbox@4.0.6:
     teleport-javascript "1.0.0"
     uvm "2.0.2"
 
-postman-sandbox@4.2.5:
-  version "4.2.5"
-  resolved "https://registry.yarnpkg.com/postman-sandbox/-/postman-sandbox-4.2.5.tgz#752e6419e59e0faf12efa8b9990bd11511315a6e"
-  integrity sha512-j+VJPRkp8kbuXnTyAFeNnCuyPAMnmZsGmZb7C2mUldYBE+PRDlYhIMs9b28IYrPXldY7CceWLGMup3f0cwVIyw==
+postman-sandbox@4.2.6:
+  version "4.2.6"
+  resolved "https://registry.yarnpkg.com/postman-sandbox/-/postman-sandbox-4.2.6.tgz#8f02daad9a79900a8f8c4717643f01cfbea0ff77"
+  integrity sha512-p56HjcGrPBmQv9s4z2h3c6zmO+a5XUEz3djuRJFCvmOh4qpILoGAlRsI5lpWkTikRgpZww4pmTeImXUgPl/y1w==
   dependencies:
     lodash "4.17.21"
     postman-collection "4.1.7"
