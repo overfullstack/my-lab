@@ -1,5 +1,5 @@
 [versions]
-kotlin = "1.8.21"
+kotlin = "1.8.22"
 ksp = "1.8.21-1.0.11"
 kover = "0.7.1"
 kotlinx-coroutines-core = "1.7.1"
