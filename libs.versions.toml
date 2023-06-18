@@ -1,7 +1,6 @@
 [versions]
 kotlin = "1.8.22"
 ksp = "1.8.22-1.0.11"
-kover = "0.7.1"
 kotlinx-coroutines-core = "1.7.1"
 hamcrest-core = "2.2"
 hamcrest-date = "2.0.8"
@@ -28,9 +27,11 @@ state-machine = "0.2.0"
 spring-dependency-management = "1.1.0"
 spring-boot = "3.1.0"
 rabbitmq-client = "5.17.0"
+kotlin-logging = "3.0.5"
 
 # Common dependencies
 junit = "5.9.3"
+kover = "0.7.1"
 kotest = "5.6.2"
 assertj-core = "3.24.2"
 detekt = "1.23.0"
@@ -78,6 +79,7 @@ immutables-value-annotations = { module = "org.immutables:value-annotations", ve
 log4j-api = { module = "org.apache.logging.log4j:log4j-api", version.ref = "apache-log4j" }
 log4j-core = { module = "org.apache.logging.log4j:log4j-core", version.ref = "apache-log4j" }
 log4j-slf4j2-impl = { module = "org.apache.logging.log4j:log4j-slf4j2-impl", version.ref = "apache-log4j" }
+kotlin-logging-jvm = { module = "io.github.microutils:kotlin-logging-jvm", version.ref = "kotlin-logging" }
 arrow-core = { module = "io.arrow-kt:arrow-core", version.ref = "arrow" }
 arrow-optics = { module = "io.arrow-kt:arrow-optics", version.ref = "arrow" }
 arrow-optics-ksp-plugin = { module = "io.arrow-kt:arrow-optics-ksp-plugin", version.ref = "arrow" }
@@ -121,6 +123,7 @@ http4k = [
   "http4k-format-moshi",
   "http4k-format-jackson"
 ]
+kotlin-logging = ["kotlin-logging-jvm", "log4j-api", "log4j-core", "log4j-slf4j2-impl"]
 
 [plugins]
 kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }

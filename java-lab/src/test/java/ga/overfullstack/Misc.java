@@ -1,8 +1,15 @@
 package ga.overfullstack;
 
+import static ga.overfullstack.Misc.Some.A;
+import static ga.overfullstack.Misc.Some.B;
+import static ga.overfullstack.Misc.Some.C;
+import static ga.overfullstack.Misc.Some.D;
+import static ga.overfullstack.Misc.Some.E;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
 import java.util.function.Consumer;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -47,5 +54,17 @@ class Misc {
 
   static void add(int a, int b, Consumer<Integer> consumer) {
     consumer.accept(a + b);
+  }
+  
+  enum Some {
+    A, B, C, D, E
+  }
+
+  @Test
+  void setOfEnumsAsKeyForMap() {
+    final var map = Map.of(
+        Set.of(A, B, C), "abc",
+        Set.of(D, E), "de");
+    System.out.println(map);
   }
 }
