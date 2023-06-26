@@ -7,10 +7,13 @@ import static ga.overfullstack.Misc.Some.D;
 import static ga.overfullstack.Misc.Some.E;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.Collections;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 import java.util.function.Consumer;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -55,16 +58,39 @@ class Misc {
   static void add(int a, int b, Consumer<Integer> consumer) {
     consumer.accept(a + b);
   }
-  
+
   enum Some {
-    A, B, C, D, E
+    A,
+    B,
+    C,
+    D,
+    E
   }
 
   @Test
   void setOfEnumsAsKeyForMap() {
-    final var map = Map.of(
-        Set.of(A, B, C), "abc",
-        Set.of(D, E), "de");
+    final var map =
+        Map.of(
+            Set.of(A, B, C), "abc",
+            Set.of(D, E), "de");
     System.out.println(map);
+  }
+
+  @Test
+  @DisplayName("Collections Disjoint")
+  void collectionsDisjoint() {
+    System.out.println(Collections.disjoint(List.of(), List.of()));
+  }
+
+  @Test
+  @DisplayName("Assert test")
+  void assertTest() {
+    Assertions.assertThat(
+            List.of(
+                "01txx0000006iyWAAQ",
+                "01txx0000006iyXAAQ",
+                "01txx0000006iwuAAA",
+                "01txx0000006iwuAAA"))
+        .containsAll(List.of("01txx0000006iwuAAA", "01txx0000006iyWAAQ", "01txx0000006iyXAAQ"));
   }
 }

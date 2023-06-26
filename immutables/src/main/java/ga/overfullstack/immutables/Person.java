@@ -1,22 +1,12 @@
 package ga.overfullstack.immutables;
 
-import ga.overfullstack.immutables.ImmutablePerson.Builder;
 import org.immutables.value.Value;
+import org.immutables.value.Value.Style.ImplementationVisibility;
 
-@PersonStyle
 @Value.Immutable
+@Value.Style(visibility = ImplementationVisibility.PRIVATE)
 public interface Person {
-  int age();
+  String getName();
 
-  boolean isEmployed();
-
-  @Value.Default
-  default boolean isMarried() {
-    return false;
-  }
-
-  /** Control what gets exposed */
-  static Builder configure() {
-    return ImmutablePerson.configure();
-  }
+  String getAddress();
 }

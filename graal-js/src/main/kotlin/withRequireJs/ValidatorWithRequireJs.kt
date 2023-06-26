@@ -1,9 +1,9 @@
 package withRequireJs
 
-import buildContext
+import context.buildJSContext
 
 fun main() {
-  val context = buildContext()
+  val context = buildJSContext()
   context.eval("js", "const validator = require('validator'); console.info(validator.isEmail('foo'));")
 }
 

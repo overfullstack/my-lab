@@ -15,14 +15,14 @@ import org.http4k.lens.int
 import org.http4k.lens.string
 
 fun main() {
-
     data class Child(val name: String)
     data class Pageable(val sortAscending: Boolean, val page: Int, val maxResults: Int)
 
     val nameHeader = Header.required("name")
     val ageQuery = Query.int().optional("age")
     val childrenBody = Body.string(TEXT_PLAIN)
-        .map({ it.split(",").map(::Child) }, { it.joinToString { it.name } })
+        .map({ it.split(",").map(::Child) }, 
+          { it.joinToString { it.name } })
         .toLens()
     val pageable = Query.composite {
         Pageable(

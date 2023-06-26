@@ -2,19 +2,19 @@ package ga.overfullstack.factory
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
-import factory.RegexAdapterFactory
+import ga.overfullstack.pojo.NestedBean
 import ga.overfullstack.utils.readFileFromTestResource
+import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
-import pojo.NestedBean
 import java.io.IOException
 
 class RegexFactoryTest {
 
   @Test
   fun `regex test`() {
-    val postManVariableRegex = "\\{\\{([^{}]*?)}}".toRegex()
-    println(postManVariableRegex.find("{{container}}")?.groupValues?.get(1))
+    val variable = "variable"
+    postManVariableRegex.matchEntire("{{$variable}}")?.groupValues?.get(1) shouldBe variable
   }
   
   @OptIn(ExperimentalStdlibApi::class)

@@ -7,6 +7,7 @@ plugins {
 dependencies {
   ksp(libs.arrow.optics.ksp.plugin)
   implementation(project(":common"))
+  implementation(libs.http4k.format.moshi)
   implementation(libs.bundles.arrow)
   implementation(libs.moshi)
   implementation(libs.moshi.kotlin)

@@ -11,6 +11,7 @@ moshi = "1.15.0"
 moshix = "0.22.1"
 http4k = "5.1.2.0"
 arrow = "1.2.0-RC"
+klaxon = "5.5"
 spotbugs = "5.0.14"
 lombok-gradle = "8.0.1"
 assertj-vavr = "0.4.3"
@@ -20,7 +21,7 @@ jackson-databind = "2.15.2"
 apache-commons-lang3 = "3.12.0"
 apache-commons-collections4 = "4.4"
 vador = "1.0.1"
-graal-sdk = "23.0.0"
+graal = "23.0.0"
 immutables = "2.9.3"
 mockito = "5.4.0"
 state-machine = "0.2.0"
@@ -71,8 +72,9 @@ http4k-core = { module = "org.http4k:http4k-core", version.ref = "http4k" }
 http4k-format-moshi = { module = "org.http4k:http4k-format-moshi", version.ref = "http4k" }
 http4k-format-jackson = { module = "org.http4k:http4k-format-jackson", version.ref = "http4k" }
 moshix-adapters = { module = "dev.zacsweers.moshix:moshi-adapters", version.ref = "moshix" }
-graal-sdk = { module = "org.graalvm.sdk:graal-sdk", version.ref = "graal-sdk" }
-graal-js = { module = "org.graalvm.js:js", version.ref = "graal-sdk" }
+klaxon = { module = "com.beust:klaxon", version.ref = "klaxon" }
+graal-sdk = { module = "org.graalvm.sdk:graal-sdk", version.ref = "graal" }
+graal-js = { module = "org.graalvm.js:js", version.ref = "graal" }
 immutables-value = { module = "org.immutables:value", version.ref = "immutables" }
 immutables-builder = { module = "org.immutables:builder", version.ref = "immutables" }
 immutables-value-annotations = { module = "org.immutables:value-annotations", version.ref = "immutables" }

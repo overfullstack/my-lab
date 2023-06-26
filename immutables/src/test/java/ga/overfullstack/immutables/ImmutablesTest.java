@@ -7,8 +7,8 @@ import org.junit.jupiter.api.Test;
 
 class ImmutablesTest {
   @Test
-  void person() {
-    final var person = Person.configure().age(33).isEmployed(false).isMarried(true).done();
+  void simpleBuilder() {
+    final var person = Person1.configure().age(33).isEmployed(false).isMarried(true).done();
     System.out.println(person);
   }
 
@@ -20,10 +20,31 @@ class ImmutablesTest {
   }
 
   @Test
-  @DisplayName("Kotlin Builder")
-  void kotlinBuilder() {
+  @DisplayName("Private Immutable Impl")
+  void privateImmutableImpl() {
+    new PersonBuilder().name("Jim Boe").address("P.O. box 0001, Lexington, KY").build();
+  }
+
+  @Test
+  @DisplayName("Nested Builder")
+  void nestedBuilder() {
     final var kick =
-        Kick.configure().stepConfig(StepConfig.configure().folder("").step("").off()).off();
-    System.out.println(kick);
+        Kick.configure()
+            .stepConfig(
+                StepConfig.configure()
+                    .folder("root")
+                    .nest(
+                        StepConfig.configure()
+                            .folder("folder-1")
+                            .runOnlyStep("step-1")
+                            .nest(
+                                StepConfig.configure()
+                                    .folder("folder-11")
+                                    .skipStep("step-11")
+                                    .done())
+                            .done())
+                    .done())
+            .off();
+    System.out.println(kick.stepConfig());
   }
 }

@@ -1,6 +1,6 @@
 package ga.overfullstack.polyglot
 
-import buildContext
+import context.buildJSContext
 import ga.overfullstack.polyglot.PolyglotLab.UpperCase
 import ga.overfullstack.utils.readFileFromTestResource
 import org.graalvm.polyglot.Source
@@ -13,7 +13,7 @@ class PolyglotLab {
   @Test
   fun jsonParseWithJs() {
     val responseBody = readFileFromTestResource("core-user-creation-response.json")
-    val context = buildContext(useCommonjsRequire = false)
+    val context = buildJSContext(useCommonjsRequire = false)
     val callingScript = """
       var jsonData = JSON.parse(responseBody);
       var statusCode = jsonData.compositeResponse[0].httpStatusCode;  
@@ -56,7 +56,7 @@ class PolyglotLab {
       console.log(jsonData);
       pm.environment.set('jsonData', jsonData);
     """.trimIndent()
-    val context = buildContext(useCommonjsRequire = false)
+    val context = buildJSContext(useCommonjsRequire = false)
     val source = Source.newBuilder("js", callingScript, "myScript.js").build()
     val pm = PostmanAPI()
     val jsBindings = context.getBindings("js")
@@ -83,7 +83,7 @@ class PolyglotLab {
       pm.environment.set('x', toUpperCase(jsonData.x)); 
       pm.environment.set('y', jsonData.y);
     """.trimIndent()
-    val context = buildContext(useCommonjsRequire = false)
+    val context = buildJSContext(useCommonjsRequire = false)
     val source = Source.newBuilder("js", callingScript, "myScript.js").build()
     val pm = PostmanAPI()
     val toUpperCase = UpperCase { s -> s.uppercase(Locale.getDefault()) }

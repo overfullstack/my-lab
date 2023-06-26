@@ -2,8 +2,9 @@ plugins {
   id("mylab.kt-conventions")
 }
 dependencies {
+  implementation(project(":common"))
   implementation(libs.kotlinx.coroutines.core)
-  implementation(libs.moshi)
+  implementation(libs.klaxon)
   implementation(libs.java.vavr)
   implementation(libs.kotlin.vavr)
   implementation(libs.state.machine)

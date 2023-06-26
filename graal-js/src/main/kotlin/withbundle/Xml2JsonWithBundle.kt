@@ -1,9 +1,9 @@
 package withbundle
 
-import buildContext
+import context.buildJSContext
 
 fun main() {
-  val context = buildContext()
+  val context = buildJSContext()
 //  val xml2Json = File("graal-js/src/withbundle/main/resources/xml2Json.js")
 //  val language = Source.findLanguage(xml2Json)
   //val exports = context.eval(Source.newBuilder(language, xml2Json).mimeType("application/javascript+module").build())

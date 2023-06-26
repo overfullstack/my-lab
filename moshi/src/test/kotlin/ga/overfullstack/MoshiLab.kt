@@ -1,10 +1,16 @@
 package ga.overfullstack
 
+import com.squareup.moshi.FromJson
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
 import com.squareup.moshi.adapter
-import pojo.NestedBean
-import pojo.Obj
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import ga.overfullstack.pojo.Bean1
+import ga.overfullstack.pojo.Message
+import ga.overfullstack.pojo.NestedBean
+import ga.overfullstack.pojo.NestedBean1
+import ga.overfullstack.pojo.NestedMessages
+import ga.overfullstack.pojo.Obj
 import ga.overfullstack.utils.readFileFromTestResource
 import io.kotest.matchers.equals.shouldBeEqual
 import io.kotest.matchers.maps.shouldContainExactly
@@ -15,7 +21,7 @@ internal class MoshiLab {
 
   @OptIn(ExperimentalStdlibApi::class)
   @Test
-  fun readJsonToPojo() {
+  fun readNestedJsonToNestedPojo() {
     val nestedBeanStr = readFileFromTestResource("nested-bean.json")
     val mapAdapter = Moshi.Builder().build().adapter<NestedBean>()
     val nestedBean = mapAdapter.fromJson(nestedBeanStr)!!
@@ -33,7 +39,7 @@ internal class MoshiLab {
 
   @OptIn(ExperimentalStdlibApi::class)
   @Test
-  fun readCollectionToListMap() {
+  fun `read collection to list map`() {
     val collectionStr = readFileFromTestResource("collection.json")
     val mapAdapter = Moshi.Builder().build().adapter<Any?>()
     val collection = mapAdapter.fromJson(collectionStr)
@@ -42,9 +48,18 @@ internal class MoshiLab {
 
   @OptIn(ExperimentalStdlibApi::class)
   @Test
-  fun readJsonToAnyMap() {
+  fun `read composite response to list map`() {
+    val collectionStr = readFileFromTestResource("composite-response.json")
+    val mapAdapter = Moshi.Builder().build().adapter<Any?>()
+    val compositeResp = mapAdapter.fromJson(collectionStr)
+    println(compositeResp)
+  }
+
+  @OptIn(ExperimentalStdlibApi::class)
+  @Test
+  fun `read Json into Map with star projection`() {
     val nestedBeanStr = readFileFromTestResource("nested-bean.json")
-    val mapAdapter = Moshi.Builder().build().adapter<Map<*, *>>()
+    val mapAdapter = Moshi.Builder().build().adapter<Map<String, *>>()
     val any = mapAdapter.fromJson(nestedBeanStr)!! 
     (any["bean"] as Map<String, *>) shouldContainExactly mapOf("name" to "member", "items" to listOf("item1", "item2"))
   }
@@ -69,7 +84,44 @@ internal class MoshiLab {
 
   @Test
   fun collectionElementType() {
-    val strList = listOf("a", "b");
+    val strList = listOf("a", "b")
     println(Types.collectionElementType(strList::class.java, List::class.java))
+  }
+
+  @OptIn(ExperimentalStdlibApi::class)
+  @Test
+  fun readJsonToPojo() {
+    val mapAdapter = Moshi.Builder().addLast(KotlinJsonAdapterFactory()).build().adapter<Bean1>()
+    val bean = mapAdapter.fromJson(readFileFromTestResource("bean.json"))!!
+    println(bean)
+  }
+
+  @OptIn(ExperimentalStdlibApi::class)
+  @Test
+  fun `read Json To nested Pojo`() {
+    val nestedBeanStr = readFileFromTestResource("nested-bean.json")
+    val mapAdapter = Moshi.Builder().addLast(KotlinJsonAdapterFactory()).build().adapter<NestedBean1>()
+    val nestedBean = mapAdapter.fromJson(nestedBeanStr)!!
+    println(nestedBean)
+  }
+
+  @OptIn(ExperimentalStdlibApi::class)
+  @Test
+  fun `read Json To nested Pojo with Custom Adapter`() {
+    val nestedMessages = Moshi.Builder()
+      .add(NestedMessagesAdapter(3))
+      .addLast(KotlinJsonAdapterFactory())
+      .build()
+      .adapter<NestedMessages>()
+      .fromJson(readFileFromTestResource("msg.json"))!!
+    println(nestedMessages)
+  }
+
+  class NestedMessagesAdapter(private val msgCount: Int) {
+    @FromJson
+    fun fromJson(message: Message): NestedMessages {
+      val msgs = List(msgCount) { message.copy(message = it.toString()) }
+      return NestedMessages(msgs)
+    }
   }
 }

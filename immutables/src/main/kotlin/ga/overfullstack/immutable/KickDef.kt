@@ -1,10 +1,11 @@
 package ga.overfullstack.immutable
 
-import ga.overfullstack.immutable.style.MyStyle
+import ga.overfullstack.immutable.style.Config
+import ga.overfullstack.immutable.style.StepConfig
 import org.immutables.value.Value
 import java.lang.reflect.Type
 
-@MyStyle
+@Config
 @Value.Immutable
 internal interface KickDef {
   fun templatePath(): String?
@@ -33,12 +34,18 @@ internal interface KickDef {
 
 }
 
-@MyStyle
+@StepConfig
 @Value.Immutable
 internal interface StepConfigDef {
-  fun folder(): String
+  fun folder(): String?
+  
+  fun nest(): StepConfigDef?
+  
+  @SkipNulls
+  fun runOnlySteps(): Set<String>
 
-  fun step(): String?
+  @SkipNulls
+  fun skipSteps(): Set<String>
 }
 
 enum class ValidationStrategy {

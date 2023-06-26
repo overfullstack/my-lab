@@ -1,0 +1,66 @@
+{
+  "compositeResponse": [
+    {
+      "body": {
+        "totalSize": 4,
+        "done": true,
+        "records": [
+          {
+            "attributes": {
+              "type": "QuoteLineItem",
+              "url": "/services/data/v59.0/sobjects/QuoteLineItem/0QLxx0000004D8KGAU"
+            },
+            "Id": "0QLxx0000004D8KGAU",
+            "Product2Id": "01txx0000006iAWAAY"
+          },
+          {
+            "attributes": {
+              "type": "QuoteLineItem",
+              "url": "/services/data/v59.0/sobjects/QuoteLineItem/0QLxx0000004D8LGAU"
+            },
+            "Id": "0QLxx0000004D8LGAU",
+            "Product2Id": "01txx0000006iC8AAI"
+          },
+          {
+            "attributes": {
+              "type": "QuoteLineItem",
+              "url": "/services/data/v59.0/sobjects/QuoteLineItem/0QLxx0000004D8MGAU"
+            },
+            "Id": "0QLxx0000004D8MGAU",
+            "Product2Id": "01txx0000006i7IAAQ"
+          },
+          {
+            "attributes": {
+              "type": "QuoteLineItem",
+              "url": "/services/data/v59.0/sobjects/QuoteLineItem/0QLxx0000004D8NGAU"
+            },
+            "Id": "0QLxx0000004D8NGAU",
+            "Product2Id": "01txx0000006i7IAAQ"
+          }
+        ]
+      },
+      "httpHeaders": {},
+      "httpStatusCode": 200,
+      "referenceId": "qlis"
+    },
+    {
+      "body": {
+        "totalSize": 1,
+        "done": true,
+        "records": [
+          {
+            "attributes": {
+              "type": "QuoteLineRelationship",
+              "url": "/services/data/v59.0/sobjects/QuoteLineRelationship/0yQxx000000003FEAQ"
+            },
+            "Id": "0yQxx000000003FEAQ",
+            "QuoteId": "0Q0xx0000004DQ4CAM"
+          }
+        ]
+      },
+      "httpHeaders": {},
+      "httpStatusCode": 200,
+      "referenceId": "qlrs"
+    }
+  ]
+}

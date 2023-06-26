@@ -1,9 +1,9 @@
 package withRequireJs
 
-import buildContext
+import context.buildJSContext
 
 fun main() {
-  val context = buildContext()
+  val context = buildJSContext()
   context.eval(
     "js", """
      var moment = require('moment');

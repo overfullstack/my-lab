@@ -1,10 +1,10 @@
 package ga.overfullstack.polyglot
 
-import buildContext
 import com.fasterxml.jackson.dataformat.xml.XmlMapper
-import com.github.underscore.U
-import com.squareup.moshi.Moshi
-import com.squareup.moshi.adapter
+import context.buildJSContext
+import context.jsContext
+import context.pm
+import ga.overfullstack.polyglot.PolyglotXMLLab.Xml2Json
 import org.graalvm.polyglot.Source
 import org.junit.jupiter.api.Test
 import postman.PostmanAPI
@@ -30,11 +30,11 @@ class PolyglotXMLLab {
       pm.environment.set('y', jsonData.node.b);
       pm.environment.set('z', jsonData['node']['c']['c2']);
     """.trimIndent()
-    val context = buildContext(useCommonjsRequire = false)
+    val context = buildJSContext(useCommonjsRequire = false)
     val source = Source.newBuilder("js", callingScript, "myScript.js").build()
     val pm = PostmanAPI()
     val jsBindings = context.getBindings("js")
-    jsBindings.putMember("postman", pm)
+    jsBindings.putMember("pm", pm)
     jsBindings.putMember("responseBody", responseBody)
     jsBindings.putMember("xml2Json", xml2Json2)
     context.eval(source)
@@ -66,26 +66,25 @@ class PolyglotXMLLab {
       var sessionId = jsonData['soapenv:Envelope']['soapenv:Body'].loginResponse.result.sessionId
       pm.environment.set("accessToken", sessionId);
     """.trimIndent()
-    val context = buildContext(useCommonjsRequire = false)
-    val source = Source.newBuilder("js", callingScript, "myScript.js").build()
-    val pm = PostmanAPI()
+    val context = jsContext//buildJSContext(useCommonjsRequire = false)
     val jsBindings = context.getBindings("js")
-    jsBindings.putMember("postman", pm)
     jsBindings.putMember("responseBody", responseBody)
-    jsBindings.putMember("xml2Json", xml2Json)
+    val source = Source.newBuilder("js", callingScript, "myScript.js").build()
     context.eval(source)
     println(pm.environment)
   }
 
-  @OptIn(ExperimentalStdlibApi::class)
-  val xml2Json = Xml2Json { xml ->
-    Moshi.Builder().build().adapter<Map<*, *>>().fromJson(U.xmlToJson(xml))
+  @SuppressWarnings("kotlin:S6517")
+  @FunctionalInterface // DON'T REMOVE THIS. Polyglot won't work without this
+  fun interface Xml2Json {
+    @Suppress("unused")
+    fun xml2Json(xml: String): Map<*, *>?
   }
 
   private val xml2Json2 = Xml2Json { xml ->
     val trimmedXml = if (xml.startsWith("<?xml")) xml.substring(xml.indexOf("?>") + 2) else xml
     val randomTag = getRandomString(5)
-    XmlMapper().readValue("<$randomTag>$trimmedXml</$randomTag>", Map::class.java)
+    XmlMapper().readValue("<$randomTag>$trimmedXml</$randomTag>", Map::class.java) as Map<String, Any>?
   }
 
   private fun getRandomString(length: Int): String {
@@ -93,11 +92,5 @@ class PolyglotXMLLab {
     return (1..length)
       .map { allowedChars.random() }
       .joinToString("")
-  }
-
-  @FunctionalInterface
-  fun interface Xml2Json {
-    @Suppress("unused")
-    fun xml2Json(xml: String): Map<*, *>?
   }
 }
