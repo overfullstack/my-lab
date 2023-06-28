@@ -48,15 +48,6 @@ internal class MoshiLab {
 
   @OptIn(ExperimentalStdlibApi::class)
   @Test
-  fun `read composite response to list map`() {
-    val collectionStr = readFileFromTestResource("composite-response.json")
-    val mapAdapter = Moshi.Builder().build().adapter<Any?>()
-    val compositeResp = mapAdapter.fromJson(collectionStr)
-    println(compositeResp)
-  }
-
-  @OptIn(ExperimentalStdlibApi::class)
-  @Test
   fun `read Json into Map with star projection`() {
     val nestedBeanStr = readFileFromTestResource("nested-bean.json")
     val mapAdapter = Moshi.Builder().build().adapter<Map<String, *>>()
@@ -66,7 +57,7 @@ internal class MoshiLab {
 
   @OptIn(ExperimentalStdlibApi::class)
   @Test
-  fun readJsonToPojo2() {
+  fun `read json to pojo`() {
     val objStr = readFileFromTestResource("obj.json")
     val mapAdapter = Moshi.Builder().build().adapter<Obj>()
     val obj = mapAdapter.fromJson(objStr)!!
@@ -90,7 +81,7 @@ internal class MoshiLab {
 
   @OptIn(ExperimentalStdlibApi::class)
   @Test
-  fun readJsonToPojo() {
+  fun `read json to pojo without Annotations`() {
     val mapAdapter = Moshi.Builder().addLast(KotlinJsonAdapterFactory()).build().adapter<Bean1>()
     val bean = mapAdapter.fromJson(readFileFromTestResource("bean.json"))!!
     println(bean)

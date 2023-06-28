@@ -1,0 +1,26 @@
+{
+  "pricingPref": "System",
+  "graph": {
+    "graphId": "abcd",
+    "records": {
+      "recordsList": [
+        {
+          "referenceId": "lineReferenceId",
+          "record": {
+            "recordBody": {
+              "Status": "Draft",
+              "quoteId": "headerActualId",
+              "Name": "QuoteLine1"
+            },
+            "isSetRecordBody": true
+          },
+          "isSetReferenceId": true,
+          "isSetRecord": true
+        }
+      ],
+      "isSetRecordsList": false
+    },
+    "isSetGraphId": true,
+    "isSetRecords": true
+  }
+}
