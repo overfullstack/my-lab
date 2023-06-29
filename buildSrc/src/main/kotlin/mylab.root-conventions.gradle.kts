@@ -20,17 +20,20 @@ repositories {
 }
 spotless {
   kotlin {
-    target("src/main/java/**/*.kt", "src/test/java/**/*.kt")
-    targetExclude("$buildDir/generated/**/*.*")
-    ktlint()
-      .setUseExperimental(true)
-      .editorConfigOverride(mapOf("indent_size" to "2", "continuation_indent_size" to "2"))
+    ktfmt().googleStyle()
+    target("**/*.kt")
+    trimTrailingWhitespace()
+    endWithNewline()
+    targetExclude(
+      "**/Dependencies.kt",
+      "**/build/**",
+    )
   }
   kotlinGradle {
-    target("*.gradle.kts")
-    ktlint()
-      .setUseExperimental(true)
-      .editorConfigOverride(mapOf("indent_size" to "2", "continuation_indent_size" to "2"))
+    ktfmt().googleStyle()
+    target("**/*.gradle.kts")
+    trimTrailingWhitespace()
+    endWithNewline()
   }
   java {
     toggleOffOn()
