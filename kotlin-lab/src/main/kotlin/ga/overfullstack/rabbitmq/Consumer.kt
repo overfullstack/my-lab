@@ -12,23 +12,16 @@ fun main() {
   val channel = connection.createChannel()
   val consumerTag = "SimpleConsumer"
 
-  channel.queueDeclare(QUEUE_NAME, false, false, false, null) 
+  channel.queueDeclare(QUEUE_NAME, false, false, false, null)
 
   println("[$consumerTag] Waiting for messages...")
   val deliverCallback = DeliverCallback { tag: String?, delivery: Delivery ->
     val message = String(delivery.body, StandardCharsets.UTF_8)
     println("[📩] Received message: '$message'")
-    channel.basicPublish(
-      "",
-      QUEUE_NAME,
-      null,
-      message.toByteArray(StandardCharsets.UTF_8)
-    )
+    channel.basicPublish("", QUEUE_NAME, null, message.toByteArray(StandardCharsets.UTF_8))
     println(" [x] Sent '$message'")
   }
-  val cancelCallback = CancelCallback { tag: String? ->
-    println("[$tag] was canceled")
-  }
+  val cancelCallback = CancelCallback { tag: String? -> println("[$tag] was canceled") }
 
   channel.basicConsume(QUEUE_NAME, true, consumerTag, deliverCallback, cancelCallback)
 }

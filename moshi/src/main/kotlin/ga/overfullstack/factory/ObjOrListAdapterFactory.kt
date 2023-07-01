@@ -12,19 +12,15 @@ import java.util.Collections.singletonList
 import kotlin.annotation.AnnotationRetention.RUNTIME
 import kotlin.annotation.AnnotationTarget.PROPERTY
 
-@Retention(RUNTIME)
-@Target(PROPERTY)
-@JsonQualifier
-annotation class ObjOrList
+@Retention(RUNTIME) @Target(PROPERTY) @JsonQualifier annotation class ObjOrList
 
 object ObjOrListAdapterFactory : JsonAdapter.Factory {
-  override fun create(
-    type: Type,
-    annotations: Set<Annotation>,
-    moshi: Moshi
-  ): JsonAdapter<*>? {
-    val delegateAnnotations = Types.nextAnnotations(annotations, ObjOrList::class.java) ?: return null
-    require(Types.getRawType(type) === List::class.java) { "@ObjOrList requires the type to be List. Found this type: $type" }
+  override fun create(type: Type, annotations: Set<Annotation>, moshi: Moshi): JsonAdapter<*>? {
+    val delegateAnnotations =
+      Types.nextAnnotations(annotations, ObjOrList::class.java) ?: return null
+    require(Types.getRawType(type) === List::class.java) {
+      "@ObjOrList requires the type to be List. Found this type: $type"
+    }
     val elementType = Types.collectionElementType(type, List::class.java)
     val singleElementAdapter: JsonAdapter<Any?> = moshi.adapter(elementType)
     val delegateAdapterForList: JsonAdapter<List<Any?>?> = moshi.adapter(type, delegateAnnotations)
@@ -35,6 +31,7 @@ object ObjOrListAdapterFactory : JsonAdapter.Factory {
         } else {
           delegateAdapterForList.fromJson(reader)
         }
+
       override fun toJson(writer: JsonWriter, value: List<Any?>?) {
         if (value == null) {
           return

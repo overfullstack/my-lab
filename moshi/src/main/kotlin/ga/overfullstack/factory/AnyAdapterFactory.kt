@@ -10,13 +10,12 @@ import java.lang.reflect.Type
 import java.util.Collections.singletonList
 
 object AnyAdapterFactory : JsonAdapter.Factory {
-  override fun create(
-    type: Type,
-    annotations: Set<Annotation>,
-    moshi: Moshi
-  ): JsonAdapter<*>? {
+  override fun create(type: Type, annotations: Set<Annotation>, moshi: Moshi): JsonAdapter<*>? {
     val elementType = Types.collectionElementType(type, List::class.java)
-    if (!(Types.getRawType(type) === List::class.java && Types.getRawType(elementType) === Map::class.java)) {
+    if (
+      !(Types.getRawType(type) === List::class.java &&
+        Types.getRawType(elementType) === Map::class.java)
+    ) {
       return null
     }
     val delegateAdapter: JsonAdapter<List<Any?>?> = moshi.adapter(type)

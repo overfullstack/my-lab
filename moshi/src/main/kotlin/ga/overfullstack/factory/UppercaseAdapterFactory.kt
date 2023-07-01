@@ -20,7 +20,7 @@ class UppercaseAdapterFactory : JsonAdapter.Factory {
         return s?.uppercase() ?: ""
       }
 
-      override fun toJson(writer: JsonWriter, value: String?) = 
+      override fun toJson(writer: JsonWriter, value: String?) =
         stringAdapter.toJson(writer, value?.uppercase(Locale.getDefault()))
     }
   }

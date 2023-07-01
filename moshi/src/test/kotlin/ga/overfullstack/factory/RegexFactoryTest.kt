@@ -5,9 +5,9 @@ import com.squareup.moshi.adapter
 import ga.overfullstack.pojo.NestedBean
 import ga.overfullstack.utils.readFileFromTestResource
 import io.kotest.matchers.shouldBe
+import java.io.IOException
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
-import java.io.IOException
 
 class RegexFactoryTest {
 
@@ -16,7 +16,7 @@ class RegexFactoryTest {
     val variable = "variable"
     postManVariableRegex.matchEntire("{{$variable}}")?.groupValues?.get(1) shouldBe variable
   }
-  
+
   @OptIn(ExperimentalStdlibApi::class)
   @Test
   @Throws(IOException::class)

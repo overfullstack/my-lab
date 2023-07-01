@@ -22,32 +22,29 @@ class FlowLab {
   }
 
   @Test
-  fun flowCollect() = runBlocking<Unit> {
-    // Launch a concurrent coroutine to check if the ga.overfullstack.main thread is blocked
-    launch {
-      for (k in 1..3) {
-        log("I'm not blocked $k")
-        delay(100)
+  fun flowCollect() =
+    runBlocking<Unit> {
+      // Launch a concurrent coroutine to check if the ga.overfullstack.main thread is blocked
+      launch {
+        for (k in 1..3) {
+          log("I'm not blocked $k")
+          delay(100)
+        }
       }
+      // Collect the flow
+      foo().collect { value -> log("Collected $value") }
     }
-    // Collect the flow
-    foo().collect { value ->
-      log("Collected $value")
-    }
-  }
 
-  fun foo2(): Flow<Int> = flow {
-    for (i in 1..3) {
-      Thread.sleep(100) // pretend we are computing it in CPU-consuming way
-      log("Emitting $i")
-      emit(i) // emit next value
-    }
-  }.flowOn(Dispatchers.Default)
+  fun foo2(): Flow<Int> =
+    flow {
+        for (i in 1..3) {
+          Thread.sleep(100) // pretend we are computing it in CPU-consuming way
+          log("Emitting $i")
+          emit(i) // emit next value
+        }
+      }
+      .flowOn(Dispatchers.Default)
 
   @Test
-  fun flowCollect2() = runBlocking<Unit> {
-    foo2().collect { value ->
-      log("Collected $value")
-    }
-  }
+  fun flowCollect2() = runBlocking<Unit> { foo2().collect { value -> log("Collected $value") } }
 }

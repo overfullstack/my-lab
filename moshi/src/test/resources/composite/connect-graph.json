@@ -1,0 +1,101 @@
+{
+  "graph": {
+    "graphId": "pq-create-with-bundles",
+    "records": {
+      "recordsList": [
+        {
+          "referenceId": "refQuoteItem1",
+          "record": {
+            "recordBody": {
+              "attributes": {
+                "type": "QuoteLineItem",
+                "method": "POST"
+              },
+              "QuoteId": "0Q0xx0000004EfUCAU",
+              "PricebookEntryId": "01uxx0000008zuUAAQ",
+              "Product2Id": "01txx0000006jOKAAY",
+              "Quantity": 2.0,
+              "UnitPrice": 25.0,
+              "PeriodBoundary": "Anniversary",
+              "BillingFrequency": "Monthly",
+              "StartDate": "2023-06-30"
+            },
+            "isSetRecordBody": true
+          },
+          "isSetReferenceId": true,
+          "isSetRecord": true
+        },
+        {
+          "referenceId": "refQuoteItem2",
+          "record": {
+            "recordBody": {
+              "attributes": {
+                "type": "QuoteLineItem",
+                "method": "POST"
+              },
+              "QuoteId": "0Q0xx0000004EfUCAU",
+              "PricebookEntryId": "01uxx0000008zuVAAQ",
+              "Product2Id": "01txx0000006jMjAAI",
+              "Quantity": 2.0,
+              "UnitPrice": 25.0,
+              "EndDate": "2024-06-29",
+              "PeriodBoundary": "DayOfPeriod",
+              "PeriodBoundaryDay": 4,
+              "BillingFrequency": "Monthly",
+              "StartDate": "2023-06-30"
+            },
+            "isSetRecordBody": true
+          },
+          "isSetReferenceId": true,
+          "isSetRecord": true
+        },
+        {
+          "referenceId": "refQuoteItem3",
+          "record": {
+            "recordBody": {
+              "attributes": {
+                "type": "QuoteLineItem",
+                "method": "POST"
+              },
+              "QuoteId": "0Q0xx0000004EfUCAU",
+              "PricebookEntryId": "01uxx0000008zssAAA",
+              "Product2Id": "01txx0000006jMiAAI",
+              "Quantity": 2.0,
+              "UnitPrice": 25.0,
+              "StartDate": "2023-06-30"
+            },
+            "isSetRecordBody": true
+          },
+          "isSetReferenceId": true,
+          "isSetRecord": true
+        },
+        {
+          "referenceId": "refQuoteItem4",
+          "record": {
+            "recordBody": {
+              "attributes": {
+                "type": "QuoteLineItem",
+                "method": "POST"
+              },
+              "QuoteId": "0Q0xx0000004EfUCAU",
+              "PricebookEntryId": "01uxx0000008zssAAA",
+              "Product2Id": "01txx0000006jMiAAI",
+              "Quantity": 2.0,
+              "UnitPrice": 25.0,
+              "StartDate": "2023-06-30"
+            },
+            "isSetRecordBody": true
+          },
+          "isSetReferenceId": true,
+          "isSetRecord": true
+        }
+      ],
+      "isSetRecordsList": false
+    },
+    "isSetGraphId": true,
+    "isSetRecords": true
+  },
+  "isSetGraph": true,
+  "pricingPref": "System",
+  "isSetPricingPref": true
+}

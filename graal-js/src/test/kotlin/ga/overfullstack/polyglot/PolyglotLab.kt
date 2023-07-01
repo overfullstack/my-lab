@@ -3,10 +3,10 @@ package ga.overfullstack.polyglot
 import context.buildJSContext
 import ga.overfullstack.polyglot.PolyglotLab.UpperCase
 import ga.overfullstack.utils.readFileFromTestResource
+import java.util.Locale
 import org.graalvm.polyglot.Source
 import org.junit.jupiter.api.Test
 import postman.PostmanAPI
-import java.util.Locale
 
 class PolyglotLab {
 
@@ -14,9 +14,10 @@ class PolyglotLab {
   fun jsonParseWithJs() {
     val responseBody = readFileFromTestResource("core-user-creation-response.json")
     val context = buildJSContext(useCommonjsRequire = false)
-    val callingScript = """
+    val callingScript =
+      """
       var jsonData = JSON.parse(responseBody);
-      var statusCode = jsonData.compositeResponse[0].httpStatusCode;  
+      var statusCode = jsonData.compositeResponse[0].httpStatusCode;
       if (statusCode === 201) {
           jsonData.compositeResponse.forEach(function(response) {
               var referenceId = response.referenceId;
@@ -29,9 +30,10 @@ class PolyglotLab {
               } else if(response.referenceId === "refTermedOrderItem") {
                   pm.environment.set("termedOrderItemId", response.body.id);
               }
-          });  
+          });
       }
-    """.trimIndent()
+    """
+        .trimIndent()
     val source = Source.newBuilder("js", callingScript, "myScript.js").build()
     val pm = PostmanAPI()
     val jsBindings = context.getBindings("js")
@@ -43,19 +45,23 @@ class PolyglotLab {
 
   @Test
   fun `set object inside pm env`() {
-    val responseBody = """
+    val responseBody =
+      """
     {
       "x": "a",
       "y": [
         "2"
       ]
     }
-    """.trimIndent()
-    val callingScript = """
+    """
+        .trimIndent()
+    val callingScript =
+      """
       var jsonData=JSON.parse(responseBody);
       console.log(jsonData);
       pm.environment.set('jsonData', jsonData);
-    """.trimIndent()
+    """
+        .trimIndent()
     val context = buildJSContext(useCommonjsRequire = false)
     val source = Source.newBuilder("js", callingScript, "myScript.js").build()
     val pm = PostmanAPI()
@@ -69,20 +75,24 @@ class PolyglotLab {
 
   @Test
   fun jsonParseWithCallback() {
-    val responseBody = """
+    val responseBody =
+      """
     {
       "x": "a",
       "y": [
         "2"
       ]
     }
-    """.trimIndent()
-    val callingScript = """
+    """
+        .trimIndent()
+    val callingScript =
+      """
       var jsonData=JSON.parse(responseBody);
       console.log(jsonData);
-      pm.environment.set('x', toUpperCase(jsonData.x)); 
+      pm.environment.set('x', toUpperCase(jsonData.x));
       pm.environment.set('y', jsonData.y);
-    """.trimIndent()
+    """
+        .trimIndent()
     val context = buildJSContext(useCommonjsRequire = false)
     val source = Source.newBuilder("js", callingScript, "myScript.js").build()
     val pm = PostmanAPI()
@@ -98,7 +108,6 @@ class PolyglotLab {
   @FunctionalInterface
   fun interface UpperCase {
 
-    @Suppress("unused")
-    fun toUpperCase(s: String): String
+    @Suppress("unused") fun toUpperCase(s: String): String
   }
 }

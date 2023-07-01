@@ -8,9 +8,9 @@ import com.squareup.moshi.adapter
 import com.squareup.moshi.internal.Util
 import ga.overfullstack.pojo.Bean
 import ga.overfullstack.pojo.NestedBean
-import org.junit.jupiter.api.Test
 import java.lang.reflect.Type
 import java.nio.charset.Charset
+import org.junit.jupiter.api.Test
 
 internal class ValueSink {
 
@@ -18,7 +18,8 @@ internal class ValueSink {
   @Test
   fun upperCaseFactoryToJson() {
     val beanJsonAdapter = Moshi.Builder().add(AppendTypeFactory()).build().adapter<NestedBean>()
-    val nestedBeanStr = beanJsonAdapter.toJson(NestedBean("container", Bean("member", listOf("item1", "item2"))))
+    val nestedBeanStr =
+      beanJsonAdapter.toJson(NestedBean("container", Bean("member", listOf("item1", "item2"))))
     println(nestedBeanStr)
   }
 
@@ -39,5 +40,4 @@ internal class ValueSink {
       }
     }
   }
-
 }

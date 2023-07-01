@@ -5,33 +5,35 @@ import org.http4k.format.Jackson.auto
 import org.http4k.lens.BiDiBodyLens
 
 data class Email(val value: String)
+
 data class Message(val subject: String, val from: Email, val to: Email)
 
 fun main() {
-    // We can use the auto method here from either Jackson, Gson or the Xml message format objects.
-    // Note that the auto() method needs to be manually imported as IntelliJ won't pick it up automatically.
-    val messageLens: BiDiBodyLens<Message> = Body.auto<Message>().toLens()
+  // We can use the auto method here from either Jackson, Gson or the Xml message format objects.
+  // Note that the auto() method needs to be manually imported as IntelliJ won't pick it up
+  // automatically.
+  val messageLens: BiDiBodyLens<Message> = Body.auto<Message>().toLens()
 
-    val myMessage = Message("hello", Email("bob@git.com"), Email("sue@git.com"))
+  val myMessage = Message("hello", Email("bob@git.com"), Email("sue@git.com"))
 
-    // to inject the body into the message - this also works with Response
-    val requestWithEmail: Request = messageLens(myMessage, Request(GET, "/"))
+  // to inject the body into the message - this also works with Response
+  val requestWithEmail: Request = messageLens(myMessage, Request(GET, "/"))
 
-    println(requestWithEmail)
+  println(requestWithEmail)
 
-// Produces:
-//    GET / HTTP/1.1
-//    content-type: application/json
-//
-//    {"subject":"hello","from":{"value":"bob@git.com"},"to":{"value":"sue@git.com"}}
+  // Produces:
+  //    GET / HTTP/1.1
+  //    content-type: application/json
+  //
+  //    {"subject":"hello","from":{"value":"bob@git.com"},"to":{"value":"sue@git.com"}}
 
-    // to extract the body from the message - this also works with Response
-    val extractedMessage: Message = messageLens(requestWithEmail)
+  // to extract the body from the message - this also works with Response
+  val extractedMessage: Message = messageLens(requestWithEmail)
 
-    println(extractedMessage)
-    println(extractedMessage == myMessage)
+  println(extractedMessage)
+  println(extractedMessage == myMessage)
 
-// Produces:
-//    Message(subject=hello, from=Email(value=bob@git.com), to=Email(value=sue@git.com))
-//    true
+  // Produces:
+  //    Message(subject=hello, from=Email(value=bob@git.com), to=Email(value=sue@git.com))
+  //    true
 }

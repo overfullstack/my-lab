@@ -1,6 +1,7 @@
 package ga.overfullstack
 
 import ga.overfullstack.common.User
+import kotlin.concurrent.thread
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
@@ -8,7 +9,6 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 import org.junit.jupiter.api.Test
-import kotlin.concurrent.thread
 
 /* gakshintala created on 7/28/20 */
 
@@ -20,7 +20,9 @@ class Coroutines2Lab {
         println(Thread.currentThread().name)
         println(user)
       }
-    } catch (e: Exception) { // This cannot catch the exception as Main finishes before the thread it spawns.
+    } catch (
+      e: Exception) { // This cannot catch the exception as Main finishes before the thread it
+      // spawns.
       println("exception")
     }
     println("done in ga.overfullstack.main")

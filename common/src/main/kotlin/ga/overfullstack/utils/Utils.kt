@@ -1,4 +1,5 @@
 @file:JvmName("Utils")
+
 package ga.overfullstack.utils
 
 import com.squareup.moshi.JsonAdapter
@@ -11,11 +12,10 @@ import java.lang.reflect.Type
 fun readFileFromTestResource(fileRelativePath: String): String =
   File("src/test/resources/$fileRelativePath").readText()
 
-fun readFileFromResource(fileAbsolutePath: String): String =
-  File(fileAbsolutePath).readText()
+fun readFileFromResource(fileAbsolutePath: String): String = File(fileAbsolutePath).readText()
 
 @JvmOverloads
-fun <PojoT: Any> jsonToPojo(
+fun <PojoT : Any> jsonToPojo(
   pojoType: Type,
   jsonFilePath: String,
   customAdapters: List<Any> = emptyList(),
@@ -26,7 +26,7 @@ fun <PojoT: Any> jsonToPojo(
 }
 
 @JvmOverloads
-fun <PojoT: Any> pojoToJson(
+fun <PojoT : Any> pojoToJson(
   pojoType: Type,
   pojo: PojoT,
   customAdapters: List<Any> = emptyList(),
@@ -36,7 +36,7 @@ fun <PojoT: Any> pojoToJson(
   return runCatching { jsonAdapter.indent("  ").toJson(pojo) }.getOrNull()
 }
 
-inline fun <reified PojoT: Any> pojoToJson(
+inline fun <reified PojoT : Any> pojoToJson(
   pojo: PojoT,
   customAdapters: List<Any> = emptyList(),
   typesToIgnore: Set<Class<out Any>>? = emptySet()
@@ -45,7 +45,7 @@ inline fun <reified PojoT: Any> pojoToJson(
   return runCatching { jsonAdapter.indent("  ").toJson(pojo) }.getOrNull()
 }
 
-private fun <PojoT: Any> initMoshiJsonAdapter(
+private fun <PojoT : Any> initMoshiJsonAdapter(
   customAdapters: List<Any>,
   typesToIgnore: Set<Class<out Any>>?,
   pojoType: Type
@@ -61,7 +61,7 @@ private fun <PojoT: Any> initMoshiJsonAdapter(
 }
 
 @OptIn(ExperimentalStdlibApi::class)
-inline fun <reified PojoT: Any> initMoshiJsonAdapter(
+inline fun <reified PojoT : Any> initMoshiJsonAdapter(
   customAdapters: List<Any>,
   typesToIgnore: Set<Class<out Any>>?,
 ): JsonAdapter<PojoT> {

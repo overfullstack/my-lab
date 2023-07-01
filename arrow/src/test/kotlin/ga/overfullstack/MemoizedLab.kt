@@ -6,9 +6,8 @@ import org.apache.commons.lang3.RandomStringUtils.random
 import org.junit.jupiter.api.Test
 
 private val cache: HashBiMap<Any, Any> = HashBiMap.create()
-private val anyRandomGenerator: (Any) -> Any = { id: Any ->
-  cache.computeIfAbsent(id) { random(18, true, true) }
-}.memoize()
+private val anyRandomGenerator: (Any) -> Any =
+  { id: Any -> cache.computeIfAbsent(id) { random(18, true, true) } }.memoize()
 
 class MemoizedLab {
   @Test

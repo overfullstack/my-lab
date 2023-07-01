@@ -4,11 +4,108 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="CompositeResponse.RecordAdapterFactory working">
-      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="Use ktfmt and change editor config accordingly">
+      <change afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/pojo/composite/PQGraph.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moshi/src/test/resources/composite/connect-graph.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apt/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/apt/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apt/src/test/kotlin/ga/overfullstack/lombok/LombokTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/apt/src/test/kotlin/ga/overfullstack/lombok/LombokTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arrow/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/arrow/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arrow/src/main/kotlin/ga/overfullstack/optics/Player.kt" beforeDir="false" afterPath="$PROJECT_DIR$/arrow/src/main/kotlin/ga/overfullstack/optics/Player.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arrow/src/main/kotlin/ga/overfullstack/optics/person.kt" beforeDir="false" afterPath="$PROJECT_DIR$/arrow/src/main/kotlin/ga/overfullstack/optics/person.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arrow/src/test/kotlin/ga/overfullstack/ClosureLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/arrow/src/test/kotlin/ga/overfullstack/ClosureLab.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arrow/src/test/kotlin/ga/overfullstack/CoroutineLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/arrow/src/test/kotlin/ga/overfullstack/CoroutineLab.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arrow/src/test/kotlin/ga/overfullstack/Coroutines2Lab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/arrow/src/test/kotlin/ga/overfullstack/Coroutines2Lab.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arrow/src/test/kotlin/ga/overfullstack/FlowLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/arrow/src/test/kotlin/ga/overfullstack/FlowLab.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arrow/src/test/kotlin/ga/overfullstack/MemoizedLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/arrow/src/test/kotlin/ga/overfullstack/MemoizedLab.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arrow/src/test/kotlin/ga/overfullstack/optics/OpticsLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/arrow/src/test/kotlin/ga/overfullstack/optics/OpticsLab.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.kt-conventions.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.kt-conventions.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.root-conventions.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.root-conventions.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.sub-conventions.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.sub-conventions.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/kotlin/predef.kt" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/predef.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/common/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/utils/IgnoreUnknownFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/utils/IgnoreUnknownFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/utils/Utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/utils/Utils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graal-js/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/graal-js/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graal-js/src/main/kotlin/context/JsContext.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graal-js/src/main/kotlin/context/JsContext.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graal-js/src/main/kotlin/postman/PostmanEnvironment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graal-js/src/main/kotlin/postman/PostmanEnvironment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graal-js/src/main/kotlin/postman/SDK.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graal-js/src/main/kotlin/postman/SDK.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graal-js/src/main/kotlin/postman/state/Script.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graal-js/src/main/kotlin/postman/state/Script.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graal-js/src/main/kotlin/withRequireJs/MomentWithRequireJs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graal-js/src/main/kotlin/withRequireJs/MomentWithRequireJs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graal-js/src/main/kotlin/withRequireJs/PostmanRuntime.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graal-js/src/main/kotlin/withRequireJs/PostmanRuntime.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graal-js/src/main/kotlin/withRequireJs/ValidatorWithRequireJs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graal-js/src/main/kotlin/withRequireJs/ValidatorWithRequireJs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graal-js/src/main/kotlin/withbundle/MomentWithBundle.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graal-js/src/main/kotlin/withbundle/MomentWithBundle.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graal-js/src/main/kotlin/withbundle/NewmanWithBundle.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graal-js/src/main/kotlin/withbundle/NewmanWithBundle.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graal-js/src/main/kotlin/withbundle/ValidatorWithBundle.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graal-js/src/main/kotlin/withbundle/ValidatorWithBundle.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graal-js/src/main/kotlin/withbundle/Xml2JsonWithBundle.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graal-js/src/main/kotlin/withbundle/Xml2JsonWithBundle.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graal-js/src/test/kotlin/ga/overfullstack/polyglot/PolyglotLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graal-js/src/test/kotlin/ga/overfullstack/polyglot/PolyglotLab.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graal-js/src/test/kotlin/ga/overfullstack/polyglot/PolyglotXMLLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graal-js/src/test/kotlin/ga/overfullstack/polyglot/PolyglotXMLLab.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http4k/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/http4k/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http4k/src/main/kotlin/BiDiLens.kt" beforeDir="false" afterPath="$PROJECT_DIR$/http4k/src/main/kotlin/BiDiLens.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http4k/src/main/kotlin/LensLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/http4k/src/main/kotlin/LensLab.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http4k/src/main/kotlin/Pokemon.kt" beforeDir="false" afterPath="$PROJECT_DIR$/http4k/src/main/kotlin/Pokemon.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/immutables/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/immutables/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/immutables/src/main/kotlin/ga/overfullstack/immutable/KickDef.kt" beforeDir="false" afterPath="$PROJECT_DIR$/immutables/src/main/kotlin/ga/overfullstack/immutable/KickDef.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/immutables/src/main/kotlin/ga/overfullstack/immutable/style/Config.kt" beforeDir="false" afterPath="$PROJECT_DIR$/immutables/src/main/kotlin/ga/overfullstack/immutable/style/Config.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-lab/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-lab/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/ga/overfullstack/DeepFlatten.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/ga/overfullstack/DeepFlatten.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/ga/overfullstack/Regex.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/ga/overfullstack/Regex.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/ga/overfullstack/enumlab/RGB.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/ga/overfullstack/enumlab/RGB.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/ga/overfullstack/interop/Misc.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/ga/overfullstack/interop/Misc.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/ga/overfullstack/rabbitmq/Consumer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/ga/overfullstack/rabbitmq/Consumer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/ClosureLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/ClosureLab.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/DateTimeLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/DateTimeLab.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/KlaxonLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/KlaxonLab.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/Misc.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/Misc.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/SuccessConfigTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/SuccessConfigTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/coroutines/CoroutineLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/coroutines/CoroutineLab.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/coroutines/Coroutines2Lab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/coroutines/Coroutines2Lab.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/groot/MapperConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/groot/MapperConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/groot/Match.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/groot/Match.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/sobject/Udd.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/sobject/Udd.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/state/ContextAttributeMapping.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/state/ContextAttributeMapping.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/state/ContextDefinition.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/state/ContextDefinition.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/state/ContextDefinitionVersion.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/state/ContextDefinitionVersion.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/state/ContextDefinitionVersionX.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/state/ContextDefinitionVersionX.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/state/ContextDefinitionX.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/state/ContextDefinitionX.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/state/ContextMapping.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/state/ContextMapping.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/state/ContextNode.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/state/ContextNode.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/state/ContextNodeMapping.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/state/ContextNodeMapping.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/state/ContextSObjectHydrationInfo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/state/ContextSObjectHydrationInfo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/state/ContextTag.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/state/ContextTag.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/state/Manifest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/state/Manifest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/state/NodeAttribute.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/state/NodeAttribute.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/state/Payload.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/contextdef/state/Payload.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/factory/AnyAdapterFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/factory/AnyAdapterFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/factory/ObjOrListAdapterFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/factory/ObjOrListAdapterFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/factory/RegexAdapterFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/factory/RegexAdapterFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/factory/RegexAdapterFactoryWithState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/factory/RegexAdapterFactoryWithState.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/factory/SingleOrListAdapterFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/factory/SingleOrListAdapterFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/factory/UppercaseAdapterFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/factory/UppercaseAdapterFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/pojo/composite/CompositeGraph.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/pojo/composite/ConnectGraph.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/pojo/composite/CompositeGraphPQ.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/pojo/composite/CompositeResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/pojo/composite/CompositeResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/pojo/withAnnotations.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/pojo/withAnnotations.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/JSONInheritance.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/JSONInheritance.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/JsonString.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/JsonString.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/MoshiLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/MoshiLab.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/PostmanLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/PostmanLab.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/SealedLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/SealedLab.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/ValueSink.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/ValueSink.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/composite/CompositeLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/pojo/composite/CompositeLab.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/contextdef/ContextDefOpticsTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/contextdef/ContextDefOpticsTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/contextdef/ContextMappingGeneratorTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/contextdef/ContextMappingGeneratorTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/factory/RegexFactoryTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/factory/RegexFactoryTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/factory/SingleOrListAdapterTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/factory/SingleOrListAdapterTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/factory/UpperCaseAdapterFactoryTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/factory/UpperCaseAdapterFactoryTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/test/resources/composite/composite-graph-pq.json" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/resources/composite/pq-graph.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/test/resources/composite/composite-graph-with-recordList.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/kotlin/ga/overfullstack/spring/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/kotlin/ga/overfullstack/spring/Application.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +167,9 @@
       </list>
     </option>
   </component>
+  <component name="FindBugs-IDEA-Workspace">
+    <toolWindowEditorPreview>false</toolWindowEditorPreview>
+  </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
@@ -91,16 +191,6 @@
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
-  </component>
-  <component name="HighlightingMarkupGrave">
-    <markupCoffin contentHash="816144852" url="file://$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.root-conventions.gradle.kts">
-      <highlighter start="1033" end="1045" layer="5000" target="0">
-        <option name="myExternalName" value="WRONG_REFERENCES_ATTRIBUTES" />
-      </highlighter>
-      <highlighter start="1262" end="1274" layer="5000" target="0">
-        <option name="myExternalName" value="WRONG_REFERENCES_ATTRIBUTES" />
-      </highlighter>
-    </markupCoffin>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.beust/klaxon/5.5/d5e430c7122e16bb891dc94c30ff786086d3224a/klaxon-5.5-sources.jar!/com/beust/klaxon/World.kt" root0="SKIP_INSPECTION" />
@@ -188,6 +278,7 @@
     &quot;FindInProjectState.isProjectScope&quot;: &quot;false&quot;,
     &quot;Notification.DisplayName-DoNotAsk-Dependencies from package.json&quot;: &quot;Dependencies from package.json available&quot;,
     &quot;Notification.DoNotAsk-Dependencies from package.json&quot;: &quot;true&quot;,
+    &quot;PROJECT_TOOLBAR_COLOR&quot;: &quot;29585c&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;false&quot;,
@@ -213,7 +304,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2693383&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;intellij.plugin.js.indexing.ExcludeConfigurable&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;6e697ef780714c0f816b57bef39ecdfe&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -243,11 +334,11 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/pojo" />
       <recent name="$PROJECT_DIR$/moshi/src/test/resources/composite" />
       <recent name="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/pojo/composite" />
       <recent name="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/factory" />
       <recent name="$PROJECT_DIR$/moshi/src/main/kotlin/factory" />
-      <recent name="$PROJECT_DIR$/graal-js/src/main/kotlin/context" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="ga.overfullstack.composite" />
@@ -308,7 +399,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.CompositeLab.read composite response json to pojo">
+  <component name="RunManager" selected="Gradle.CompositeLab.Unmarshall composite response json to pojo">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -322,7 +413,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CompositeLab.read Json To composite Graph PQ (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CompositeLab.Unmarshall Json to composite Graph" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -335,7 +426,7 @@
           <list>
             <option value=":moshi:test" />
             <option value="--tests" />
-            <option value="&quot;ga.overfullstack.composite.CompositeLab.read Json To composite Graph PQ&quot;" />
+            <option value="&quot;ga.overfullstack.pojo.composite.CompositeLab.Unmarshall Json to composite Graph&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -346,7 +437,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CompositeLab.read Json To composite Graph PQ" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CompositeLab.Unmarshall composite Graph PQ JSON to Composite Graph Connect POJO" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -359,7 +450,31 @@
           <list>
             <option value=":moshi:test" />
             <option value="--tests" />
-            <option value="&quot;ga.overfullstack.CompositeLab.read Json To composite Graph PQ&quot;" />
+            <option value="&quot;ga.overfullstack.pojo.composite.CompositeLab.Unmarshall composite Graph PQ JSON to Composite Graph Connect POJO&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="CompositeLab.Unmarshall composite response json to pojo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":moshi:test" />
+            <option value="--tests" />
+            <option value="&quot;ga.overfullstack.pojo.composite.CompositeLab.Unmarshall composite response json to pojo&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -394,53 +509,21 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CompositeLab.read composite response to pojo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":moshi:test" />
-            <option value="--tests" />
-            <option value="&quot;ga.overfullstack.composite.CompositeLab.read composite response to pojo&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="MoshiLab.read Json To composite Graph" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":moshi:test" />
-            <option value="--tests" />
-            <option value="&quot;ga.overfullstack.MoshiLab.read Json To composite Graph&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
+    <configuration name="CompositeLab.Unmarshall composite Graph PQ JSON to Composite Graph Connect POJO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="my-lab.moshi.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ga.overfullstack.pojo.composite.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ga.overfullstack.pojo.composite" />
+      <option name="MAIN_CLASS_NAME" value="ga.overfullstack.pojo.composite.CompositeLab" />
+      <option name="METHOD_NAME" value="Unmarshall composite Graph PQ JSON to Composite Graph Connect POJO" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="my-lab.spring.main" />
@@ -458,11 +541,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.MoshiLab.read Json To composite Graph" />
-        <item itemvalue="Gradle.CompositeLab.read composite response to pojo" />
+        <item itemvalue="Gradle.CompositeLab.Unmarshall composite response json to pojo" />
+        <item itemvalue="Gradle.CompositeLab.Unmarshall Json to composite Graph" />
+        <item itemvalue="Gradle.CompositeLab.Unmarshall composite Graph PQ JSON to Composite Graph Connect POJO" />
+        <item itemvalue="JUnit.CompositeLab.Unmarshall composite Graph PQ JSON to Composite Graph Connect POJO" />
         <item itemvalue="Gradle.CompositeLab.read composite response json to pojo" />
-        <item itemvalue="Gradle.CompositeLab.read Json To composite Graph PQ" />
-        <item itemvalue="Gradle.CompositeLab.read Json To composite Graph PQ (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -859,7 +942,13 @@
       <workItem from="1687789295772" duration="863000" />
       <workItem from="1687867613472" duration="2145000" />
       <workItem from="1687919202241" duration="4211000" />
-      <workItem from="1688057000116" duration="997000" />
+      <workItem from="1688057000116" duration="1436000" />
+      <workItem from="1688058553258" duration="3426000" />
+      <workItem from="1688097268284" duration="2252000" />
+      <workItem from="1688116521247" duration="390000" />
+      <workItem from="1688116917035" duration="39000" />
+      <workItem from="1688116974057" duration="3215000" />
+      <workItem from="1688184552349" duration="6069000" />
     </task>
     <task id="LOCAL-00009" summary="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
       <created>1627583016664</created>
@@ -1204,7 +1293,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684333262543</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1290,7 +1379,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="New modules" />
     <MESSAGE value="Moshi lab" />
     <MESSAGE value="moshi-lab" />
     <MESSAGE value="commit" />
@@ -1315,7 +1403,8 @@
     <MESSAGE value="Commit" />
     <MESSAGE value="Custom Moshi Marshaller" />
     <MESSAGE value="CompositeResponse.RecordAdapterFactory working" />
-    <option name="LAST_COMMIT_MESSAGE" value="CompositeResponse.RecordAdapterFactory working" />
+    <MESSAGE value="Use ktfmt and change editor config accordingly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Use ktfmt and change editor config accordingly" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1337,21 +1426,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/http4k/src/main/kotlin/LensLab.kt</url>
-          <line>24</line>
-          <properties>
-            <option name="lambda-ordinal" value="0" />
-          </properties>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/http4k/src/main/kotlin/LensLab.kt</url>
-          <line>56</line>
+          <line>57</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/http4k/src/main/kotlin/LensLab.kt</url>
-          <line>38</line>
+          <line>37</line>
           <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-format-moshi/5.2.0.0/854b109f990983532bab331829fef4fdcdfe061f/http4k-format-moshi-5.2.0.0-sources.jar!/org/http4k/format/write.kt</url>
+          <line>32</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/pojo/composite/CompositeResponse.kt</url>
+          <line>38</line>
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

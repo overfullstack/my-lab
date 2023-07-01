@@ -1,9 +1,5 @@
 dependencyResolutionManagement {
-  versionCatalogs {
-    create("libs") {
-      from(files("libs.versions.toml"))
-    }
-  }
+  versionCatalogs { create("libs") { from(files("libs.versions.toml")) } }
   pluginManagement {
     repositories {
       mavenCentral()
@@ -16,13 +12,23 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "my-lab"
+
 include("apt")
+
 include("arrow")
+
 include("java-lab")
+
 include("common")
+
 include("http4k")
+
 include("moshi")
+
 include("graal-js")
+
 include("kotlin-lab")
+
 include("spring")
+
 include("immutables")

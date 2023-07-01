@@ -9,8 +9,11 @@ plugins {
   id("io.gitlab.arturbosch.detekt")
   id("com.github.spotbugs") apply false
 }
+
 version = "1.0.0"
+
 group = "ga.overfullstack"
+
 description = "My Lab"
 // This is needed to declare repositories on each module
 repositories {
@@ -18,6 +21,7 @@ repositories {
   maven("https://oss.sonatype.org/content/repositories/snapshots")
   maven("https://repo.spring.io/milestone")
 }
+
 spotless {
   kotlin {
     ktfmt().googleStyle()
@@ -58,12 +62,14 @@ spotless {
     endWithNewline()
   }
 }
+
 detekt {
   parallel = true
   buildUponDefaultConfig = true
   baseline = file("$rootDir/detekt/baseline.xml")
   config.setFrom(file("$rootDir/detekt/config.yml"))
 }
+
 tasks {
   spotbugsMain.get().enabled = false
   spotbugsTest.get().enabled = false

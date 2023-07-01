@@ -40,9 +40,7 @@ class ClosureLab {
   @Test
   fun `closure inside function should access local variable`() {
     var k = 3
-    val closure = {
-      k--
-    }
+    val closure = { k-- }
     someFun(closure)
     println()
     repeat(3) { print(closure()) }

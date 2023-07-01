@@ -1,6 +1,5 @@
 package ga.overfullstack.contextdef.groot
 
-
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)

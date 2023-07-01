@@ -15,11 +15,12 @@ class JsonString {
   @Test
   fun jsonString() {
     val collectionJsonStr = readFileFromTestResource("collection-in-obj.json")
-    val collectionAdapter = Moshi.Builder()
-      .add(JsonString.Factory())
-      .add(AdaptedBy.Factory())
-      .build()
-      .adapter(Collection::class.java)
+    val collectionAdapter =
+      Moshi.Builder()
+        .add(JsonString.Factory())
+        .add(AdaptedBy.Factory())
+        .build()
+        .adapter(Collection::class.java)
     println(collectionAdapter.fromJson(collectionJsonStr))
   }
 

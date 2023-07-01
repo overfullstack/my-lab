@@ -3,9 +3,9 @@ plugins {
   alias(libs.plugins.kotlin.lombok)
   alias(libs.plugins.lombok)
 }
-kotlinLombok {
-  lombokConfigurationFile(file("lombok.config"))
-}
+
+kotlinLombok { lombokConfigurationFile(file("lombok.config")) }
+
 dependencies {
   implementation(libs.java.vavr)
   implementation(libs.kotlin.vavr)

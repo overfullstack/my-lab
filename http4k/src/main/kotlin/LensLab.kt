@@ -15,53 +15,55 @@ import org.http4k.lens.int
 import org.http4k.lens.string
 
 fun main() {
-    data class Child(val name: String)
-    data class Pageable(val sortAscending: Boolean, val page: Int, val maxResults: Int)
+  data class Child(val name: String)
+  data class Pageable(val sortAscending: Boolean, val page: Int, val maxResults: Int)
 
-    val nameHeader = Header.required("name")
-    val ageQuery = Query.int().optional("age")
-    val childrenBody = Body.string(TEXT_PLAIN)
-        .map({ it.split(",").map(::Child) }, 
-          { it.joinToString { it.name } })
-        .toLens()
-    val pageable = Query.composite {
-        Pageable(
-            boolean().defaulted("sortAscending", true)(it),
-            int().defaulted("page", 1)(it),
-            int().defaulted("maxResults", 20)(it)
-        )
+  val nameHeader = Header.required("name")
+  val ageQuery = Query.int().optional("age")
+  val childrenBody =
+    Body.string(TEXT_PLAIN)
+      .map({ it.split(",").map(::Child) }, { it.joinToString { it.name } })
+      .toLens()
+  val pageable =
+    Query.composite {
+      Pageable(
+        boolean().defaulted("sortAscending", true)(it),
+        int().defaulted("page", 1)(it),
+        int().defaulted("maxResults", 20)(it)
+      )
     }
 
-    val endpoint = { request: Request ->
+  val endpoint = { request: Request ->
+    val name: String = nameHeader(request)
+    val age: Int? = ageQuery(request)
+    val children: List<Child> = childrenBody(request)
+    val pagination = pageable(request)
 
-        val name: String = nameHeader(request)
-        val age: Int? = ageQuery(request)
-        val children: List<Child> = childrenBody(request)
-        val pagination = pageable(request)
-
-        val msg = """
-            $name is ${age ?: "unknown"} years old and has 
+    val msg =
+      """
+            $name is ${age ?: "unknown"} years old and has
             ${children.size} children (${children.joinToString { it.name }})
             Pagination: $pagination
             """
-        Response(OK).with(
-            Body.string(TEXT_PLAIN).toLens() of msg
-        )
-    }
+    Response(OK).with(Body.string(TEXT_PLAIN).toLens() of msg)
+  }
 
-    val app = ServerFilters.CatchLensFailure.then(endpoint)
+  val app = ServerFilters.CatchLensFailure.then(endpoint)
 
-    val goodRequest = Request(GET, "http://localhost:9000").with(
+  val goodRequest =
+    Request(GET, "http://localhost:9000")
+      .with(
         nameHeader of "Jane Doe",
         ageQuery of 25,
         childrenBody of listOf(Child("Rita"), Child("Sue"))
-    )
+      )
 
-    println(listOf("", "Request:", goodRequest, app(goodRequest)).joinToString("\n"))
+  println(listOf("", "Request:", goodRequest, app(goodRequest)).joinToString("\n"))
 
-    val badRequest = Request(GET, "http://localhost:9000")
-        .with(nameHeader of "Jane Doe")
-        .query("age", "some illegal age!")
+  val badRequest =
+    Request(GET, "http://localhost:9000")
+      .with(nameHeader of "Jane Doe")
+      .query("age", "some illegal age!")
 
-    println(listOf("", "Request:", badRequest, app(badRequest)).joinToString("\n"))
+  println(listOf("", "Request:", badRequest, app(badRequest)).joinToString("\n"))
 }

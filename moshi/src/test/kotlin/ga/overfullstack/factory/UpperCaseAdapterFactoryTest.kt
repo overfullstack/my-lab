@@ -15,7 +15,8 @@ internal class UpperCaseAdapterFactoryTest {
   @Test
   fun upperCaseFactoryFromJson() {
     val beanStr = readFileFromTestResource("nested-bean.json")
-    val beanJsonAdapter = Moshi.Builder().add(UppercaseAdapterFactory()).build().adapter<NestedBean>()
+    val beanJsonAdapter =
+      Moshi.Builder().add(UppercaseAdapterFactory()).build().adapter<NestedBean>()
     val nestedBean = beanJsonAdapter.fromJson(beanStr)
     Assertions.assertNotNull(nestedBean)
     Assertions.assertNotNull(nestedBean?.bean)
@@ -27,9 +28,10 @@ internal class UpperCaseAdapterFactoryTest {
   @OptIn(ExperimentalStdlibApi::class)
   @Test
   fun upperCaseFactoryToJson() {
-    val beanJsonAdapter = Moshi.Builder().add(UppercaseAdapterFactory()).build().adapter<NestedBean>()
-    val nestedBeanStr = beanJsonAdapter.toJson(NestedBean("container", Bean("member", listOf("item1", "item2"))))
+    val beanJsonAdapter =
+      Moshi.Builder().add(UppercaseAdapterFactory()).build().adapter<NestedBean>()
+    val nestedBeanStr =
+      beanJsonAdapter.toJson(NestedBean("container", Bean("member", listOf("item1", "item2"))))
     println(nestedBeanStr)
   }
-
 }

@@ -11,7 +11,8 @@ import org.immutables.value.Value
   build = "off",
   depluralize = true,
   add = "",
-  visibility = Value.Style.ImplementationVisibility.PUBLIC)
+  visibility = Value.Style.ImplementationVisibility.PUBLIC
+)
 annotation class Config
 
 @Target(AnnotationTarget.CLASS)
@@ -23,5 +24,6 @@ annotation class Config
   build = "done",
   depluralize = true,
   add = "",
-  visibility = Value.Style.ImplementationVisibility.PUBLIC)
+  visibility = Value.Style.ImplementationVisibility.PUBLIC
+)
 annotation class StepConfig

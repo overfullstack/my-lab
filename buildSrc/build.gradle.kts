@@ -1,6 +1,4 @@
-plugins {
-  `kotlin-dsl`
-}
+plugins { `kotlin-dsl` }
 // These are the list of gradle plugins used inside the buildSrc
 dependencies {
   implementation(libs.kotlin.gradle)

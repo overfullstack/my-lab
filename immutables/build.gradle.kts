@@ -4,6 +4,7 @@ plugins {
   id("mylab.kt-conventions")
   id(libs.plugins.kotlin.kapt.pluginId)
 }
+
 dependencies {
   kapt(libs.immutables.value)
   compileOnly(libs.immutables.builder)

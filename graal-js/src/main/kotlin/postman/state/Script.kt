@@ -1,2 +1,2 @@
 package postman.state
-data class Script(val exec: List<String>);
+data class Script(val exec: List<String>)

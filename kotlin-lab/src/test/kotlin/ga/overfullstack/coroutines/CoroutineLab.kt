@@ -1,5 +1,6 @@
 package ga.overfullstack.coroutines
 
+import kotlin.system.measureTimeMillis
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
@@ -7,7 +8,6 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 import org.junit.jupiter.api.Test
-import kotlin.system.measureTimeMillis
 
 /* gakshintala created on 4/19/20 */
 class CoroutineLab {
@@ -72,7 +72,7 @@ class CoroutineLab {
   @Test
   fun asyncInLoop() = runBlocking {
     /*(1..5).asFlow().map { i -> foo(i) }.flowOn(Dispatchers.Default)
-            .collect { i -> log(i) }*/
+    .collect { i -> log(i) }*/
 
     val map = (1..5).map { i -> async { foo(i) } }
   }
@@ -82,9 +82,7 @@ class CoroutineLab {
     val time = measureTimeMillis {
       runBlocking {
         for (i in 1..2) {
-          launch {
-            work(i)
-          }
+          launch { work(i) }
         }
       }
     }
@@ -96,9 +94,7 @@ class CoroutineLab {
     val time = measureTimeMillis {
       runBlocking {
         for (i in 1..2) {
-          launch {
-            workWithContext(i)
-          }
+          launch { workWithContext(i) }
         }
       }
     }
@@ -110,9 +106,7 @@ class CoroutineLab {
     val time = measureTimeMillis {
       runBlocking(Dispatchers.Default) {
         for (i in 1..2) {
-          launch {
-            work(i)
-          }
+          launch { work(i) }
         }
       }
     }
@@ -124,9 +118,7 @@ class CoroutineLab {
     println("Work $i done")
   }
 
-  private suspend fun workWithContext(i: Int) = withContext(Dispatchers.Default) {
-    work(i)
-  }
+  private suspend fun workWithContext(i: Int) = withContext(Dispatchers.Default) { work(i) }
 
   @Test
   fun `withDispatchers vs launch`() = runBlocking {
@@ -134,7 +126,7 @@ class CoroutineLab {
     withContext(Dispatchers.Default) { // This runs on ThreadPool, same as starting a fork-join pool
       val longer = async { delayFun(1, 2000) }
       val shorter = async { delayFun(2) }
-      longer.await() // while waiting on this, thread is freed and hops to shorter 
+      longer.await() // while waiting on this, thread is freed and hops to shorter
       shorter.await()
     }
 
@@ -151,9 +143,13 @@ class CoroutineLab {
   }
 
   private suspend fun delayFun(id: Int, delay: Long = 1000) {
-    println("$id - Delay start in Thread: ${Thread.currentThread().name}") // It doesn't block the main thread.
+    println(
+      "$id - Delay start in Thread: ${Thread.currentThread().name}"
+    ) // It doesn't block the main thread.
     delay(delay) // Thread freed here.
     // Thread.sleep(1000)
-    println("$id - Delay end   in Thread: ${Thread.currentThread().name}") // ! It can be started and ended by a different thread.
+    println(
+      "$id - Delay end   in Thread: ${Thread.currentThread().name}"
+    ) // ! It can be started and ended by a different thread.
   }
 }

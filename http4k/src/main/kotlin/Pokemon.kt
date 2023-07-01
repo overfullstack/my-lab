@@ -9,10 +9,13 @@ fun main() {
 }
 
 private fun callout(urlToClass: Map<String, Class<out Any>>): List<Any?> =
-  urlToClass.map { (url, clazz) ->
-    val result: Response = JavaHttpClient()(Request(Method.GET, url))
-    Moshi.asA(result.bodyString(), clazz.kotlin)
-  }.toList()
+  urlToClass
+    .map { (url, clazz) ->
+      val result: Response = JavaHttpClient()(Request(Method.GET, url))
+      Moshi.asA(result.bodyString(), clazz.kotlin)
+    }
+    .toList()
 
 data class Pokemon(val name: String)
+
 data class Results(val results: List<Pokemon>)

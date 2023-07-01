@@ -5,8 +5,8 @@ import com.squareup.moshi.JsonClass
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
 import ga.overfullstack.utils.readFileFromTestResource
-import org.junit.jupiter.api.Test
 import java.lang.reflect.Type
+import org.junit.jupiter.api.Test
 
 class JSONInheritance {
 
@@ -17,8 +17,8 @@ class JSONInheritance {
   }
 
   @JsonClass(generateAdapter = true)
-  internal class Child(val cField1: String, val cField2: String): Parent()
-  
+  internal class Child(val cField1: String, val cField2: String) : Parent()
+
   private class IgnoreSuperClass : JsonAdapter.Factory {
     override fun create(type: Type, annotations: Set<Annotation?>, moshi: Moshi): JsonAdapter<*>? {
       if (type == Parent::class.java) {

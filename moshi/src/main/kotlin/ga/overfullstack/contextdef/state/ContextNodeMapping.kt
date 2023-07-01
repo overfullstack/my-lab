@@ -1,6 +1,5 @@
 package ga.overfullstack.contextdef.state
 
-
 import arrow.optics.optics
 import com.squareup.moshi.JsonClass
 

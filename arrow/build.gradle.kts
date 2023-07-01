@@ -2,6 +2,7 @@ plugins {
   id("mylab.kt-conventions")
   alias(libs.plugins.ksp)
 }
+
 dependencies {
   ksp(libs.arrow.optics.ksp.plugin)
   implementation(libs.bundles.arrow)

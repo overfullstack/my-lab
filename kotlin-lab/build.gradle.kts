@@ -1,6 +1,5 @@
-plugins {
-  id("mylab.kt-conventions")
-}
+plugins { id("mylab.kt-conventions") }
+
 dependencies {
   implementation(project(":common"))
   implementation(libs.kotlinx.coroutines.core)

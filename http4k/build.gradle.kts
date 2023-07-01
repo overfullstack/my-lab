@@ -1,6 +1,4 @@
-plugins {
-  id("mylab.kt-conventions")
-}
+plugins { id("mylab.kt-conventions") }
 
 dependencies {
   implementation(libs.http4k.core)

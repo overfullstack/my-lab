@@ -7,4 +7,3 @@ fun main() {
   val cx: Context = buildJSContext()
   cx.eval("js", "const newman = require('postman-sandbox');")
 }
-

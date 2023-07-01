@@ -14,11 +14,11 @@ class SealedLab {
   @Test
   fun sealed() {
     val successStr = readFileFromTestResource("sealed/success.json")
-    //val errorStr = readFileFromTestResource("sealed/error.json")
+    // val errorStr = readFileFromTestResource("sealed/error.json")
     val sObject = Moshi.Builder().build().adapter<SObject>().fromJson(successStr)
     println(sObject)
   }
-  
+
   @JsonClass(generateAdapter = true, generator = "sealed:success")
   internal sealed class SObject {
 
@@ -30,10 +30,13 @@ class SealedLab {
     @JsonClass(generateAdapter = true)
     data class Error(val errors: List<SObjectError>) : SObject()
 
-    @DefaultObject
-    object Unknown : SObject()
+    @DefaultObject object Unknown : SObject()
   }
 
   @JsonClass(generateAdapter = true)
-  internal data class SObjectError(val message: String, val errorCode: String, val fields: List<String>?)
+  internal data class SObjectError(
+    val message: String,
+    val errorCode: String,
+    val fields: List<String>?
+  )
 }

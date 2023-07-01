@@ -12,20 +12,16 @@ import java.util.Collections.singletonList
 import kotlin.annotation.AnnotationRetention.RUNTIME
 import kotlin.annotation.AnnotationTarget.PROPERTY
 
-@Retention(RUNTIME)
-@Target(PROPERTY)
-@JsonQualifier
-annotation class SingleOrList
+@Retention(RUNTIME) @Target(PROPERTY) @JsonQualifier annotation class SingleOrList
 
 object SingleOrListAdapterFactory : JsonAdapter.Factory {
-  override fun create(
-    type: Type,
-    annotations: Set<Annotation>,
-    moshi: Moshi
-  ): JsonAdapter<*>? {
-    val delegateAnnotations = Types.nextAnnotations(annotations, SingleOrList::class.java) ?: return null
+  override fun create(type: Type, annotations: Set<Annotation>, moshi: Moshi): JsonAdapter<*>? {
+    val delegateAnnotations =
+      Types.nextAnnotations(annotations, SingleOrList::class.java) ?: return null
     if (Types.getRawType(type) !== List::class.java) {
-      throw IllegalArgumentException("@SingleOrList requires the type to be List. Found this type: $type")
+      throw IllegalArgumentException(
+        "@SingleOrList requires the type to be List. Found this type: $type"
+      )
     }
     val elementType = Types.collectionElementType(type, List::class.java)
     val delegateAdapter: JsonAdapter<List<Any?>?> = moshi.adapter(type, delegateAnnotations)
@@ -37,6 +33,7 @@ object SingleOrListAdapterFactory : JsonAdapter.Factory {
         } else {
           delegateAdapter.fromJson(reader)
         }
+
       override fun toJson(writer: JsonWriter, value: List<Any?>?) {
         if (value == null) {
           return

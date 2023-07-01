@@ -27,7 +27,7 @@ internal class MoshiLab {
     val nestedBean = mapAdapter.fromJson(nestedBeanStr)!!
     nestedBean.bean shouldNotBe null
   }
-  
+
   @OptIn(ExperimentalStdlibApi::class)
   @Test
   fun readJsonToMap() {
@@ -51,8 +51,9 @@ internal class MoshiLab {
   fun `read Json into Map with star projection`() {
     val nestedBeanStr = readFileFromTestResource("nested-bean.json")
     val mapAdapter = Moshi.Builder().build().adapter<Map<String, *>>()
-    val any = mapAdapter.fromJson(nestedBeanStr)!! 
-    (any["bean"] as Map<String, *>) shouldContainExactly mapOf("name" to "member", "items" to listOf("item1", "item2"))
+    val any = mapAdapter.fromJson(nestedBeanStr)!!
+    (any["bean"] as Map<String, *>) shouldContainExactly
+      mapOf("name" to "member", "items" to listOf("item1", "item2"))
   }
 
   @OptIn(ExperimentalStdlibApi::class)
@@ -69,7 +70,8 @@ internal class MoshiLab {
   fun readJsonToAny() {
     val nestedBeanStr = readFileFromTestResource("nested-bean.json")
     val anyAdapter = Moshi.Builder().build().adapter<Any>()
-    val any = anyAdapter.fromJson(nestedBeanStr)!! // It reads to LinkedHashTreeMap like javascript JSON
+    val any =
+      anyAdapter.fromJson(nestedBeanStr)!! // It reads to LinkedHashTreeMap like javascript JSON
     println(any)
   }
 
@@ -91,7 +93,8 @@ internal class MoshiLab {
   @Test
   fun `read Json To nested Pojo`() {
     val nestedBeanStr = readFileFromTestResource("nested-bean.json")
-    val mapAdapter = Moshi.Builder().addLast(KotlinJsonAdapterFactory()).build().adapter<NestedBean1>()
+    val mapAdapter =
+      Moshi.Builder().addLast(KotlinJsonAdapterFactory()).build().adapter<NestedBean1>()
     val nestedBean = mapAdapter.fromJson(nestedBeanStr)!!
     println(nestedBean)
   }
@@ -99,12 +102,13 @@ internal class MoshiLab {
   @OptIn(ExperimentalStdlibApi::class)
   @Test
   fun `read Json To nested Pojo with Custom Adapter`() {
-    val nestedMessages = Moshi.Builder()
-      .add(NestedMessagesAdapter(3))
-      .addLast(KotlinJsonAdapterFactory())
-      .build()
-      .adapter<NestedMessages>()
-      .fromJson(readFileFromTestResource("msg.json"))!!
+    val nestedMessages =
+      Moshi.Builder()
+        .add(NestedMessagesAdapter(3))
+        .addLast(KotlinJsonAdapterFactory())
+        .build()
+        .adapter<NestedMessages>()
+        .fromJson(readFileFromTestResource("msg.json"))!!
     println(nestedMessages)
   }
 

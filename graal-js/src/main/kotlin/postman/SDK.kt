@@ -4,8 +4,7 @@ import com.squareup.moshi.JsonClass
 import postman.state.Request
 
 class PostmanAPI {
-  @JvmField
-  val environment: PostmanEnvironment = PostmanEnvironment()
+  @JvmField val environment: PostmanEnvironment = PostmanEnvironment()
   lateinit var request: Request
   lateinit var response: Response
 

@@ -9,6 +9,5 @@ class SuccessConfigTest {
   fun successConfig() {
     val sc = successType("abc")
     validateIfSuccess("abc", "pqr")
-    
   }
 }

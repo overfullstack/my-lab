@@ -1,7 +1,7 @@
 package ga.overfullstack
 
-import org.junit.jupiter.api.Test
 import java.time.LocalDate
+import org.junit.jupiter.api.Test
 
 class DateTimeLab {
 

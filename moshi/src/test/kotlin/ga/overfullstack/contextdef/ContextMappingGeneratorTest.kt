@@ -21,7 +21,13 @@ class ContextMappingGeneratorTest {
   @Test
   fun `Context Def Validator`() {
     val contextDefAdapter = Moshi.Builder().build().adapter<ContextDefinition>()
-    val contextDef = contextDefAdapter.fromJson(readFileFromTestResource("context-def/context-def.json"))!!.payload.contextDefinition.contextDefinitionVersionList[0].contextDefinitionVersion
+    val contextDef =
+      contextDefAdapter
+        .fromJson(readFileFromTestResource("context-def/context-def.json"))!!
+        .payload
+        .contextDefinition
+        .contextDefinitionVersionList[0]
+        .contextDefinitionVersion
 
     val salesTxnNode = contextDef.contextNodes[0]
     val salesTxnLevel0Attributes = salesTxnNode.nodeAttributes
@@ -32,49 +38,78 @@ class ContextMappingGeneratorTest {
     val quoteAttributeMapping = quoteMapping.contextAttributeMappingList
 
     quoteAttributeMapping.forEach {
-      nameToAttr[it.contextSObjectHydrationInfoList[0].queryAttribute]?.contextAttributeId shouldBe it.contextAttributeId
+      nameToAttr[it.contextSObjectHydrationInfoList[0].queryAttribute]?.contextAttributeId shouldBe
+        it.contextAttributeId
     }
   }
 
   @OptIn(ExperimentalStdlibApi::class)
   @Test
   fun `Context mapping generator`() {
-    val contextDefAdapter = Moshi.Builder().addLast(KotlinJsonAdapterFactory()).build().adapter<ContextDefinition>()
-    val contextDef = contextDefAdapter.fromJson(readFileFromTestResource("context-def/groot/context-def.json"))!!.payload.contextDefinition.contextDefinitionVersionList[0].contextDefinitionVersion
+    val contextDefAdapter =
+      Moshi.Builder().addLast(KotlinJsonAdapterFactory()).build().adapter<ContextDefinition>()
+    val contextDef =
+      contextDefAdapter
+        .fromJson(readFileFromTestResource("context-def/groot/context-def.json"))!!
+        .payload
+        .contextDefinition
+        .contextDefinitionVersionList[0]
+        .contextDefinitionVersion
 
     val salesTxnNode = contextDef.contextNodes[0]
-    val quoteMapperConfig = Moshi.Builder().build().adapter<MapperConfig>().fromJson(readFileFromTestResource("context-def/groot/quote-mapper-config.json"))!!
+    val quoteMapperConfig =
+      Moshi.Builder()
+        .build()
+        .adapter<MapperConfig>()
+        .fromJson(readFileFromTestResource("context-def/groot/quote-mapper-config.json"))!!
     val quoteFields = Udd.getFieldsForAPIName(quoteMapperConfig.sObjectName)!!
 
-    val contextMapping = Moshi.Builder()
-      .add(ContextMappingAdapter(quoteMapperConfig, quoteFields, salesTxnNode))
-      .addLast(KotlinJsonAdapterFactory())
-      .build()
-      .adapter<ContextMapping>()
-      .fromJson(readFileFromTestResource("context-def/groot/context-node-mapping-template.json"))
+    val contextMapping =
+      Moshi.Builder()
+        .add(ContextMappingAdapter(quoteMapperConfig, quoteFields, salesTxnNode))
+        .addLast(KotlinJsonAdapterFactory())
+        .build()
+        .adapter<ContextMapping>()
+        .fromJson(readFileFromTestResource("context-def/groot/context-node-mapping-template.json"))
     println(pojoToJson(contextMapping!!))
   }
 
-  class ContextMappingAdapter(private val mapperConfig: MapperConfig, private val fields: List<String>, private val node: ContextNode) {
+  class ContextMappingAdapter(
+    private val mapperConfig: MapperConfig,
+    private val fields: List<String>,
+    private val node: ContextNode
+  ) {
     @FromJson
     fun fromJson(contextNodeMapping: ContextNodeMapping): ContextMapping {
-      val nameToAttrId = node.nodeAttributes.associateBy(NodeAttribute::name, NodeAttribute::contextAttributeId)
-      val fieldMatch = mapperConfig.match.associateBy(Match::queryAttribute, Match::contextNodeAttributeName)
+      val nameToAttrId =
+        node.nodeAttributes.associateBy(NodeAttribute::name, NodeAttribute::contextAttributeId)
+      val fieldMatch =
+        mapperConfig.match.associateBy(Match::queryAttribute, Match::contextNodeAttributeName)
       val contextAttributeMapping = contextNodeMapping.contextAttributeMappingList[0]
       val contextSObjectHydrationInfo = contextAttributeMapping.contextSObjectHydrationInfoList[0]
-      
-      val contextAttrMappings = fields.filterNot { mapperConfig.excludeFields.contains(it) }.map { field ->
-        contextAttributeMapping.copy(
-          contextAttributeId = nameToAttrId[fieldMatch[field] ?: field] ?: "",
-          contextSObjectHydrationInfoList = listOf(contextSObjectHydrationInfo.copy(queryAttribute = field, sObjectDomain = mapperConfig.sObjectName))
-        )
-      }
-      val contextNodeMappings = 
+
+      val contextAttrMappings =
+        fields
+          .filterNot { mapperConfig.excludeFields.contains(it) }
+          .map { field ->
+            contextAttributeMapping.copy(
+              contextAttributeId = nameToAttrId[fieldMatch[field] ?: field] ?: "",
+              contextSObjectHydrationInfoList =
+                listOf(
+                  contextSObjectHydrationInfo.copy(
+                    queryAttribute = field,
+                    sObjectDomain = mapperConfig.sObjectName
+                  )
+                )
+            )
+          }
+      val contextNodeMappings =
         contextNodeMapping.copy(
           contextNodeId = node.contextNodeId,
           sObjectName = mapperConfig.sObjectName,
-          contextAttributeMappingList = contextAttrMappings)
-      
+          contextAttributeMappingList = contextAttrMappings
+        )
+
       return ContextMapping(mapperConfig.contextMappingName, listOf(contextNodeMappings))
     }
   }

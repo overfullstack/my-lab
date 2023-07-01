@@ -14,6 +14,7 @@ dependencies {
   implementation(libs.moshix.adapters)
   testImplementation(libs.bundles.kotest)
 }
+
 moshi {
   enableSealed by true
   generateProguardRules by false

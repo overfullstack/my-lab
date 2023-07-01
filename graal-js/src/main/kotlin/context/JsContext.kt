@@ -45,6 +45,5 @@ val xml2Json = Xml2Json { xml ->
 @SuppressWarnings("kotlin:S6517")
 @FunctionalInterface // DON'T REMOVE THIS. Polyglot won't work without this
 fun interface Xml2Json {
-  @Suppress("unused")
-  fun xml2Json(xml: String): Map<String, Any>?
+  @Suppress("unused") fun xml2Json(xml: String): Map<String, Any>?
 }
