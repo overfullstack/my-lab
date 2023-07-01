@@ -1,21 +1,19 @@
 package ga.overfullstack.pojo.composite
 
-
 import com.squareup.moshi.FromJson
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.JsonClass
 import com.squareup.moshi.JsonReader
 import com.squareup.moshi.JsonWriter
 import com.squareup.moshi.ToJson
+import dev.zacsweers.moshix.adapters.AdaptedBy
 import ga.overfullstack.pojo.composite.CompositeResponse.CompositeResponse.Body.Record
 import ga.overfullstack.pojo.composite.CompositeResponse.CompositeResponse.Body.Record.Attributes
 import org.http4k.format.obj
 import org.http4k.format.string
 
 @JsonClass(generateAdapter = true)
-data class CompositeResponse(
-  val compositeResponse: List<CompositeResponse>
-) {
+data class CompositeResponse(val compositeResponse: List<CompositeResponse>) {
   @JsonClass(generateAdapter = true)
   data class CompositeResponse(
     val body: Body,
@@ -24,29 +22,18 @@ data class CompositeResponse(
     val referenceId: String
   ) {
     @JsonClass(generateAdapter = true)
-    data class Body(
-      val done: Boolean,
-      val records: List<Record>,
-      val totalSize: Int
-    ) {
+    data class Body(val done: Boolean, val records: List<Record>, val totalSize: Int) {
       @JsonClass(generateAdapter = true)
-      class Record(
-        val attributes: Attributes,
-        val recordBody: Map<String, String>
-      ) {
-        @JsonClass(generateAdapter = true)
-        class Attributes(
-          val type: String,
-          val url: String
-        )
+      @AdaptedBy(RecordAdapter::class)
+      data class Record(val attributes: Attributes, val recordBody: Map<String, String>) {
+        @JsonClass(generateAdapter = true) data class Attributes(val type: String, val url: String)
       }
     }
 
-    @JsonClass(generateAdapter = true)
-    class HttpHeaders
+    @JsonClass(generateAdapter = true) class HttpHeaders
   }
 
-  class RecordAdapterFactory : JsonAdapter<Record>() {
+  class RecordAdapter : JsonAdapter<Record>() {
     @FromJson
     override fun fromJson(reader: JsonReader): Record {
       reader.beginObject()
@@ -73,12 +60,9 @@ data class CompositeResponse(
             string("type", type)
             string("url", url)
           }
-          obj(recordBody) {
-            entries.forEach { string(it.key, it.value) }
-          }
+          recordBody.entries.forEach { string(it.key, it.value) } }
         }
       }
     }
   }
-}
 
