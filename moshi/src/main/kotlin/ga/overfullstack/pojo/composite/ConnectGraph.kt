@@ -1,40 +1,44 @@
 package ga.overfullstack.pojo.composite
 
+import com.squareup.moshi.FromJson
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.JsonClass
 import com.squareup.moshi.JsonReader
 import com.squareup.moshi.JsonWriter
 import com.squareup.moshi.ToJson
-import org.http4k.format.list
+import dev.zacsweers.moshix.adapters.AdaptedBy
+import ga.overfullstack.pojo.composite.ConnectGraph.Graph.Records.Records.Record.RecordBody
+import ga.overfullstack.pojo.composite.ConnectGraph.Graph.Records.Records.Record.RecordBody.Attributes
 import org.http4k.format.obj
 import org.http4k.format.string
 
 @JsonClass(generateAdapter = true)
 data class ConnectGraph(
-  val graph: Graph,
-  val isSetGraph: Boolean,
-  val isSetPricingPref: Boolean,
-  val pricingPref: String
+    val graph: Graph,
+    val isSetGraph: Boolean,
+    val isSetPricingPref: Boolean,
+    val pricingPref: String
 ) {
   @JsonClass(generateAdapter = true)
   data class Graph(
-    val graphId: String,
-    val isSetGraphId: Boolean,
-    val isSetRecords: Boolean,
-    val records: Records
+      val graphId: String,
+      val isSetGraphId: Boolean,
+      val isSetRecords: Boolean,
+      val records: Records
   ) {
     @JsonClass(generateAdapter = true)
     data class Records(val isSetRecordsList: Boolean, val recordsList: List<Records>) {
       @JsonClass(generateAdapter = true)
       data class Records(
-        val isSetRecord: Boolean,
-        val isSetReferenceId: Boolean,
-        val record: Record,
-        val referenceId: String
+          val isSetRecord: Boolean,
+          val isSetReferenceId: Boolean,
+          val record: Record,
+          val referenceId: String
       ) {
         @JsonClass(generateAdapter = true)
         data class Record(val isSetRecordBody: Boolean, val recordBody: RecordBody) {
           @JsonClass(generateAdapter = true)
+          @AdaptedBy(RecordBodyAdapter::class)
           data class RecordBody(val attributes: Attributes, val recordBody: Map<String, String>) {
             @JsonClass(generateAdapter = true)
             data class Attributes(val method: String, val type: String)
@@ -43,33 +47,35 @@ data class ConnectGraph(
       }
     }
   }
-  
-  class ConnectGraphToPQJsonAdapter : JsonAdapter<ConnectGraph>() {
 
-    override fun fromJson(reader: JsonReader): ConnectGraph? {
-      TODO("Not yet implemented")
+  class RecordBodyAdapter : JsonAdapter<RecordBody>() {
+    @FromJson
+    override fun fromJson(reader: JsonReader): RecordBody {
+      reader.beginObject()
+      var attributes = Attributes("", "")
+      val recordBody = mutableMapOf<String, String>()
+      while (reader.hasNext()) {
+        when (val nextName = reader.nextName()) {
+          "attributes" -> {
+            val attrMap = reader.readJsonValue() as Map<String, String>
+            attributes = Attributes(attrMap["type"] ?: "", attrMap["method"] ?: "")
+          }
+          else -> recordBody[nextName] = reader.nextString()
+        }
+      }
+      reader.endObject()
+      return RecordBody(attributes, recordBody)
     }
 
     @ToJson
-    override fun toJson(writer: JsonWriter, connectGraph: ConnectGraph?) {
+    override fun toJson(writer: JsonWriter, record: RecordBody?) {
       with(writer) {
-        obj(connectGraph) {
-          string("pricingPref", pricingPref)
-          obj("graph", graph) {
-            string("graphId", graphId)
-            list("records", records.recordsList) {
-              obj(this) {
-                string("referenceId", referenceId)
-                obj("record", record) {
-                  obj("attributes", record.recordBody.attributes) {
-                    string("type", type)
-                    string("method", method)
-                  }
-                  obj(recordBody.recordBody) { entries.forEach { string(it.key, it.value) } }
-                }
-              }
-            }
+        obj(record) {
+          obj("attributes", attributes) {
+            string("type", type)
+            string("url", method)
           }
+          recordBody.entries.forEach { string(it.key, it.value) }
         }
       }
     }

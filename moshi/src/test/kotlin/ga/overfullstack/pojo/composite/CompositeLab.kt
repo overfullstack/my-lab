@@ -40,8 +40,8 @@ class CompositeLab {
   @OptIn(ExperimentalStdlibApi::class)
   @Test
   fun `Unmarshall composite Graph PQ JSON to Composite Graph Connect POJO`() {
-    val jsonStr = readFileFromTestResource("composite/pq-graph.json")
-    val adapter = Moshi.Builder().build().adapter<ConnectGraph>()
+    val jsonStr = readFileFromTestResource("composite/connect-graph.json")
+    val adapter = Moshi.Builder().add(AdaptedBy.Factory()).build().adapter<ConnectGraph>()
     val pojo = adapter.fromJson(jsonStr)!!
     println(pojo)
   }
