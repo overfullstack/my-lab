@@ -4,11 +4,10 @@ import arrow.optics.optics
 import com.squareup.moshi.FromJson
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.JsonClass
+import com.squareup.moshi.JsonDataException
 import com.squareup.moshi.JsonReader
 import com.squareup.moshi.JsonWriter
-import com.squareup.moshi.Moshi
 import com.squareup.moshi.ToJson
-import com.squareup.moshi.adapter
 import ga.overfullstack.NoArg
 import ga.overfullstack.pojo.composite.ConnectGraph.Graph.Records
 import ga.overfullstack.pojo.composite.ConnectGraph.Graph.Records.Records.Record.RecordBody
@@ -19,7 +18,6 @@ import ga.overfullstack.utils.objr
 import org.http4k.format.list
 import org.http4k.format.obj
 import org.http4k.format.string
-import java.lang.reflect.Type
 
 @NoArg
 @optics
@@ -81,43 +79,54 @@ data class ConnectGraph(
     }
   }
 
-  class RecordBodyAdapter : JsonAdapter<RecordBody>() {
+  object RecordBodyAdapter {
+    private val options = JsonReader.Options.of("attributes")
+
     @FromJson
-    override fun fromJson(reader: JsonReader): RecordBody {
+    fun fromJson(reader: JsonReader, attributesJsonAdapter: JsonAdapter<Attributes>): RecordBody {
       reader.beginObject()
-      var attributes = Attributes("", "")
+      var attributes: Attributes? = null
       val recordBody = mutableMapOf<String, String>()
       while (reader.hasNext()) {
-        when (val nextName = reader.nextName()) {
-          "attributes" -> {
-            val attrMap = reader.readJsonValue() as Map<String, String>
-            attributes = Attributes(attrMap["type"] ?: "", attrMap["method"] ?: "")
+        when (reader.selectName(options)) {
+          0 -> {
+            if (attributes != null) {
+              throw JsonDataException("Duplicate attributes.")
+            }
+            attributes = attributesJsonAdapter.fromJson(reader)
           }
-          else -> recordBody[nextName] = reader.nextString()
+          -1 -> recordBody[reader.nextName()] = reader.nextString()!!
+          else -> {
+            throw AssertionError()
+          }
         }
       }
       reader.endObject()
-      return RecordBody(attributes, recordBody)
+      return RecordBody(attributes!!, recordBody)
     }
 
     @ToJson
-    override fun toJson(writer: JsonWriter, recordBody: RecordBody?) {
+    fun toJson(
+      writer: JsonWriter,
+      recordBody: RecordBody?,
+      attributesJsonAdapter: JsonAdapter<Attributes>
+    ) =
       with(writer) {
         obj(recordBody) {
-          obj("attributes", attributes) {
-            string("type", type)
-            string("url", method)
-          }
+          name("attributes")
+          attributesJsonAdapter.toJson(writer, recordBody?.attributes)
           this.recordBody?.entries?.forEach { string(it.key, it.value) }
         }
       }
-    }
   }
 
-  class ConnectGraphToPQJsonAdapter(private val recordBodyAdapter: JsonAdapter<RecordBody>) :
-    JsonAdapter<ConnectGraph>() {
+  /**
+   * Connect Graph POJO -> PQ Graph JSON
+   * PQ graph JSON -> Connect Graph POJO
+   */
+  object ConnectPQGraphAdapter {
     @FromJson
-    override fun fromJson(reader: JsonReader): ConnectGraph =
+    fun fromJson(reader: JsonReader, recordBodyAdapter: JsonAdapter<RecordBody>): ConnectGraph =
       with(reader) {
         objr(instanceWithJavaReflectionFn<ConnectGraph>()) {
           when (it) {
@@ -134,7 +143,7 @@ data class ConnectGraph(
                     "graphId" -> Graph.graphId.set(Graph.isSetGraphId.set(this, true), nextString())
                     "records" ->
                       Graph.records.set(
-                        this,
+                        Graph.isSetRecords.set(this, true),
                         Records(
                           true,
                           listr(instanceWithJavaReflectionFn<Records.Records>()) {
@@ -164,7 +173,11 @@ data class ConnectGraph(
       }
 
     @ToJson
-    override fun toJson(writer: JsonWriter, connectGraph: ConnectGraph?) =
+    fun toJson(
+      writer: JsonWriter,
+      connectGraph: ConnectGraph?,
+      recordBodyAdapter: JsonAdapter<RecordBody>
+    ) =
       with(writer) {
         obj(connectGraph) {
           string("pricingPref", pricingPref)
@@ -180,16 +193,5 @@ data class ConnectGraph(
           }
         }
       }
-  }
-
-  class ConnectGraphFactory : JsonAdapter.Factory {
-    @OptIn(ExperimentalStdlibApi::class)
-    override fun create(type: Type, annotations: Set<Annotation?>, moshi: Moshi): JsonAdapter<*>? {
-      if (annotations.isNotEmpty()) {
-        return null // Annotations? This factory doesn't apply.
-      }
-      val recordBodyAdapter = moshi.adapter<RecordBody>()
-      return ConnectGraphToPQJsonAdapter(recordBodyAdapter).nullSafe()
-    }
   }
 }
