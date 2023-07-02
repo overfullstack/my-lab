@@ -60,9 +60,9 @@ data class CompositeResponse(val compositeResponse: List<CompositeResponse>) {
             string("type", type)
             string("url", url)
           }
-          recordBody.entries.forEach { string(it.key, it.value) } }
+          recordBody.entries.forEach { string(it.key, it.value) }
         }
       }
     }
   }
-
+}

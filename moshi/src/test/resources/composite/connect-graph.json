@@ -1,7 +1,13 @@
 {
+  "pricingPref": "System",
+  "isSetPricingPref": true,
+  "isSetGraph": true,
   "graph": {
     "graphId": "pq-create-with-bundles",
+    "isSetGraphId": true,
+    "isSetRecords": true,
     "records": {
+      "isSetRecordsList": true,
       "recordsList": [
         {
           "referenceId": "refQuoteItem1",
@@ -89,13 +95,7 @@
           "isSetReferenceId": true,
           "isSetRecord": true
         }
-      ],
-      "isSetRecordsList": false
-    },
-    "isSetGraphId": true,
-    "isSetRecords": true
-  },
-  "isSetGraph": true,
-  "pricingPref": "System",
-  "isSetPricingPref": true
+      ]
+    }
+  }
 }

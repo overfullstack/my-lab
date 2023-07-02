@@ -1,4 +1,4 @@
-@file:JvmName("Utils")
+@file:JvmName("JsonPojoUtils")
 
 package ga.overfullstack.utils
 

@@ -97,7 +97,7 @@ spring-boot-starter-batch = { module = "org.springframework.boot:spring-boot-sta
 spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
 spring-batch-test = { module = "org.springframework.batch:spring-batch-test" }
 
-# Gradle plugins
+# Gradle plugins (Only declare the ones needed for buildSrc)
 kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 kotlin-spring-gradle = { module = "org.jetbrains.kotlin.plugin.spring:org.jetbrains.kotlin.plugin.spring.gradle.plugin", version.ref = "kotlin" }
 spring-dependency-management-gradle = { module = "io.spring.dependency-management:io.spring.dependency-management.gradle.plugin", version.ref = "spring-dependency-management" }
@@ -105,8 +105,9 @@ spring-boot-gradle = { module = "org.springframework.boot:spring-boot-gradle-plu
 detekt-gradle = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
 kover-gradle = { module = "org.jetbrains.kotlinx.kover:org.jetbrains.kotlinx.kover.gradle.plugin", version.ref = "kover" }
 spotless-gradle = { module = "com.diffplug.spotless:spotless-plugin-gradle", version.ref = "spotless" }
-# moshix-gradle = { module = "dev.zacsweers.moshix:moshi-gradle-plugin", version.ref = "moshix" }
 spotbugs-gradle = { module = "com.github.spotbugs.snom:spotbugs-gradle-plugin", version.ref = "spotbugs" }
+# moshix-gradle = { module = "dev.zacsweers.moshix:moshi-gradle-plugin", version.ref = "moshix" }
+
 
 [bundles]
 kotest = [
@@ -139,6 +140,7 @@ spotbugs = { id = "com.github.spotbugs", version.ref = "spotbugs" }
 lombok = { id = "io.freefair.lombok", version.ref = "lombok-gradle" }
 testLogger = { id = "com.adarshr.test-logger", version.ref = "testLogger" }
 moshix = { id = "dev.zacsweers.moshix", version.ref = "moshix" }
+kotlin-noarg = { id = "org.jetbrains.kotlin.plugin.noarg", version.ref = "kotlin" }
 kotlin-lombok = { id = "org.jetbrains.kotlin.plugin.lombok", version.ref = "kotlin" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }

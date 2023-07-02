@@ -1,6 +1,7 @@
 plugins {
   id("mylab.kt-conventions")
   alias(libs.plugins.moshix)
+  alias(libs.plugins.kotlin.noarg)
   alias(libs.plugins.ksp)
 }
 
@@ -13,6 +14,11 @@ dependencies {
   implementation(libs.moshi.kotlin)
   implementation(libs.moshix.adapters)
   testImplementation(libs.bundles.kotest)
+}
+
+noArg {
+  annotation("ga.overfullstack.NoArg")
+  invokeInitializers = true
 }
 
 moshi {

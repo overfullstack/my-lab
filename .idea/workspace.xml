@@ -4,8 +4,21 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="Use ktfmt and change editor config accordingly">
+    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="Working ConnectGraph Marshall unmashall&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
+      <change afterPath="$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/utils/JsonReaderUtils.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/utils/ReflectionUtils.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/NoArg.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/adapter/RecordAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.buildship.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.buildship.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/utils/Utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/utils/JsonPojoUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/libs.versions.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/pojo/composite/CompositeResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/pojo/composite/CompositeResponse.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/pojo/composite/ConnectGraph.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/pojo/composite/ConnectGraph.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/pojo/composite/CompositeLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/pojo/composite/CompositeLab.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/test/resources/composite/composite-response.json" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/resources/composite/composite-response.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/test/resources/composite/connect-graph.json" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/resources/composite/connect-graph.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,9 +73,9 @@
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="Kotlin Object" />
-        <option value="Kotlin File" />
         <option value="Kotlin Enum" />
         <option value="Class" />
+        <option value="Kotlin File" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -204,7 +217,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2693383&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;intellij.plugin.js.indexing.ExcludeConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;6e697ef780714c0f816b57bef39ecdfe&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -241,11 +254,11 @@
       <recent name="$PROJECT_DIR$/moshi/src/main/kotlin/factory" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="ga.overfullstack.utils" />
       <recent name="ga.overfullstack.composite" />
       <recent name="ga.overfullstack.pojo.composite" />
       <recent name="ga.overfullstack.pojo.compositegraph" />
       <recent name="ga.overfullstack.factory" />
-      <recent name="factory" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ga.overfullstack" />
@@ -290,6 +303,7 @@
       <command value="gradle test --tests ga.overfullstack.interop.InteropTest" />
       <command value="gradle kotlin-lab:test --tests ga.overfullstack.interop.InteropTest" />
       <command value="gradle spotlessApply" />
+      <command value="gradle moshi:spotlessApply" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -299,7 +313,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.CompositeLab.Unmarshall composite Graph PQ JSON to Composite Graph Connect POJO">
+  <component name="RunManager" selected="Gradle.CompositeLab.PQ graph JSON --) Connect Graph POJO --) Connect Graph JSON">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -313,7 +327,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CompositeLab.Unmarshall Json to composite Graph" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CompositeLab.Composite response JSON --) POJO" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -326,7 +340,7 @@
           <list>
             <option value=":moshi:test" />
             <option value="--tests" />
-            <option value="&quot;ga.overfullstack.pojo.composite.CompositeLab.Unmarshall Json to composite Graph&quot;" />
+            <option value="&quot;ga.overfullstack.pojo.composite.CompositeLab.Composite response JSON --) POJO&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -337,7 +351,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CompositeLab.Unmarshall composite Graph PQ JSON to Composite Graph Connect POJO" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CompositeLab.Connect Graph JSON --) POJO --) PQ Graph JSON" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -350,7 +364,7 @@
           <list>
             <option value=":moshi:test" />
             <option value="--tests" />
-            <option value="&quot;ga.overfullstack.pojo.composite.CompositeLab.Unmarshall composite Graph PQ JSON to Composite Graph Connect POJO&quot;" />
+            <option value="&quot;ga.overfullstack.pojo.composite.CompositeLab.Connect Graph JSON --) POJO --) PQ Graph JSON&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -361,7 +375,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CompositeLab.Unmarshall composite response json to pojo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CompositeLab.PQ graph JSON --) Connect Graph POJO --) Connect Graph JSON" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -374,7 +388,7 @@
           <list>
             <option value=":moshi:test" />
             <option value="--tests" />
-            <option value="&quot;ga.overfullstack.pojo.composite.CompositeLab.Unmarshall composite response json to pojo&quot;" />
+            <option value="&quot;ga.overfullstack.pojo.composite.CompositeLab.PQ graph JSON --) Connect Graph POJO --) Connect Graph JSON&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -385,7 +399,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CompositeLab.read composite response json to pojo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CompositeLab.PQ graph JSON --) Connect Graph POJO" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -398,7 +412,7 @@
           <list>
             <option value=":moshi:test" />
             <option value="--tests" />
-            <option value="&quot;ga.overfullstack.composite.CompositeLab.read composite response json to pojo&quot;" />
+            <option value="&quot;ga.overfullstack.pojo.composite.CompositeLab.PQ graph JSON --) Connect Graph POJO&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -409,21 +423,27 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CompositeLab.Unmarshall composite Graph PQ JSON to Composite Graph Connect POJO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="my-lab.moshi.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ga.overfullstack.pojo.composite.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ga.overfullstack.pojo.composite" />
-      <option name="MAIN_CLASS_NAME" value="ga.overfullstack.pojo.composite.CompositeLab" />
-      <option name="METHOD_NAME" value="Unmarshall composite Graph PQ JSON to Composite Graph Connect POJO" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="my-lab [moshi:spotlessApply]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="moshi:spotlessApply" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="my-lab.spring.main" />
@@ -441,11 +461,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CompositeLab.Unmarshall composite Graph PQ JSON to Composite Graph Connect POJO" />
-        <item itemvalue="Gradle.CompositeLab.Unmarshall composite response json to pojo" />
-        <item itemvalue="Gradle.CompositeLab.Unmarshall Json to composite Graph" />
-        <item itemvalue="JUnit.CompositeLab.Unmarshall composite Graph PQ JSON to Composite Graph Connect POJO" />
-        <item itemvalue="Gradle.CompositeLab.read composite response json to pojo" />
+        <item itemvalue="Gradle.CompositeLab.PQ graph JSON --) Connect Graph POJO --) Connect Graph JSON" />
+        <item itemvalue="Gradle.CompositeLab.Connect Graph JSON --) POJO --) PQ Graph JSON" />
+        <item itemvalue="Gradle.CompositeLab.PQ graph JSON --) Connect Graph POJO" />
+        <item itemvalue="Gradle.my-lab [moshi:spotlessApply]" />
+        <item itemvalue="Gradle.CompositeLab.Composite response JSON --) POJO" />
       </list>
     </recent_temporary>
   </component>
@@ -849,6 +869,7 @@
       <workItem from="1688116917035" duration="39000" />
       <workItem from="1688116974057" duration="3215000" />
       <workItem from="1688184552349" duration="6069000" />
+      <workItem from="1688285107577" duration="10390000" />
     </task>
     <task id="LOCAL-00009" summary="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
       <created>1627583016664</created>
@@ -1193,7 +1214,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684333262543</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1279,7 +1300,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Moshi lab" />
     <MESSAGE value="moshi-lab" />
     <MESSAGE value="commit" />
     <MESSAGE value="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;" />
@@ -1304,7 +1324,8 @@
     <MESSAGE value="Custom Moshi Marshaller" />
     <MESSAGE value="CompositeResponse.RecordAdapterFactory working" />
     <MESSAGE value="Use ktfmt and change editor config accordingly" />
-    <option name="LAST_COMMIT_MESSAGE" value="Use ktfmt and change editor config accordingly" />
+    <MESSAGE value="Working ConnectGraph Marshall unmashall&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working ConnectGraph Marshall unmashall&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1333,11 +1354,6 @@
           <url>file://$PROJECT_DIR$/http4k/src/main/kotlin/LensLab.kt</url>
           <line>37</line>
           <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-format-moshi/5.2.0.0/854b109f990983532bab331829fef4fdcdfe061f/http4k-format-moshi-5.2.0.0-sources.jar!/org/http4k/format/write.kt</url>
-          <line>32</line>
-          <option name="timeStamp" value="48" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
