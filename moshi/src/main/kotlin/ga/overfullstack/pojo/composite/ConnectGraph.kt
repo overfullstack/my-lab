@@ -4,14 +4,12 @@ import arrow.optics.optics
 import com.squareup.moshi.FromJson
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.JsonClass
-import com.squareup.moshi.JsonDataException
 import com.squareup.moshi.JsonReader
 import com.squareup.moshi.JsonWriter
 import com.squareup.moshi.ToJson
 import ga.overfullstack.NoArg
 import ga.overfullstack.pojo.composite.ConnectGraph.Graph.Records
 import ga.overfullstack.pojo.composite.ConnectGraph.Graph.Records.Records.Record.RecordBody
-import ga.overfullstack.pojo.composite.ConnectGraph.Graph.Records.Records.Record.RecordBody.Attributes
 import ga.overfullstack.utils.instanceWithJavaReflectionFn
 import ga.overfullstack.utils.listr
 import ga.overfullstack.utils.objr
@@ -65,14 +63,8 @@ data class ConnectGraph(
 
           @optics
           @JsonClass(generateAdapter = true)
-          data class RecordBody(val attributes: Attributes?, val recordBody: Map<String, String>?) {
+          data class RecordBody(val recordBody: Map<String, Any>?) {
             companion object
-
-            @optics
-            @JsonClass(generateAdapter = true)
-            data class Attributes(val method: String?, val type: String?) {
-              companion object
-            }
           }
         }
       }
@@ -80,49 +72,38 @@ data class ConnectGraph(
   }
 
   object RecordBodyAdapter {
-    private val options = JsonReader.Options.of("attributes")
 
     @FromJson
-    fun fromJson(reader: JsonReader, attributesJsonAdapter: JsonAdapter<Attributes>): RecordBody {
+    fun fromJson(reader: JsonReader): RecordBody {
       reader.beginObject()
-      var attributes: Attributes? = null
-      val recordBody = mutableMapOf<String, String>()
+      val recordBody = mutableMapOf<String, Any>()
       while (reader.hasNext()) {
-        when (reader.selectName(options)) {
-          0 -> {
-            if (attributes != null) {
-              throw JsonDataException("Duplicate attributes.")
-            }
-            attributes = attributesJsonAdapter.fromJson(reader)
-          }
-          -1 -> recordBody[reader.nextName()] = reader.nextString()!!
-          else -> {
-            throw AssertionError()
-          }
-        }
+        recordBody[reader.nextName()] = reader.readJsonValue()!!
       }
       reader.endObject()
-      return RecordBody(attributes!!, recordBody)
+      return RecordBody(recordBody)
     }
 
     @ToJson
     fun toJson(
       writer: JsonWriter,
       recordBody: RecordBody?,
-      attributesJsonAdapter: JsonAdapter<Attributes>
+      dynamicJsonAdapter: JsonAdapter<Any>
     ) =
       with(writer) {
         obj(recordBody) {
           name("attributes")
-          attributesJsonAdapter.toJson(writer, recordBody?.attributes)
-          this.recordBody?.entries?.forEach { string(it.key, it.value) }
+          this.recordBody?.entries?.forEach {
+            name(it.key)
+            dynamicJsonAdapter.toJson(writer, it.value) 
+          }
         }
       }
   }
 
   /**
-   * Connect Graph POJO -> PQ Graph JSON
-   * PQ graph JSON -> Connect Graph POJO
+   * fromJson: PQ graph JSON -> Connect Graph POJO
+   * toJson: Connect Graph POJO -> PQ Graph JSON
    */
   object ConnectPQGraphAdapter {
     @FromJson
