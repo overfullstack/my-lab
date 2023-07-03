@@ -24,3 +24,11 @@ fun <T> JsonReader.listr(mk: () -> T, item: T.(String) -> T): List<T> {
   endArray()
   return items
 }
+
+fun JsonReader.anyMap(): Map<String, Any?>? = skipNullOr {
+  beginObject()
+  val map = mutableMapOf<String, Any?>()
+  while (hasNext()) map += nextName() to readJsonValue()
+  endObject()
+  map
+}

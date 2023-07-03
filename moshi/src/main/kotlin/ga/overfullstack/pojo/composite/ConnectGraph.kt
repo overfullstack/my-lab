@@ -9,7 +9,7 @@ import com.squareup.moshi.JsonWriter
 import com.squareup.moshi.ToJson
 import ga.overfullstack.NoArg
 import ga.overfullstack.pojo.composite.ConnectGraph.Graph.Records
-import ga.overfullstack.pojo.composite.ConnectGraph.Graph.Records.Records.Record.RecordBody
+import ga.overfullstack.utils.anyMap
 import ga.overfullstack.utils.instanceWithJavaReflectionFn
 import ga.overfullstack.utils.listr
 import ga.overfullstack.utils.objr
@@ -58,56 +58,17 @@ data class ConnectGraph(
         @NoArg
         @optics
         @JsonClass(generateAdapter = true)
-        data class Record(val isSetRecordBody: Boolean, val recordBody: RecordBody?) {
+        data class Record(val isSetRecordBody: Boolean, val recordBody: Map<String, Any?>?) {
           companion object
-
-          @optics
-          @JsonClass(generateAdapter = true)
-          data class RecordBody(val recordBody: Map<String, Any>?) {
-            companion object
-          }
         }
       }
     }
   }
 
-  object RecordBodyAdapter {
-
-    @FromJson
-    fun fromJson(reader: JsonReader): RecordBody {
-      reader.beginObject()
-      val recordBody = mutableMapOf<String, Any>()
-      while (reader.hasNext()) {
-        recordBody[reader.nextName()] = reader.readJsonValue()!!
-      }
-      reader.endObject()
-      return RecordBody(recordBody)
-    }
-
-    @ToJson
-    fun toJson(
-      writer: JsonWriter,
-      recordBody: RecordBody?,
-      dynamicJsonAdapter: JsonAdapter<Any>
-    ) =
-      with(writer) {
-        obj(recordBody) {
-          name("attributes")
-          this.recordBody?.entries?.forEach {
-            name(it.key)
-            dynamicJsonAdapter.toJson(writer, it.value) 
-          }
-        }
-      }
-  }
-
-  /**
-   * fromJson: PQ graph JSON -> Connect Graph POJO
-   * toJson: Connect Graph POJO -> PQ Graph JSON
-   */
+  /** fromJson: PQ graph JSON -> Connect Graph POJO toJson: Connect Graph POJO -> PQ Graph JSON */
   object ConnectPQGraphAdapter {
     @FromJson
-    fun fromJson(reader: JsonReader, recordBodyAdapter: JsonAdapter<RecordBody>): ConnectGraph =
+    fun fromJson(reader: JsonReader): ConnectGraph =
       with(reader) {
         objr(instanceWithJavaReflectionFn<ConnectGraph>()) {
           when (it) {
@@ -137,7 +98,7 @@ data class ConnectGraph(
                               "record" ->
                                 Records.Records.record.set(
                                   Records.Records.isSetRecord.set(this, true),
-                                  Records.Records.Record(true, recordBodyAdapter.fromJson(reader)!!)
+                                  Records.Records.Record(true, anyMap())
                                 )
                               else -> this.also { skipValue() }
                             }
@@ -157,7 +118,7 @@ data class ConnectGraph(
     fun toJson(
       writer: JsonWriter,
       connectGraph: ConnectGraph?,
-      recordBodyAdapter: JsonAdapter<RecordBody>
+      dynamicJsonAdapter: JsonAdapter<Any>
     ) =
       with(writer) {
         obj(connectGraph) {
@@ -168,7 +129,7 @@ data class ConnectGraph(
               obj(this) {
                 string("referenceId", referenceId)
                 name("record")
-                recordBodyAdapter.toJson(writer, record?.recordBody)
+                dynamicJsonAdapter.toJson(writer, record?.recordBody)
               }
             }
           }
