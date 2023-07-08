@@ -70,7 +70,9 @@ vador-matchers = { module = "com.salesforce.vador:vador-matchers", version.ref =
 http4k-bom = { module = "org.http4k:http4k-bom", version.ref = "http4k" }
 http4k-core = { module = "org.http4k:http4k-core", version.ref = "http4k" }
 http4k-format-moshi = { module = "org.http4k:http4k-format-moshi", version.ref = "http4k" }
+http4k-client-apache = { module = "org.http4k:http4k-client-apache", version.ref = "http4k" }
 http4k-format-jackson = { module = "org.http4k:http4k-format-jackson", version.ref = "http4k" }
+http4k-metrics-micrometer = { module = "org.http4k:http4k-metrics-micrometer", version.ref = "http4k" }
 moshix-adapters = { module = "dev.zacsweers.moshix:moshi-adapters", version.ref = "moshix" }
 klaxon = { module = "com.beust:klaxon", version.ref = "klaxon" }
 graal-sdk = { module = "org.graalvm.sdk:graal-sdk", version.ref = "graal" }
@@ -123,8 +125,10 @@ arrow = ["arrow-core", "arrow-optics", "arrow-fx-coroutines"]
 http4k = [
   "http4k-bom",
   "http4k-core",
+  "http4k-client-apache",
   "http4k-format-moshi",
-  "http4k-format-jackson"
+  "http4k-format-jackson",
+  "http4k-metrics-micrometer"
 ]
 kotlin-logging = ["kotlin-logging-jvm", "log4j-api", "log4j-core", "log4j-slf4j2-impl"]
 

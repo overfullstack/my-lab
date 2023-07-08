@@ -1,7 +1,6 @@
 plugins { id("mylab.kt-conventions") }
 
 dependencies {
-  implementation(libs.http4k.core)
-  implementation(libs.http4k.format.moshi)
-  implementation(libs.http4k.format.jackson)
+  implementation(libs.bundles.http4k)
+  implementation(libs.bundles.apache.log4j)
 }
