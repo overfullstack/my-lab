@@ -29,6 +29,4 @@ include("graal-js")
 
 include("kotlin-lab")
 
-include("spring")
-
 include("immutables")

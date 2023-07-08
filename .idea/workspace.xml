@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="Remove attributes from ConnectGraph&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
-      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/pojo/composite/ConnectGraph.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/pojo/composite/ConnectGraph.kt" afterDir="false" />
+    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="spotlessapply&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arrow/src/main/kotlin/ga/overfullstack/optics/person.kt" beforeDir="false" afterPath="$PROJECT_DIR$/arrow/src/main/kotlin/ga/overfullstack/optics/Person.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arrow/src/test/java/ga/overfullstack/optics/OpticsJLab.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/http4k/src/main/kotlin/ga/overfullstack/http4k/BiDiLens.kt" beforeDir="false" afterPath="$PROJECT_DIR$/http4k/src/main/kotlin/ga/overfullstack/BiDiLens.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http4k/src/main/kotlin/ga/overfullstack/http4k/MicroMetrics.kt" beforeDir="false" afterPath="$PROJECT_DIR$/http4k/src/main/kotlin/ga/overfullstack/MicroMetrics.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http4k/src/main/kotlin/ga/overfullstack/http4k/TxDuration.kt" beforeDir="false" afterPath="$PROJECT_DIR$/http4k/src/main/kotlin/ga/overfullstack/TxDuration.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/kotlin/ga/overfullstack/spring/Application.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/resources/application.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +50,9 @@
           <activation />
         </task>
         <task path="$PROJECT_DIR$/spring">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/arrow">
           <activation />
         </task>
         <projects_view>
@@ -169,7 +182,6 @@
     <option name="autoscrollToSource" value="true" />
     <option name="flattenModules" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
@@ -285,12 +297,14 @@
       <command value="gradle common:clean common:build" />
       <command value="gradle clean build -x test" />
       <command value="gradle build" />
-      <command value="gradle clean build" />
       <command value="gradle test --test ga.overfullstack.interop.InteropTest" />
       <command value="gradle test --tests ga.overfullstack.interop.InteropTest" />
       <command value="gradle kotlin-lab:test --tests ga.overfullstack.interop.InteropTest" />
-      <command value="gradle spotlessApply" />
       <command value="gradle moshi:spotlessApply" />
+      <command value="gradle spotlessApply" />
+      <command value="gradle clean build" />
+      <command value="gradle arrow:kspKotlin" />
+      <command value="gradle arrow:clean arrow:build" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -300,7 +314,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.my-lab [spotlessApply]">
+  <component name="RunManager" selected="Gradle.my-lab [arrow:clean arrow:build]">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -314,7 +328,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CompositeLab.PQ graph JSON --) Connect graph POJO --) PQ graph JSON" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="my-lab [arrow:clean arrow:build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -325,20 +339,19 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":moshi:test" />
-            <option value="--tests" />
-            <option value="&quot;ga.overfullstack.pojo.composite.CompositeLab.PQ graph JSON --) Connect graph POJO --) PQ graph JSON&quot;" />
+            <option value="arrow:clean" />
+            <option value="arrow:build" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CompositeLab.toJson ~ Connect graph JSON --) Connect graph POJO --) PQ graph JSON" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="my-lab [arrow:kspKotlin]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -349,17 +362,15 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":moshi:test" />
-            <option value="--tests" />
-            <option value="&quot;ga.overfullstack.pojo.composite.CompositeLab.toJson ~ Connect graph JSON --) Connect graph POJO --) PQ graph JSON&quot;" />
+            <option value="arrow:kspKotlin" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="my-lab [clean build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -445,11 +456,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.my-lab [arrow:clean arrow:build]" />
+        <item itemvalue="Gradle.my-lab [arrow:kspKotlin]" />
         <item itemvalue="Gradle.my-lab [spotlessApply]" />
         <item itemvalue="Gradle.my-lab [moshi:spotlessApply]" />
         <item itemvalue="Gradle.my-lab [clean build]" />
-        <item itemvalue="Gradle.CompositeLab.toJson ~ Connect graph JSON --) Connect graph POJO --) PQ graph JSON" />
-        <item itemvalue="Gradle.CompositeLab.PQ graph JSON --) Connect graph POJO --) PQ graph JSON" />
       </list>
     </recent_temporary>
   </component>
@@ -1200,7 +1211,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684333262543</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1286,7 +1297,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Major: Migrated to Version catalogs&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;" />
     <MESSAGE value="Defined kt-conventions&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;" />
     <MESSAGE value="Kotlin to 1.7.21&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;" />
     <MESSAGE value="Use JVM Test suite for sub projects&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;" />
@@ -1311,7 +1321,8 @@
     <MESSAGE value=":zap: Robust adapters&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall." />
     <MESSAGE value=":zap: Robust adapters&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="Remove attributes from ConnectGraph&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove attributes from ConnectGraph&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <MESSAGE value="spotlessapply&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="spotlessapply&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
