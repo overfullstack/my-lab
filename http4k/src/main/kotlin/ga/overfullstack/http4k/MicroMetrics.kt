@@ -13,13 +13,12 @@ fun main() {
   // this is a micrometer registry used mostly for testing - substitute the correct implementation.
   val registry = SimpleMeterRegistry()
   val client =
-      ClientFilters.SetBaseUriFrom(Uri.of("https://pokeapi.co"))
-          .then(ClientFilters.MicrometerMetrics.RequestTimer(registry))
-          .then(ApacheClient())
+    ClientFilters.SetBaseUriFrom(Uri.of("https://pokeapi.co"))
+      .then(ClientFilters.MicrometerMetrics.RequestTimer(registry))
+      .then(ApacheClient())
 
-  // make some calls
-  (0..< 10).forEach {
-    client(Request(GET, "/api/v2/pokemon?limit=$it"))
+  for (limit in 1..10) {
+    client(Request(GET, "/api/v2/pokemon?limit=$limit"))
   }
 
   // see some results

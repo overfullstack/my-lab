@@ -6,4 +6,3 @@ inline fun <reified T> instanceWithJavaReflection(): T =
 inline fun <reified T> instanceWithJavaReflectionFn(): () -> T = {
   T::class.java.getConstructor().newInstance()
 }
-
