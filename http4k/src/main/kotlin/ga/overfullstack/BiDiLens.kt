@@ -1,4 +1,4 @@
-package ga.overfullstack.http4k
+package ga.overfullstack
 
 import org.http4k.core.Body
 import org.http4k.core.Method.GET

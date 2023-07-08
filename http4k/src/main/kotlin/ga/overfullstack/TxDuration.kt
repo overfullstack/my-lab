@@ -1,4 +1,4 @@
-package ga.overfullstack.http4k
+package ga.overfullstack
 
 import org.http4k.client.ApacheClient
 import org.http4k.core.HttpHandler

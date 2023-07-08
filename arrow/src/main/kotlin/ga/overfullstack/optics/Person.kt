@@ -3,8 +3,7 @@ package ga.overfullstack.optics
 import arrow.optics.optics
 
 @optics
-data class Person(val name: String, val age: Int, val address: Address) {
-  companion object
+object data class Person(val name: String, val age: Int, val address: Address) {
 }
 
 @optics

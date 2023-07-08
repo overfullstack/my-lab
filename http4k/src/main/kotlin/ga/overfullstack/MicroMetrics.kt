@@ -1,4 +1,4 @@
-package ga.overfullstack.http4k
+package ga.overfullstack
 
 import io.micrometer.core.instrument.simple.SimpleMeterRegistry
 import org.http4k.client.ApacheClient
