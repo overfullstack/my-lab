@@ -1,18 +1,12 @@
 package ga.overfullstack.pojo.composite
 
 import arrow.optics.optics
-import com.squareup.moshi.FromJson
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.JsonClass
-import com.squareup.moshi.JsonReader
 import com.squareup.moshi.JsonWriter
 import com.squareup.moshi.ToJson
 import ga.overfullstack.NoArg
 import ga.overfullstack.pojo.composite.ConnectGraph.Graph.Records
-import ga.overfullstack.utils.anyMap
-import ga.overfullstack.utils.instanceWithJavaReflectionFn
-import ga.overfullstack.utils.listr
-import ga.overfullstack.utils.objr
 import org.http4k.format.list
 import org.http4k.format.obj
 import org.http4k.format.string
@@ -67,7 +61,7 @@ data class ConnectGraph(
 
   /** fromJson: PQ graph JSON -> Connect Graph POJO toJson: Connect Graph POJO -> PQ Graph JSON */
   object ConnectPQGraphAdapter {
-    @FromJson
+    /*@FromJson
     fun fromJson(reader: JsonReader): ConnectGraph =
       with(reader) {
         objr(instanceWithJavaReflectionFn<ConnectGraph>()) {
@@ -112,7 +106,7 @@ data class ConnectGraph(
             else -> this.also { skipValue() }
           }
         }
-      }
+      }*/
 
     @ToJson
     fun toJson(

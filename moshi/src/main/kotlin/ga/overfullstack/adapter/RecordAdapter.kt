@@ -6,7 +6,6 @@ import com.squareup.moshi.JsonClass
 import com.squareup.moshi.JsonDataException
 import com.squareup.moshi.JsonReader
 import com.squareup.moshi.JsonWriter
-import com.squareup.moshi.Moshi
 import com.squareup.moshi.ToJson
 
 @JsonClass(generateAdapter = true) data class Body(val records: List<Record>)
@@ -14,7 +13,7 @@ import com.squareup.moshi.ToJson
 @JsonClass(generateAdapter = true)
 data class Record(val attributes: Attributes, val recordBody: Map<String, Any>)
 
-@JsonClass(generateAdapter = true) data class Attributes(val type: String, val url: String)
+@JsonClass(generateAdapter = true) data class Attributes(val skill: String, val weapon: String)
 
 object RecordAdapter {
   private val options = JsonReader.Options.of("attributes")
@@ -62,34 +61,6 @@ object RecordAdapter {
   }
 }
 
-fun main() {
-  val moshi = Moshi.Builder().add(RecordAdapter).build()
-  val idResponseJsonAdapter = moshi.adapter(Body::class.java)
-  val encoded =
-    """
-    {
-      "records": [
-        {
-          "attributes": {
-          "type": "...",
-          "url": "..."
-        },
-        "Id": "...",
-        "Name": "...",
-        "...": "..."
-      }
-    ]
-  }"""
-      .trimIndent()
-  val decoded =
-    Body(
-      listOf(
-        Record(
-          Attributes(type = "...", url = "..."),
-          mapOf("Id" to "...", "Name" to "...", "..." to "...")
-        )
-      )
-    )
-  println(idResponseJsonAdapter.fromJson(encoded))
-  println(idResponseJsonAdapter.toJson(decoded))
+object BodyAdapter {
+  @ToJson fun toJson(body: Body) = Body(List(3) { _ -> body.records[0] })
 }

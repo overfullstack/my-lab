@@ -1,4 +1,4 @@
-package ga.overfullstack.factory
+package ga.overfullstack.adapter
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
@@ -9,22 +9,22 @@ import java.io.IOException
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
-class RegexFactoryTest {
+class RegexAdapterTest {
 
   @Test
   fun `regex test`() {
-    val variable = "variable"
-    postManVariableRegex.matchEntire("{{$variable}}")?.groupValues?.get(1) shouldBe variable
+    val variableKey = "\$variableKey"
+    postManVariableRegex.find("{{$variableKey}}")?.groups?.get("variableKey")?.value shouldBe
+      variableKey
   }
 
   @OptIn(ExperimentalStdlibApi::class)
   @Test
   @Throws(IOException::class)
   fun `regex Factory`() {
-    val beanStr = readFileFromTestResource("bean-with-regex.json")
-    val moshi = Moshi.Builder().add(RegexAdapterFactory()).build()
-    val beanJsonAdapter = moshi.adapter<NestedBean>()
-    val nestedBean = beanJsonAdapter.fromJson(beanStr)
+    val beanStr = readFileFromTestResource("factory/bean-with-regex.json")
+    val nestedBean =
+      Moshi.Builder().add(RegexAdapter).build().adapter<NestedBean>().fromJson(beanStr)
     Assertions.assertNotNull(nestedBean)
     Assertions.assertNotNull(nestedBean?.bean)
     Assertions.assertEquals("{{container}}".uppercase(), nestedBean?.name)

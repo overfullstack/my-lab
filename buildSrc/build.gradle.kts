@@ -10,4 +10,5 @@ dependencies {
   implementation(libs.kover.gradle)
   implementation(libs.spotbugs.gradle)
   implementation(libs.testLogger.gradle)
+  implementation(libs.gradle.doctor.gradle)
 }

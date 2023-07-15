@@ -39,6 +39,7 @@ detekt = "1.23.0"
 spotless = "6.19.0"
 apache-log4j = "2.20.0"
 testLogger = "3.2.0"
+gradle-doctor = "0.8.1"
 jetbrains-annotations = "24.0.1"
 
 [libraries]
@@ -108,8 +109,7 @@ detekt-gradle = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", v
 kover-gradle = { module = "org.jetbrains.kotlinx.kover:org.jetbrains.kotlinx.kover.gradle.plugin", version.ref = "kover" }
 spotless-gradle = { module = "com.diffplug.spotless:spotless-plugin-gradle", version.ref = "spotless" }
 spotbugs-gradle = { module = "com.github.spotbugs.snom:spotbugs-gradle-plugin", version.ref = "spotbugs" }
-# moshix-gradle = { module = "dev.zacsweers.moshix:moshi-gradle-plugin", version.ref = "moshix" }
-
+gradle-doctor-gradle = { module = "com.osacky.doctor:com.osacky.doctor.gradle.plugin", version.ref = "gradle-doctor" }
 
 [bundles]
 kotest = [
@@ -143,6 +143,7 @@ spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
 spotbugs = { id = "com.github.spotbugs", version.ref = "spotbugs" }
 lombok = { id = "io.freefair.lombok", version.ref = "lombok-gradle" }
 testLogger = { id = "com.adarshr.test-logger", version.ref = "testLogger" }
+gradle-doctor = { id = "com.osacky.doctor", version.ref = "gradle-doctor" }
 moshix = { id = "dev.zacsweers.moshix", version.ref = "moshix" }
 kotlin-noarg = { id = "org.jetbrains.kotlin.plugin.noarg", version.ref = "kotlin" }
 kotlin-lombok = { id = "org.jetbrains.kotlin.plugin.lombok", version.ref = "kotlin" }

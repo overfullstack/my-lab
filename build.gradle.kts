@@ -4,6 +4,7 @@ import io.gitlab.arturbosch.detekt.report.ReportMergeTask
 
 plugins {
   id(libs.plugins.kover.pluginId)
+  id(libs.plugins.gradle.doctor.pluginId)
   id(libs.plugins.detekt.pluginId) apply false
 }
 

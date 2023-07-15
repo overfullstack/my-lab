@@ -2,9 +2,9 @@ package ga.overfullstack.optics
 
 import arrow.optics.optics
 
-@optics
-object data class Person(val name: String, val age: Int, val address: Address) {
-}
+@optics object data
+
+class Person(val name: String, val age: Int, val address: Address) {}
 
 @optics
 data class Address(val street: Street, val city: City, val coordinates: List<Int>) {

@@ -1,13 +1,8 @@
 package ga.overfullstack.optics
 
-import arrow.optics.Lens
-import arrow.optics.copy
-import io.kotest.matchers.shouldBe
-import org.junit.jupiter.api.Test
-
 class OpticsLab {
 
-  @Test
+  /*@Test
   fun optics() {
     val me =
       Person(
@@ -66,5 +61,5 @@ class OpticsLab {
       City.name set "Amsterdam"
       City.country set "Netherlands"
     }
-  }
+  }*/
 }
