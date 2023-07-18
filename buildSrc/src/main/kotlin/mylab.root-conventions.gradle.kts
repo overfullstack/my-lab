@@ -1,9 +1,8 @@
-import com.adarshr.gradle.testlogger.theme.ThemeType
+import com.adarshr.gradle.testlogger.theme.ThemeType.MOCHA
 import com.diffplug.spotless.extra.wtp.EclipseWtpFormatterStep.XML
 
 plugins {
   java
-  idea
   id("com.diffplug.spotless")
   id("com.adarshr.test-logger")
   id("io.gitlab.arturbosch.detekt")
@@ -70,9 +69,12 @@ detekt {
   config.setFrom(file("$rootDir/detekt/config.yml"))
 }
 
+testlogger {
+  theme = MOCHA
+}
+
 tasks {
   spotbugsMain.get().enabled = false
   spotbugsTest.get().enabled = false
   spotbugs.ignoreFailures.set(true)
-  testlogger.theme = ThemeType.MOCHA
 }

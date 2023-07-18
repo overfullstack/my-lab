@@ -9,5 +9,4 @@ dependencies {
   implementation(libs.kotlinx.coroutines.core)
   implementation(libs.guava)
   implementation(libs.apache.commons.lang3)
-  implementation(libs.bundles.kotest)
 }
