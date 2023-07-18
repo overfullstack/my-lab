@@ -8,7 +8,8 @@ dependencies { testImplementation(libs.kotestBundle) }
 
 tasks {
   withType<KotlinCompile> {
-    kotlinOptions.freeCompilerArgs = listOf("-opt-in=kotlin.RequiresOptIn", "-Xcontext-receivers", "-progressive")
+    kotlinOptions.freeCompilerArgs =
+      listOf("-opt-in=kotlin.RequiresOptIn", "-Xcontext-receivers", "-progressive")
   }
 }
 

@@ -1,4 +1,5 @@
 import com.adarshr.gradle.testlogger.theme.ThemeType.MOCHA
+import com.diffplug.spotless.LineEnding.PLATFORM_NATIVE
 import com.diffplug.spotless.extra.wtp.EclipseWtpFormatterStep.XML
 
 plugins {
@@ -22,32 +23,31 @@ repositories {
 }
 
 spotless {
+  lineEndings = PLATFORM_NATIVE
   kotlin {
     ktfmt().googleStyle()
     target("**/*.kt")
     trimTrailingWhitespace()
     endWithNewline()
-    targetExclude(
-      "**/Dependencies.kt",
-      "**/build/**",
-    )
+    targetExclude("**/build/**", "**/.gradle/**", "**/generated/**")
   }
   kotlinGradle {
     ktfmt().googleStyle()
     target("**/*.gradle.kts")
     trimTrailingWhitespace()
     endWithNewline()
+    targetExclude("**/build/**", "**/.gradle/**", "**/generated/**")
   }
   java {
     toggleOffOn()
-    target("src/main/java/**/*.java", "src/test/java/**/*.java")
-    targetExclude("$buildDir/generated/**/*.*")
+    target("**/*.java")
     importOrder()
     removeUnusedImports()
     googleJavaFormat()
     trimTrailingWhitespace()
     indentWithSpaces(2)
     endWithNewline()
+    targetExclude("**/build/**", "**/.gradle/**", "**/generated/**")
   }
   format("xml") {
     targetExclude("pom.xml")
@@ -69,9 +69,7 @@ detekt {
   config.setFrom(file("$rootDir/detekt/config.yml"))
 }
 
-testlogger {
-  theme = MOCHA
-}
+testlogger.theme = MOCHA
 
 tasks {
   spotbugsMain.get().enabled = false
