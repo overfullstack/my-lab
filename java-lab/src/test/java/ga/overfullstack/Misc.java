@@ -5,7 +5,9 @@ import static ga.overfullstack.Misc.Some.B;
 import static ga.overfullstack.Misc.Some.C;
 import static ga.overfullstack.Misc.Some.D;
 import static ga.overfullstack.Misc.Some.E;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.Collections;
 import java.util.List;
@@ -13,22 +15,13 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 import java.util.function.Consumer;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 class Misc {
   @Test
   void exceptionInCatch() {
-    someThrowingFun();
-  }
-
-  @Test
-  @DisplayName("Casting")
-  void casting() {
-    final String a = null;
-    final String b = (String) a;
-    System.out.println(b);
+    assertThrows(IllegalArgumentException.class, this::someThrowingFun);
   }
 
   void someThrowingFun() {
@@ -85,7 +78,7 @@ class Misc {
   @Test
   @DisplayName("Assert test")
   void assertTest() {
-    Assertions.assertThat(
+    assertThat(
             List.of(
                 "01txx0000006iyWAAQ",
                 "01txx0000006iyXAAQ",

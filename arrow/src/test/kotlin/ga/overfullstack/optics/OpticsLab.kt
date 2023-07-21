@@ -4,25 +4,22 @@ class OpticsLab {
 
   /*@Test
   fun optics() {
-    val me =
-      Person(
-        "Gopal",
-        99,
-        Address(Street("Kotlinstraat", 1), City("Hilversum", "Netherlands"), listOf(1, 2))
-      )
+    val me = Person(
+      "Alejandro", 35,
+      Address(Street("Kotlinstraat", 1), City("Hilversum", "Netherlands"))
+    )
 
-    Person.name.get(me) shouldBe "Gopal"
+    Person.name.get(me) shouldBe "Alejandro"
 
     val meAfterBirthdayParty = Person.age.modify(me) { it + 1 }
-    Person.age.get(meAfterBirthdayParty) shouldBe 100
+    Person.age.get(meAfterBirthdayParty) shouldBe 36
 
-    val newAddress =
-      Address(Street("Kotlinplein", null), City("Amsterdam", "Netherlands"), listOf(1, 2))
+    val newAddress = Address(Street("Kotlinplein", null), City("Amsterdam", "Netherlands"))
     val meAfterMoving = Person.address.set(me, newAddress)
     Person.address.get(meAfterMoving) shouldBe newAddress
-  }
+  }*/
 
-  @Test
+  /*@Test
   fun `optics composition`() {
     val personCity: Lens<Person, String> = Person.address compose Address.city compose City.name
 

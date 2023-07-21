@@ -7,15 +7,15 @@ import com.squareup.moshi.JsonDataException
 import com.squareup.moshi.JsonReader
 import com.squareup.moshi.JsonWriter
 import com.squareup.moshi.ToJson
-import ga.overfullstack.pojo.composite.PQGraph.Graph.Record.Record
-import ga.overfullstack.pojo.composite.PQGraph.Graph.Record.Record.Attributes
+import ga.overfullstack.pojo.composite.PQPayload.Graph.Record.Record
+import ga.overfullstack.pojo.composite.PQPayload.Graph.Record.Record.Attributes
 import org.http4k.format.boolean
 import org.http4k.format.list
 import org.http4k.format.obj
 import org.http4k.format.string
 
 @JsonClass(generateAdapter = true)
-data class PQGraph(val graph: Graph, val pricingPref: String) {
+data class PQPayload(val graph: Graph, val pricingPref: String) {
   @JsonClass(generateAdapter = true)
   data class Graph(val graphId: String, val records: List<Record>) {
     @JsonClass(generateAdapter = true)
@@ -67,12 +67,12 @@ data class PQGraph(val graph: Graph, val pricingPref: String) {
       }
   }
 
-  /** PQ Graph POJO -> Connect Graph JSON Connect Graph JSON -> PQ graph POJO */
-  object PQConnectGraphAdapter {
+  /** PQ payload POJO -> Connect graph JSON | Connect graph JSON -> PQ graph POJO */
+  object PQPayloadGraphAdapter {
     @ToJson
-    fun toJson(writer: JsonWriter, pqGraph: PQGraph?, recordAdapter: JsonAdapter<Record>) =
+    fun toJson(writer: JsonWriter, pqPayload: PQPayload?, recordAdapter: JsonAdapter<Record>) =
       with(writer) {
-        obj(pqGraph) {
+        obj(pqPayload) {
           boolean("isSetPricingPref", true)
           string("pricingPref", pricingPref)
           boolean("isSetGraph", true)

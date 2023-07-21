@@ -4,8 +4,8 @@ import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
 import dev.zacsweers.moshix.adapters.AdaptedBy
 import ga.overfullstack.pojo.composite.ConnectGraph.ConnectPQGraphAdapter
-import ga.overfullstack.pojo.composite.PQGraph.PQConnectGraphAdapter
-import ga.overfullstack.pojo.composite.PQGraph.RecordAdapter
+import ga.overfullstack.pojo.composite.PQPayload.PQPayloadGraphAdapter
+import ga.overfullstack.pojo.composite.PQPayload.RecordAdapter
 import ga.overfullstack.utils.readFileFromTestResource
 import org.junit.jupiter.api.Test
 
@@ -32,19 +32,19 @@ class CompositeLab {
 
   @OptIn(ExperimentalStdlibApi::class)
   @Test
-  fun `PQ graph JSON --) POJO --) Connect graph JSON`() {
+  fun `PQ payload JSON --) POJO --) Connect graph JSON`() {
     val jsonStr = readFileFromTestResource("composite/pq-payload.json")
-    val adapter = Moshi.Builder().add(RecordAdapter).build().adapter<PQGraph>()
+    val adapter = Moshi.Builder().add(RecordAdapter).build().adapter<PQPayload>()
     val pqGraph = adapter.fromJson(jsonStr)!!
     println(pqGraph)
     val pqToConnectJsonAdapter =
-      Moshi.Builder().add(RecordAdapter).add(PQConnectGraphAdapter).build().adapter<PQGraph>()
+      Moshi.Builder().add(RecordAdapter).add(PQPayloadGraphAdapter).build().adapter<PQPayload>()
     println(pqToConnectJsonAdapter.indent("  ").toJson(pqGraph))
   }
 
   @OptIn(ExperimentalStdlibApi::class)
   @Test
-  fun `toJson ~ Connect graph JSON --) Connect graph POJO --) PQ graph JSON`() {
+  fun `toJson ~ Connect graph JSON --) Connect graph POJO --) PQ payload JSON`() {
     val jsonStr = readFileFromTestResource("composite/connect-graph.json")
     val connectGraphAdapter = Moshi.Builder().build().adapter<ConnectGraph>()
     val connectGraph = connectGraphAdapter.fromJson(jsonStr)!!
@@ -56,7 +56,7 @@ class CompositeLab {
 
   @OptIn(ExperimentalStdlibApi::class)
   @Test
-  fun `fromJson ~ PQ graph JSON --) Connect graph POJO --) Connect graph JSON`() {
+  fun `fromJson ~ PQ payload JSON --) Connect graph POJO --) Connect graph JSON`() {
     val jsonStr = readFileFromTestResource("composite/pq-payload.json")
     val pqJsonToConnectGraphAdapter =
       Moshi.Builder().add(ConnectPQGraphAdapter).build().adapter<ConnectGraph>()

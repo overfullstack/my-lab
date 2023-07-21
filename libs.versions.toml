@@ -52,7 +52,6 @@ typeTools = { module = "net.jodah:typetools", version.ref = "typeTools" }
 reflection-util = { module = "de.cronn:reflection-util", version.ref = "reflection-util" }
 testLogger-gradle = { module = "com.adarshr.test-logger:com.adarshr.test-logger.gradle.plugin", version.ref = "testLogger" }
 kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
-kotest-frameworkEngine = { module = "io.kotest:kotest-framework-engine", version.ref = "kotest" }
 kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest" }
 kotest-runnerJUnit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
 assertj-core = { module = "org.assertj:assertj-core", version.ref = "assertj-core" }
@@ -114,7 +113,6 @@ gradle-doctor-gradle = { module = "com.osacky.doctor:com.osacky.doctor.gradle.pl
 [bundles]
 kotest = [
   "kotest-assertions-core",
-  "kotest-frameworkEngine",
   "kotest-property",
   "kotest-runnerJUnit5",
 ]

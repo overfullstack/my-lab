@@ -59,7 +59,7 @@ data class ConnectGraph(
     }
   }
 
-  /** fromJson: PQ graph JSON -> Connect Graph POJO toJson: Connect Graph POJO -> PQ Graph JSON */
+  /** fromJson: PQ graph JSON -> Connect graph POJO | toJson: Connect Graph POJO -> PQ Graph JSON */
   object ConnectPQGraphAdapter {
     /*@FromJson
     fun fromJson(reader: JsonReader): ConnectGraph =

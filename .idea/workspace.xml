@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="Gradle changes&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
+    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="- Kotest removed frameworkengine&#10;- Tree parser&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.root-conventions.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.root-conventions.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,9 +287,9 @@
       <command value="gradle moshi:spotlessApply" />
       <command value="gradle arrow:kspKotlin" />
       <command value="gradle arrow:clean arrow:build" />
-      <command value="gradle clean build" />
       <command value="gradle spotlessApply" />
       <command value="gradle test" />
+      <command value="gradle clean build" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -300,7 +299,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.my-lab [test]">
+  <component name="RunManager" selected="Gradle.my-lab [clean build]">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -314,7 +313,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VavrLab.threadSleepWithTry" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TreeParserTest.tree parse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -325,9 +324,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":java-lab:test" />
+            <option value=":moshi:test" />
             <option value="--tests" />
-            <option value="&quot;ga.overfullstack.VavrLab.threadSleepWithTry&quot;" />
+            <option value="&quot;ga.overfullstack.pojo.composite.TreeParserTest.tree parse&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -428,11 +427,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.my-lab [test]" />
-        <item itemvalue="Gradle.my-lab [clean build]" />
+        <item itemvalue="Gradle.TreeParserTest.tree parse" />
         <item itemvalue="Kotlin.RecordAdapterKt" />
+        <item itemvalue="Gradle.my-lab [test]" />
         <item itemvalue="Gradle.my-lab [spotlessApply]" />
-        <item itemvalue="Gradle.VavrLab.threadSleepWithTry" />
+        <item itemvalue="Gradle.my-lab [clean build]" />
       </list>
     </recent_temporary>
   </component>
@@ -853,6 +852,8 @@
       <workItem from="1689682909832" duration="890000" />
       <workItem from="1689685229476" duration="1404000" />
       <workItem from="1689693707005" duration="1370000" />
+      <workItem from="1689822283264" duration="516000" />
+      <workItem from="1689923527348" duration="4575000" />
     </task>
     <task id="LOCAL-00009" summary="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
       <created>1627583016664</created>
@@ -1197,7 +1198,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684333262543</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1283,7 +1284,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="Upgrade Kotlin to 1.8.20-RC and languageVersion to 2.0&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="Major: Merge modules and create new module &quot;spring&quot;&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
@@ -1308,7 +1308,8 @@
     <MESSAGE value="minor&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="Add Gradle doctor plugin&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="Gradle changes&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gradle changes&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <MESSAGE value="- Kotest removed frameworkengine&#10;- Tree parser&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Kotest removed frameworkengine&#10;- Tree parser&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1340,13 +1341,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/adapter/AnyAdapterFactory.kt</url>
-          <line>19</line>
+          <line>20</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/adapter/AnyAdapterTest.kt</url>
           <line>28</line>
           <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/pojo/composite/TreeParserTest.kt</url>
+          <line>17</line>
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
