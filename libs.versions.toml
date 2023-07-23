@@ -31,7 +31,7 @@ rabbitmq-client = "5.18.0"
 kotlin-logging = "3.0.5"
 
 # Common dependencies
-junit = "5.9.3"
+junit = "5.10.0"
 kover = "0.7.2"
 kotest = "5.6.2"
 assertj-core = "3.24.2"
