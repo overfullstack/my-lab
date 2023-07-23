@@ -10,8 +10,6 @@ dependencies {
   implementation(project(":common"))
   implementation(libs.http4k.format.moshi)
   implementation(libs.bundles.arrow)
-  implementation(libs.moshi)
-  implementation(libs.moshi.kotlin)
   implementation(libs.moshix.adapters)
   testImplementation(libs.bundles.kotest)
 }
@@ -22,6 +20,5 @@ noArg {
 }
 
 moshi {
-  enableSealed by true
-  generateProguardRules by false
+  enableSealed = true
 }

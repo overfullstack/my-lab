@@ -1,4 +1,4 @@
-package ga.overfullstack.utils
+package ga.overfullstack.utils.json
 
 import com.squareup.moshi.JsonReader
 

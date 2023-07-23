@@ -10,7 +10,7 @@ import ga.overfullstack.contextdef.state.ContextMapping
 import ga.overfullstack.contextdef.state.ContextNode
 import ga.overfullstack.contextdef.state.ContextNodeMapping
 import ga.overfullstack.contextdef.state.NodeAttribute
-import ga.overfullstack.utils.pojoToJson
+import ga.overfullstack.utils.json.pojoToJson
 import ga.overfullstack.utils.readFileFromTestResource
 import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.Test

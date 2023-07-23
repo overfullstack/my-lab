@@ -15,8 +15,7 @@ class TreeParserTest {
     val treeJson = readFileFromTestResource("tree/tree.json")
     val nodeAdapter = NodeAdapter()
     val treeAdapter = Moshi.Builder().add(nodeAdapter).build().adapter<Tree>()
-    val tree = treeAdapter.fromJson(treeJson)
-    println(tree)
-    println(nodeAdapter.treeGraph[tree?.tree?.root])
+    val tree = treeAdapter.fromJson(treeJson)!!
+    println(nodeAdapter.treeGraph[tree.tree.root])
   }
 }

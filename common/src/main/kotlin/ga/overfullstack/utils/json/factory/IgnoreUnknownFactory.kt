@@ -1,4 +1,4 @@
-package ga.overfullstack.utils
+package ga.overfullstack.utils.json.factory
 
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.JsonReader
@@ -7,7 +7,7 @@ import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
 import java.lang.reflect.Type
 
-class IgnoreUnknownFactory(private val typesToIgnore: Set<Class<out Any>>) : JsonAdapter.Factory {
+internal class IgnoreUnknownFactory(private val typesToIgnore: Set<Type>) : JsonAdapter.Factory {
   override fun create(type: Type, annotations: Set<Annotation?>, moshi: Moshi): JsonAdapter<*> {
     val rawType = Types.getRawType(type)
     return if (typesToIgnore.contains(rawType)) {

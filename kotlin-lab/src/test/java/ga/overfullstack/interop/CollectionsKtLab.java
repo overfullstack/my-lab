@@ -11,4 +11,10 @@ class CollectionsKtLab {
   void collectionsKt() {
     System.out.println(CollectionsKt.associateBy(List.of(1, 2, 3, 1), String::valueOf));
   }
+
+  @Test
+  @DisplayName("Class Package path")
+  void classPackagePath() {
+    System.out.println(this.getClass().getResource("").getPath());
+  }
 }
