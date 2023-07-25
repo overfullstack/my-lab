@@ -1,7 +1,7 @@
 [versions]
 kotlin = "1.9.0"
 ksp = "1.9.0-1.0.12"
-kotlinx-coroutines-core = "1.7.2"
+kotlinx-coroutines-core = "1.7.3"
 hamcrest-core = "2.2"
 hamcrest-date = "2.0.8"
 java-vavr = "0.10.4"
