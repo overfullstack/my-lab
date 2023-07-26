@@ -28,14 +28,13 @@ subprojects {
   apply(plugin = "mylab.sub-conventions")
   tasks.withType<Detekt>().configureEach {
     reports {
-      xml.required = true
       html.required = true
     }
   }
   plugins.withType<DetektPlugin> {
     tasks.withType<Detekt> detekt@{
       finalizedBy(detektReportMerge)
-      detektReportMerge.configure { input.from(this@detekt.xmlReportFile) }
+      detektReportMerge.configure { input.from(this@detekt.htmlReportFile) }
     }
   }
 }

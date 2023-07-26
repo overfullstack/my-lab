@@ -69,7 +69,11 @@ detekt {
   config.setFrom(file("$rootDir/detekt/config.yml"))
 }
 
-testlogger.theme = MOCHA
+testlogger {
+  theme = MOCHA_PARALLEL
+  showCauses = false
+  showSimpleNames = true
+}
 
 tasks {
   spotbugsMain.get().enabled = false
