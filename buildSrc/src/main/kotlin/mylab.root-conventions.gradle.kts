@@ -1,4 +1,4 @@
-import com.adarshr.gradle.testlogger.theme.ThemeType.MOCHA
+import com.adarshr.gradle.testlogger.theme.ThemeType.MOCHA_PARALLEL
 import com.diffplug.spotless.LineEnding.PLATFORM_NATIVE
 import com.diffplug.spotless.extra.wtp.EclipseWtpFormatterStep.XML
 
@@ -29,14 +29,14 @@ spotless {
     target("**/*.kt")
     trimTrailingWhitespace()
     endWithNewline()
-    targetExclude("**/build/**", "**/.gradle/**", "**/generated/**")
+    targetExclude("**/build/**", "**/.gradle/**", "**/generated/**", "**/bin/**")
   }
   kotlinGradle {
     ktfmt().googleStyle()
     target("**/*.gradle.kts")
     trimTrailingWhitespace()
     endWithNewline()
-    targetExclude("**/build/**", "**/.gradle/**", "**/generated/**")
+    targetExclude("**/build/**", "**/.gradle/**", "**/generated/**", "**/bin/**")
   }
   java {
     toggleOffOn()
@@ -47,7 +47,7 @@ spotless {
     trimTrailingWhitespace()
     indentWithSpaces(2)
     endWithNewline()
-    targetExclude("**/build/**", "**/.gradle/**", "**/generated/**")
+    targetExclude("**/build/**", "**/.gradle/**", "**/generated/**", "**/bin/**")
   }
   format("xml") {
     targetExclude("pom.xml")
