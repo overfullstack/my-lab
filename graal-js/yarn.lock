@@ -479,6 +479,18 @@ handlebars@4.7.7:
   optionalDependencies:
     uglify-js "^3.1.4"
 
+handlebars@4.7.8:
+  version "4.7.8"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.7.8.tgz#41c42c18b1be2365439188c77c6afae71c0cd9e9"
+  integrity sha512-vafaFqs8MZkRrSX7sFVUdo3ap/eNiLnb4IakshzvP56X5Nr1iGKAIqdX6tMlm6HcNRIkr6AxO5jFEoJzzpT8aQ==
+  dependencies:
+    minimist "^1.2.5"
+    neo-async "^2.6.2"
+    source-map "^0.6.1"
+    wordwrap "^1.0.0"
+  optionalDependencies:
+    uglify-js "^3.1.4"
+
 har-schema@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/har-schema/-/har-schema-2.0.0.tgz"
@@ -540,10 +552,10 @@ httpntlm@1.7.7:
     httpreq ">=0.4.22"
     underscore "~1.12.1"
 
-httpntlm@1.8.12:
-  version "1.8.12"
-  resolved "https://registry.yarnpkg.com/httpntlm/-/httpntlm-1.8.12.tgz#1b2f46e9839cc8434cced1b120d8689fdbd19387"
-  integrity sha512-dqdye5b5OmzCIDrA2JgkKG7bV9sK0S5VUELD1+JcRZG6ZDieAW7/c0MPsqlTRKDzso1tIMhvDQAWvfgFN0yg3A==
+httpntlm@1.8.13:
+  version "1.8.13"
+  resolved "https://registry.yarnpkg.com/httpntlm/-/httpntlm-1.8.13.tgz#4130e555701b58207303bf757a4e1e41c06835bd"
+  integrity sha512-2F2FDPiWT4rewPzNMg3uPhNkP3NExENlUGADRUDPQvuftuUTGW98nLZtGemCIW3G40VhWZYgkIDcQFAwZ3mf2Q==
   dependencies:
     des.js "^1.0.1"
     httpreq ">=0.4.22"
@@ -727,7 +739,7 @@ moment@2.29.4:
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
   integrity sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==
 
-neo-async@^2.6.0:
+neo-async@^2.6.0, neo-async@^2.6.2:
   version "2.6.2"
   resolved "https://registry.npmjs.org/neo-async/-/neo-async-2.6.2.tgz"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
@@ -839,10 +851,10 @@ postman-collection@4.1.1:
     semver "7.3.5"
     uuid "8.3.2"
 
-postman-collection@4.1.7:
-  version "4.1.7"
-  resolved "https://registry.yarnpkg.com/postman-collection/-/postman-collection-4.1.7.tgz#9a9ec376b6a78e557247bb54f3892a237d7d2b8b"
-  integrity sha512-fMICmDa6megCH/jKq66MZVcR26wrSn1G/rjIkqrtdB6Df4u/I+XLRbWueQnz91Jwm3FR+su1refy4gwIjLLGLg==
+postman-collection@4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/postman-collection/-/postman-collection-4.2.0.tgz#19ac4aca7966ddb4bcc252f06d8e1ed61142ebc1"
+  integrity sha512-tvOLgN1h6Kab6dt43PmBoV5kYO/YUta3x0C2QqfmbzmHZe47VTpZ/+gIkGlbNhjKNPUUub5X6ehxYKoaTYdy1w==
   dependencies:
     "@faker-js/faker" "5.5.3"
     file-type "3.9.0"
@@ -853,7 +865,7 @@ postman-collection@4.1.7:
     mime-format "2.0.1"
     mime-types "2.1.35"
     postman-url-encoder "3.0.5"
-    semver "7.3.8"
+    semver "7.5.4"
     uuid "8.3.2"
 
 postman-request@2.88.1-postman.31:
@@ -934,25 +946,25 @@ postman-runtime@7.29.0:
     tough-cookie "3.0.1"
     uuid "8.3.2"
 
-postman-runtime@7.32.3:
-  version "7.32.3"
-  resolved "https://registry.yarnpkg.com/postman-runtime/-/postman-runtime-7.32.3.tgz#319575f79200f9f0d5f73822e839273f2af43f8f"
-  integrity sha512-aeyXxriDjRIZfojX2umXBFh3Vih+VV5mKJS8uJbYBMvNkGcm/dZlcUxIH8Yf0ysk4dzcsfFbkYFDfXuZnKpd6g==
+postman-runtime@7.33.0:
+  version "7.33.0"
+  resolved "https://registry.yarnpkg.com/postman-runtime/-/postman-runtime-7.33.0.tgz#ed7aa8d6c30846b6c0ef040b35f1a0b8418552ec"
+  integrity sha512-cYCb+5Y12FwZU/T3gOj2SKiOz38pisVLc0tdppb+ZlG7iqn5aLgxghJwhjG62pZCV6uixKiQX1hNdLSk9a9Xtw==
   dependencies:
     "@postman/tough-cookie" "4.1.3-postman.1"
     async "3.2.4"
     aws4 "1.12.0"
-    handlebars "4.7.7"
-    httpntlm "1.8.12"
+    handlebars "4.7.8"
+    httpntlm "1.8.13"
     jose "4.14.4"
     js-sha512 "0.8.0"
     lodash "4.17.21"
     mime-types "2.1.35"
     node-oauth1 "1.3.0"
     performance-now "2.1.0"
-    postman-collection "4.1.7"
+    postman-collection "4.2.0"
     postman-request "2.88.1-postman.33"
-    postman-sandbox "4.2.6"
+    postman-sandbox "4.2.7"
     postman-url-encoder "3.0.5"
     serialised-error "1.1.3"
     strip-json-comments "3.1.1"
@@ -967,13 +979,13 @@ postman-sandbox@4.0.6:
     teleport-javascript "1.0.0"
     uvm "2.0.2"
 
-postman-sandbox@4.2.6:
-  version "4.2.6"
-  resolved "https://registry.yarnpkg.com/postman-sandbox/-/postman-sandbox-4.2.6.tgz#8f02daad9a79900a8f8c4717643f01cfbea0ff77"
-  integrity sha512-p56HjcGrPBmQv9s4z2h3c6zmO+a5XUEz3djuRJFCvmOh4qpILoGAlRsI5lpWkTikRgpZww4pmTeImXUgPl/y1w==
+postman-sandbox@4.2.7:
+  version "4.2.7"
+  resolved "https://registry.yarnpkg.com/postman-sandbox/-/postman-sandbox-4.2.7.tgz#427440cb3f9c30cf0022f05ea6f3f88eeb63635b"
+  integrity sha512-/EcCrKnb/o+9iLS4u+H76E0kBomJFjPptVjoDiq1uZ7Es/4aTv0MAX+0aoDxdDO+0h9sl8vy65uKQwyjN7AOaw==
   dependencies:
     lodash "4.17.21"
-    postman-collection "4.1.7"
+    postman-collection "4.2.0"
     teleport-javascript "1.0.0"
     uvm "2.1.1"
 
@@ -1087,10 +1099,10 @@ semver@7.3.5:
   dependencies:
     lru-cache "^6.0.0"
 
-semver@7.3.8:
-  version "7.3.8"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.8.tgz#07a78feafb3f7b32347d725e33de7e2a2df67798"
-  integrity sha512-NB1ctGL5rlHrPJtFDVIVzTyQylMLu9N9VICA6HSFJo8MCGVTMW6gfpicwKmmK/dAjTOrqu5l63JJOpDSrAis3A==
+semver@7.5.4:
+  version "7.5.4"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.5.4.tgz#483986ec4ed38e1c6c48c34894a9182dbff68a6e"
+  integrity sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==
   dependencies:
     lru-cache "^6.0.0"
 
