@@ -8,7 +8,7 @@ class RecordAdapterTest {
   @OptIn(ExperimentalStdlibApi::class)
   @Test
   fun `record adapter`() {
-    val bodyAdapter = Moshi.Builder().add(RecordAdapter).build().adapter<Body>()
+    val recordsAdapter = Moshi.Builder().add(RecordAdapter).build().adapter<Records>()
     val encoded =
       """
     {
@@ -25,7 +25,7 @@ class RecordAdapterTest {
       ]
     }"""
         .trimIndent()
-    val body = bodyAdapter.fromJson(encoded)
-    println(bodyAdapter.indent("  ").toJson(body))
+    val records = recordsAdapter.fromJson(encoded)
+    println(recordsAdapter.indent("  ").toJson(records))
   }
 }

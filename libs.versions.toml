@@ -25,6 +25,7 @@ graal = "23.0.1"
 immutables = "2.9.3"
 mockito = "5.4.0"
 state-machine = "0.2.0"
+spring = "6.0.11"
 spring-dependency-management = "1.1.2"
 spring-boot = "3.1.2"
 rabbitmq-client = "5.18.0"
@@ -93,6 +94,7 @@ mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
 state-machine = { module = "com.tinder.statemachine:statemachine", version.ref = "state-machine" }
 kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
 rabbitmq-client = { module = "com.rabbitmq:amqp-client", version.ref = "rabbitmq-client" }
+spring-beans = { module = "org.springframework:spring-beans", version.ref = "spring" }
 
 # Spring (version managed by spring-dependency-management)
 spring-boot-starter-batch = { module = "org.springframework.boot:spring-boot-starter-batch" }

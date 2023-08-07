@@ -4,7 +4,7 @@ import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
 import dev.zacsweers.moshix.adapters.AdaptedBy
 import ga.overfullstack.pojo.composite.ConnectGraph.ConnectPQGraphAdapter
-import ga.overfullstack.pojo.composite.PQPayload.PQPayloadGraphAdapter
+import ga.overfullstack.pojo.composite.PQPayload.PQPayloadAdapter
 import ga.overfullstack.pojo.composite.PQPayload.RecordAdapter
 import ga.overfullstack.utils.readFileFromTestResource
 import org.junit.jupiter.api.Test
@@ -38,7 +38,7 @@ class CompositeLab {
     val pqGraph = adapter.fromJson(jsonStr)!!
     println(pqGraph)
     val pqToConnectJsonAdapter =
-      Moshi.Builder().add(RecordAdapter).add(PQPayloadGraphAdapter).build().adapter<PQPayload>()
+      Moshi.Builder().add(RecordAdapter).add(PQPayloadAdapter).build().adapter<PQPayload>()
     println(pqToConnectJsonAdapter.indent("  ").toJson(pqGraph))
   }
 

@@ -14,10 +14,10 @@ data class Tree(val tree: Tree) {
 
     @JsonClass(generateAdapter = true)
     data class Node(
-        val id: String,
-        var left: Node? = null,
-        var right: Node? = null,
-        var value: Int? = null
+      val id: String,
+      var left: Node? = null,
+      var right: Node? = null,
+      var value: Int? = null
     )
   }
 }

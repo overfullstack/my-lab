@@ -68,7 +68,7 @@ data class PQPayload(val graph: Graph, val pricingPref: String) {
   }
 
   /** PQ payload POJO -> Connect graph JSON | Connect graph JSON -> PQ graph POJO */
-  object PQPayloadGraphAdapter {
+  object PQPayloadAdapter {
     @ToJson
     fun toJson(writer: JsonWriter, pqPayload: PQPayload?, recordAdapter: JsonAdapter<Record>) =
       with(writer) {

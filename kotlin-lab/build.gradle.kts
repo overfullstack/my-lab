@@ -10,5 +10,6 @@ dependencies {
   implementation(libs.rabbitmq.client)
   implementation(libs.bundles.apache.log4j)
   implementation(libs.bundles.kotlin.logging)
+  implementation(libs.spring.beans)
   testImplementation(libs.assertj.core)
 }

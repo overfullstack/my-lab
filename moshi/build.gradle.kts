@@ -19,6 +19,4 @@ noArg {
   invokeInitializers = true
 }
 
-moshi {
-  enableSealed = true
-}
+moshi { enableSealed = true }

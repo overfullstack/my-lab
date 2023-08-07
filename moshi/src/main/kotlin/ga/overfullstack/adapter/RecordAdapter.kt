@@ -8,7 +8,7 @@ import com.squareup.moshi.JsonReader
 import com.squareup.moshi.JsonWriter
 import com.squareup.moshi.ToJson
 
-@JsonClass(generateAdapter = true) data class Body(val records: List<Record>)
+@JsonClass(generateAdapter = true) data class Records(val records: List<Record>)
 
 @JsonClass(generateAdapter = true)
 data class Record(val attributes: Attributes, val recordBody: Map<String, Any>)
@@ -59,8 +59,4 @@ object RecordAdapter {
     }
     writer.endObject()
   }
-}
-
-object BodyAdapter {
-  @ToJson fun toJson(body: Body) = Body(List(3) { _ -> body.records[0] })
 }

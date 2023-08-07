@@ -26,11 +26,7 @@ val detektReportMerge by
 
 subprojects {
   apply(plugin = "mylab.sub-conventions")
-  tasks.withType<Detekt>().configureEach {
-    reports {
-      html.required = true
-    }
-  }
+  tasks.withType<Detekt>().configureEach { reports { html.required = true } }
   plugins.withType<DetektPlugin> {
     tasks.withType<Detekt> detekt@{
       finalizedBy(detektReportMerge)
