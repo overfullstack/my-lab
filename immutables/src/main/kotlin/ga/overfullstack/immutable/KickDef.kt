@@ -2,8 +2,8 @@ package ga.overfullstack.immutable
 
 import ga.overfullstack.immutable.style.Config
 import ga.overfullstack.immutable.style.StepConfig
-import java.lang.reflect.Type
 import org.immutables.value.Value
+import java.lang.reflect.Type
 
 @Config
 @Value.Immutable

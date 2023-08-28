@@ -4,46 +4,14 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="Junit upgrade&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
-      <change afterPath="$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/utils/json/JsonWriterUtils.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/utils/json/adapters/EpochAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/test/java/ga/overfullstack/utils/json/JsonPojoUtilsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/test/java/ga/overfullstack/utils/json/JsonReaderUtilsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/test/resources/nested-bean.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/test/resources/pq-payload.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/ReflectionLab.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/ReflectionLab.kt" afterDir="false" />
+    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="ReflectionLab&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
       <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/apt/my-github.my-lab.apt.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/apt/my-github.my-lab.apt.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/apt/my-github.my-lab.apt.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/apt/my-github.my-lab.apt.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/apt/my-lab.apt.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/apt/my-lab.apt.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/apt/my-lab.apt.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/apt/my-lab.apt.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/java-lab/my-lab.java-lab.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/java-lab/my-lab.java-lab.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/my-lab.buildSrc.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/my-lab.buildSrc.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/my-lab.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/my-lab.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/my-lab.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/my-lab.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/vador-lab/ga.overfullstack.my-lab.vador-lab.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/vador-lab/ga.overfullstack.my-lab.vador-lab.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/vador-lab/ga.overfullstack.my-lab.vador-lab.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/vador-lab/ga.overfullstack.my-lab.vador-lab.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/vador-lab/my-lab.vador-lab.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/vador-lab/my-lab.vador-lab.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/vador-lab/my-lab.vador-lab.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/vador-lab/my-lab.vador-lab.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/common/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/utils/json/JsonPojoUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/utils/json/JsonPojoUtils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/utils/json/JsonReaderUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/utils/json/JsonReaderUtils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/VadorLab.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/VadorLab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/generics/GenericsLab.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/GenericsLab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/generics/TypesLab.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/vador/VadorLab.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-lab/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-lab/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.root-conventions.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.root-conventions.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/immutables/src/main/kotlin/ga/overfullstack/immutable/KickDef.kt" beforeDir="false" afterPath="$PROJECT_DIR$/immutables/src/main/kotlin/ga/overfullstack/immutable/KickDef.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/immutables/src/main/kotlin/ga/overfullstack/immutable/style/Config.kt" beforeDir="false" afterPath="$PROJECT_DIR$/immutables/src/main/kotlin/ga/overfullstack/immutable/style/Config.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/libs.versions.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/adapter/RecordAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/adapter/RecordAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/pojo/composite/PQPayload.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/pojo/composite/PQPayload.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/pojo/tree/Tree.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/pojo/tree/Tree.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/adapter/RecordAdapterTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/adapter/RecordAdapterTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/pojo/composite/CompositeLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/pojo/composite/CompositeLab.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,14 +104,11 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/31.1-jre/c388a68bc2b17a314dfa7c769d858ada0fc32dcf/guava-31.1-jre-sources.jar!/com/google/common/collect/StandardTable.java" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi/1.14.0/cae460a3498d2375721e5ecb3b8e15e3131c72a3/moshi-1.14.0-sources.jar!/com/squareup/moshi/Types.java" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi/1.14.0/cae460a3498d2375721e5ecb3b8e15e3131c72a3/moshi-1.14.0-sources.jar!/com/squareup/moshi/internal/Util.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi/1.15.0/a21adfe8e16fa82e4f6dbb313536a915ff6e06f7/moshi-1.15.0-sources.jar!/main/com/squareup/moshi/-MoshiKotlinExtensions.kt" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi/1.15.0/bfefc77019c04fb3e1ad94abb0a2c141a78bbbd8/moshi-1.15.0.jar!/com/squareup/moshi/JsonReader.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi/1.15.0/bfefc77019c04fb3e1ad94abb0a2c141a78bbbd8/moshi-1.15.0.jar!/com/squareup/moshi/JsonWriter.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi/1.15.0/bfefc77019c04fb3e1ad94abb0a2c141a78bbbd8/moshi-1.15.0.jar!/com/squareup/moshi/StandardJsonAdapters.class" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-format-moshi/5.2.1.0/b2dfca1f6430aaf2c570df5331a204b16abc8112/http4k-format-moshi-5.2.1.0-sources.jar!/org/http4k/format/write.kt" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-metrics-micrometer/5.2.1.0/ddedd724bd850fc224e10873d8f4df0988f9ab22/http4k-metrics-micrometer-5.2.1.0-sources.jar!/org/http4k/filter/micrometerExtensions.kt" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.9.0/6fb55fcd2b695c29928835638f5f221f18427695/kotlin-stdlib-common-1.9.0-sources.jar!/generated/_Sequences.kt" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.sdkman/candidates/java/current/lib/src.zip!/java.base/java/lang/reflect/Type.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.sdkman/candidates/java/current/lib/src.zip!/java.base/java/nio/charset/Charset.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.sdkman/candidates/java/current/lib/src.zip!/java.base/java/util/Collection.java" root0="SKIP_INSPECTION" />
@@ -193,8 +158,7 @@
     <option name="version" value="2" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: -1
+  &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="1rhAs1mSOs9P04dgKIqL0uZ9bcO" />
   <component name="ProjectLevelVcsManager">
@@ -214,7 +178,6 @@
     &quot;FindInProjectState.isProjectScope&quot;: &quot;false&quot;,
     &quot;Notification.DisplayName-DoNotAsk-Dependencies from package.json&quot;: &quot;Dependencies from package.json available&quot;,
     &quot;Notification.DoNotAsk-Dependencies from package.json&quot;: &quot;true&quot;,
-    &quot;PROJECT_TOOLBAR_COLOR&quot;: &quot;29585c&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
@@ -930,7 +893,15 @@
       <workItem from="1691216274583" duration="574000" />
       <workItem from="1691217233556" duration="9910000" />
       <workItem from="1691319575054" duration="3009000" />
-      <workItem from="1691378551381" duration="1621000" />
+      <workItem from="1691378551381" duration="2473000" />
+      <workItem from="1691464618109" duration="1369000" />
+      <workItem from="1691491457105" duration="795000" />
+      <workItem from="1691494879097" duration="32000" />
+      <workItem from="1691568345890" duration="1188000" />
+      <workItem from="1691571989824" duration="2659000" />
+      <workItem from="1691652150483" duration="395000" />
+      <workItem from="1693105922733" duration="2066000" />
+      <workItem from="1693207037032" duration="2303000" />
     </task>
     <task id="LOCAL-00009" summary="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
       <created>1627583016664</created>
@@ -1275,7 +1246,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684333262543</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1373,7 +1344,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="upgrade arrow&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="Extracted Immutables to different module&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="Nested config with Immutables&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopalakshintala@gmail.com&gt;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
@@ -1398,7 +1368,8 @@
     <MESSAGE value="- Kotest removed frameworkengine&#10;- Tree parser&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="Updgrade moshix&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="Junit upgrade&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Junit upgrade&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <MESSAGE value="ReflectionLab&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="ReflectionLab&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1412,16 +1383,6 @@
           <url>file://$PROJECT_DIR$/lombok-lab/src/test/java/ga/overfullstack/generics/ValidationConfigTest.java</url>
           <line>10</line>
           <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/ReflectionLab.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="57" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/ReflectionLab.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/PostmanLab.kt</url>
@@ -1440,18 +1401,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/adapter/AnyAdapterFactory.kt</url>
-          <line>19</line>
+          <line>20</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/adapter/AnyAdapterTest.kt</url>
           <line>28</line>
           <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/ReflectionLab.kt</url>
-          <line>67</line>
-          <option name="timeStamp" value="63" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

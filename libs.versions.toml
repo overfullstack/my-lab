@@ -29,7 +29,7 @@ spring = "6.0.11"
 spring-dependency-management = "1.1.3"
 spring-boot = "3.1.3"
 rabbitmq-client = "5.18.0"
-kotlin-logging = "3.0.5"
+kotlin-logging = "5.1.0"
 
 # Common dependencies
 junit = "5.10.0"
@@ -84,7 +84,7 @@ immutables-value-annotations = { module = "org.immutables:value-annotations", ve
 log4j-api = { module = "org.apache.logging.log4j:log4j-api", version.ref = "apache-log4j" }
 log4j-core = { module = "org.apache.logging.log4j:log4j-core", version.ref = "apache-log4j" }
 log4j-slf4j2-impl = { module = "org.apache.logging.log4j:log4j-slf4j2-impl", version.ref = "apache-log4j" }
-kotlin-logging-jvm = { module = "io.github.microutils:kotlin-logging-jvm", version.ref = "kotlin-logging" }
+kotlin-logging-jvm = { module = "io.github.oshai:kotlin-logging-jvm", version.ref = "kotlin-logging" }
 arrow-core = { module = "io.arrow-kt:arrow-core", version.ref = "arrow" }
 arrow-optics = { module = "io.arrow-kt:arrow-optics", version.ref = "arrow" }
 arrow-optics-ksp-plugin = { module = "io.arrow-kt:arrow-optics-ksp-plugin", version.ref = "arrow" }

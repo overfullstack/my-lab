@@ -1,6 +1,7 @@
 package ga.overfullstack.immutable.style
 
 import org.immutables.value.Value
+import org.immutables.value.Value.Style.ImplementationVisibility.PUBLIC
 
 @Target(AnnotationTarget.CLASS)
 @Retention(AnnotationRetention.SOURCE)
@@ -9,9 +10,11 @@ import org.immutables.value.Value
   typeAbstract = ["*Def"],
   builder = "configure",
   build = "off",
+  put = "*",
+  add = "*",
+  addAll = "*",
   depluralize = true,
-  add = "",
-  visibility = Value.Style.ImplementationVisibility.PUBLIC
+  visibility = PUBLIC
 )
 annotation class Config
 
@@ -22,8 +25,9 @@ annotation class Config
   typeAbstract = ["*Def"],
   builder = "configure",
   build = "done",
+  put = "*",
+  add = "*",
   depluralize = true,
-  add = "",
-  visibility = Value.Style.ImplementationVisibility.PUBLIC
+  visibility = PUBLIC
 )
 annotation class StepConfig
