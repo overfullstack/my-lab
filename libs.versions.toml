@@ -34,7 +34,7 @@ kotlin-logging = "5.1.0"
 # Common dependencies
 junit = "5.10.0"
 kover = "0.7.3"
-kotest = "5.7.1"
+kotest = "5.7.2"
 assertj-core = "3.24.2"
 detekt = "1.23.1"
 spotless = "6.21.0"
