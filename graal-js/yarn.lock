@@ -868,6 +868,23 @@ postman-collection@4.2.0:
     semver "7.5.4"
     uuid "8.3.2"
 
+postman-collection@4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/postman-collection/-/postman-collection-4.2.1.tgz#86e3c8ee11530a1f00a30864503d487846ee516f"
+  integrity sha512-DFLt3/yu8+ldtOTIzmBUctoupKJBOVK4NZO0t68K2lIir9smQg7OdQTBjOXYy+PDh7u0pSDvD66tm93eBHEPHA==
+  dependencies:
+    "@faker-js/faker" "5.5.3"
+    file-type "3.9.0"
+    http-reasons "0.1.0"
+    iconv-lite "0.6.3"
+    liquid-json "0.3.1"
+    lodash "4.17.21"
+    mime-format "2.0.1"
+    mime-types "2.1.35"
+    postman-url-encoder "3.0.5"
+    semver "7.5.4"
+    uuid "8.3.2"
+
 postman-request@2.88.1-postman.31:
   version "2.88.1-postman.31"
   resolved "https://registry.npmjs.org/postman-request/-/postman-request-2.88.1-postman.31.tgz"
