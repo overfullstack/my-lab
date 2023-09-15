@@ -2,8 +2,8 @@ package ga.overfullstack.immutable
 
 import ga.overfullstack.immutable.style.Config
 import ga.overfullstack.immutable.style.StepConfig
-import org.immutables.value.Value
 import java.lang.reflect.Type
+import org.immutables.value.Value
 
 @Config
 @Value.Immutable
@@ -18,7 +18,7 @@ internal interface KickDef {
 
   @Value.Default fun validationStrategy(): ValidationStrategy = ValidationStrategy.FAIL_FAST
 
-  @SkipNulls fun customAdaptersForResponse(): List<Any>
+  @Value.Default @SkipNulls fun customAdaptersForResponse(): Set<Any> = emptySet()
 
   @SkipNulls fun typesInResponseToIgnore(): Set<Class<out Any>>
 

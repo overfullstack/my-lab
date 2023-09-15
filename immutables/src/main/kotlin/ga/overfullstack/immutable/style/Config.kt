@@ -12,7 +12,6 @@ import org.immutables.value.Value.Style.ImplementationVisibility.PUBLIC
   build = "off",
   put = "*",
   add = "*",
-  addAll = "*",
   depluralize = true,
   visibility = PUBLIC
 )

@@ -1,21 +1,9 @@
 package ga.overfullstack.immutables.generics;
 
-import com.google.common.reflect.TypeToken;
-import java.lang.reflect.Type;
 import java.util.List;
 import org.immutables.value.Value;
 
-public abstract class TreeElement<T> extends Super<T> {
-  @Value.Derived
-  public Type getType() {
-    return new TypeToken<T>(getClass()) {}.getType();
-  }
-}
-
-abstract class Super<T> {
-  protected final Type type1 =
-      new TypeToken<T>(getClass()) {}.getType(); // or getRawType() to return Class<? super T>
-}
+public abstract class TreeElement<T> {}
 
 @Value.Immutable
 abstract class Node<T> extends TreeElement<T> {

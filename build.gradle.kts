@@ -21,7 +21,7 @@ koverReport { defaults { html { onCheck = true } } }
 
 val detektReportMerge by
   tasks.registering(ReportMergeTask::class) {
-    output.set(rootProject.buildDir.resolve("reports/detekt/merge.xml"))
+    output.set(rootProject.layout.buildDirectory.file("reports/detekt/merge.xml"))
   }
 
 subprojects {

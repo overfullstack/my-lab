@@ -2,6 +2,7 @@ package ga.overfullstack.immutables;
 
 import ga.overfullstack.immutable.Kick;
 import ga.overfullstack.immutable.StepConfig;
+import java.util.Set;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -46,5 +47,11 @@ class ImmutablesTest {
                     .done())
             .off();
     System.out.println(kick.stepConfig());
+  }
+
+  @Test
+  @DisplayName("Append to Set")
+  void appendToSet() {
+    final var kick = Kick.configure().customAdaptersForResponse(Set.of());
   }
 }

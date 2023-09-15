@@ -16,7 +16,6 @@ dependencies {
 
   implementation(libs.java.vavr)
   implementation(libs.kotlin.vavr)
-  implementation(libs.guava)
   compileOnly(libs.jetbrains.annotations)
 }
 
