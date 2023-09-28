@@ -16,6 +16,10 @@ internal interface KickDef {
 
   @SkipNulls fun stepNameToErrorType(): Map<String, Type>
 
+  @SkipNulls fun hooks(): Set<Set<String>>
+
+  @Value.Derived fun hooksFlattened(): List<String> = hooks().flatten()
+
   @Value.Default fun validationStrategy(): ValidationStrategy = ValidationStrategy.FAIL_FAST
 
   @Value.Default @SkipNulls fun customAdaptersForResponse(): Set<Any> = emptySet()
@@ -24,7 +28,7 @@ internal interface KickDef {
 
   @Value.Default fun insecureHttp(): Boolean = false
 
-  fun stepConfig(): StepConfigDef
+  fun stepConfig(): StepConfigDef?
 }
 
 @StepConfig

@@ -17,6 +17,6 @@ class TreeElementTest {
                     .addElements(ImmutableLeaf.of("D"))
                     .build())
             .build();
-    System.out.println(tree.type1);
+    System.out.println(tree);
   }
 }

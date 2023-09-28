@@ -50,6 +50,13 @@ class ImmutablesTest {
   }
 
   @Test
+  @DisplayName("Derived attributes")
+  void derivedAttributes() {
+    final var kick = Kick.configure().hooks(Set.of(Set.of("a"), Set.of("b"))).off();
+    System.out.println(kick.hooksFlattened());
+  }
+
+  @Test
   @DisplayName("Append to Set")
   void appendToSet() {
     final var kick = Kick.configure().customAdaptersForResponse(Set.of());
