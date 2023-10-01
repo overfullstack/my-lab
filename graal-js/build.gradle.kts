@@ -7,7 +7,7 @@ dependencies {
   implementation(libs.kotlin.vavr)
   implementation("com.fasterxml.jackson.core:jackson-databind:2.15.2")
   implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.15.2")
-  implementation("com.github.javadev:underscore:1.93")
+  implementation("com.github.javadev:underscore:1.94")
   implementation(libs.moshi)
   implementation(libs.apache.commons.lang3)
 }
