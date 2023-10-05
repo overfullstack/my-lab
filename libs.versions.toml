@@ -8,7 +8,7 @@ java-vavr = "0.10.4"
 kotlin-vavr = "0.10.2"
 typeTools = "0.6.3"
 moshi = "1.15.0"
-moshix = "0.24.3"
+moshix = "0.25.0-alpha01"
 http4k = "5.8.3.0"
 arrow = "1.2.1"
 klaxon = "5.6"
@@ -22,6 +22,7 @@ apache-commons-lang3 = "3.13.0"
 apache-commons-collections4 = "4.4"
 vador = "1.1.0"
 graal = "23.1.0"
+graal-js = "23.0.1"
 immutables = "2.9.3"
 mockito = "5.5.0"
 state-machine = "0.2.0"
@@ -77,7 +78,7 @@ http4k-metrics-micrometer = { module = "org.http4k:http4k-metrics-micrometer", v
 moshix-adapters = { module = "dev.zacsweers.moshix:moshi-adapters", version.ref = "moshix" }
 klaxon = { module = "com.beust:klaxon", version.ref = "klaxon" }
 graal-sdk = { module = "org.graalvm.sdk:graal-sdk", version.ref = "graal" }
-graal-js = { module = "org.graalvm.js:js", version.ref = "graal" }
+graal-js = { module = "org.graalvm.js:js", version.ref = "graal-js" }
 immutables-value = { module = "org.immutables:value", version.ref = "immutables" }
 immutables-builder = { module = "org.immutables:builder", version.ref = "immutables" }
 immutables-value-annotations = { module = "org.immutables:value-annotations", version.ref = "immutables" }

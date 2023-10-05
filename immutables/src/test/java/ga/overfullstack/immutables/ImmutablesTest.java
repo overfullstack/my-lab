@@ -57,8 +57,11 @@ class ImmutablesTest {
   }
 
   @Test
-  @DisplayName("Append to Set")
-  void appendToSet() {
-    final var kick = Kick.configure().customAdaptersForResponse(Set.of());
+  @DisplayName("Copy from Config")
+  void copyFromConfig() {
+    final var kick = Kick.configure().hooks(Set.of(Set.of("a"), Set.of("b"))).off();
+    final var kickCopy = kick.withHooks(Set.of("c"));
+    System.out.println(kickCopy);
   }
+  
 }
