@@ -13,6 +13,7 @@ import org.immutables.value.Value.Style.ImplementationVisibility.PUBLIC
   put = "*",
   add = "*",
   depluralize = true,
+  depluralizeDictionary = ["templatePath:templatePathsInOrder"],
   visibility = PUBLIC
 )
 annotation class Config
