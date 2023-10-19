@@ -719,6 +719,11 @@ newman@6.0.0:
     word-wrap "1.2.5"
     xmlbuilder "15.1.1"
 
+node-forge@1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-1.3.1.tgz#be8da2af243b2417d5f646a770663a92b7e9ded3"
+  integrity sha512-dPEtOeMvF9VMcYV/1Wb8CPoVAXtp6MKMlcbAt4ddqmGqUJ6fQZFXkNZNkNlfevtNkGtaSoXf/vNNNSvgrdXwtA==
+
 node-oauth1@1.3.0:
   version "1.3.0"
   resolved "https://registry.npmjs.org/node-oauth1/-/node-oauth1-1.3.0.tgz"
@@ -868,6 +873,31 @@ postman-runtime@7.33.0:
     strip-json-comments "3.1.1"
     uuid "8.3.2"
 
+postman-runtime@7.34.0:
+  version "7.34.0"
+  resolved "https://registry.yarnpkg.com/postman-runtime/-/postman-runtime-7.34.0.tgz#93fd002341409a64d859cd4368950660289d60ce"
+  integrity sha512-hvSAIYL4k5ftkwoQf0l8P8YL0SiI7zYnSonPy6//JOchQtezDrhwyD5bOgrDjX8eHpfHYNE+sfFoGCDwKV3juQ==
+  dependencies:
+    "@postman/tough-cookie" "4.1.3-postman.1"
+    async "3.2.4"
+    aws4 "1.12.0"
+    handlebars "4.7.8"
+    httpntlm "1.8.13"
+    jose "4.14.4"
+    js-sha512 "0.8.0"
+    lodash "4.17.21"
+    mime-types "2.1.35"
+    node-forge "1.3.1"
+    node-oauth1 "1.3.0"
+    performance-now "2.1.0"
+    postman-collection "4.2.1"
+    postman-request "2.88.1-postman.33"
+    postman-sandbox "4.2.8"
+    postman-url-encoder "3.0.5"
+    serialised-error "1.1.3"
+    strip-json-comments "3.1.1"
+    uuid "8.3.2"
+
 postman-sandbox@4.2.7:
   version "4.2.7"
   resolved "https://registry.yarnpkg.com/postman-sandbox/-/postman-sandbox-4.2.7.tgz#427440cb3f9c30cf0022f05ea6f3f88eeb63635b"
@@ -875,6 +905,16 @@ postman-sandbox@4.2.7:
   dependencies:
     lodash "4.17.21"
     postman-collection "4.2.0"
+    teleport-javascript "1.0.0"
+    uvm "2.1.1"
+
+postman-sandbox@4.2.8:
+  version "4.2.8"
+  resolved "https://registry.yarnpkg.com/postman-sandbox/-/postman-sandbox-4.2.8.tgz#22202694a1f5de4e45985803b7b708ed63f272c2"
+  integrity sha512-NDQwZVlfkx7CVEYrMnic3r7II9xm/X2+wOLddWr91WINkzCuvTNp/a741P5lB29pM+A4mBz3n26bcg5oCiR3Kw==
+  dependencies:
+    lodash "4.17.21"
+    postman-collection "4.2.1"
     teleport-javascript "1.0.0"
     uvm "2.1.1"
 
