@@ -80,6 +80,11 @@ async@3.2.4:
   resolved "https://registry.yarnpkg.com/async/-/async-3.2.4.tgz#2d22e00f8cddeb5fde5dd33522b56d1cf569a81c"
   integrity sha512-iAB+JbDEGXhyIUavoDl9WP/Jj106Kz9DEn1DPgYw5ruDn0e3Wgi3sKFm55sASdGBNOQB8F59d9qQ7deqrHA8wQ==
 
+async@3.2.5:
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/async/-/async-3.2.5.tgz#ebd52a8fdaf7a2289a24df399f8d8485c8a46b66"
+  integrity sha512-baNZyqaaLhyLVKm/DlvdW051MSgO6b8eVfIezl9E5PqWxFgzLm/wQntEW4zOytVburDEr0JlALEpdOFwvErLsg==
+
 asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz"
@@ -821,6 +826,23 @@ postman-collection@4.2.1:
     semver "7.5.4"
     uuid "8.3.2"
 
+postman-collection@4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/postman-collection/-/postman-collection-4.3.0.tgz#edbdc9401c113c46a01718c740fc194ed527214d"
+  integrity sha512-QpmNOw1JhAVQTFWRz443/qpKs4/3T1MFrKqDZ84RS1akxOzhXXr15kD8+/+jeA877qyy9rfMsrFgLe2W7aCPjw==
+  dependencies:
+    "@faker-js/faker" "5.5.3"
+    file-type "3.9.0"
+    http-reasons "0.1.0"
+    iconv-lite "0.6.3"
+    liquid-json "0.3.1"
+    lodash "4.17.21"
+    mime-format "2.0.1"
+    mime-types "2.1.35"
+    postman-url-encoder "3.0.5"
+    semver "7.5.4"
+    uuid "8.3.2"
+
 postman-request@2.88.1-postman.33:
   version "2.88.1-postman.33"
   resolved "https://registry.yarnpkg.com/postman-request/-/postman-request-2.88.1-postman.33.tgz#684147d61c9a263a28f148d3207b1593e0f01ec5"
@@ -873,13 +895,13 @@ postman-runtime@7.33.0:
     strip-json-comments "3.1.1"
     uuid "8.3.2"
 
-postman-runtime@7.35.0:
-  version "7.35.0"
-  resolved "https://registry.yarnpkg.com/postman-runtime/-/postman-runtime-7.35.0.tgz#9cd19af632a7bd06fdef7f5eb37c5130fc49ec26"
-  integrity sha512-mh3ixExdiCWLYjLuhg6TlUfoiHYGhbnAxGjiiLOYVJvvXY95S9vMjIFUR+qwBV+h4io9RssA/ELIU344ChpURA==
+postman-runtime@7.36.0:
+  version "7.36.0"
+  resolved "https://registry.yarnpkg.com/postman-runtime/-/postman-runtime-7.36.0.tgz#cc72be949e7df931fdd8dcee787161e9af31d99e"
+  integrity sha512-URWS/3guArK0A12YJ9Iq73V40UiSMtUBigWyaCEf8eAWbdrUtDRcALTE3rpjBael8+6NEGOT8+pRdpvuniDB9Q==
   dependencies:
     "@postman/tough-cookie" "4.1.3-postman.1"
-    async "3.2.4"
+    async "3.2.5"
     aws4 "1.12.0"
     handlebars "4.7.8"
     httpntlm "1.8.13"
@@ -890,9 +912,9 @@ postman-runtime@7.35.0:
     node-forge "1.3.1"
     node-oauth1 "1.3.0"
     performance-now "2.1.0"
-    postman-collection "4.2.1"
+    postman-collection "4.3.0"
     postman-request "2.88.1-postman.33"
-    postman-sandbox "4.3.0"
+    postman-sandbox "4.4.0"
     postman-url-encoder "3.0.5"
     serialised-error "1.1.3"
     strip-json-comments "3.1.1"
@@ -908,13 +930,13 @@ postman-sandbox@4.2.7:
     teleport-javascript "1.0.0"
     uvm "2.1.1"
 
-postman-sandbox@4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/postman-sandbox/-/postman-sandbox-4.3.0.tgz#df28661a2a0e74edd7324f3386962f342633d2b6"
-  integrity sha512-CRfY4WbRjxWc6xKWJWMYgLHzvKudB4yz/n5Q/CyFYHIIqZ2boM3+/HoSW0uuw8r5i814lftc690doZ5vfvCnqQ==
+postman-sandbox@4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/postman-sandbox/-/postman-sandbox-4.4.0.tgz#939c58a42e9e2f15f2b9db146adc09b53e94623f"
+  integrity sha512-NvNodj44vqtZrgLvnqoqFxvqRL1Pw0MSLXGlzSu252iurmHCz59wUykNUQ8mQh0AXNM00gbN/lS1nrGfS1zqwA==
   dependencies:
     lodash "4.17.21"
-    postman-collection "4.2.1"
+    postman-collection "4.3.0"
     teleport-javascript "1.0.0"
     uvm "2.1.1"
 
