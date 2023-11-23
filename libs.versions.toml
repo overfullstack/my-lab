@@ -1,5 +1,5 @@
 [versions]
-kotlin = "1.9.20"
+kotlin = "1.9.21"
 ksp = "1.9.20-1.0.14"
 kotlinx-coroutines-core = "1.7.3"
 hamcrest-core = "2.2"
@@ -26,9 +26,9 @@ graal-js = "23.0.2"
 immutables = "2.10.0"
 mockito = "5.7.0"
 state-machine = "0.2.0"
-spring = "6.1.0"
+spring = "6.1.1"
 spring-dependency-management = "1.1.4"
-spring-boot = "3.1.5"
+spring-boot = "3.2.0"
 rabbitmq-client = "5.20.0"
 kotlin-logging = "5.1.0"
 
