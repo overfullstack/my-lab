@@ -6,7 +6,7 @@ dependencies {
   implementation(libs.jackson.databind)
   implementation(libs.apache.commons.collections4)
   implementation(libs.guava)
-  implementation(libs.vador)
+  implementation(libs.bundles.vador)
   implementation(libs.spring.beans)
 
   testImplementation(libs.assertj.vavr)

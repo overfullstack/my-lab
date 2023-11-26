@@ -60,10 +60,9 @@ class ImmutablesTest {
   @DisplayName("Copy from Config")
   void copyFromConfig() {
     final var kick =
-        Kick.configure().templatePathsInOrder("path").hooks(Set.of(Set.of("a"), Set.of("b"))).off();
+        Kick.configure().templatePathsInOdr("path").hooks(Set.of(Set.of("a"), Set.of("b"))).off();
     final var kickCopy = // Replace attributes
-        kick.withTemplatePathsInOrder("pathCopy")
-            .withHooks(Set.of("c"));
+        kick.withTemplatePathsInOrder("pathCopy").withHooks(Set.of("c"));
     System.out.println(kickCopy);
   }
 }

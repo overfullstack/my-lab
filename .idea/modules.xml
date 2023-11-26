@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/apt/ga.overfullstack.my-lab.apt.main.iml" filepath="$PROJECT_DIR$/.idea/modules/apt/ga.overfullstack.my-lab.apt.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/apt/ga.overfullstack.my-lab.apt.test.iml" filepath="$PROJECT_DIR$/.idea/modules/apt/ga.overfullstack.my-lab.apt.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/vador-lab/ga.overfullstack.my-lab.vador-lab.main.iml" filepath="$PROJECT_DIR$/.idea/modules/vador-lab/ga.overfullstack.my-lab.vador-lab.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/vador-lab/ga.overfullstack.my-lab.vador-lab.test.iml" filepath="$PROJECT_DIR$/.idea/modules/vador-lab/ga.overfullstack.my-lab.vador-lab.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/apt/my-lab.apt.main.iml" filepath="$PROJECT_DIR$/.idea/modules/apt/my-lab.apt.main.iml" />

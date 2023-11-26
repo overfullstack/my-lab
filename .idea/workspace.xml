@@ -5,8 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="k2 compiler&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/apt/ga.overfullstack.my-lab.apt.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/apt/ga.overfullstack.my-lab.apt.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.kt-conventions.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.kt-conventions.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.sub-conventions.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.sub-conventions.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/common/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/immutables/src/main/kotlin/ga/overfullstack/immutable/KickDef.kt" beforeDir="false" afterPath="$PROJECT_DIR$/immutables/src/main/kotlin/ga/overfullstack/immutable/KickDef.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/immutables/src/main/kotlin/ga/overfullstack/immutable/style/Config.kt" beforeDir="false" afterPath="$PROJECT_DIR$/immutables/src/main/kotlin/ga/overfullstack/immutable/style/Config.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/immutables/src/test/java/ga/overfullstack/immutables/ImmutablesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/immutables/src/test/java/ga/overfullstack/immutables/ImmutablesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-lab/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/libs.versions.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,7 +300,6 @@
       <command value="gradle clean" />
       <command value="gradle common:build" />
       <command value="gradle common:clean common:build" />
-      <command value="gradle clean build -x test" />
       <command value="gradle build" />
       <command value="gradle test --test ga.overfullstack.interop.InteropTest" />
       <command value="gradle test --tests ga.overfullstack.interop.InteropTest" />
@@ -299,8 +311,10 @@
       <command value="gradle clean build --no-build-cache" />
       <command value="gradle clean build" />
       <command value="gradle clean build --no-build-cache --no-configuration-cache" />
-      <command value="gradle spotlessApply" />
       <command value="gradle clean build --no-build-cache --no-configuration-cache -x test" />
+      <command value="gradle clean build -x test" />
+      <command value="gradle spotlessApply" />
+      <command value="gradle clean build -x test --no-configuration-cache" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -310,7 +324,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ImmutablesTest.copyFromConfig">
+  <component name="RunManager" selected="Gradle.my-lab [clean build]">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -423,11 +437,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ImmutablesTest.copyFromConfig" />
-        <item itemvalue="Gradle.my-lab [spotlessApply]" />
-        <item itemvalue="Gradle.my-lab [clean build]" />
         <item itemvalue="Kotlin.TxDurationKt" />
         <item itemvalue="Kotlin.MicroMetricsKt" />
+        <item itemvalue="Gradle.my-lab [spotlessApply]" />
+        <item itemvalue="Gradle.my-lab [clean build]" />
+        <item itemvalue="Gradle.ImmutablesTest.copyFromConfig" />
       </list>
     </recent_temporary>
   </component>
@@ -896,7 +910,16 @@
       <workItem from="1696486720362" duration="3186000" />
       <workItem from="1696493052772" duration="363000" />
       <workItem from="1696494689198" duration="807000" />
-      <workItem from="1696566213406" duration="301000" />
+      <workItem from="1696566213406" duration="491000" />
+      <workItem from="1696594306774" duration="123000" />
+      <workItem from="1696682786757" duration="1685000" />
+      <workItem from="1697162342568" duration="827000" />
+      <workItem from="1697163649236" duration="720000" />
+      <workItem from="1697424735408" duration="1426000" />
+      <workItem from="1700156911562" duration="571000" />
+      <workItem from="1700200450616" duration="3200000" />
+      <workItem from="1700370667931" duration="465000" />
+      <workItem from="1700996946404" duration="3000" />
     </task>
     <task id="LOCAL-00009" summary="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
       <created>1627583016664</created>
@@ -1241,7 +1264,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684333262543</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1339,7 +1362,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Optimize imports" />
     <MESSAGE value="Groot V1 with ContextMapping Generator working" />
     <MESSAGE value="Coroutine lab" />
     <MESSAGE value="Commit" />
@@ -1364,8 +1386,17 @@
     <MESSAGE value="Commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="k2 compiler&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="Fix moshi, polyglot broken&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix moshi, polyglot broken&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <MESSAGE value="Immutables depluralizeDictionary not working&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Immutables depluralizeDictionary not working&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
   </component>
+  <component name="WfRunsListSearchHistory"><![CDATA[{
+  "history": [
+    {
+    }
+  ],
+  "lastFilter": {
+  }
+}]]></component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
