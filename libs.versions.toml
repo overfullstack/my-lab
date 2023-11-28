@@ -1,6 +1,6 @@
 [versions]
 kotlin = "2.0.0-Beta1"
-ksp = "2.0.0-Beta1-1.0.14"
+ksp = "2.0.0-Beta1-1.0.15"
 kotlinx-coroutines-core = "1.7.3"
 hamcrest-core = "2.2"
 hamcrest-date = "2.0.8"
