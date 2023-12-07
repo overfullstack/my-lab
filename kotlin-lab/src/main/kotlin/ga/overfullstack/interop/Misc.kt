@@ -9,7 +9,6 @@ fun nameLen(bean: Bean, fn: Bean.() -> Int) = fn(bean)
 data class Env(val data: String = "data")
 
 context(Env)
-
 fun contextFun(someStr: String) {
   println(data)
 }
