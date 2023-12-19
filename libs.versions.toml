@@ -30,7 +30,7 @@ spring = "6.1.2"
 spring-dependency-management = "1.1.4"
 spring-boot = "3.2.0"
 rabbitmq-client = "5.20.0"
-kotlin-logging = "6.0.0"
+kotlin-logging = "6.0.1"
 
 # Common dependencies
 junit = "5.10.1"
