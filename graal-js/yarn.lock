@@ -895,10 +895,10 @@ postman-runtime@7.33.0:
     strip-json-comments "3.1.1"
     uuid "8.3.2"
 
-postman-runtime@7.36.0:
-  version "7.36.0"
-  resolved "https://registry.yarnpkg.com/postman-runtime/-/postman-runtime-7.36.0.tgz#cc72be949e7df931fdd8dcee787161e9af31d99e"
-  integrity sha512-URWS/3guArK0A12YJ9Iq73V40UiSMtUBigWyaCEf8eAWbdrUtDRcALTE3rpjBael8+6NEGOT8+pRdpvuniDB9Q==
+postman-runtime@7.36.1:
+  version "7.36.1"
+  resolved "https://registry.yarnpkg.com/postman-runtime/-/postman-runtime-7.36.1.tgz#10f77338cb6ac6754d80f6757012d6ecff0b1c28"
+  integrity sha512-SarhTewd+rp2cAdC6WFDdT4No0BR3e+tzBcQWZm/o+BDBeOf0W8MQsMKs3BozLMKoKOb/ImqW0jTsa0Rewo0cg==
   dependencies:
     "@postman/tough-cookie" "4.1.3-postman.1"
     async "3.2.5"
