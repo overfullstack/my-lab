@@ -5,7 +5,7 @@
     "crypto-js": "4.2.0",
     "events": "3.3.0",
     "lodash": "4.17.21",
-    "moment": "2.29.4",
+    "moment": "2.30.0",
     "newman": "6.0.0",
     "path-browserify": "1.0.1",
     "postman-collection": "4.3.0",
