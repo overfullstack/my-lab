@@ -7,14 +7,14 @@ import com.squareup.moshi.JsonWriter
 import com.squareup.moshi.Moshi
 import dev.zacsweers.moshix.adapters.AdaptedBy
 import dev.zacsweers.moshix.adapters.JsonString
-import ga.overfullstack.utils.readFileFromTestResource
+import ga.overfullstack.utils.readFileInResourcesToString
 import okio.BufferedSource
 import org.junit.jupiter.api.Test
 
 class JsonString {
   @Test
   fun jsonString() {
-    val collectionJsonStr = readFileFromTestResource("collection-in-obj.json")
+    val collectionJsonStr = readFileInResourcesToString("collection-in-obj.json")
     val collectionAdapter =
       Moshi.Builder()
         .add(JsonString.Factory())

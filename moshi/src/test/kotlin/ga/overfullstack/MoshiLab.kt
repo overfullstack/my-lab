@@ -11,7 +11,7 @@ import ga.overfullstack.pojo.NestedBean
 import ga.overfullstack.pojo.NestedBean1
 import ga.overfullstack.pojo.NestedMessages
 import ga.overfullstack.pojo.Obj
-import ga.overfullstack.utils.readFileFromTestResource
+import ga.overfullstack.utils.readFileInResourcesToString
 import io.kotest.matchers.equals.shouldBeEqual
 import io.kotest.matchers.maps.shouldContainExactly
 import io.kotest.matchers.shouldNotBe
@@ -22,7 +22,7 @@ internal class MoshiLab {
   @OptIn(ExperimentalStdlibApi::class)
   @Test
   fun readNestedJsonToNestedPojo() {
-    val nestedBeanStr = readFileFromTestResource("nested-bean.json")
+    val nestedBeanStr = readFileInResourcesToString("nested-bean.json")
     val mapAdapter = Moshi.Builder().build().adapter<NestedBean>()
     val nestedBean = mapAdapter.fromJson(nestedBeanStr)!!
     nestedBean.bean shouldNotBe null
@@ -31,7 +31,7 @@ internal class MoshiLab {
   @OptIn(ExperimentalStdlibApi::class)
   @Test
   fun readJsonToMap() {
-    val mapStr = readFileFromTestResource("obj.json")
+    val mapStr = readFileInResourcesToString("obj.json")
     val mapAdapter = Moshi.Builder().build().adapter<Map<String, String>>()
     val map = mapAdapter.fromJson(mapStr)
     println(map)
@@ -40,7 +40,7 @@ internal class MoshiLab {
   @OptIn(ExperimentalStdlibApi::class)
   @Test
   fun `read collection to list map`() {
-    val collectionStr = readFileFromTestResource("collection.json")
+    val collectionStr = readFileInResourcesToString("collection.json")
     val mapAdapter = Moshi.Builder().build().adapter<Any?>()
     val collection = mapAdapter.fromJson(collectionStr)
     println(collection)
@@ -49,7 +49,7 @@ internal class MoshiLab {
   @OptIn(ExperimentalStdlibApi::class)
   @Test
   fun `read Json into Map with star projection`() {
-    val nestedBeanStr = readFileFromTestResource("nested-bean.json")
+    val nestedBeanStr = readFileInResourcesToString("nested-bean.json")
     val mapAdapter = Moshi.Builder().build().adapter<Map<String, *>>()
     val any = mapAdapter.fromJson(nestedBeanStr)!!
     (any["bean"] as Map<String, *>) shouldContainExactly
@@ -59,7 +59,7 @@ internal class MoshiLab {
   @OptIn(ExperimentalStdlibApi::class)
   @Test
   fun `read json to pojo`() {
-    val objStr = readFileFromTestResource("obj.json")
+    val objStr = readFileInResourcesToString("obj.json")
     val mapAdapter = Moshi.Builder().build().adapter<Obj>()
     val obj = mapAdapter.fromJson(objStr)!!
     obj.a shouldBeEqual "1"
@@ -68,7 +68,7 @@ internal class MoshiLab {
   @OptIn(ExperimentalStdlibApi::class)
   @Test
   fun readJsonToAny() {
-    val nestedBeanStr = readFileFromTestResource("nested-bean.json")
+    val nestedBeanStr = readFileInResourcesToString("nested-bean.json")
     val anyAdapter = Moshi.Builder().build().adapter<Any>()
     val any =
       anyAdapter.fromJson(nestedBeanStr)!! // It reads to LinkedHashTreeMap like javascript JSON
@@ -85,14 +85,14 @@ internal class MoshiLab {
   @Test
   fun `read json to pojo without Annotations`() {
     val mapAdapter = Moshi.Builder().addLast(KotlinJsonAdapterFactory()).build().adapter<Bean1>()
-    val bean = mapAdapter.fromJson(readFileFromTestResource("bean.json"))!!
+    val bean = mapAdapter.fromJson(readFileInResourcesToString("bean.json"))!!
     println(bean)
   }
 
   @OptIn(ExperimentalStdlibApi::class)
   @Test
   fun `read Json To nested Pojo`() {
-    val nestedBeanStr = readFileFromTestResource("nested-bean.json")
+    val nestedBeanStr = readFileInResourcesToString("nested-bean.json")
     val mapAdapter =
       Moshi.Builder().addLast(KotlinJsonAdapterFactory()).build().adapter<NestedBean1>()
     val nestedBean = mapAdapter.fromJson(nestedBeanStr)!!
@@ -108,7 +108,7 @@ internal class MoshiLab {
         .addLast(KotlinJsonAdapterFactory())
         .build()
         .adapter<NestedMessages>()
-        .fromJson(readFileFromTestResource("msg.json"))!!
+        .fromJson(readFileInResourcesToString("msg.json"))!!
     println(nestedMessages)
   }
 

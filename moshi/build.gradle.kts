@@ -9,6 +9,7 @@ dependencies {
   ksp(libs.arrow.optics.ksp.plugin)
   implementation(project(":common"))
   implementation(libs.http4k.format.moshi)
+  implementation(libs.revoman)
   implementation(libs.bundles.arrow)
   implementation(libs.moshix.adapters)
   testImplementation(libs.bundles.kotest)

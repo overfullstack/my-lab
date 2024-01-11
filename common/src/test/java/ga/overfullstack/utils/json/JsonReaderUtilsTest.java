@@ -1,4 +1,4 @@
-package ga.overfullstack.utils.json;
+package com.salesforce.revoman.input.json;
 
 import static ga.overfullstack.utils.json.JsonReaderUtilsKt.anyMap;
 import static ga.overfullstack.utils.json.JsonReaderUtilsKt.list;
@@ -7,7 +7,6 @@ import static ga.overfullstack.utils.json.JsonReaderUtilsKt.nextString;
 import static ga.overfullstack.utils.json.JsonReaderUtilsKt.obj;
 import static ga.overfullstack.utils.json.JsonReaderUtilsKt.skipValue;
 import static ga.overfullstack.utils.json.JsonReaderUtilsTest.ConnectInputRepWithGraphUnMarshaller.of;
-import static org.assertj.core.api.Assertions.assertThat;
 
 import com.squareup.moshi.JsonAdapter;
 import com.squareup.moshi.JsonReader;

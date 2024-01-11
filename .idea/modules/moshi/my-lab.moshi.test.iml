@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4">
+  <component name="AdditionalModuleElements">
+    <content url="file://$MODULE_DIR$/../../../moshi/src/test" dumb="true">
+      <sourceFolder url="file://$MODULE_DIR$/../../../moshi/src/test/java" isTestSource="true" />
+    </content>
+  </component>
   <component name="SonarLintModuleSettings">
     <option name="uniqueId" value="116160ad-7fb9-4b36-9fb5-6844fc47f148" />
   </component>

@@ -2,7 +2,7 @@ package ga.overfullstack
 
 import com.beust.klaxon.Klaxon
 import com.beust.klaxon.PathMatcher
-import ga.overfullstack.utils.readFileFromTestResource
+import ga.overfullstack.utils.readFileInResourcesToString
 import java.io.StringReader
 import java.util.regex.Pattern
 import org.junit.jupiter.api.Test
@@ -21,7 +21,7 @@ class KlaxonLab {
 
     Klaxon()
       .pathMatcher(pathMatcher)
-      .parseJsonObject(StringReader(readFileFromTestResource("json/library.json")))
+      .parseJsonObject(StringReader(readFileInResourcesToString("json/library.json")))
   }
 
   @Test
@@ -38,7 +38,7 @@ class KlaxonLab {
     Klaxon()
       .pathMatcher(pathMatcher)
       .parseJsonObject(
-        StringReader(readFileFromTestResource("json/pokemon.postman_collection.json"))
+        StringReader(readFileInResourcesToString("json/pokemon.postman_collection.json"))
       )
   }
 }

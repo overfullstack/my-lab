@@ -8,6 +8,7 @@ dependencies {
   implementation(libs.moshi.kotlin)
   implementation(libs.moshix.adapters)
   testImplementation(libs.assertj.core)
+  implementation(libs.okio.jvm)
 }
 
 moshi { enableSealed = true }

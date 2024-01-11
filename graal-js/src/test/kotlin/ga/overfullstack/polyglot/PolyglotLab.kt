@@ -2,7 +2,7 @@ package ga.overfullstack.polyglot
 
 import context.buildJSContext
 import ga.overfullstack.polyglot.PolyglotLab.UpperCase
-import ga.overfullstack.utils.readFileFromTestResource
+import ga.overfullstack.utils.readFileInResourcesToString
 import java.util.Locale
 import org.graalvm.polyglot.Source
 import org.junit.jupiter.api.Test
@@ -12,7 +12,7 @@ class PolyglotLab {
 
   @Test
   fun jsonParseWithJs() {
-    val responseBody = readFileFromTestResource("core-user-creation-response.json")
+    val responseBody = readFileInResourcesToString("core-user-creation-response.json")
     val context = buildJSContext(useCommonjsRequire = false)
     val callingScript =
       """

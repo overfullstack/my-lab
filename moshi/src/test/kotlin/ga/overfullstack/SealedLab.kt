@@ -5,7 +5,7 @@ import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
 import dev.zacsweers.moshix.sealed.annotations.DefaultObject
 import dev.zacsweers.moshix.sealed.annotations.TypeLabel
-import ga.overfullstack.utils.readFileFromTestResource
+import ga.overfullstack.utils.readFileInResourcesToString
 import org.junit.jupiter.api.Test
 
 class SealedLab {
@@ -13,8 +13,8 @@ class SealedLab {
   @OptIn(ExperimentalStdlibApi::class)
   @Test
   fun sealed() {
-    val successStr = readFileFromTestResource("sealed/success.json")
-    // val errorStr = readFileFromTestResource("sealed/error.json")
+    val successStr = readFileInResourcesToString("sealed/success.json")
+    // val errorStr = readFileInResourcesToString("sealed/error.json")
     val sObject = Moshi.Builder().build().adapter<SObject>().fromJson(successStr)
     println(sObject)
   }

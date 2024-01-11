@@ -4,7 +4,7 @@ import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.JsonClass
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
-import ga.overfullstack.utils.readFileFromTestResource
+import ga.overfullstack.utils.readFileInResourcesToString
 import java.lang.reflect.Type
 import org.junit.jupiter.api.Test
 
@@ -31,7 +31,7 @@ class JSONInheritance {
   @OptIn(ExperimentalStdlibApi::class)
   @Test
   fun inheritance() {
-    val json = readFileFromTestResource("inheritance.json")
+    val json = readFileInResourcesToString("inheritance.json")
     val child = Moshi.Builder().build().adapter<Child>().fromJson(json)
     println(child?.pField1)
   }

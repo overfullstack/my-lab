@@ -3,10 +3,18 @@
 package ga.overfullstack.utils
 
 import java.io.File
+import okio.BufferedSource
+import okio.FileSystem
+import okio.Path.Companion.toPath
+import okio.buffer
+import okio.source
 
-fun readFileToString(fileRelativePath: String): String {
-  return File(fileRelativePath).readText(Charsets.UTF_8)
-}
+fun bufferFileInResources(fileRelativePath: String): BufferedSource =
+  FileSystem.RESOURCES.source(fileRelativePath.toPath()).buffer()
 
-fun readFileFromTestResource(fileRelativePath: String): String =
-  File("src/test/resources/$fileRelativePath").readText()
+fun readFileInResourcesToString(fileRelativePath: String): String =
+  bufferFileInResources(fileRelativePath).readUtf8()
+
+fun bufferFile(file: File): BufferedSource = file.source().buffer()
+
+fun readFileToString(file: File): String = bufferFile(file).readUtf8()

@@ -3,7 +3,7 @@ package ga.overfullstack.adapter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
 import ga.overfullstack.pojo.NestedBean
-import ga.overfullstack.utils.readFileFromTestResource
+import ga.overfullstack.utils.readFileInResourcesToString
 import io.kotest.matchers.shouldBe
 import java.io.IOException
 import org.junit.jupiter.api.Assertions
@@ -22,7 +22,7 @@ class RegexAdapterTest {
   @Test
   @Throws(IOException::class)
   fun `regex Factory`() {
-    val beanStr = readFileFromTestResource("factory/bean-with-regex.json")
+    val beanStr = readFileInResourcesToString("factory/bean-with-regex.json")
     val nestedBean =
       Moshi.Builder().add(RegexAdapter).build().adapter<NestedBean>().fromJson(beanStr)
     Assertions.assertNotNull(nestedBean)

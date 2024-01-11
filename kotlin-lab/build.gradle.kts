@@ -11,5 +11,6 @@ dependencies {
   implementation(libs.bundles.apache.log4j)
   implementation(libs.bundles.kotlin.logging)
   implementation(libs.spring.beans)
+  implementation(libs.pprint)
   testImplementation(libs.assertj.core)
 }

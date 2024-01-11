@@ -37,6 +37,7 @@ data class PQPayload(val graph: Graph, val pricingPref: String) {
       var attributes: Attributes? = null
       val recordBody = mutableMapOf<String, String>()
       while (reader.hasNext()) {
+        // `selectName` returns the index of match in the options
         when (reader.selectName(options)) {
           0 -> {
             if (attributes != null) {

@@ -1,20 +1,16 @@
-package ga.overfullstack.utils.json;
-
-import static org.assertj.core.api.Assertions.assertThat;
+package com.salesforce.revoman.input.json;
 
 import java.util.List;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 class JsonPojoUtilsTest {
-  private static final String TEST_RESOURCES_PATH = "src/test/resources/";
 
   @Test
   @DisplayName("json file To Pojo")
   void jsonFileToPojo() {
     final var nestedBeanFromJson =
-        JsonPojoUtils.<NestedBean>jsonFileToPojo(
-            NestedBean.class, TEST_RESOURCES_PATH + "nested-bean.json");
+        JsonPojoUtils.<NestedBean>jsonFileToPojo(NestedBean.class, "nested-bean.json");
     assertThat(nestedBeanFromJson).isNotNull();
     assertThat(nestedBeanFromJson.getName()).isEqualTo("container");
     assertThat(nestedBeanFromJson.getBean().getItems()).hasSize(2);
