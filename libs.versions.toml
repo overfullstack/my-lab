@@ -33,7 +33,7 @@ spring-boot = "3.2.2"
 okio = "3.7.0"
 rabbitmq-client = "5.20.0"
 kotlin-logging = "6.0.3"
-pprint = "1.0.0"
+pprint = "1.1.0"
 
 # Common dependencies
 junit = "5.10.1"
