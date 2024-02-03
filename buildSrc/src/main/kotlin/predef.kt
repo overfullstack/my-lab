@@ -2,10 +2,6 @@ import org.gradle.api.artifacts.ExternalModuleDependencyBundle
 import org.gradle.api.artifacts.VersionCatalog
 import org.gradle.api.provider.Property
 import org.gradle.api.provider.Provider
-import org.gradle.plugin.use.PluginDependency
-
-val Provider<PluginDependency>.pluginId: String
-  get() = get().pluginId
 
 infix fun <T> Property<T>.by(value: T) {
   set(value)
@@ -25,6 +21,9 @@ internal val VersionCatalog.junitBom
 
 internal val VersionCatalog.junitBundle
   get() = getBundle("junit")
+
+internal val VersionCatalog.jdk
+  get() = getVersion("jdk")
 
 internal val VersionCatalog.junitVersion
   get() = getVersion("junit")

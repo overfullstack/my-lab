@@ -1,8 +1,9 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
+  id("mylab.sub-conventions")
   id("mylab.kt-conventions")
-  id(libs.plugins.kotlin.kapt.pluginId)
+  id(libs.plugins.kotlin.kapt.get().pluginId)
 }
 
 dependencies {

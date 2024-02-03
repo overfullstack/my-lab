@@ -3,9 +3,8 @@ dependencyResolutionManagement {
   versionCatalogs { create("libs") { from(files("../libs.versions.toml")) } }
   repositories {
     mavenCentral()
-    maven("https://repo.spring.io/milestone")
     gradlePluginPortal()
     maven("https://oss.sonatype.org/content/repositories/snapshots")
-    google()
+    maven("https://repo.spring.io/milestone")
   }
 }

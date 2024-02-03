@@ -3,12 +3,12 @@ import io.gitlab.arturbosch.detekt.DetektPlugin
 import io.gitlab.arturbosch.detekt.report.ReportMergeTask
 
 plugins {
-  id(libs.plugins.kover.pluginId)
-  id(libs.plugins.gradle.doctor.pluginId)
-  id(libs.plugins.detekt.pluginId) apply false
+  id("mylab.root-conventions")
+  id(libs.plugins.kover.get().pluginId)
+  id(libs.plugins.gradle.doctor.get().pluginId)
+  id(libs.plugins.dependency.analysis.get().pluginId)
+  id(libs.plugins.detekt.get().pluginId) apply false
 }
-
-allprojects { apply(plugin = "mylab.root-conventions") }
 
 dependencies {
   val subProjectsForKover = setOf("immutables")
@@ -24,8 +24,15 @@ val detektReportMerge by
     output.set(rootProject.layout.buildDirectory.file("reports/detekt/merge.xml"))
   }
 
+allprojects {
+  repositories {
+    mavenCentral()
+    maven("https://oss.sonatype.org/content/repositories/snapshots")
+    maven("https://repo.spring.io/milestone")
+  }
+}
+
 subprojects {
-  apply(plugin = "mylab.sub-conventions")
   tasks.withType<Detekt>().configureEach { reports { html.required = true } }
   plugins.withType<DetektPlugin> {
     tasks.withType<Detekt> detekt@{

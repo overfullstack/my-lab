@@ -18,11 +18,12 @@ class ReflectionLab {
           final var propType = BeanUtils.findPropertyType(fieldName, Bean.class);
           if (propType.isPrimitive()) {
             switch (propType.getName()) {
-              case "int", "boolean" -> Try.run(
-                  () ->
-                      BeanUtils.getPropertyDescriptor(Bean.class, fieldName)
-                          .getWriteMethod()
-                          .invoke(bean, value));
+              case "int", "boolean" ->
+                  Try.run(
+                      () ->
+                          BeanUtils.getPropertyDescriptor(Bean.class, fieldName)
+                              .getWriteMethod()
+                              .invoke(bean, value));
             }
           } else if (propType.isEnum()) {
             for (Object enumConstant : propType.getEnumConstants()) {

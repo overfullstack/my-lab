@@ -8,4 +8,4 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true) data class Obj(val a: String, val b: String, val c: String)
 
-@JsonClass(generateAdapter = true) data class Message(val message: String)
+@JsonClass(generateAdapter = true) data class Message2(val message: String)

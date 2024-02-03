@@ -15,12 +15,6 @@ version = "1.0.0"
 group = "ga.overfullstack"
 
 description = "My Lab"
-// This is needed to declare repositories on each module
-repositories {
-  mavenCentral()
-  maven("https://oss.sonatype.org/content/repositories/snapshots")
-  maven("https://repo.spring.io/milestone")
-}
 
 spotless {
   lineEndings = PLATFORM_NATIVE

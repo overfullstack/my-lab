@@ -4,54 +4,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
-      <change afterPath="$PROJECT_DIR$/immutables/src/main/kotlin/ga/overfullstack/immutable/PQPayloadDef.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/immutables/src/main/kotlin/ga/overfullstack/immutable/StepConfigDef.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/RevomanLab.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/RegexLab.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moshi/src/test/java/ga/overfullstack/MoshiJLab.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moshi/src/test/java/ga/overfullstack/models/BlackjackHand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moshi/src/test/java/ga/overfullstack/models/Card.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moshi/src/test/java/ga/overfullstack/models/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moshi/src/test/java/ga/overfullstack/models/Suit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moshi/src/test/java/ga/overfullstack/models/Tournament.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/apt/ga.overfullstack.my-lab.apt.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/apt/ga.overfullstack.my-lab.apt.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/apt/ga.overfullstack.my-lab.apt.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/apt/ga.overfullstack.my-lab.apt.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/moshi/my-lab.moshi.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/moshi/my-lab.moshi.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/common/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/utils/Utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/utils/Utils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/utils/json/JsonPojoUtils.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/utils/json/JsonReaderUtils.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/utils/json/JsonWriterUtils.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/utils/json/adapters/EpochAdapter.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/utils/json/factory/IgnoreUnknownFactory.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/test/java/ga/overfullstack/utils/json/JsonPojoUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/test/java/ga/overfullstack/utils/json/JsonPojoUtilsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/test/java/ga/overfullstack/utils/json/JsonReaderUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/test/java/ga/overfullstack/utils/json/JsonReaderUtilsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graal-js/src/test/kotlin/ga/overfullstack/polyglot/PolyglotLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graal-js/src/test/kotlin/ga/overfullstack/polyglot/PolyglotLab.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/immutables/src/main/kotlin/ga/overfullstack/immutable/KickDef.kt" beforeDir="false" afterPath="$PROJECT_DIR$/immutables/src/main/kotlin/ga/overfullstack/immutable/KickDef.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-lab/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-lab/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/KlaxonLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/KlaxonLab.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/Misc.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/Misc.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/libs.versions.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/adapter/RegexAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/adapter/RegexAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/pojo/composite/PQPayload.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/pojo/composite/PQPayload.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/JSONInheritance.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/JSONInheritance.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/JsonString.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/JsonString.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/MoshiLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/MoshiLab.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/PostmanLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/PostmanLab.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/SealedLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/SealedLab.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/adapter/RegexAdapterTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/adapter/RegexAdapterTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/contextdef/ContextMappingGeneratorTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/contextdef/ContextMappingGeneratorTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/factory/SingleOrListAdapterTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/factory/SingleOrListAdapterTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/factory/UpperCaseAdapterFactoryTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/factory/UpperCaseAdapterFactoryTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/pojo/composite/CompositeLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/pojo/composite/CompositeLab.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/pojo/composite/TreeParserTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/pojo/composite/TreeParserTest.kt" afterDir="false" />
+    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="Remove apply subprojects convention from subprojects block&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
+      <change beforePath="$PROJECT_DIR$/buildSrc/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,9 +68,9 @@
         <option value="Kotlin Object" />
         <option value="Kotlin Enum" />
         <option value="package.json" />
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
         <option value="Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -146,7 +100,6 @@
     <option name="projectConfigVersion" value="5" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.salesforce.revoman/revoman/0.24.2/dcdfc32965f893bb2d216df9fd34a84547639632/revoman-0.24.2.jar!/com/salesforce/revoman/input/json/JsonPojoUtils.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.salesforce.revoman/revoman/0.24.3/4689e76580f321901e34e011cb02a164d2dc011c/revoman-0.24.3.jar!/com/salesforce/revoman/input/json/JsonPojoUtils.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi/1.15.0/a21adfe8e16fa82e4f6dbb313536a915ff6e06f7/moshi-1.15.0-sources.jar!/main/com/squareup/moshi/-MoshiKotlinExtensions.kt" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi/1.15.0/bfefc77019c04fb3e1ad94abb0a2c141a78bbbd8/moshi-1.15.0.jar!/com/squareup/moshi/JsonReader.class" root0="SKIP_INSPECTION" />
@@ -186,6 +139,9 @@
   <component name="KotlinScriptingSettings">
     <option name="suppressDefinitionsCheck" value="true" />
   </component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -213,75 +169,81 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "FindInProjectState.directoryName": "/Users/gopala.akshintala/code-clones/my-github/my-lab/moshi/src/test",
-    "FindInProjectState.isProjectScope": "false",
-    "Gradle.Build my-lab.executor": "Run",
-    "Gradle.ImmutablesTest.copyFromConfig.executor": "Run",
-    "Gradle.JsonPojoUtilsTest.jsonFileStreamToPojo.executor": "Run",
-    "Gradle.JsonPojoUtilsTest.jsonFileToPojo.executor": "Run",
-    "Gradle.Misc.print data class.executor": "Run",
-    "Gradle.MoshiJLab.cardAdapter.executor": "Run",
-    "Gradle.RegexAdapterTest.regex Factory.executor": "Debug",
-    "Gradle.RegexLab.Only digits.executor": "Run",
-    "Gradle.RegexLab.regex lab.executor": "Run",
-    "Gradle.RevomanLab.jsonWithEpochDateToPojo.executor": "Debug",
-    "Gradle.my-lab [clean build].executor": "Run",
-    "Gradle.my-lab [spotlessApply].executor": "Run",
-    "Kotest.Misc: joinToString.executor": "Run",
-    "Kotest.Misc: path matches (1).executor": "Run",
-    "Kotest.Misc: path matches (2).executor": "Debug",
-    "Kotest.Misc: path matches.executor": "Run",
-    "Kotest.Misc: print data class (1).executor": "Run",
-    "Kotest.Misc: print data class.executor": "Run",
-    "Kotest.Misc: split.executor": "Run",
-    "Notification.DisplayName-DoNotAsk-Dependencies from package.json": "Dependencies from package.json available",
-    "Notification.DoNotAsk-Dependencies from package.json": "true",
-    "RunOnceActivity.CodyProjectSettingsMigration": "true",
-    "RunOnceActivity.Enable generate summary features in internal mode": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.com.sfdc.cdb.use_credential_helper": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "false",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable": "ALL",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
-    "ignore.preview.features.used": "true",
-    "javascript.nodejs.core.library.configured.version": "20.10.0",
-    "javascript.nodejs.core.library.typings.version": "20.10.3",
-    "jdk.selected.JAVA_MODULE": "17",
-    "kotlin-language-version-configured": "true",
-    "ktor.last.update.timestamp": "1684333206939",
-    "last_directory_selection": "/Users/gopala.akshintala/code-clones/my-github/my-lab/kotlin-lab/src/test/java",
-    "last_opened_file_path": "/Users/gopala.akshintala/code-clones/my-github/my-lab/immutables/src/main/kotlin/ga/overfullstack/immutable",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "yarn",
-    "prettierjs.PrettierConfiguration.Package": "/Users/gopala.akshintala/.config/yarn/global/node_modules/prettier",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2693383",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
-    "settings.editor.splitter.proportion": "0.14190038",
-    "spring.configuration.checksum": "0b0bb7c6cf8bb04d48d26ca6cdfeb332",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;FindInProjectState.directoryName&quot;: &quot;/Users/gopala.akshintala/code-clones/my-github/my-lab/moshi/src/test&quot;,
+    &quot;FindInProjectState.isProjectScope&quot;: &quot;false&quot;,
+    &quot;Gradle.Build my-lab.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ImmutablesTest.copyFromConfig.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ImmutablesTest.simpleBuilder.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.JsonPojoUtilsTest.jsonFileStreamToPojo.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.JsonPojoUtilsTest.jsonFileToPojo.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Misc.print data class.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MoshiJLab.cardAdapter.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RegexAdapterTest.regex Factory.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.RegexLab.Only digits.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RegexLab.regex lab.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RevomanLab.jsonWithEpochDateToPojo.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.my-lab [buildHealth].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.my-lab [clean build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.my-lab [spotlessApply].executor&quot;: &quot;Run&quot;,
+    &quot;Kotest.Misc: joinToString.executor&quot;: &quot;Run&quot;,
+    &quot;Kotest.Misc: path matches (1).executor&quot;: &quot;Run&quot;,
+    &quot;Kotest.Misc: path matches (2).executor&quot;: &quot;Debug&quot;,
+    &quot;Kotest.Misc: path matches.executor&quot;: &quot;Run&quot;,
+    &quot;Kotest.Misc: print data class (1).executor&quot;: &quot;Run&quot;,
+    &quot;Kotest.Misc: print data class.executor&quot;: &quot;Run&quot;,
+    &quot;Kotest.Misc: split.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.LensLabKt.executor&quot;: &quot;Run&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-Dependencies from package.json&quot;: &quot;Dependencies from package.json available&quot;,
+    &quot;Notification.DoNotAsk-Dependencies from package.json&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.Enable generate summary features in internal mode&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.com.sfdc.cdb.use_credential_helper&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable&quot;: &quot;ALL&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.11.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.11.9&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;ktor.last.update.timestamp&quot;: &quot;1684333206939&quot;,
+    &quot;last_directory_selection&quot;: &quot;/Users/gopala.akshintala/code-clones/my-github/my-lab/kotlin-lab/src/test/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/gopala.akshintala/code-clones/my-github/my-lab/immutables/src/main/kotlin/ga/overfullstack/immutable&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/gopala.akshintala/.config/yarn/global/node_modules/prettier&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2693383&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.language.Kotlin&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.14190038&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;0b0bb7c6cf8bb04d48d26ca6cdfeb332&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "GitStage.ChangesTree.GroupingKeys": [
-      "repository"
+  &quot;keyToStringList&quot;: {
+    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
+      &quot;repository&quot;
     ],
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JAVA"
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JAVA&quot;
+    ],
+    &quot;kotlin-gradle-user-dirs&quot;: [
+      &quot;/Users/gopala.akshintala/.gradle&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="master" />
@@ -363,6 +325,7 @@
       <command value="gradle clean build --no-build-cache --no-configuration-cache" />
       <command value="gradle clean build --no-build-cache --no-configuration-cache -x test" />
       <command value="gradle clean build -x test --no-configuration-cache" />
+      <command value="gradle buildHealth" />
       <command value="gradle clean build -x test" />
       <command value="gradle spotlessApply" />
     </option>
@@ -374,7 +337,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.RegexAdapterTest.regex Factory">
+  <component name="RunManager" selected="Gradle.ImmutablesTest.simpleBuilder">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -388,7 +351,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Misc.print data class" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ImmutablesTest.simpleBuilder" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -399,9 +362,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":kotlin-lab:test" />
+            <option value=":immutables:test" />
             <option value="--tests" />
-            <option value="&quot;ga.overfullstack.Misc.print data class&quot;" />
+            <option value="&quot;ga.overfullstack.immutables.ImmutablesTest.simpleBuilder&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -436,7 +399,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="my-lab [spotlessApply]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="my-lab [buildHealth]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -447,7 +410,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="spotlessApply" />
+            <option value="buildHealth" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -457,6 +420,36 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <RunAsTest>false</RunAsTest>
       <method v="2" />
+    </configuration>
+    <configuration name="my-lab [clean build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="-x test" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="LensLabKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LensLabKt" />
+      <module name="my-lab.http4k.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="my-lab.spring.main" />
@@ -472,43 +465,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Misc: print data class (1)" type="ioKotest" factoryName="Kotest" temporary="true" defaultName="singleModule">
-      <module name="my-lab.kotlin-lab.test" />
-      <option name="jrePath" value="" />
-      <option name="jrePathEnabled" value="false" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" value="$MODULE_WORKING_DIR$" />
-      <option name="programParameters" value="" />
-      <option name="specName" value="ga.overfullstack.Misc" />
-      <option name="testPath" value="print data class" />
-      <option name="packageName" value="" />
-      <option name="vmparams" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Misc: print data class" type="ioKotest" factoryName="Kotest" temporary="true" defaultName="singleModule">
-      <module name="my-lab.kotlin-lab.test" />
-      <option name="jrePath" value="" />
-      <option name="jrePathEnabled" value="false" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" value="$MODULE_WORKING_DIR$" />
-      <option name="programParameters" value="" />
-      <option name="specName" value="ga.overfullstack.Misc" />
-      <option name="testPath" value="print data class" />
-      <option name="packageName" value="" />
-      <option name="vmparams" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ImmutablesTest.simpleBuilder" />
+        <item itemvalue="Gradle.my-lab [clean build]" />
+        <item itemvalue="Kotlin.LensLabKt" />
+        <item itemvalue="Gradle.my-lab [buildHealth]" />
         <item itemvalue="Gradle.RegexAdapterTest.regex Factory" />
-        <item itemvalue="Gradle.my-lab [spotlessApply]" />
-        <item itemvalue="Gradle.Misc.print data class" />
-        <item itemvalue="Kotest.Misc: print data class (1)" />
-        <item itemvalue="Kotest.Misc: print data class" />
       </list>
     </recent_temporary>
   </component>
@@ -1009,7 +972,15 @@
       <workItem from="1704613070162" duration="14000" />
       <workItem from="1704770286731" duration="472000" />
       <workItem from="1704955627961" duration="160000" />
-      <workItem from="1704955886587" duration="1146000" />
+      <workItem from="1704955886587" duration="1305000" />
+      <workItem from="1704978968854" duration="1663000" />
+      <workItem from="1706442676627" duration="67000" />
+      <workItem from="1706632008336" duration="135000" />
+      <workItem from="1706632192177" duration="1316000" />
+      <workItem from="1706695037349" duration="1358000" />
+      <workItem from="1706700421281" duration="2246000" />
+      <workItem from="1706929222755" duration="3889000" />
+      <workItem from="1706933218388" duration="682000" />
     </task>
     <task id="LOCAL-00009" summary="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
       <created>1627583016664</created>
@@ -1354,7 +1325,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684333262543</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1452,8 +1423,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Coroutine lab" />
-    <MESSAGE value="Commit" />
     <MESSAGE value="Custom Moshi Marshaller" />
     <MESSAGE value="CompositeResponse.RecordAdapterFactory working" />
     <MESSAGE value="Use ktfmt and change editor config accordingly" />
@@ -1477,10 +1446,14 @@
     <MESSAGE value="Fix moshi, polyglot broken&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="Immutables depluralizeDictionary not working&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <MESSAGE value="Remove Json Utils and use the ones from ReVoman&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <MESSAGE value="Remove apply subprojects convention from subprojects block&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove apply subprojects convention from subprojects block&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
   </component>
-  <component name="WfRunsListSearchHistory"><![CDATA[{
-  "history": [
+  <component name="WfRunsListSearchHistory">{
+  &quot;history&quot;: [
+    {
+    },
     {
     },
     {
@@ -1526,9 +1499,9 @@
     {
     }
   ],
-  "lastFilter": {
+  &quot;lastFilter&quot;: {
   }
-}]]></component>
+}</component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -1554,12 +1527,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/http4k/src/main/kotlin/LensLab.kt</url>
-          <line>57</line>
+          <line>61</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/http4k/src/main/kotlin/LensLab.kt</url>
-          <line>37</line>
+          <line>41</line>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
@@ -1571,6 +1544,11 @@
           <url>file://$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/Misc.kt</url>
           <line>31</line>
           <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/adapter/RecordAdapter.kt</url>
+          <line>26</line>
+          <option name="timeStamp" value="57" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

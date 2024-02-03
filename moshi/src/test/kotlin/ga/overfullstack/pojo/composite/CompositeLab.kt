@@ -13,7 +13,8 @@ class CompositeLab {
   @OptIn(ExperimentalStdlibApi::class)
   @Test
   fun `Composite response JSON --) POJO --) JSON`() {
-    val compositeRepStr = readFileInResourcesToString("composite/composite-response.json")
+    val compositeRepStr =
+      readFileInResourcesToString("composite/composite-query-success-response.json")
     val compositeRepAdapter =
       Moshi.Builder().add(AdaptedBy.Factory()).build().adapter<CompositeResponse>()
     val compositeResp = compositeRepAdapter.fromJson(compositeRepStr)

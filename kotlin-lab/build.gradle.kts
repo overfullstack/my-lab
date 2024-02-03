@@ -1,4 +1,7 @@
-plugins { id("mylab.kt-conventions") }
+plugins {
+  id("mylab.sub-conventions")
+  id("mylab.kt-conventions")
+}
 
 dependencies {
   implementation(project(":common"))

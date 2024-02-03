@@ -6,4 +6,4 @@ data class NestedBean1(val name: String, val bean: Bean)
 
 data class Message1(val message: String)
 
-data class NestedMessages(val messages: List<Message>)
+data class NestedMessages(val message2s: List<Message2>)

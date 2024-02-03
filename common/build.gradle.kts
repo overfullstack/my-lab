@@ -1,4 +1,5 @@
 plugins {
+  id("mylab.sub-conventions")
   id("mylab.kt-conventions")
   alias(libs.plugins.moshix)
 }

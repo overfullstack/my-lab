@@ -1,3 +1,5 @@
+plugins { id("mylab.sub-conventions") }
+
 dependencies {
   implementation(project(":common"))
   implementation(libs.java.vavr)

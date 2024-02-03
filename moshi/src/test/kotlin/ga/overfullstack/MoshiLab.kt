@@ -6,7 +6,7 @@ import com.squareup.moshi.Types
 import com.squareup.moshi.adapter
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import ga.overfullstack.pojo.Bean1
-import ga.overfullstack.pojo.Message
+import ga.overfullstack.pojo.Message2
 import ga.overfullstack.pojo.NestedBean
 import ga.overfullstack.pojo.NestedBean1
 import ga.overfullstack.pojo.NestedMessages
@@ -114,8 +114,8 @@ internal class MoshiLab {
 
   class NestedMessagesAdapter(private val msgCount: Int) {
     @FromJson
-    fun fromJson(message: Message): NestedMessages {
-      val msgs = List(msgCount) { message.copy(message = it.toString()) }
+    fun fromJson(message2: Message2): NestedMessages {
+      val msgs = List(msgCount) { message2.copy(message = it.toString()) }
       return NestedMessages(msgs)
     }
   }

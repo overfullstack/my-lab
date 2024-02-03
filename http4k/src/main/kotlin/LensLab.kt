@@ -1,5 +1,6 @@
 import org.http4k.core.Body
 import org.http4k.core.ContentType.Companion.TEXT_PLAIN
+import org.http4k.core.HttpMessage
 import org.http4k.core.Method.GET
 import org.http4k.core.Request
 import org.http4k.core.Response
@@ -7,6 +8,8 @@ import org.http4k.core.Status.Companion.OK
 import org.http4k.core.then
 import org.http4k.core.with
 import org.http4k.filter.ServerFilters
+import org.http4k.lens.BiDiBodyLens
+import org.http4k.lens.BiDiLens
 import org.http4k.lens.Header
 import org.http4k.lens.Query
 import org.http4k.lens.boolean
@@ -14,13 +17,14 @@ import org.http4k.lens.composite
 import org.http4k.lens.int
 import org.http4k.lens.string
 
-fun main() {
-  data class Child(val name: String)
-  data class Pageable(val sortAscending: Boolean, val page: Int, val maxResults: Int)
+data class Child(val name: String)
 
-  val nameHeader = Header.required("name")
-  val ageQuery = Query.int().optional("age")
-  val childrenBody =
+data class Pageable(val sortAscending: Boolean, val page: Int, val maxResults: Int)
+
+fun main() {
+  val nameHeader: BiDiLens<HttpMessage, String> = Header.required("name")
+  val ageQuery: BiDiLens<Request, Int?> = Query.int().optional("age")
+  val childrenBody: BiDiBodyLens<List<Child>> =
     Body.string(TEXT_PLAIN)
       .map({ it.split(",").map(::Child) }, { it.joinToString { it.name } })
       .toLens()

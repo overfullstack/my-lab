@@ -1,4 +1,5 @@
 plugins {
+  id("mylab.sub-conventions")
   id("mylab.kt-conventions")
   alias(libs.plugins.moshix)
   alias(libs.plugins.kotlin.noarg)
@@ -13,6 +14,7 @@ dependencies {
   implementation(libs.bundles.arrow)
   implementation(libs.moshix.adapters)
   testImplementation(libs.bundles.kotest)
+  testImplementation(libs.truth)
 }
 
 noArg {

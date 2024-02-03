@@ -3,10 +3,12 @@ plugins {
   id("org.jetbrains.kotlinx.kover")
 }
 
-java { toolchain { languageVersion.set(JavaLanguageVersion.of(21)) } }
+val libs: VersionCatalog = extensions.getByType<VersionCatalogsExtension>().named("libs")
+
+java { toolchain { languageVersion.set(JavaLanguageVersion.of(libs.jdk.toString())) } }
 
 testing {
   suites {
-    val test by getting(JvmTestSuite::class) { useJUnitJupiter("5.10.1") }
+    val test by getting(JvmTestSuite::class) { useJUnitJupiter(libs.junitVersion.toString()) }
   }
 }
