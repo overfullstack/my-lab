@@ -562,11 +562,6 @@ js-md4@^0.3.2:
   resolved "https://registry.yarnpkg.com/js-md4/-/js-md4-0.3.2.tgz#cd3b3dc045b0c404556c81ddb5756c23e59d7cf5"
   integrity sha512-/GDnfQYsltsjRswQhN9fhv3EMw2sCpUdrdxyWDOUK7eyD++r3gRhzgiQgc/x4MAv2i1iuQ4lxO5mvqM3vj4bwA==
 
-js-sha512@0.8.0:
-  version "0.8.0"
-  resolved "https://registry.npmjs.org/js-sha512/-/js-sha512-0.8.0.tgz"
-  integrity sha512-PWsmefG6Jkodqt+ePTvBZCSMFgN7Clckjd0O7su3I0+BW2QWUTJNzjktHsztGLhncP2h8mcF9V9Y2Ha59pAViQ==
-
 js-sha512@0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/js-sha512/-/js-sha512-0.9.0.tgz#ed569aa1e4bdaf0b83363c29db1ab87b1192d9ae"
@@ -697,10 +692,10 @@ neo-async@^2.6.2:
   resolved "https://registry.npmjs.org/neo-async/-/neo-async-2.6.2.tgz"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-newman@6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/newman/-/newman-6.1.0.tgz#7c5dc025f7094ae23872295603d6efffbf0b2ccc"
-  integrity sha512-0A/dSVnGvmnNv6RatCNMIYnSfMqkUjBLMac/Lvo+C0Zr8BQbweBuEw+zNR1kgPiBwUQmYVkRvGWJwI/cE3N2qA==
+newman@6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/newman/-/newman-6.1.1.tgz#fa4a3028a4a9150ac36542de1f3b4a513408f7a2"
+  integrity sha512-VxE6vQ2aigWRjuRlbb7GwudpT4jY+fJgY4wE93C2bi89AJSOfC46X4ow/DyYRl0NCSaW52KVEyc4UixCR6lHiw==
   dependencies:
     "@postman/tough-cookie" "4.1.3-postman.1"
     async "3.2.5"
@@ -717,7 +712,7 @@ newman@6.1.0:
     postman-collection "4.3.0"
     postman-collection-transformer "4.1.8"
     postman-request "2.88.1-postman.33"
-    postman-runtime "7.36.1"
+    postman-runtime "7.36.3"
     pretty-ms "7.0.1"
     semver "7.5.4"
     serialised-error "1.1.3"
@@ -836,31 +831,6 @@ postman-request@2.88.1-postman.33:
     safe-buffer "^5.1.2"
     stream-length "^1.0.2"
     uuid "^8.3.2"
-
-postman-runtime@7.36.1:
-  version "7.36.1"
-  resolved "https://registry.yarnpkg.com/postman-runtime/-/postman-runtime-7.36.1.tgz#10f77338cb6ac6754d80f6757012d6ecff0b1c28"
-  integrity sha512-SarhTewd+rp2cAdC6WFDdT4No0BR3e+tzBcQWZm/o+BDBeOf0W8MQsMKs3BozLMKoKOb/ImqW0jTsa0Rewo0cg==
-  dependencies:
-    "@postman/tough-cookie" "4.1.3-postman.1"
-    async "3.2.5"
-    aws4 "1.12.0"
-    handlebars "4.7.8"
-    httpntlm "1.8.13"
-    jose "4.14.4"
-    js-sha512 "0.8.0"
-    lodash "4.17.21"
-    mime-types "2.1.35"
-    node-forge "1.3.1"
-    node-oauth1 "1.3.0"
-    performance-now "2.1.0"
-    postman-collection "4.3.0"
-    postman-request "2.88.1-postman.33"
-    postman-sandbox "4.4.0"
-    postman-url-encoder "3.0.5"
-    serialised-error "1.1.3"
-    strip-json-comments "3.1.1"
-    uuid "8.3.2"
 
 postman-runtime@7.36.3:
   version "7.36.3"
