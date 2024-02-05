@@ -8,11 +8,9 @@ plugins {
 dependencies {
   implementation(project(":common"))
   implementation(libs.revoman)
+  implementation(libs.moshix.adapters)
   testImplementation(libs.bundles.kotest)
   testImplementation(libs.truth)
 }
-
-val generatedAnnotation = "javax.annotation.processing.Generated"
-ksp { arg("moshi.generated", generatedAnnotation) }
 
 moshi { enableSealed = true }

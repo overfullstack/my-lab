@@ -1,13 +1,13 @@
-@file:JvmName("Utils")
+@file:JvmName("FileUtils")
 
-package ga.overfullstack.utils
+package ga.overfullstack
 
-import java.io.File
 import okio.BufferedSource
 import okio.FileSystem
 import okio.Path.Companion.toPath
 import okio.buffer
 import okio.source
+import java.io.File
 
 fun bufferFileInResources(fileRelativePath: String): BufferedSource =
   FileSystem.RESOURCES.source(fileRelativePath.toPath()).buffer()

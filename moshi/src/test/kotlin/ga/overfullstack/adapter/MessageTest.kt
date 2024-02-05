@@ -29,7 +29,7 @@ class MessageTest {
     assertThat(adapter.fromJson("{\"type\":\"unknown\",\"value\":\"Okay!\"}")).isEqualTo(success)
   }
 
-  @FallbackJsonAdapter(MessageWithFallbackAdapter.SuccessAdapter::class)
+  @FallbackJsonAdapter(MessageWithFallbackAdapter.Fallback::class)
   @JsonClass(generateAdapter = true, generator = "sealed:type")
   sealed class MessageWithFallbackAdapter {
 
@@ -41,7 +41,7 @@ class MessageTest {
     @JsonClass(generateAdapter = true)
     data class Error(val error_logs: Map<String, Any>) : MessageWithFallbackAdapter()
 
-    class SuccessAdapter(moshi: Moshi) : JsonAdapter<MessageWithFallbackAdapter>() {
+    class Fallback(moshi: Moshi) : JsonAdapter<MessageWithFallbackAdapter>() {
       private val delegate = moshi.adapter<Success>()
 
       override fun fromJson(reader: JsonReader): MessageWithFallbackAdapter? {

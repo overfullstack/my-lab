@@ -1,4 +1,4 @@
-package ga.overfullstack.utils
+package ga.overfullstack
 
 inline fun <reified T> instanceWithJavaReflection(): T =
   T::class.java.getConstructor().newInstance()
