@@ -34,7 +34,7 @@ spring-boot = "3.2.2"
 okio = "3.7.0"
 rabbitmq-client = "5.20.0"
 kotlin-logging = "6.0.3"
-pprint = "2.0.0"
+pprint = "2.0.1"
 dependency-analysis = "1.29.0"
 
 # Common dependencies
