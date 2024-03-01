@@ -4,10 +4,10 @@ import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
 import com.squareup.moshi.adapter
-import ga.overfullstack.utils.readFileInResourcesToString
-import java.util.Collections
+import ga.overfullstack.readFileInResourcesToString
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
+import java.util.*
 
 class SingleOrListAdapterTest {
   @Test

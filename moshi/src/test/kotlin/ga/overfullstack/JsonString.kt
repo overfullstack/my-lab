@@ -7,7 +7,6 @@ import com.squareup.moshi.JsonWriter
 import com.squareup.moshi.Moshi
 import dev.zacsweers.moshix.adapters.AdaptedBy
 import dev.zacsweers.moshix.adapters.JsonString
-import ga.overfullstack.utils.readFileInResourcesToString
 import okio.BufferedSource
 import org.junit.jupiter.api.Test
 

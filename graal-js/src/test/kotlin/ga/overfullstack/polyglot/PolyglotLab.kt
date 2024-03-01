@@ -2,11 +2,11 @@ package ga.overfullstack.polyglot
 
 import context.buildJSContext
 import ga.overfullstack.polyglot.PolyglotLab.UpperCase
-import ga.overfullstack.utils.readFileInResourcesToString
-import java.util.Locale
+import ga.overfullstack.readFileInResourcesToString
 import org.graalvm.polyglot.Source
 import org.junit.jupiter.api.Test
 import postman.PostmanAPI
+import java.util.Locale
 
 class PolyglotLab {
 

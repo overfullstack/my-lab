@@ -8,6 +8,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
+import kotlin.Pair;
+import kotlin.collections.MapsKt;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 class MapLab {
@@ -43,6 +46,12 @@ class MapLab {
     final Function2<Integer, String, Integer> getInt = bean::getInt;
     FakeBean.map.put(getInt, new IllegalArgumentException("For getInt"));
     System.out.println(FakeBean.map.get(getInt));
+  }
+
+  @Test
+  @DisplayName("MapsKt with null Value")
+  void mapsKtWithNullValue() {
+    System.out.println(MapsKt.mapOf(new Pair<>("a", null)));
   }
 
   interface FakeBean {
