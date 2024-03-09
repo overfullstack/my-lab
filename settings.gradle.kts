@@ -5,6 +5,7 @@ dependencyResolutionManagement {
       mavenCentral()
       gradlePluginPortal()
       google()
+      maven("https://s01.oss.sonatype.org/content/repositories/snapshots")
       maven("https://oss.sonatype.org/content/repositories/snapshots")
       maven("https://repo.spring.io/milestone")
     }

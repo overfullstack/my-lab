@@ -5,7 +5,6 @@ import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
 import dev.zacsweers.moshix.sealed.annotations.DefaultObject
 import dev.zacsweers.moshix.sealed.annotations.TypeLabel
-import ga.overfullstack.readFileInResourcesToString
 import org.junit.jupiter.api.Test
 
 class SealedLab {

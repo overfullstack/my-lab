@@ -7,13 +7,13 @@ import com.squareup.moshi.JsonReader
 import com.squareup.moshi.JsonWriter
 import com.squareup.moshi.ToJson
 import dev.zacsweers.moshix.adapters.AdaptedBy
-import ga.overfullstack.pojo.composite.CompositeResponse.CompositeResponse.Body.Record
-import ga.overfullstack.pojo.composite.CompositeResponse.CompositeResponse.Body.Record.Attributes
+import ga.overfullstack.pojo.composite.CompositeQueryResponse.CompositeResponse.Body.Record
+import ga.overfullstack.pojo.composite.CompositeQueryResponse.CompositeResponse.Body.Record.Attributes
 import org.http4k.format.obj
 import org.http4k.format.string
 
 @JsonClass(generateAdapter = true)
-data class CompositeResponse(val compositeResponse: List<CompositeResponse>) {
+data class CompositeQueryResponse(val compositeResponse: List<CompositeResponse>) {
   @JsonClass(generateAdapter = true)
   data class CompositeResponse(
     val body: Body,

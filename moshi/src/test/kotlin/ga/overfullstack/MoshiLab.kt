@@ -11,7 +11,6 @@ import ga.overfullstack.pojo.NestedBean
 import ga.overfullstack.pojo.NestedBean1
 import ga.overfullstack.pojo.NestedMessages
 import ga.overfullstack.pojo.Obj
-import ga.overfullstack.readFileInResourcesToString
 import io.kotest.matchers.equals.shouldBeEqual
 import io.kotest.matchers.maps.shouldContainExactly
 import io.kotest.matchers.shouldNotBe

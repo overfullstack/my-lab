@@ -3,7 +3,6 @@ package ga.overfullstack
 import com.squareup.moshi.JsonClass
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
-import ga.overfullstack.readFileInResourcesToString
 import org.junit.jupiter.api.Test
 
 class PostmanLab {

@@ -4,26 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="Commit">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graal-js/src/test/kotlin/ga/overfullstack/polyglot/PolyglotLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graal-js/src/test/kotlin/ga/overfullstack/polyglot/PolyglotLab.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/MapLab.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/MapLab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/KlaxonLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/KlaxonLab.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/JSONInheritance.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/JSONInheritance.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/JsonString.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/JsonString.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/MoshiLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/MoshiLab.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/PostmanLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/PostmanLab.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/SealedLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/SealedLab.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/adapter/RegexAdapterTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/adapter/RegexAdapterTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/contextdef/ContextMappingGeneratorTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/contextdef/ContextMappingGeneratorTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/factory/SingleOrListAdapterTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/factory/SingleOrListAdapterTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/factory/UpperCaseAdapterFactoryTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/factory/UpperCaseAdapterFactoryTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/pojo/composite/CompositeLab.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/pojo/composite/CompositeLab.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/pojo/composite/TreeParserTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/pojo/composite/TreeParserTest.kt" afterDir="false" />
-    </list>
+    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="BiAdapterFactory" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,8 +71,8 @@
         <option value="Kotlin Object" />
         <option value="Kotlin Enum" />
         <option value="package.json" />
-        <option value="Kotlin File" />
         <option value="Class" />
+        <option value="Kotlin File" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -205,6 +186,7 @@
   &quot;keyToString&quot;: {
     &quot;FindInProjectState.directoryName&quot;: &quot;/Users/gopala.akshintala/code-clones/my-github/my-lab/moshi/src/test&quot;,
     &quot;FindInProjectState.isProjectScope&quot;: &quot;false&quot;,
+    &quot;Gradle.BiAdapterFactoryTest.Graph Success --) POJO.executor&quot;: &quot;Debug&quot;,
     &quot;Gradle.Build my-lab.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.FileUtilsTest.read file from resources to string.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.ImmutablesTest.copyFromConfig.executor&quot;: &quot;Run&quot;,
@@ -243,6 +225,7 @@
     &quot;Kotlin.LensLabKt.executor&quot;: &quot;Run&quot;,
     &quot;Notification.DisplayName-DoNotAsk-Dependencies from package.json&quot;: &quot;Dependencies from package.json available&quot;,
     &quot;Notification.DoNotAsk-Dependencies from package.json&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyHistoryLlmMigration&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.Enable generate summary features in internal mode&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -275,7 +258,7 @@
     &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2693383&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.language.Kotlin&quot;,
     &quot;settings.editor.splitter.proportion&quot;: &quot;0.14190038&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;0b0bb7c6cf8bb04d48d26ca6cdfeb332&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -312,18 +295,18 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/moshi/src/test/resources/composite/graph/resp" />
+      <recent name="$PROJECT_DIR$/moshi/src/test/resources/composite/resp" />
+      <recent name="$PROJECT_DIR$/moshi/src/test/resources/composite/req" />
       <recent name="$PROJECT_DIR$/common/src/main/kotlin/ga/overfullstack/utils/json" />
       <recent name="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/adapter" />
-      <recent name="$PROJECT_DIR$/moshi/src/test/resources/factory" />
-      <recent name="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/pojo" />
-      <recent name="$PROJECT_DIR$/moshi/src/test/resources/composite" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="ga.overfullstack.pojo.composite" />
       <recent name="ga.overfullstack.immutable" />
       <recent name="ga.overfullstack.utils.json.factory" />
       <recent name="ga.overfullstack.utils.json" />
       <recent name="ga.overfullstack.adapter" />
-      <recent name="ga.overfullstack.utils" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ga.overfullstack" />
@@ -341,17 +324,20 @@
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="ga.overfullstack.factory" />
+      <recent name="ga.overfullstack.pojo.composite.graph.resp" />
       <recent name="ga.overfullstack.adapter" />
       <recent name="ga.overfullstack.pojo" />
       <recent name="postman" />
-      <recent name="ga.overfullstack" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ga.overfullstack.factory" />
       <recent name="ga.overfullstack" />
       <recent name="ga.overfullstack.lombok" />
       <recent name="ga.overfullstack.immutables.generics" />
       <recent name="ga.overfullstack.generics" />
-      <recent name="" />
+    </key>
+    <key name="KotlinExtractSuperclassDialog.RECENT_KEYS">
+      <recent name="ga.overfullstack.pojo.composite.graph.resp" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -376,10 +362,10 @@
       <command value="gradle -q dependencies" />
       <command value="gradle -q dependencies --configuration testRuntimeClasspath" />
       <command value="gradle build --scan" />
+      <command value="gradle clean build -x test --no-configuration-cache" />
       <command value="gradle clean" />
       <command value="gradle clean build -x test" />
       <command value="gradle spotlessApply" />
-      <command value="gradle clean build -x test --no-configuration-cache" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -389,7 +375,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.MapLab.mapsKt">
+  <component name="RunManager" selected="Gradle.my-lab [spotlessApply]">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -403,7 +389,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileUtilsTest.read file from resources to string" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BiAdapterFactoryTest.Graph Success --) POJO" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -414,33 +400,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":common:test" />
+            <option value=":moshi:test" />
             <option value="--tests" />
-            <option value="&quot;ga.overfullstack.FileUtilsTest.read file from resources to string&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="MapLab.immutableMapWithNull" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":java-lab:test" />
-            <option value="--tests" />
-            <option value="&quot;ga.overfullstack.MapLab.immutableMapWithNull&quot;" />
+            <option value="&quot;ga.overfullstack.factory.BiAdapterFactoryTest.Graph Success --) POJO&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -475,31 +437,30 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="MessageTest.assertFallbackAdapterBehavior" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="my-lab [clean build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" value="-x test --no-configuration-cache" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":moshi:test" />
-            <option value="--tests" />
-            <option value="&quot;ga.overfullstack.adapter.MessageTest.assertFallbackAdapterBehavior&quot;" />
+            <option value="clean" />
+            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="PolyglotLab.jsonParseWithJs" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="my-lab [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -510,17 +471,37 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":graal-js:test" />
-            <option value="--tests" />
-            <option value="&quot;ga.overfullstack.polyglot.PolyglotLab.jsonParseWithJs&quot;" />
+            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="my-lab [spotlessApply]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="spotlessApply" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -538,21 +519,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.MapLab.immutableMapWithNull" />
+      <item itemvalue="Gradle.BiAdapterFactoryTest.Graph Success --) POJO" />
+      <item itemvalue="Gradle.my-lab [clean build]" />
+      <item itemvalue="Gradle.my-lab [clean]" />
+      <item itemvalue="Gradle.my-lab [spotlessApply]" />
       <item itemvalue="Gradle.MapLab.mapsKt" />
-      <item itemvalue="Gradle.PolyglotLab.jsonParseWithJs" />
-      <item itemvalue="Gradle.FileUtilsTest.read file from resources to string" />
-      <item itemvalue="Gradle.MessageTest.assertFallbackAdapterBehavior" />
       <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Spring Boot.Application (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.BiAdapterFactoryTest.Graph Success --) POJO" />
+        <item itemvalue="Gradle.my-lab [clean]" />
+        <item itemvalue="Gradle.my-lab [clean build]" />
+        <item itemvalue="Gradle.my-lab [spotlessApply]" />
         <item itemvalue="Gradle.MapLab.mapsKt" />
-        <item itemvalue="Gradle.MapLab.immutableMapWithNull" />
-        <item itemvalue="Gradle.PolyglotLab.jsonParseWithJs" />
-        <item itemvalue="Gradle.FileUtilsTest.read file from resources to string" />
-        <item itemvalue="Gradle.MessageTest.assertFallbackAdapterBehavior" />
       </list>
     </recent_temporary>
   </component>
@@ -1077,6 +1058,10 @@
       <workItem from="1708659105745" duration="918000" />
       <workItem from="1708689425218" duration="26000" />
       <workItem from="1709291238762" duration="1159000" />
+      <workItem from="1709300764453" duration="175000" />
+      <workItem from="1709922921623" duration="455000" />
+      <workItem from="1709990031635" duration="11251000" />
+      <workItem from="1710005792302" duration="1621000" />
     </task>
     <task id="LOCAL-00009" summary="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
       <created>1627583016664</created>
@@ -1421,7 +1406,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684333262543</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1519,7 +1504,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Working ConnectGraph Marshall unmashall&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value=":zap: PQ graph JSON --) Connect Graph POJO --) Connect Graph JSON&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall." />
     <MESSAGE value=":zap: Robust adapters&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall." />
     <MESSAGE value=":zap: Robust adapters&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
@@ -1544,7 +1528,8 @@
     <MESSAGE value="MessageTest" />
     <MESSAGE value="clean moshi deps" />
     <MESSAGE value="Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
+    <MESSAGE value="BiAdapterFactory" />
+    <option name="LAST_COMMIT_MESSAGE" value="BiAdapterFactory" />
   </component>
   <component name="WfRunsListSearchHistory">{
   &quot;history&quot;: [
@@ -1650,9 +1635,6 @@
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JetRunConfigurationType">
-        <watch expression="writer.path" language="kotlin" />
-      </configuration>
-      <configuration name="GradleRunConfiguration">
         <watch expression="writer.path" language="kotlin" />
       </configuration>
     </watches-manager>

@@ -2,9 +2,9 @@ package ga.overfullstack
 
 import com.beust.klaxon.Klaxon
 import com.beust.klaxon.PathMatcher
-import org.junit.jupiter.api.Test
 import java.io.StringReader
 import java.util.regex.Pattern
+import org.junit.jupiter.api.Test
 
 class KlaxonLab {
   @Test
