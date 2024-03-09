@@ -6,11 +6,14 @@ import com.squareup.moshi.JsonClass
 @JsonClass(generateAdapter = true)
 data class GraphResponse(val graphs: List<Graph>) {
   sealed interface Graph {
+    val graphId: String
+    val isSuccessful: Boolean
+    
     @JsonClass(generateAdapter = true)
     data class SuccessGraph(
-      val graphId: String,
+      override val graphId: String,
       val graphResponse: GraphResponse,
-      val isSuccessful: Boolean
+      override val isSuccessful: Boolean
     ) : Graph {
       @JsonClass(generateAdapter = true)
       data class GraphResponse(val compositeResponse: List<CompositeResponse>) {
@@ -32,14 +35,14 @@ data class GraphResponse(val graphs: List<Graph>) {
 
     @JsonClass(generateAdapter = true)
     data class ErrorGraph(
-      val graphId: String,
-      val graphResponse: GraphResponse,
-      val isSuccessful: Boolean
+      override val graphId: String,
+      val graphResponse: GraphErrorResponse,
+      override val isSuccessful: Boolean
     ) : Graph {
       @JsonClass(generateAdapter = true)
-      data class GraphResponse(val compositeResponse: List<CompositeResponse>) {
+      data class GraphErrorResponse(val compositeResponse: List<CompositeErrorResponse>) {
         @JsonClass(generateAdapter = true)
-        data class CompositeResponse(
+        data class CompositeErrorResponse(
           val body: List<Body>,
           val httpHeaders: HttpHeaders,
           val httpStatusCode: Int,

@@ -10,12 +10,12 @@ import ga.overfullstack.pojo.composite.GraphResponse.Graph.SuccessGraph
 import ga.overfullstack.readFileInResourcesToString
 import org.junit.jupiter.api.Test
 
-class BiAdapterFactoryTest {
+class DiMorphicAdapterTest {
   @OptIn(ExperimentalStdlibApi::class)
   @Test
   fun `Graph Success --) POJO`() {
     val graphFactory =
-      BiAdapterFactory.of(
+      DiMorphicAdapter.of(
         Graph::class.java,
         "isSuccessful",
         true,
@@ -27,8 +27,7 @@ class BiAdapterFactoryTest {
       graphResponseAdapter.fromJson(
         readFileInResourcesToString("composite/graph/resp/graph-success-response.json")
       )
-    assertThat(successGraphResponse).isInstanceOf(SuccessGraph::class.java)
-
+    assertThat(successGraphResponse?.graphs?.get(0)).isInstanceOf(SuccessGraph::class.java)
     val errorGraphResponse =
       graphResponseAdapter.fromJson(
         readFileInResourcesToString("composite/graph/resp/graph-error-response.json")

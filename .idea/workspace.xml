@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="BiAdapterFactory" />
+    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="BiAdapterFactory&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
+      <change beforePath="$PROJECT_DIR$/moshi/src/main/kotlin/ga/overfullstack/factory/BiAdapterFactory.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/factory/BiAdapterFactoryTest.kt" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -124,6 +127,7 @@
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi/1.15.0/bfefc77019c04fb3e1ad94abb0a2c141a78bbbd8/moshi-1.15.0.jar!/com/squareup/moshi/JsonWriter.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi/1.15.0/bfefc77019c04fb3e1ad94abb0a2c141a78bbbd8/moshi-1.15.0.jar!/com/squareup/moshi/StandardJsonAdapters.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi/1.15.1/753fe8158eae76508bf251afd645101f871680c4/moshi-1.15.1.jar!/com/squareup/moshi/JsonReader.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.0.0-Beta3/9982637ebb69602015ed823cceca7054d2ab8bbe/kotlin-stdlib-2.0.0-Beta3.jar!/kotlin/PreconditionsKt.class" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/apt/build.gradle.kts" root0="FORCE_HIGHLIGHTING" />
@@ -188,6 +192,7 @@
     &quot;FindInProjectState.isProjectScope&quot;: &quot;false&quot;,
     &quot;Gradle.BiAdapterFactoryTest.Graph Success --) POJO.executor&quot;: &quot;Debug&quot;,
     &quot;Gradle.Build my-lab.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.DiMorphicAdapterTest.Graph Success --) POJO.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.FileUtilsTest.read file from resources to string.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.ImmutablesTest.copyFromConfig.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.ImmutablesTest.simpleBuilder.executor&quot;: &quot;Run&quot;,
@@ -375,7 +380,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.my-lab [spotlessApply]">
+  <component name="RunManager" selected="Gradle.DiMorphicAdapterTest.Graph Success --) POJO">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -413,7 +418,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="MapLab.mapsKt" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="DiMorphicAdapterTest.Graph Success --) POJO" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -424,9 +429,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":java-lab:test" />
+            <option value=":moshi:test" />
             <option value="--tests" />
-            <option value="&quot;ga.overfullstack.MapLab.mapsKt&quot;" />
+            <option value="&quot;ga.overfullstack.factory.DiMorphicAdapterTest.Graph Success --) POJO&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -519,21 +524,21 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.DiMorphicAdapterTest.Graph Success --) POJO" />
       <item itemvalue="Gradle.BiAdapterFactoryTest.Graph Success --) POJO" />
       <item itemvalue="Gradle.my-lab [clean build]" />
       <item itemvalue="Gradle.my-lab [clean]" />
       <item itemvalue="Gradle.my-lab [spotlessApply]" />
-      <item itemvalue="Gradle.MapLab.mapsKt" />
       <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Spring Boot.Application (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.DiMorphicAdapterTest.Graph Success --) POJO" />
         <item itemvalue="Gradle.BiAdapterFactoryTest.Graph Success --) POJO" />
         <item itemvalue="Gradle.my-lab [clean]" />
         <item itemvalue="Gradle.my-lab [clean build]" />
         <item itemvalue="Gradle.my-lab [spotlessApply]" />
-        <item itemvalue="Gradle.MapLab.mapsKt" />
       </list>
     </recent_temporary>
   </component>
@@ -1062,6 +1067,7 @@
       <workItem from="1709922921623" duration="455000" />
       <workItem from="1709990031635" duration="11251000" />
       <workItem from="1710005792302" duration="1621000" />
+      <workItem from="1710007578783" duration="3145000" />
     </task>
     <task id="LOCAL-00009" summary="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
       <created>1627583016664</created>
@@ -1406,7 +1412,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684333262543</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1504,7 +1510,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value=":zap: PQ graph JSON --) Connect Graph POJO --) Connect Graph JSON&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall." />
     <MESSAGE value=":zap: Robust adapters&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall." />
     <MESSAGE value=":zap: Robust adapters&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="Remove attributes from ConnectGraph&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
@@ -1529,7 +1534,8 @@
     <MESSAGE value="clean moshi deps" />
     <MESSAGE value="Commit" />
     <MESSAGE value="BiAdapterFactory" />
-    <option name="LAST_COMMIT_MESSAGE" value="BiAdapterFactory" />
+    <MESSAGE value="BiAdapterFactory&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="BiAdapterFactory&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
   </component>
   <component name="WfRunsListSearchHistory">{
   &quot;history&quot;: [
