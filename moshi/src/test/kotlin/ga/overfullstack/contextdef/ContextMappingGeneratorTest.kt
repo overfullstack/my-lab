@@ -11,7 +11,7 @@ import ga.overfullstack.contextdef.state.ContextMapping
 import ga.overfullstack.contextdef.state.ContextNode
 import ga.overfullstack.contextdef.state.ContextNodeMapping
 import ga.overfullstack.contextdef.state.NodeAttribute
-import ga.overfullstack.readFileInResourcesToString
+import com.salesforce.revoman.input.readFileInResourcesToString
 import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.Test
 

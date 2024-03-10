@@ -1,13 +1,13 @@
 package ga.overfullstack.factory
 
 import com.google.common.truth.Truth.assertThat
+import com.salesforce.revoman.input.readFileInResourcesToString
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
 import ga.overfullstack.pojo.composite.GraphResponse
 import ga.overfullstack.pojo.composite.GraphResponse.Graph
 import ga.overfullstack.pojo.composite.GraphResponse.Graph.ErrorGraph
 import ga.overfullstack.pojo.composite.GraphResponse.Graph.SuccessGraph
-import ga.overfullstack.readFileInResourcesToString
 import org.junit.jupiter.api.Test
 
 class DiMorphicAdapterTest {

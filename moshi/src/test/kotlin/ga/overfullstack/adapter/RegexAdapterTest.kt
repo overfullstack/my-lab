@@ -3,7 +3,7 @@ package ga.overfullstack.adapter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
 import ga.overfullstack.pojo.NestedBean
-import ga.overfullstack.readFileInResourcesToString
+import com.salesforce.revoman.input.readFileInResourcesToString
 import io.kotest.matchers.shouldBe
 import java.io.IOException
 import org.junit.jupiter.api.Assertions

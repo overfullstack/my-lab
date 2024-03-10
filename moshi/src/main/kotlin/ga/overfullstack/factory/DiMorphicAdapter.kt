@@ -9,7 +9,7 @@ import com.squareup.moshi.Moshi
 import com.squareup.moshi.rawType
 import java.lang.reflect.Type
 
-internal class DiMorphicAdapter
+class DiMorphicAdapter
 private constructor(
   private val labelKey: String,
   private val successAdapter: Triple<Boolean, Type, JsonAdapter<Any>>,

@@ -2,7 +2,7 @@ package ga.overfullstack.polyglot
 
 import context.buildJSContext
 import ga.overfullstack.polyglot.PolyglotLab.UpperCase
-import ga.overfullstack.readFileInResourcesToString
+import com.salesforce.revoman.input.readFileInResourcesToString
 import java.util.Locale
 import org.graalvm.polyglot.Source
 import org.junit.jupiter.api.Test

@@ -4,7 +4,7 @@ import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
 import ga.overfullstack.pojo.tree.NodeAdapter
 import ga.overfullstack.pojo.tree.Tree
-import ga.overfullstack.readFileInResourcesToString
+import com.salesforce.revoman.input.readFileInResourcesToString
 import org.junit.jupiter.api.Test
 
 class TreeParserTest {

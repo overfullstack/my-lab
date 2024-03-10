@@ -6,7 +6,7 @@ import dev.zacsweers.moshix.adapters.AdaptedBy
 import ga.overfullstack.pojo.composite.ConnectGraph.ConnectPQGraphAdapter
 import ga.overfullstack.pojo.composite.PQPayload.PQPayloadAdapter
 import ga.overfullstack.pojo.composite.PQPayload.RecordAdapter
-import ga.overfullstack.readFileInResourcesToString
+import com.salesforce.revoman.input.readFileInResourcesToString
 import org.junit.jupiter.api.Test
 
 class CompositeLab {
