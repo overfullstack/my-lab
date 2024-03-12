@@ -919,6 +919,16 @@ postman-sandbox@4.5.0:
     teleport-javascript "1.0.0"
     uvm "2.1.1"
 
+postman-sandbox@4.5.1:
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/postman-sandbox/-/postman-sandbox-4.5.1.tgz#4f84443deef2b5e1ef00a763f4e6fd3f4d9bbafb"
+  integrity sha512-bTMTfwlHHgXAWB6bI1YH2TfQ+QG3CUdgJ3YsKxN5alWKY/BfK/VrnZztk9IDwqx2SDJrpSMOL4pDRjRsRngVdA==
+  dependencies:
+    lodash "4.17.21"
+    postman-collection "4.4.0"
+    teleport-javascript "1.0.0"
+    uvm "2.1.1"
+
 postman-url-encoder@3.0.5:
   version "3.0.5"
   resolved "https://registry.npmjs.org/postman-url-encoder/-/postman-url-encoder-3.0.5.tgz"
