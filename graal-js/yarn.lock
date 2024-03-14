@@ -692,10 +692,10 @@ neo-async@^2.6.2:
   resolved "https://registry.npmjs.org/neo-async/-/neo-async-2.6.2.tgz"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-newman@6.1.1:
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/newman/-/newman-6.1.1.tgz#fa4a3028a4a9150ac36542de1f3b4a513408f7a2"
-  integrity sha512-VxE6vQ2aigWRjuRlbb7GwudpT4jY+fJgY4wE93C2bi89AJSOfC46X4ow/DyYRl0NCSaW52KVEyc4UixCR6lHiw==
+newman@6.1.2:
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/newman/-/newman-6.1.2.tgz#d59b224b29f2a9faaaf6fcc8a7998e33b868cf19"
+  integrity sha512-VyaXFguIYM7QUWXHQlHtkj3axzZQFHgj9OYkhbKpq4iphKAJckHFstltacSBtgpeiGp5SKk9FBdCYVbJXcLvnQ==
   dependencies:
     "@postman/tough-cookie" "4.1.3-postman.1"
     async "3.2.5"
@@ -709,12 +709,12 @@ newman@6.1.1:
     liquid-json "0.3.1"
     lodash "4.17.21"
     mkdirp "3.0.1"
-    postman-collection "4.3.0"
+    postman-collection "4.4.0"
     postman-collection-transformer "4.1.8"
     postman-request "2.88.1-postman.33"
-    postman-runtime "7.36.3"
+    postman-runtime "7.37.1"
     pretty-ms "7.0.1"
-    semver "7.5.4"
+    semver "7.6.0"
     serialised-error "1.1.3"
     word-wrap "1.2.5"
     xmlbuilder "15.1.1"
@@ -787,23 +787,6 @@ postman-collection-transformer@4.1.8:
     semver "7.5.4"
     strip-json-comments "3.1.1"
 
-postman-collection@4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/postman-collection/-/postman-collection-4.3.0.tgz#edbdc9401c113c46a01718c740fc194ed527214d"
-  integrity sha512-QpmNOw1JhAVQTFWRz443/qpKs4/3T1MFrKqDZ84RS1akxOzhXXr15kD8+/+jeA877qyy9rfMsrFgLe2W7aCPjw==
-  dependencies:
-    "@faker-js/faker" "5.5.3"
-    file-type "3.9.0"
-    http-reasons "0.1.0"
-    iconv-lite "0.6.3"
-    liquid-json "0.3.1"
-    lodash "4.17.21"
-    mime-format "2.0.1"
-    mime-types "2.1.35"
-    postman-url-encoder "3.0.5"
-    semver "7.5.4"
-    uuid "8.3.2"
-
 postman-collection@4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/postman-collection/-/postman-collection-4.4.0.tgz#6acb6e3796fcd9f6ac5a94e6894185e42387d7da"
@@ -849,31 +832,6 @@ postman-request@2.88.1-postman.33:
     stream-length "^1.0.2"
     uuid "^8.3.2"
 
-postman-runtime@7.36.3:
-  version "7.36.3"
-  resolved "https://registry.yarnpkg.com/postman-runtime/-/postman-runtime-7.36.3.tgz#884903bba3c92ff5087e776aee7b2127675b7f3a"
-  integrity sha512-Wo5c02njkq5pIKVj9uNe8VS9cdvdgrEj9leImDBAfGFCV6gb7iX51wrgIcyN3GFvic5uCb22YmQMNLnmWvsPbQ==
-  dependencies:
-    "@postman/tough-cookie" "4.1.3-postman.1"
-    async "3.2.5"
-    aws4 "1.12.0"
-    handlebars "4.7.8"
-    httpntlm "1.8.13"
-    jose "4.14.4"
-    js-sha512 "0.9.0"
-    lodash "4.17.21"
-    mime-types "2.1.35"
-    node-forge "1.3.1"
-    node-oauth1 "1.3.0"
-    performance-now "2.1.0"
-    postman-collection "4.3.0"
-    postman-request "2.88.1-postman.33"
-    postman-sandbox "4.4.0"
-    postman-url-encoder "3.0.5"
-    serialised-error "1.1.3"
-    strip-json-comments "3.1.1"
-    uuid "8.3.2"
-
 postman-runtime@7.37.1:
   version "7.37.1"
   resolved "https://registry.yarnpkg.com/postman-runtime/-/postman-runtime-7.37.1.tgz#6b5edd66eebb7057c91a70d3a389627c3a8b2491"
@@ -898,16 +856,6 @@ postman-runtime@7.37.1:
     serialised-error "1.1.3"
     strip-json-comments "3.1.1"
     uuid "8.3.2"
-
-postman-sandbox@4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/postman-sandbox/-/postman-sandbox-4.4.0.tgz#939c58a42e9e2f15f2b9db146adc09b53e94623f"
-  integrity sha512-NvNodj44vqtZrgLvnqoqFxvqRL1Pw0MSLXGlzSu252iurmHCz59wUykNUQ8mQh0AXNM00gbN/lS1nrGfS1zqwA==
-  dependencies:
-    lodash "4.17.21"
-    postman-collection "4.3.0"
-    teleport-javascript "1.0.0"
-    uvm "2.1.1"
 
 postman-sandbox@4.6.0:
   version "4.6.0"
@@ -1021,6 +969,13 @@ semver@7.5.4:
   version "7.5.4"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.5.4.tgz#483986ec4ed38e1c6c48c34894a9182dbff68a6e"
   integrity sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==
+  dependencies:
+    lru-cache "^6.0.0"
+
+semver@7.6.0:
+  version "7.6.0"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.6.0.tgz#1a46a4db4bffcccd97b743b5005c8325f23d4e2d"
+  integrity sha512-EnwXhrlwXMk9gKu5/flx5sv/an57AkRplG3hTK68W7FRDN+k+OWBj65M7719OkA82XLBxrcX0KSHj+X5COhOVg==
   dependencies:
     lru-cache "^6.0.0"
 
