@@ -857,10 +857,55 @@ postman-runtime@7.37.1:
     strip-json-comments "3.1.1"
     uuid "8.3.2"
 
+postman-runtime@7.37.2:
+  version "7.37.2"
+  resolved "https://registry.yarnpkg.com/postman-runtime/-/postman-runtime-7.37.2.tgz#d0616fa759ed2fccacb40e3d41721b6f47041613"
+  integrity sha512-vjfnh71OioZn4yy4Nk6vPhwmI7rtE9TFqY1K/l9v2m6dOVP4Yw+JmImRZtDpVqg7a5nM3wMaP9IgE7+Q1gPT3A==
+  dependencies:
+    "@postman/tough-cookie" "4.1.3-postman.1"
+    async "3.2.5"
+    aws4 "1.12.0"
+    handlebars "4.7.8"
+    httpntlm "1.8.13"
+    jose "4.14.4"
+    js-sha512 "0.9.0"
+    lodash "4.17.21"
+    mime-types "2.1.35"
+    node-forge "1.3.1"
+    node-oauth1 "1.3.0"
+    performance-now "2.1.0"
+    postman-collection "4.4.0"
+    postman-request "2.88.1-postman.33"
+    postman-sandbox "4.6.1"
+    postman-url-encoder "3.0.5"
+    serialised-error "1.1.3"
+    strip-json-comments "3.1.1"
+    uuid "8.3.2"
+
 postman-sandbox@4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/postman-sandbox/-/postman-sandbox-4.6.0.tgz#911dd41cdc66951d38e3f1fc238cf34f988e0136"
   integrity sha512-+tCUEhiFAV6saqMEetRzLmSWt4/9kgVagtnrVgyqVgIGdPBIaq1p3aay54bOzYW7/QjIIz0xPF3YkJA8Olt3LQ==
+  dependencies:
+    lodash "4.17.21"
+    postman-collection "4.4.0"
+    teleport-javascript "1.0.0"
+    uvm "2.1.1"
+
+postman-sandbox@4.6.1:
+  version "4.6.1"
+  resolved "https://registry.yarnpkg.com/postman-sandbox/-/postman-sandbox-4.6.1.tgz#96648c280b3efa25b0dcdd6b17bb4f062b6c4897"
+  integrity sha512-5MVsgCtoL9XCoRvCIkD/AnSI4HVQI/bRew8QkKmvktuRyyu/0x4327tNv9zRfqrsM5uMLdk5AWuCGkc/Nr2kCA==
+  dependencies:
+    lodash "4.17.21"
+    postman-collection "4.4.0"
+    teleport-javascript "1.0.0"
+    uvm "2.1.1"
+
+postman-sandbox@4.7.0:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/postman-sandbox/-/postman-sandbox-4.7.0.tgz#8798e7534637fe916faa077d905b94ddf91eeb7a"
+  integrity sha512-W8NkRSUn7w2v3/orQDRsY/pW1wOayb1pePb5CBziCjfBSC0dtWOFh47ZkIDqsaXc5eBEp3I4V/ENVi0P1D7SyA==
   dependencies:
     lodash "4.17.21"
     postman-collection "4.4.0"
