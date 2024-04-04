@@ -1,10 +1,10 @@
 package ga.overfullstack.factory
 
+import com.salesforce.revoman.input.readFileInResourcesToString
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
 import ga.overfullstack.pojo.Bean
 import ga.overfullstack.pojo.NestedBean
-import com.salesforce.revoman.input.readFileInResourcesToString
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test

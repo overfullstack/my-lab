@@ -1,4 +1,5 @@
 import com.salesforce.revoman.input.json.pojoToJson
+import com.salesforce.revoman.input.readFileInResourcesToString
 import com.squareup.moshi.FromJson
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
@@ -11,7 +12,6 @@ import ga.overfullstack.contextdef.state.ContextMapping
 import ga.overfullstack.contextdef.state.ContextNode
 import ga.overfullstack.contextdef.state.ContextNodeMapping
 import ga.overfullstack.contextdef.state.NodeAttribute
-import com.salesforce.revoman.input.readFileInResourcesToString
 import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.Test
 

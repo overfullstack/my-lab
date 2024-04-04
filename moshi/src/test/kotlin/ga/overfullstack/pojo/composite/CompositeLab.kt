@@ -1,12 +1,12 @@
 package ga.overfullstack.pojo.composite
 
+import com.salesforce.revoman.input.readFileInResourcesToString
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
 import dev.zacsweers.moshix.adapters.AdaptedBy
 import ga.overfullstack.pojo.composite.ConnectGraph.ConnectPQGraphAdapter
 import ga.overfullstack.pojo.composite.PQPayload.PQPayloadAdapter
 import ga.overfullstack.pojo.composite.PQPayload.RecordAdapter
-import com.salesforce.revoman.input.readFileInResourcesToString
 import org.junit.jupiter.api.Test
 
 class CompositeLab {

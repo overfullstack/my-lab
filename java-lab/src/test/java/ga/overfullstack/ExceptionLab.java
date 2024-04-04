@@ -8,7 +8,9 @@ class ExceptionLab {
     try {
       someFunThrows();
     } catch (Throwable e) {
-      System.out.printf("caught " + e.getMessage());
+      throw new RuntimeException(e);
+    } finally {
+      System.out.println("Finally");
     }
   }
 

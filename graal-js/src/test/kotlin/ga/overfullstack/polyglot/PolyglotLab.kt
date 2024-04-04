@@ -1,21 +1,75 @@
 package ga.overfullstack.polyglot
 
-import context.buildJSContext
-import ga.overfullstack.polyglot.PolyglotLab.UpperCase
+import com.salesforce.revoman.input.evaluateJS
 import com.salesforce.revoman.input.readFileInResourcesToString
-import java.util.Locale
+import context.buildJSContext
+import context.buildJSContext2
+import ga.overfullstack.polyglot.PolyglotLab.UpperCase
+import okio.FileSystem
+import okio.Path.Companion.toPath
+import okio.buffer
 import org.graalvm.polyglot.Source
 import org.junit.jupiter.api.Test
 import postman.PostmanAPI
+import java.util.*
+
 
 class PolyglotLab {
+  private val context = buildJSContext()
+
+  @Test
+  fun `use moment from bundle`() {
+    val momentJs = FileSystem.RESOURCES.source("jsbundle/moment.js".toPath()).buffer().readUtf8()
+    val context = buildJSContext2()
+    val jscript =
+      """
+     var moment = require('moment');
+     var scheduleTime = moment().add(62, 'seconds').format("HH:mm:ss.SSS")
+     console.log(scheduleTime)
+  """
+      context.eval(
+        Source.newBuilder("js", momentJs, "moment")
+          .content(jscript)
+          .mimeType("application/javascript+module")
+          .build()
+      )
+  }
+
+  @Test
+  fun `use moment from node_modules`() {
+    val nodeModulePath = javaClass.classLoader.getResource("node_modules")?.path
+    val context2 = buildJSContext(nodeModulePath.toString())
+    val jscript =
+        """
+     var moment = require('moment');
+     var scheduleTime = moment().add(62, 'seconds').format("HH:mm:ss.SSS")
+     console.log(scheduleTime)
+     """
+            .trimIndent()
+    context2.eval(
+      Source.newBuilder("js", jscript, "jscript")
+        .mimeType("application/javascript+module")
+        .build(),
+    )
+  }
+
+  @Test
+  fun `use moment with revoman`() {
+    val jscript =
+        """
+     var moment = require('moment');
+     var scheduleTime = moment().add(62, 'seconds').format("HH:mm:ss.SSS")
+     console.log(scheduleTime)
+     """
+            .trimIndent()
+    evaluateJS(jscript)
+  }
 
   @Test
   fun jsonParseWithJs() {
     val responseBody = readFileInResourcesToString("core-user-creation-response.json")
-    val context = buildJSContext(useCommonjsRequire = false)
     val callingScript =
-      """
+        """
       var jsonData = JSON.parse(responseBody);
       var statusCode = jsonData.compositeResponse[0].httpStatusCode;
       if (statusCode === 201) {
@@ -33,7 +87,7 @@ class PolyglotLab {
           });
       }
     """
-        .trimIndent()
+            .trimIndent()
     val source = Source.newBuilder("js", callingScript, "myScript.js").build()
     val pm = PostmanAPI()
     val jsBindings = context.getBindings("js")
@@ -46,7 +100,7 @@ class PolyglotLab {
   @Test
   fun `set object inside pm env`() {
     val responseBody =
-      """
+        """
     {
       "x": "a",
       "y": [
@@ -54,15 +108,14 @@ class PolyglotLab {
       ]
     }
     """
-        .trimIndent()
+            .trimIndent()
     val callingScript =
-      """
+        """
       var jsonData=JSON.parse(responseBody);
       console.log(jsonData);
       pm.environment.set('jsonData', jsonData);
     """
-        .trimIndent()
-    val context = buildJSContext(useCommonjsRequire = false)
+            .trimIndent()
     val source = Source.newBuilder("js", callingScript, "myScript.js").build()
     val pm = PostmanAPI()
     val jsBindings = context.getBindings("js")
@@ -76,7 +129,7 @@ class PolyglotLab {
   @Test
   fun jsonParseWithCallback() {
     val responseBody =
-      """
+        """
     {
       "x": "a",
       "y": [
@@ -84,16 +137,15 @@ class PolyglotLab {
       ]
     }
     """
-        .trimIndent()
+            .trimIndent()
     val callingScript =
-      """
+        """
       var jsonData=JSON.parse(responseBody);
       console.log(jsonData);
       pm.environment.set('x', toUpperCase(jsonData.x));
       pm.environment.set('y', jsonData.y);
     """
-        .trimIndent()
-    val context = buildJSContext(useCommonjsRequire = false)
+            .trimIndent()
     val source = Source.newBuilder("js", callingScript, "myScript.js").build()
     val pm = PostmanAPI()
     val toUpperCase = UpperCase { s -> s.uppercase(Locale.getDefault()) }

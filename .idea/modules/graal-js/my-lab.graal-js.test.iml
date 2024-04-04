@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4">
+  <component name="AdditionalModuleElements">
+    <content url="file://$MODULE_DIR$/../../../graal-js/src/test" dumb="true">
+      <sourceFolder url="file://$MODULE_DIR$/../../../graal-js/src/test/java" isTestSource="true" />
+    </content>
+  </component>
   <component name="SonarLintModuleSettings">
     <option name="uniqueId" value="d4bec344-03d6-4e1d-83a0-398152fe4004" />
   </component>
