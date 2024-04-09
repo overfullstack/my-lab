@@ -1,6 +1,6 @@
 [versions]
 jdk = "21"
-kotlin = "2.0.0-Beta5"
+kotlin = "2.0.0-RC1"
 ksp = "2.0.0-Beta5-1.0.20"
 kotlinx-coroutines-core = "1.8.0"
 hamcrest-core = "2.2"
