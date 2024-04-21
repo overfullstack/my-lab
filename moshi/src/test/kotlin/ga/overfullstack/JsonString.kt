@@ -1,5 +1,6 @@
 package ga.overfullstack
 
+import com.salesforce.revoman.input.readFileInResourcesToString
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.JsonClass
 import com.squareup.moshi.JsonReader
@@ -12,7 +13,7 @@ import org.junit.jupiter.api.Test
 
 class JsonString {
   @Test
-  fun jsonString() {
+  fun jsonToString() {
     val collectionJsonStr = readFileInResourcesToString("collection-in-obj.json")
     val collectionAdapter =
       Moshi.Builder()

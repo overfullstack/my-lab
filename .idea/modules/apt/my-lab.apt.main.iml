@@ -16,7 +16,4 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.8.20" level="project" />
   </component>
-  <component name="SonarLintModuleSettings">
-    <option name="uniqueId" value="e92de055-19c5-4d7c-9aea-1f62f6e8d78c" />
-  </component>
 </module>

@@ -1,5 +1,6 @@
 package ga.overfullstack;
 
+import com.google.common.base.Throwables;
 import org.junit.jupiter.api.Test;
 
 class ExceptionLab {
@@ -8,7 +9,7 @@ class ExceptionLab {
     try {
       someFunThrows();
     } catch (Throwable e) {
-      throw new RuntimeException(e);
+      throw new RuntimeException(Throwables.getRootCause(e).toString(), e);
     } finally {
       System.out.println("Finally");
     }
@@ -21,7 +22,7 @@ class ExceptionLab {
   }
 
   static void someFunThrows() throws Throwable {
-    throw new MyException("my-exception");
+    throw new NullPointerException();
   }
 
   private static class MyException extends Exception {

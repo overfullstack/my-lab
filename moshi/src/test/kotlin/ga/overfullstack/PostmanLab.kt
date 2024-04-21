@@ -1,5 +1,6 @@
 package ga.overfullstack
 
+import com.salesforce.revoman.input.readFileInResourcesToString
 import com.squareup.moshi.JsonClass
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter

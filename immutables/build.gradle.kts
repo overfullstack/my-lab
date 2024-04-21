@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
   id("mylab.sub-conventions")
   id("mylab.kt-conventions")
@@ -20,11 +18,4 @@ dependencies {
   compileOnly(libs.jetbrains.annotations)
 }
 
-tasks {
-  withType<KotlinCompile> {
-    kotlinOptions {
-      // ! -Xjvm-default=all" is needed for Immutables to work with Kotlin default methods
-      freeCompilerArgs = listOf("-Xjvm-default=all")
-    }
-  }
-}
+kotlin { compilerOptions { freeCompilerArgs.add("-Xjvm-default=all") } }

@@ -1,5 +1,6 @@
 package ga.overfullstack
 
+import com.salesforce.revoman.input.readFileInResourcesToString
 import com.squareup.moshi.JsonClass
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
@@ -9,7 +10,6 @@ import org.junit.jupiter.api.Test
 
 class SealedLab {
 
-  @OptIn(ExperimentalStdlibApi::class)
   @Test
   fun sealed() {
     val successStr = readFileInResourcesToString("sealed/success.json")
