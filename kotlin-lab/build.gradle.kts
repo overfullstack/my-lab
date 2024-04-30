@@ -5,6 +5,7 @@ plugins {
 
 dependencies {
   implementation(project(":common"))
+  implementation(libs.revoman)
   implementation(libs.kotlinx.coroutines.core)
   implementation(libs.klaxon)
   implementation(libs.java.vavr)

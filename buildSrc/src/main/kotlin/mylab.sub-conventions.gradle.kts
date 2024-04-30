@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
   application
   id("org.jetbrains.kotlinx.kover")
@@ -13,8 +11,4 @@ testing {
   suites {
     val test by getting(JvmTestSuite::class) { useJUnitJupiter(libs.junitVersion.toString()) }
   }
-}
-
-tasks.withType<KotlinCompile>().configureEach {
-  compilerOptions { freeCompilerArgs.add("-opt-in=kotlin.ExperimentalStdlibApi") }
 }

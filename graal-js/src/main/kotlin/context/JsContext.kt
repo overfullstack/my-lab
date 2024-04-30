@@ -5,58 +5,22 @@ import com.squareup.moshi.Moshi
 import org.graalvm.polyglot.Context
 import org.graalvm.polyglot.HostAccess
 import org.graalvm.polyglot.io.IOAccess
-import postman.PostmanAPI
+import postman.PostmanSDK
 
-val pm by lazy { PostmanAPI() }
+val pm by lazy { PostmanSDK() }
 
 internal val jsContext: Context by lazy {
-  buildJSContext(false).also {
+  buildJSContext().also {
     it.getBindings("js").putMember("pm", pm)
     it.getBindings("js").putMember("xml2Json", xml2Json)
   }
 }
 
-fun buildJSContext(useCommonjsRequire: Boolean = true): Context {
+fun buildJSContext(nodeModulesRelativePath: String? = "graal-js"): Context {
   val options = buildMap {
-    if (useCommonjsRequire) {
+    if (!nodeModulesRelativePath.isNullOrBlank()) {
       put("js.commonjs-require", "true")
-      put("js.commonjs-require-cwd", "graal-js")
-      put("js.commonjs-core-modules-replacements", "path:path-browserify")
-    }
-    put("js.esm-eval-returns-exports", "true")
-    put("engine.WarnInterpreterOnly", "false")
-  }
-  return Context.newBuilder("js")
-    .allowExperimentalOptions(true)
-    .allowIO(IOAccess.ALL)
-    .options(options)
-    .allowHostAccess(HostAccess.ALL)
-    .allowHostClassLookup { true }
-    .build()
-}
-
-fun buildJSContext2(useCommonjsRequire: Boolean = true): Context {
-  val options = buildMap {
-    if (useCommonjsRequire) {
-      put("js.commonjs-require", "true")
-    }
-    put("js.esm-eval-returns-exports", "true")
-    put("engine.WarnInterpreterOnly", "false")
-  }
-  return Context.newBuilder("js")
-    .allowExperimentalOptions(true)
-    .allowIO(IOAccess.ALL)
-    .options(options)
-    .allowHostAccess(HostAccess.ALL)
-    .allowHostClassLookup { true }
-    .build()
-}
-
-fun buildJSContext(requiredCWD: String, useCommonjsRequire: Boolean = true): Context {
-  val options = buildMap {
-    if (useCommonjsRequire) {
-      put("js.commonjs-require", "true")
-      put("js.commonjs-require-cwd", requiredCWD)
+      put("js.commonjs-require-cwd", nodeModulesRelativePath)
       put("js.commonjs-core-modules-replacements", "path:path-browserify")
     }
     put("js.esm-eval-returns-exports", "true")

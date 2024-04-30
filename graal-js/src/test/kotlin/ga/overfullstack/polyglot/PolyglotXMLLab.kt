@@ -7,7 +7,7 @@ import context.pm
 import ga.overfullstack.polyglot.PolyglotXMLLab.Xml2Json
 import org.graalvm.polyglot.Source
 import org.junit.jupiter.api.Test
-import postman.PostmanAPI
+import postman.PostmanSDK
 
 class PolyglotXMLLab {
   @Test
@@ -36,7 +36,7 @@ class PolyglotXMLLab {
         .trimIndent()
     val context = buildJSContext(useCommonjsRequire = false)
     val source = Source.newBuilder("js", callingScript, "myScript.js").build()
-    val pm = PostmanAPI()
+    val pm = PostmanSDK()
     val jsBindings = context.getBindings("js")
     jsBindings.putMember("pm", pm)
     jsBindings.putMember("responseBody", responseBody)
