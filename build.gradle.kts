@@ -1,5 +1,4 @@
 import io.gitlab.arturbosch.detekt.Detekt
-import io.gitlab.arturbosch.detekt.DetektPlugin
 import io.gitlab.arturbosch.detekt.report.ReportMergeTask
 
 plugins {
@@ -7,7 +6,7 @@ plugins {
   id(libs.plugins.kover.get().pluginId)
   id(libs.plugins.gradle.doctor.get().pluginId)
   id(libs.plugins.dependency.analysis.get().pluginId)
-  id(libs.plugins.detekt.get().pluginId) apply false
+  id(libs.plugins.detekt.get().pluginId)
 }
 
 allprojects {
@@ -28,11 +27,6 @@ dependencies {
 
 koverReport { defaults { html { onCheck = true } } }
 
-val detektReportMerge by
-  tasks.registering(ReportMergeTask::class) {
-    output.set(rootProject.layout.buildDirectory.file("reports/detekt/merge.xml"))
-  }
-
 allprojects {
   repositories {
     mavenCentral()
@@ -42,12 +36,20 @@ allprojects {
   }
 }
 
+val detektReportMerge by
+tasks.registering(ReportMergeTask::class) {
+  output = project.layout.buildDirectory.file("reports/detekt/merge.sarif")
+}
+
 subprojects {
-  tasks.withType<Detekt>().configureEach { reports { html.required = true } }
-  plugins.withType<DetektPlugin> {
-    tasks.withType<Detekt> detekt@{
+  tasks {
+    withType<Detekt>().configureEach {
       finalizedBy(detektReportMerge)
-      detektReportMerge.configure { input.from(this@detekt.htmlReportFile) }
+      reports { sarif.required = true }
     }
+  }
+
+  detektReportMerge {
+    input.from(tasks.withType<Detekt>().map { it.sarifReportFile })
   }
 }
