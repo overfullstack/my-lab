@@ -7,6 +7,7 @@ dependencies {
   implementation(project(":common"))
   implementation(libs.revoman)
   implementation(libs.kotlinx.coroutines.core)
+  implementation(libs.kotlinx.datetime)
   implementation(libs.klaxon)
   implementation(libs.java.vavr)
   implementation(libs.kotlin.vavr)

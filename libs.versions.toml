@@ -3,6 +3,7 @@ jdk = "21"
 kotlin = "2.0.0-RC3"
 ksp = "2.0.0-RC2-1.0.20"
 kotlinx-coroutines-core = "1.8.1"
+kotlinx-datetime = "0.6.0-RC.2"
 hamcrest-core = "2.2"
 hamcrest-date = "2.0.8"
 java-vavr = "0.10.4"
@@ -102,6 +103,7 @@ arrow-optics = { module = "io.arrow-kt:arrow-optics", version.ref = "arrow" }
 arrow-optics-ksp-plugin = { module = "io.arrow-kt:arrow-optics-ksp-plugin", version.ref = "arrow" }
 arrow-fx-coroutines = { module = "io.arrow-kt:arrow-fx-coroutines", version.ref = "arrow" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines-core" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime-jvm", version.ref = "kotlinx-datetime" }
 mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
 state-machine = { module = "com.tinder.statemachine:statemachine", version.ref = "state-machine" }
 kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
