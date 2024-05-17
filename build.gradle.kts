@@ -25,8 +25,6 @@ dependencies {
     .forEach { kover(project(":${it.name}")) }
 }
 
-koverReport { defaults { html { onCheck = true } } }
-
 allprojects {
   repositories {
     mavenCentral()
@@ -36,10 +34,12 @@ allprojects {
   }
 }
 
+kover { reports { total { html { onCheck = true } } } }
+
 val detektReportMerge by
-tasks.registering(ReportMergeTask::class) {
-  output = project.layout.buildDirectory.file("reports/detekt/merge.sarif")
-}
+  tasks.registering(ReportMergeTask::class) {
+    output = project.layout.buildDirectory.file("reports/detekt/merge.sarif")
+  }
 
 subprojects {
   tasks {
@@ -49,7 +49,5 @@ subprojects {
     }
   }
 
-  detektReportMerge {
-    input.from(tasks.withType<Detekt>().map { it.sarifReportFile })
-  }
+  detektReportMerge { input.from(tasks.withType<Detekt>().map { it.sarifReportFile }) }
 }

@@ -18,4 +18,8 @@ dependencies {
   compileOnly(libs.jetbrains.annotations)
 }
 
+kapt {
+  useBuildCache = true
+}
+
 kotlin { compilerOptions { freeCompilerArgs.add("-Xjvm-default=all") } }
