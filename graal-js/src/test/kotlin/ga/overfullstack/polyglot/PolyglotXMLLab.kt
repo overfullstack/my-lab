@@ -34,7 +34,7 @@ class PolyglotXMLLab {
       pm.environment.set('z', jsonData['node']['c']['c2']);
     """
         .trimIndent()
-    val context = buildJSContext(useCommonjsRequire = false)
+    val context = buildJSContext()
     val source = Source.newBuilder("js", callingScript, "myScript.js").build()
     val pm = PostmanSDK()
     val jsBindings = context.getBindings("js")
