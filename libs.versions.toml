@@ -1,7 +1,7 @@
 [versions]
 jdk = "21"
 kotlin = "2.0.10"
-ksp = "2.0.0-1.0.24"
+ksp = "2.0.10-1.0.24"
 moshi = "2.0.0-SNAPSHOT"
 moshix = "0.27.2"
 kotlinx-coroutines-core = "1.8.1"
