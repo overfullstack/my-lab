@@ -2,6 +2,7 @@ plugins {
   application
   id("org.jetbrains.kotlinx.kover")
   id("io.gitlab.arturbosch.detekt")
+  id("com.autonomousapps.dependency-analysis")
 }
 
 val libs: VersionCatalog = extensions.getByType<VersionCatalogsExtension>().named("libs")

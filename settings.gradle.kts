@@ -1,3 +1,8 @@
+plugins {
+  id("com.autonomousapps.build-health") version "2.0.1"
+  id("org.jetbrains.kotlin.jvm") version "2.0.20" apply false
+}
+
 dependencyResolutionManagement {
   versionCatalogs { create("libs") { from(files("libs.versions.toml")) } }
   pluginManagement {

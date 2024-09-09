@@ -5,6 +5,16 @@
       <list>
         <AccountData>
           <accountId value="VXNlcjoyOQ==" />
+          <chats>
+            <list>
+              <chat>
+                <internalId value="b40c138e-2d2a-4707-b8c6-c521ee930ad1" />
+              </chat>
+              <chat>
+                <internalId value="91902329-0365-4d05-a404-b5afbfd1c0e7" />
+              </chat>
+            </list>
+          </chats>
         </AccountData>
       </list>
     </accountData>
