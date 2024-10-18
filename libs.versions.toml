@@ -38,7 +38,7 @@ underscore = "1.106"
 rabbitmq-client = "5.22.0"
 kotlin-logging = "7.0.0"
 pprint = "2.0.2"
-dependency-analysis = "2.1.4"
+dependency-analysis = "2.2.0"
 
 # Common dependencies
 junit = "5.11.2"
