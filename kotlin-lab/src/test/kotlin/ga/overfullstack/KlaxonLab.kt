@@ -1,7 +1,11 @@
 package ga.overfullstack
 
+import com.beust.klaxon.JsonArray
+import com.beust.klaxon.JsonObject
 import com.beust.klaxon.Klaxon
+import com.beust.klaxon.Parser
 import com.beust.klaxon.PathMatcher
+import com.salesforce.revoman.input.bufferFileInResources
 import com.salesforce.revoman.input.readFileInResourcesToString
 import org.junit.jupiter.api.Test
 import java.io.StringReader
@@ -41,4 +45,46 @@ class KlaxonLab {
         StringReader(readFileInResourcesToString("json/pokemon.postman_collection.json"))
       )
   }
+  
+  @Test
+  fun `klaxon Json Object`() {
+    val parser: Parser = Parser.default()
+    val stringBuilder: StringBuilder = StringBuilder("{\"name\":\"Cedric Beust\", \"age\":23}")
+    val json: JsonObject = parser.parse(stringBuilder) as JsonObject
+    println("Name : ${json.string("name")}, Age : ${json.int("age")}")
+  }
+
+  @Test
+  fun `klaxon Json Array`() {
+    val array = Parser.default().parse(bufferFileInResources("d.json").inputStream()) as JsonArray<*>
+
+    println("=== Finding Jack:")
+    val jack = array.first {
+      it is JsonObject && it.string("first") == "Jack"
+    }
+    println("Jack: $jack")
+
+    println("=== Everyone who studied in Berkeley:")
+    val berkeley = array.filterIsInstance<JsonObject>().filter {
+      it.obj("schoolResults")?.string("location") == "Berkeley"
+    }.map {
+      it.string("last")
+    }
+    println("${berkeley}")
+
+    println("=== All last names:")
+    val lastNames = array.string("last")
+    println("$lastNames")
+
+    println("=== All grades bigger than 75")
+    val result = array.filterIsInstance<JsonObject>().map {
+      it.obj("schoolResults")
+        ?.array<JsonObject>("scores")?.filter {
+          it.long("grade")!! > 75
+        }!!
+    }
+    println("Result: ${result}")
+    
+  }
+  
 }

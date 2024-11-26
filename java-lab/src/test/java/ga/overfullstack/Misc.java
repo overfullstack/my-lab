@@ -15,6 +15,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 import java.util.function.Consumer;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -85,5 +86,11 @@ class Misc {
                 "01txx0000006iwuAAA",
                 "01txx0000006iwuAAA"))
         .containsAll(List.of("01txx0000006iwuAAA", "01txx0000006iyWAAQ", "01txx0000006iyXAAQ"));
+  }
+
+  @Test
+  @DisplayName("Boolean valueOf null")
+  void booleanValueOfNull() {
+    Assertions.assertFalse(Boolean.valueOf(null));
   }
 }

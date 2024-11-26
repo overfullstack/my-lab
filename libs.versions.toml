@@ -4,6 +4,7 @@ kotlin = "2.0.21"
 ksp = "2.0.21-1.0.28"
 moshi = "2.0.0-SNAPSHOT"
 moshix = "0.28.0"
+kotlinx-serialization = "1.7.3"
 kotlinx-coroutines-core = "1.9.0"
 kotlinx-datetime = "0.6.1"
 hamcrest-core = "3.0"
@@ -15,6 +16,7 @@ typeTools = "0.6.3"
 http4k = "5.35.5.0"
 arrow = "1.2.4"
 klaxon = "5.6"
+json = "20240303"
 spotbugs = "6.0.26"
 lombok-gradle = "8.11"
 reflection-util = "2.17.0"
@@ -39,6 +41,7 @@ rabbitmq-client = "5.23.0"
 kotlin-logging = "7.0.0"
 pprint = "2.0.2"
 dependency-analysis = "2.5.0"
+gson = "2.11.0"
 
 # Common dependencies
 junit = "5.11.3"
@@ -74,6 +77,10 @@ junit-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref 
 guava = { module = "com.google.guava:guava", version.ref = "guava" }
 moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
 moshi-kotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" }
+kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+klaxon = { module = "com.beust:klaxon", version.ref = "klaxon" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+json = { module = "org.json:json", version.ref = "json" }
 jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson-databind" }
 apache-commons-lang3 = { module = "org.apache.commons:commons-lang3", version.ref = "apache-commons-lang3" }
 apache-commons-collections4 = { module = "org.apache.commons:commons-collections4", version.ref = "apache-commons-collections4" }
@@ -86,7 +93,6 @@ http4k-client-apache = { module = "org.http4k:http4k-client-apache", version.ref
 http4k-format-jackson = { module = "org.http4k:http4k-format-jackson", version.ref = "http4k" }
 http4k-metrics-micrometer = { module = "org.http4k:http4k-metrics-micrometer", version.ref = "http4k" }
 moshix-adapters = { module = "dev.zacsweers.moshix:moshi-adapters", version.ref = "moshix" }
-klaxon = { module = "com.beust:klaxon", version.ref = "klaxon" }
 graal-sdk = { module = "org.graalvm.sdk:graal-sdk", version.ref = "graal" }
 graal-truffle-api = { module = "org.graalvm.truffle:truffle-api", version.ref = "graal" }
 graal-truffle-dsl-processor = { module = "org.graalvm.truffle:truffle-dsl-processor", version.ref = "graal" }
@@ -164,6 +170,7 @@ testLogger = { id = "com.adarshr.test-logger", version.ref = "testLogger" }
 gradle-doctor = { id = "com.osacky.doctor", version.ref = "gradle-doctor" }
 dependency-analysis = { id = "com.autonomousapps.dependency-analysis", version.ref = "dependency-analysis" }
 moshix = { id = "dev.zacsweers.moshix", version.ref = "moshix" }
+kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 kotlin-noarg = { id = "org.jetbrains.kotlin.plugin.noarg", version.ref = "kotlin" }
 kotlin-lombok = { id = "org.jetbrains.kotlin.plugin.lombok", version.ref = "kotlin" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }

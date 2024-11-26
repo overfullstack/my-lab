@@ -1,14 +1,18 @@
 plugins {
   id("mylab.sub-conventions")
   id("mylab.kt-conventions")
+  alias(libs.plugins.kotlinx.serialization)
 }
 
 dependencies {
   implementation(project(":common"))
   implementation(libs.revoman)
+  implementation(libs.kotlinx.serialization)
   implementation(libs.kotlinx.coroutines.core)
   implementation(libs.kotlinx.datetime)
   implementation(libs.klaxon)
+  implementation(libs.json)
+  implementation(libs.gson)
   implementation(libs.java.vavr)
   implementation(libs.kotlin.vavr)
   implementation(libs.state.machine)

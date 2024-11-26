@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test
 
 class SealedLab {
 
+  @OptIn(ExperimentalStdlibApi::class)
   @Test
   fun sealed() {
     val successStr = readFileInResourcesToString("sealed/success.json")
