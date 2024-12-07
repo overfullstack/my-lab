@@ -5,10 +5,9 @@ plugins {
 
 dependencies {
   implementation(project(":common"))
-  implementation(libs.graal.sdk)
+  implementation(libs.graal.js)
   implementation(libs.graal.truffle.api)
   implementation(libs.graal.truffle.dsl.processor)
-  implementation(libs.graal.js)
   implementation(libs.revoman)
   implementation(libs.okio.jvm)
   implementation(libs.okio.extras)

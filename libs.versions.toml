@@ -27,7 +27,6 @@ apache-commons-collections4 = "4.4"
 vador = "1.1.0"
 revoman = "0.42.2"
 graal = "24.1.1"
-graal-js = "24.1.1"
 immutables = "2.10.1"
 mockito = "5.14.2"
 state-machine = "0.2.0"
@@ -93,10 +92,9 @@ http4k-client-apache = { module = "org.http4k:http4k-client-apache", version.ref
 http4k-format-jackson = { module = "org.http4k:http4k-format-jackson", version.ref = "http4k" }
 http4k-metrics-micrometer = { module = "org.http4k:http4k-metrics-micrometer", version.ref = "http4k" }
 moshix-adapters = { module = "dev.zacsweers.moshix:moshi-adapters", version.ref = "moshix" }
-graal-sdk = { module = "org.graalvm.sdk:graal-sdk", version.ref = "graal" }
+graal-js = { module = "org.graalvm.js:js-language", version.ref = "graal" }
 graal-truffle-api = { module = "org.graalvm.truffle:truffle-api", version.ref = "graal" }
 graal-truffle-dsl-processor = { module = "org.graalvm.truffle:truffle-dsl-processor", version.ref = "graal" }
-graal-js = { module = "org.graalvm.js:js", version.ref = "graal-js" }
 immutables-value = { module = "org.immutables:value", version.ref = "immutables" }
 immutables-builder = { module = "org.immutables:builder", version.ref = "immutables" }
 immutables-value-annotations = { module = "org.immutables:value-annotations", version.ref = "immutables" }
