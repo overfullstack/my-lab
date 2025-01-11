@@ -39,7 +39,7 @@ underscore = "1.109"
 rabbitmq-client = "5.24.0"
 kotlin-logging = "7.0.3"
 pprint = "3.0.0"
-dependency-analysis = "2.6.1"
+dependency-analysis = "2.7.0"
 gson = "2.11.0"
 
 # Common dependencies
