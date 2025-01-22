@@ -18,7 +18,7 @@ arrow = "2.0.0"
 klaxon = "5.6"
 json = "20250107"
 spotbugs = "6.1.2"
-lombok-gradle = "8.11"
+lombok-gradle = "8.12"
 reflection-util = "2.17.0"
 guava = "33.4.0-jre"
 jackson-databind = "2.18.2"
@@ -53,7 +53,7 @@ spotless = "7.0.2"
 apache-log4j = "2.24.3"
 testLogger = "4.0.0"
 gradle-doctor = "0.10.0"
-jetbrains-annotations = "26.0.1"
+jetbrains-annotations = "26.0.2"
 
 [libraries]
 hamcrest-core = { module = "org.hamcrest:hamcrest", version.ref = "hamcrest-core" }
