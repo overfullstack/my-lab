@@ -17,4 +17,32 @@
       <module name="ga.overfullstack.my-lab.apt.test" target="21" />
     </bytecodeTargetLevel>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="my-github.my-lab.apt.main" options="--enable-preview -Xlint:-processing" />
+      <module name="my-github.my-lab.apt.test" options="--enable-preview -Xlint:-processing" />
+      <module name="my-lab.apt" options="--enable-preview -Xlint:-processing" />
+      <module name="my-lab.common" options="--enable-preview" />
+      <module name="my-lab.common.main" options="--enable-preview" />
+      <module name="my-lab.common.test" options="--enable-preview" />
+      <module name="my-lab.graal-js" options="--enable-preview" />
+      <module name="my-lab.graal-js.main" options="--enable-preview" />
+      <module name="my-lab.graal-js.test" options="--enable-preview" />
+      <module name="my-lab.http4k" options="--enable-preview" />
+      <module name="my-lab.http4k.main" options="--enable-preview" />
+      <module name="my-lab.http4k.test" options="--enable-preview" />
+      <module name="my-lab.immutables" options="--enable-preview -proc:none" />
+      <module name="my-lab.immutables.main" options="--enable-preview -proc:none" />
+      <module name="my-lab.immutables.test" options="--enable-preview -proc:none" />
+      <module name="my-lab.java-lab" options="--enable-preview" />
+      <module name="my-lab.java-lab.main" options="--enable-preview" />
+      <module name="my-lab.java-lab.test" options="--enable-preview" />
+      <module name="my-lab.kotlin-lab" options="--enable-preview" />
+      <module name="my-lab.kotlin-lab.main" options="--enable-preview" />
+      <module name="my-lab.kotlin-lab.test" options="--enable-preview" />
+      <module name="my-lab.moshi" options="--enable-preview" />
+      <module name="my-lab.moshi.main" options="--enable-preview" />
+      <module name="my-lab.moshi.test" options="--enable-preview" />
+    </option>
+  </component>
 </project>

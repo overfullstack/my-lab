@@ -16,12 +16,6 @@ internal val VersionCatalog.testLogger
 internal val VersionCatalog.kotlinJVM
   get() = getPlugin("kotlin-jvm")
 
-internal val VersionCatalog.junitBom
-  get() = getLibrary("junit-bom")
-
-internal val VersionCatalog.junitBundle
-  get() = getBundle("junit")
-
 internal val VersionCatalog.jdk
   get() = getVersion("jdk")
 

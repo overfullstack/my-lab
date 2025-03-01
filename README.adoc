@@ -1,0 +1,22 @@
+= My Lab 🧪
+Gopal S Akshintala <gopalakshintala@gmail.com>
+:Revision: 1.0
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+:hide-uri-scheme:
+:toc:
+:toc-placement!:
+:figure-caption!:
+:sourcedir: src/main/kotlin
+:testdir: src/test/java
+:integrationtestdir: src/integrationTest/java
+:pmtemplates: src/integrationTest/resources/pm-templates
+:imagesdir: docs/images
+:prewrap!:
+
+Just a place where I try out things!

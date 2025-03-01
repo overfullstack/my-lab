@@ -90,7 +90,7 @@ http4k-bom = { module = "org.http4k:http4k-bom", version.ref = "http4k" }
 http4k-core = { module = "org.http4k:http4k-core", version.ref = "http4k" }
 http4k-client-apache = { module = "org.http4k:http4k-client-apache", version.ref = "http4k" }
 http4k-format-jackson = { module = "org.http4k:http4k-format-jackson", version.ref = "http4k" }
-http4k-metrics-micrometer = { module = "org.http4k:http4k-metrics-micrometer", version.ref = "http4k" }
+http4k-ops-micrometer = { module = "org.http4k:http4k-ops-micrometer", version.ref = "http4k" }
 moshix-adapters = { module = "dev.zacsweers.moshix:moshi-adapters", version.ref = "moshix" }
 graal-js = { module = "org.graalvm.js:js-language", version.ref = "graal" }
 immutables-value = { module = "org.immutables:value", version.ref = "immutables" }
@@ -148,7 +148,7 @@ http4k = [
   "http4k-core",
   "http4k-client-apache",
   "http4k-format-jackson",
-  "http4k-metrics-micrometer"
+  "http4k-ops-micrometer"
 ]
 kotlin-logging = ["kotlin-logging-jvm", "log4j-api", "log4j-core", "log4j-slf4j2-impl"]
 

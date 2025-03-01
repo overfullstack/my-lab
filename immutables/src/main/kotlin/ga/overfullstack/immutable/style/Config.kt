@@ -10,8 +10,8 @@ import org.immutables.value.Value.Style.ImplementationVisibility.PUBLIC
   typeAbstract = ["*Def"],
   builder = "configure",
   build = "off",
-  put = "*",
   add = "*",
+  put = "*",
   depluralize = true,
   depluralizeDictionary = ["Odr:Order"],
   visibility = PUBLIC
