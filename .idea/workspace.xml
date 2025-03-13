@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="Remove graal.truffle &#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
-      <change afterPath="$PROJECT_DIR$/README.adoc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/KtLab.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/MilestoneLab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="http4k upgrade&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.root-conventions.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.root-conventions.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/kotlin/predef.kt" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/predef.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.kt-conventions.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.kt-conventions.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/immutables/src/main/java/ga/overfullstack/immutables/Person1.java" beforeDir="false" afterPath="$PROJECT_DIR$/immutables/src/main/java/ga/overfullstack/immutables/Person1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/immutables/src/main/kotlin/ga/overfullstack/immutable/style/Config.kt" beforeDir="false" afterPath="$PROJECT_DIR$/immutables/src/main/kotlin/ga/overfullstack/immutable/style/Config.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/immutables/src/test/java/ga/overfullstack/immutables/ImmutablesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/immutables/src/test/java/ga/overfullstack/immutables/ImmutablesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/VavrLab.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/VavrLab.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/libs.versions.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,10 +105,7 @@
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;overfullstack&quot;
-  }
+  &quot;lastFilter&quot;: {}
 }</component>
   <component name="GitHubPullRequestState">{
   &quot;prStates&quot;: []
@@ -136,7 +130,6 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi/1.15.1/753fe8158eae76508bf251afd645101f871680c4/moshi-1.15.1.jar!/com/squareup/moshi/JsonReader.class" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.sdkman/candidates/java/23.0.1-amzn/lib/src.zip!/java.base/java/util/stream/Collectors.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/apt/build.gradle.kts" root0="FORCE_HIGHLIGHTING" />
@@ -216,6 +209,7 @@
     &quot;Gradle.FileUtilsTest.read file from resources to string.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.ImmutablesTest.copyFromConfig.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.ImmutablesTest.simpleBuilder.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ImmutablesTest.usingFrom.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.JsonPojoUtilsTest.jsonFileStreamToPojo.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.JsonPojoUtilsTest.jsonFileToPojo.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.KlaxonLab.klaxon Json Array.executor&quot;: &quot;Run&quot;,
@@ -250,6 +244,7 @@
     &quot;Gradle.StringLab.nullToString.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Tests in 'ga.overfullstack'.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Tests in 'my-lab.moshi.test'.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.VavrLab.exceptionInTry.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.my-lab [buildHealth].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.my-lab [build].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.my-lab [clean build].executor&quot;: &quot;Run&quot;,
@@ -427,8 +422,8 @@
       <command value="gradle clean" />
       <command value="gradle clean build -x test --no-configuration-cache --no-build-cache" />
       <command value="gradle clean build" />
-      <command value="gradle clean build -x test" />
       <command value="gradle spotlessApply" />
+      <command value="gradle clean build -x test" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -452,7 +447,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KtLab.mergeMapsWithPlus" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ImmutablesTest.simpleBuilder" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -463,9 +458,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":java-lab:test" />
+            <option value=":immutables:test" />
             <option value="--tests" />
-            <option value="&quot;ga.overfullstack.KtLab.mergeMapsWithPlus&quot;" />
+            <option value="&quot;ga.overfullstack.immutables.ImmutablesTest.simpleBuilder&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -476,7 +471,31 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="MilestoneLab.milestone" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ImmutablesTest.usingFrom" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":immutables:test" />
+            <option value="--tests" />
+            <option value="&quot;ga.overfullstack.immutables.ImmutablesTest.usingFrom&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="VavrLab.exceptionInTry" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -489,7 +508,7 @@
           <list>
             <option value=":java-lab:test" />
             <option value="--tests" />
-            <option value="&quot;ga.overfullstack.MilestoneLab.milestone&quot;" />
+            <option value="&quot;ga.overfullstack.VavrLab.exceptionInTry&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -545,22 +564,6 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="MilestoneLab.milestone" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="my-lab.java-lab.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ga.overfullstack.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ga.overfullstack" />
-      <option name="MAIN_CLASS_NAME" value="ga.overfullstack.MilestoneLab" />
-      <option name="METHOD_NAME" value="milestone" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="my-lab.spring.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ga.overfullstack.spring.Application" />
@@ -576,19 +579,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.ImmutablesTest.simpleBuilder" />
+      <item itemvalue="Gradle.ImmutablesTest.usingFrom" />
+      <item itemvalue="Gradle.VavrLab.exceptionInTry" />
       <item itemvalue="Gradle.my-lab [clean build]" />
       <item itemvalue="Gradle.my-lab [spotlessApply]" />
-      <item itemvalue="Gradle.KtLab.mergeMapsWithPlus" />
-      <item itemvalue="Gradle.MilestoneLab.milestone" />
-      <item itemvalue="JUnit.MilestoneLab.milestone" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ImmutablesTest.usingFrom" />
+        <item itemvalue="Gradle.ImmutablesTest.simpleBuilder" />
+        <item itemvalue="Gradle.VavrLab.exceptionInTry" />
         <item itemvalue="Gradle.my-lab [clean build]" />
         <item itemvalue="Gradle.my-lab [spotlessApply]" />
-        <item itemvalue="Gradle.KtLab.mergeMapsWithPlus" />
-        <item itemvalue="Gradle.MilestoneLab.milestone" />
-        <item itemvalue="JUnit.MilestoneLab.milestone" />
       </list>
     </recent_temporary>
   </component>
@@ -1187,7 +1190,14 @@
       <workItem from="1739278729085" duration="603000" />
       <workItem from="1740227222119" duration="705000" />
       <workItem from="1740573805672" duration="971000" />
-      <workItem from="1740820985589" duration="818000" />
+      <workItem from="1740820985589" duration="875000" />
+      <workItem from="1740920011703" duration="804000" />
+      <workItem from="1740978490812" duration="665000" />
+      <workItem from="1740979384470" duration="784000" />
+      <workItem from="1741071455785" duration="2938000" />
+      <workItem from="1741746593846" duration="1383000" />
+      <workItem from="1741881850375" duration="258000" />
+      <workItem from="1741882269647" duration="319000" />
     </task>
     <task id="LOCAL-00009" summary="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
       <created>1627583016664</created>
@@ -1532,7 +1542,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684333262543</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1638,7 +1648,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="k2 compiler&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="Fix moshi, polyglot broken&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="Immutables depluralizeDictionary not working&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
@@ -1663,7 +1672,8 @@
     <MESSAGE value="Change graal deps" />
     <MESSAGE value="Change graal deps&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="Remove graal.truffle &#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove graal.truffle &#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <MESSAGE value="http4k upgrade&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="http4k upgrade&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
   </component>
   <component name="WfRunsListSearchHistory">{
   &quot;history&quot;: [

@@ -21,4 +21,12 @@ class VavrLab {
     Try.run(() -> Thread.sleep(10000));
     System.out.println("done");
   }
+
+  @Test
+  @DisplayName("Exception in try")
+  void exceptionInTry() {
+    Try.of(() -> {
+      throw new IllegalArgumentException("something");
+    }).get();
+  }
 }

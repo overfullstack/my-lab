@@ -13,6 +13,7 @@ import org.immutables.value.Value.Style.ImplementationVisibility.PUBLIC
   add = "*",
   put = "*",
   depluralize = true,
+//  builtinContainerAttributes = false,
   depluralizeDictionary = ["Odr:Order"],
   visibility = PUBLIC
 )

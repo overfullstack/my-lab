@@ -14,6 +14,14 @@ class ImmutablesTest {
   }
 
   @Test
+  void usingFrom() {
+    final var person1 = Person1.configure().age(33).isEmployed(false).isMarried(true).hobbies("cricket").done();
+    final var person2 = Person1.configure().age(33).isEmployed(false).isMarried(true).hobbies("music").done();
+    final var person3 = Person1.configure().from(person1).from(person2).done();
+    System.out.println(person3);
+  }
+
+  @Test
   @DisplayName("Expressive factory methods")
   void expressiveFactoryMethods() {
     final var point = Point.origin();
