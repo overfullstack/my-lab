@@ -87,10 +87,13 @@ vador = { module = "com.salesforce.vador:vador", version.ref = "vador" }
 vador-matchers = { module = "com.salesforce.vador:vador-matchers", version.ref = "vador" }
 revoman = { module = "com.salesforce.revoman:revoman", version.ref = "revoman" }
 http4k-bom = { module = "org.http4k:http4k-bom", version.ref = "http4k" }
-http4k-core = { module = "org.http4k:http4k-core", version.ref = "http4k" }
-http4k-client-apache = { module = "org.http4k:http4k-client-apache", version.ref = "http4k" }
-http4k-format-jackson = { module = "org.http4k:http4k-format-jackson", version.ref = "http4k" }
-http4k-ops-micrometer = { module = "org.http4k:http4k-ops-micrometer", version.ref = "http4k" }
+http4k-core = { module = "org.http4k:http4k-core" }
+http4k-client-apache = { module = "org.http4k:http4k-client-apache"}
+http4k-format-jackson = { module = "org.http4k:http4k-format-jackson" }
+http4k-ops-micrometer = { module = "org.http4k:http4k-ops-micrometer" }
+http4k-mcp-sdk = { module = "org.http4k.pro:http4k-mcp-sdk" }
+http4k-server-helidon = { module = "org.http4k:http4k-server-helidon" }
+http4k-server-jetty = { module = "org.http4k:http4k-server-jetty" }
 moshix-adapters = { module = "dev.zacsweers.moshix:moshi-adapters", version.ref = "moshix" }
 graal-js = { module = "org.graalvm.js:js-language", version.ref = "graal" }
 immutables-value = { module = "org.immutables:value", version.ref = "immutables" }
@@ -117,9 +120,9 @@ underscore = { module = "com.github.javadev:underscore", version.ref = "undersco
 pprint = { module = "io.exoquery:pprint-kotlin", version.ref = "pprint" }
 
 # Spring (version managed by spring-dependency-management)
-spring-boot-starter-batch = { module = "org.springframework.boot:spring-boot-starter-batch" }
-spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
-spring-batch-test = { module = "org.springframework.batch:spring-batch-test" }
+# spring-boot-starter-batch = { module = "org.springframework.boot:spring-boot-starter-batch" }
+# spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
+# spring-batch-test = { module = "org.springframework.batch:spring-batch-test" }
 
 # Gradle plugins (Only declare the ones needed for buildSrc)
 kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
@@ -144,11 +147,13 @@ vador = ["vador", "vador-matchers"]
 apache-log4j = ["log4j-api", "log4j-core", "log4j-slf4j2-impl"]
 arrow = ["arrow-core", "arrow-optics", "arrow-fx-coroutines"]
 http4k = [
-  "http4k-bom",
   "http4k-core",
   "http4k-client-apache",
   "http4k-format-jackson",
-  "http4k-ops-micrometer"
+  "http4k-ops-micrometer",
+  "http4k-mcp-sdk",
+  "http4k-server-helidon",
+  "http4k-server-jetty"
 ]
 kotlin-logging = ["kotlin-logging-jvm", "log4j-api", "log4j-core", "log4j-slf4j2-impl"]
 
