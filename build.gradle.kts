@@ -9,6 +9,12 @@ plugins {
   id(libs.plugins.detekt.get().pluginId)
 }
 
+doctor { 
+  javaHome { 
+    failOnError = false
+  }
+}
+
 allprojects {
   repositories {
     mavenCentral()

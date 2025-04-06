@@ -11,7 +11,7 @@ import com.squareup.moshi.ToJson
 @JsonClass(generateAdapter = true) data class Records(val records: List<Record>)
 
 @JsonClass(generateAdapter = true)
-data class Record(val attributes: Attributes, val recordBody: Map<String, Any>)
+data class Record(val attributes: Attributes, val recordBody: Map<String, Any?>)
 
 @JsonClass(generateAdapter = true) data class Attributes(val skill: String, val weapon: String)
 
@@ -24,6 +24,7 @@ object RecordAdapter {
     var attributes: Attributes? = null
     val recordBody = mutableMapOf<String, Any>()
     while (reader.hasNext()) {
+      // `selectName` returns the index of match in the options
       when (reader.selectName(options)) {
         0 -> {
           if (attributes != null) {

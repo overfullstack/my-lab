@@ -3,6 +3,7 @@ package ga.overfullstack.immutables;
 import ga.overfullstack.immutable.Kick;
 import ga.overfullstack.immutable.StepConfig;
 import java.util.Set;
+import kotlin.collections.ArraysKt;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -72,5 +73,15 @@ class ImmutablesTest {
     final var kickCopy = // Replace attributes
         kick.withTemplatePathsInOrder("pathCopy").withHooks(Set.of("c"));
     System.out.println(kickCopy);
+  }
+
+  @Test
+  @DisplayName("Arrays kt")
+  void arraysKt() {
+    final var kick =
+        Kick.configure().templatePathsInOdr("path").hooks(Set.of(Set.of("a"), Set.of("b"))).off();
+    final var arr = new Kick[] {kick, kick};
+    final var templatePaths = String.join(", ", ArraysKt.flatMap(arr, Kick::templatePathsInOrder));
+    System.out.println(templatePaths);
   }
 }

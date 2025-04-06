@@ -15,4 +15,5 @@ dependencies {
 
   testImplementation(libs.assertj.vavr)
   testImplementation(libs.assertj.core)
+  testImplementation(libs.truth)
 }

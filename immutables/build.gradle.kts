@@ -22,4 +22,8 @@ kapt {
   useBuildCache = true
 }
 
+tasks.withType<Jar> {
+  duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
 kotlin { compilerOptions { freeCompilerArgs.add("-Xjvm-default=all") } }
