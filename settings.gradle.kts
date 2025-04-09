@@ -1,5 +1,5 @@
 plugins {
-  id("com.autonomousapps.build-health") version "2.14.0"
+  id("com.autonomousapps.build-health") version "2.15.0"
   id("org.jetbrains.kotlin.jvm") version "2.1.20" apply false
 }
 
