@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="gradle wrapper&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
+      <change afterPath="$PROJECT_DIR$/http4k/src/main/kotlin/ga/overfullstack/mcp/Client.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/http4k/src/main/kotlin/ga/overfullstack/mcp/Tool.kt" beforeDir="false" afterPath="$PROJECT_DIR$/http4k/src/main/kotlin/ga/overfullstack/mcp/Tool.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/libs.versions.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,10 +124,16 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.salesforce.revoman/revoman/0.42.5/38e0dff30dc0f8418953391a769c9dec06c0d842/revoman-0.42.5-sources.jar!/com/salesforce/revoman/input/json/JsonWriterUtils.kt" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi/1.15.1/753fe8158eae76508bf251afd645101f871680c4/moshi-1.15.1.jar!/com/squareup/moshi/JsonReader.class" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-format-moshi/5.31.1.0/9bba3decd1316d34504f316732985ff03f61e2b3/http4k-format-moshi-5.31.1.0-sources.jar!/org/http4k/format/write.kt" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.immutables/value-annotations/2.10.1/8888c74e732201e97cd413d3082ef2bfd88a4a6a/value-annotations-2.10.1-sources.jar!/org/immutables/value/Value.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k.pro/http4k-mcp-sdk/6.5.3.0/53b9c51942dff9f8c27bf2b9ff5ec7f636e2532a/http4k-mcp-sdk-6.5.3.0-sources.jar!/org/http4k/mcp/server/capability/ToolCapability.kt" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k.pro/http4k-mcp-sdk/6.5.3.0/53b9c51942dff9f8c27bf2b9ff5ec7f636e2532a/http4k-mcp-sdk-6.5.3.0-sources.jar!/org/http4k/mcp/tools.kt" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k.pro/http4k-mcp-sdk/6.5.6.1/2c5ad4ee6d6c42dd88f36653c9eee648243be556/http4k-mcp-sdk-6.5.6.1.jar!/org/http4k/routing/McpKt.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k.pro/http4k-mcp-sdk/6.5.6.1/43ec60061fd4c6699acbfa8f6dbabd4a2a3c3c12/http4k-mcp-sdk-6.5.6.1-sources.jar!/org/http4k/routing/Mcp.kt" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k.pro/http4k-tools-hotreload/6.5.6.1/35a6923265930f40b88abe07ed96bf799a338434/http4k-tools-hotreload-6.5.6.1-sources.jar!/org/http4k/hotreload/HotReloadable.kt" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k.pro/http4k-tools-hotreload/6.5.6.1/8ed00f7bd3534f7eaf3b1e4edde31797cf53835e/http4k-tools-hotreload-6.5.6.1.jar!/org/http4k/hotreload/HotReloadable.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-core/6.5.3.0/50529817df8364d29b5fe8125ff1b572ab86afa7/http4k-core-6.5.3.0.jar!/org/http4k/lens/BiDiLensSpec.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-core/6.5.3.0/d2103b3c0328cd5d8e333363042fc073bf927f1d/http4k-core-6.5.3.0-sources.jar!/org/http4k/lens/lensSpec.kt" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-realtime-core/6.5.6.1/970b36f37fa657f863c55d000394ff5904aafc59/http4k-realtime-core-6.5.6.1.jar!/org/http4k/routing/PolyKt.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-realtime-core/6.5.6.1/c413ce699e407de7aa1c2c165cd2e25c5efda1e2/http4k-realtime-core-6.5.6.1-sources.jar!/org/http4k/routing/poly.kt" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/apt/build.gradle.kts" root0="FORCE_HIGHLIGHTING" />
@@ -269,6 +276,7 @@
     &quot;Kotest.Misc: split.executor&quot;: &quot;Run&quot;,
     &quot;Kotlin.ChunkingKt.executor&quot;: &quot;Run&quot;,
     &quot;Kotlin.LensLabKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.MainKt.executor&quot;: &quot;Run&quot;,
     &quot;Kotlin.MomentWithBundleKt.executor&quot;: &quot;Run&quot;,
     &quot;Kotlin.MomentWithRequireJsKt.executor&quot;: &quot;Run&quot;,
     &quot;Kotlin.ToolKt (1).executor&quot;: &quot;Run&quot;,
@@ -436,7 +444,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.ToolKt (1)">
+  <component name="RunManager" selected="Kotlin.ToolKt">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -521,30 +529,16 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ToolKt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ToolKt" />
+    <configuration name="ClientKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ga.overfullstack.mcp.ClientKt" />
       <module name="my-lab.http4k.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="ToolKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ga.overfullstack.mcp.ToolKt" />
+      <option name="MAIN_CLASS_NAME" value="ToolKt" />
       <module name="my-lab.http4k.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="my-lab.spring.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ga.overfullstack.spring.Application" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="my-lab.spring.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ga.overfullstack.spring.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -553,16 +547,16 @@
       <item itemvalue="Gradle.ImmutablesTest.arraysKt" />
       <item itemvalue="Gradle.my-lab [clean build]" />
       <item itemvalue="Gradle.KtLab.measureTimeInMillis" />
+      <item itemvalue="Kotlin.ClientKt" />
       <item itemvalue="Kotlin.ToolKt" />
-      <item itemvalue="Kotlin.ToolKt (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.ToolKt (1)" />
         <item itemvalue="Kotlin.ToolKt" />
-        <item itemvalue="Gradle.ImmutablesTest.arraysKt" />
+        <item itemvalue="Kotlin.ClientKt" />
         <item itemvalue="Gradle.my-lab [clean build]" />
         <item itemvalue="Gradle.KtLab.measureTimeInMillis" />
+        <item itemvalue="Gradle.ImmutablesTest.arraysKt" />
       </list>
     </recent_temporary>
   </component>
@@ -1177,7 +1171,11 @@
       <workItem from="1743838662591" duration="2370000" />
       <workItem from="1743867560543" duration="508000" />
       <workItem from="1743908848922" duration="10839000" />
-      <workItem from="1743953473494" duration="1123000" />
+      <workItem from="1743953473494" duration="1970000" />
+      <workItem from="1744045151327" duration="3329000" />
+      <workItem from="1744366033779" duration="1465000" />
+      <workItem from="1744444598434" duration="12367000" />
+      <workItem from="1744465259018" duration="1754000" />
     </task>
     <task id="LOCAL-00009" summary="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
       <created>1627583016664</created>
@@ -1522,7 +1520,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684333262543</updated>
     </task>
-    <option name="localTasksCounter" value="121" />
+    <option name="localTasksCounter" value="122" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

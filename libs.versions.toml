@@ -25,7 +25,7 @@ jackson-databind = "2.18.3"
 apache-commons-lang3 = "3.17.0"
 apache-commons-collections4 = "4.4"
 vador = "1.1.0"
-revoman = "0.42.5"
+revoman = "0.7.8"
 graal = "24.2.1"
 immutables = "2.10.1"
 mockito = "5.17.0"
@@ -61,8 +61,6 @@ hamcrest-date = { module = "org.exparity:hamcrest-date", version.ref = "hamcrest
 java-vavr = { module = "io.vavr:vavr", version.ref = "java-vavr" }
 kotlin-vavr = { module = "io.vavr:vavr-kotlin", version.ref = "kotlin-vavr" }
 jetbrains-annotations = { module = "org.jetbrains:annotations", version.ref = "jetbrains-annotations" }
-typeTools = { module = "net.jodah:typetools", version.ref = "typeTools" }
-reflection-util = { module = "de.cronn:reflection-util", version.ref = "reflection-util" }
 testLogger-gradle = { module = "com.adarshr.test-logger:com.adarshr.test-logger.gradle.plugin", version.ref = "testLogger" }
 kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
 kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest" }
@@ -71,8 +69,8 @@ assertj-core = { module = "org.assertj:assertj-core", version.ref = "assertj-cor
 assertj-vavr = { module = "org.assertj:assertj-vavr", version.ref = "assertj-vavr" }
 truth = { module = "com.google.truth:truth", version.ref = "truth" }
 junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
-junit-jupiter = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }
-junit-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter-api" }
+junit-engine = { module = "org.junit.jupiter:junit-jupiter-engine" }
 guava = { module = "com.google.guava:guava", version.ref = "guava" }
 moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
 moshi-kotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" }
@@ -88,12 +86,13 @@ vador-matchers = { module = "com.salesforce.vador:vador-matchers", version.ref =
 revoman = { module = "com.salesforce.revoman:revoman", version.ref = "revoman" }
 http4k-bom = { module = "org.http4k:http4k-bom", version.ref = "http4k" }
 http4k-core = { module = "org.http4k:http4k-core" }
-http4k-client-apache = { module = "org.http4k:http4k-client-apache"}
+http4k-client-apache = { module = "org.http4k:http4k-client-apache" }
 http4k-format-jackson = { module = "org.http4k:http4k-format-jackson" }
 http4k-ops-micrometer = { module = "org.http4k:http4k-ops-micrometer" }
 http4k-mcp-sdk = { module = "org.http4k.pro:http4k-mcp-sdk" }
 http4k-server-helidon = { module = "org.http4k:http4k-server-helidon" }
 http4k-server-jetty = { module = "org.http4k:http4k-server-jetty" }
+http4k-tools-hotreload = { module = "org.http4k.pro:http4k-tools-hotreload" }
 moshix-adapters = { module = "dev.zacsweers.moshix:moshi-adapters", version.ref = "moshix" }
 graal-js = { module = "org.graalvm.js:js-language", version.ref = "graal" }
 immutables-value = { module = "org.immutables:value", version.ref = "immutables" }
@@ -142,7 +141,6 @@ kotest = [
   "kotest-property",
   "kotest-runnerJUnit5",
 ]
-junit = ["junit-jupiter", "junit-engine"]
 vador = ["vador", "vador-matchers"]
 apache-log4j = ["log4j-api", "log4j-core", "log4j-slf4j2-impl"]
 arrow = ["arrow-core", "arrow-optics", "arrow-fx-coroutines"]
@@ -153,7 +151,8 @@ http4k = [
   "http4k-ops-micrometer",
   "http4k-mcp-sdk",
   "http4k-server-helidon",
-  "http4k-server-jetty"
+  "http4k-server-jetty",
+  "http4k-tools-hotreload"
 ]
 kotlin-logging = ["kotlin-logging-jvm", "log4j-api", "log4j-core", "log4j-slf4j2-impl"]
 
