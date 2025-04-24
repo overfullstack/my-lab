@@ -38,7 +38,7 @@ rabbitmq-client = "5.25.0"
 kotlin-logging = "7.0.7"
 pprint = "3.0.0"
 dependency-analysis = "2.16.0"
-gson = "2.13.0"
+gson = "2.13.1"
 
 # Common dependencies
 junit = "5.12.2"
