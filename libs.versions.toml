@@ -153,6 +153,7 @@ http4k = [
   "http4k-tools-hotreload"
 ]
 kotlin-logging = ["kotlin-logging-jvm", "log4j-api", "log4j-core", "log4j-slf4j2-impl"]
+junit = ["junit-jupiter", "junit-engine"]
 
 [plugins]
 kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
