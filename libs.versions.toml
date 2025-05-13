@@ -1,6 +1,6 @@
 [versions]
 jdk = "23"
-kotlin = "2.1.20"
+kotlin = "2.1.21"
 ksp = "2.1.20-2.0.1"
 moshi = "2.0.0-SNAPSHOT"
 moshix = "0.30.0"
