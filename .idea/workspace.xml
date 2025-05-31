@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
+      <change afterPath="$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/v64/ClassWithParametricTypes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/v65/ClassWithParametricTypes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/libs.versions.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,17 +122,8 @@
     &quot;accountId&quot;: &quot;67619594-9f71-429c-8848-7bfb75858647&quot;
   }
 }</component>
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="$USER_HOME$/.sdkman/candidates/gradle/8.14.1" javaHome="$USER_HOME$/.sdkman/candidates/java/23.0.2-amzn" />
   <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k.pro/http4k-mcp-sdk/6.5.3.0/53b9c51942dff9f8c27bf2b9ff5ec7f636e2532a/http4k-mcp-sdk-6.5.3.0-sources.jar!/org/http4k/mcp/server/capability/ToolCapability.kt" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k.pro/http4k-mcp-sdk/6.5.3.0/53b9c51942dff9f8c27bf2b9ff5ec7f636e2532a/http4k-mcp-sdk-6.5.3.0-sources.jar!/org/http4k/mcp/tools.kt" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k.pro/http4k-mcp-sdk/6.5.6.1/2c5ad4ee6d6c42dd88f36653c9eee648243be556/http4k-mcp-sdk-6.5.6.1.jar!/org/http4k/routing/McpKt.class" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k.pro/http4k-mcp-sdk/6.5.6.1/43ec60061fd4c6699acbfa8f6dbabd4a2a3c3c12/http4k-mcp-sdk-6.5.6.1-sources.jar!/org/http4k/routing/Mcp.kt" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k.pro/http4k-tools-hotreload/6.5.6.1/35a6923265930f40b88abe07ed96bf799a338434/http4k-tools-hotreload-6.5.6.1-sources.jar!/org/http4k/hotreload/HotReloadable.kt" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k.pro/http4k-tools-hotreload/6.5.6.1/8ed00f7bd3534f7eaf3b1e4edde31797cf53835e/http4k-tools-hotreload-6.5.6.1.jar!/org/http4k/hotreload/HotReloadable.class" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-core/6.5.3.0/50529817df8364d29b5fe8125ff1b572ab86afa7/http4k-core-6.5.3.0.jar!/org/http4k/lens/BiDiLensSpec.class" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-core/6.5.3.0/d2103b3c0328cd5d8e333363042fc073bf927f1d/http4k-core-6.5.3.0-sources.jar!/org/http4k/lens/lensSpec.kt" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-realtime-core/6.5.6.1/970b36f37fa657f863c55d000394ff5904aafc59/http4k-realtime-core-6.5.6.1.jar!/org/http4k/routing/PolyKt.class" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-realtime-core/6.5.6.1/c413ce699e407de7aa1c2c165cd2e25c5efda1e2/http4k-realtime-core-6.5.6.1-sources.jar!/org/http4k/routing/poly.kt" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/apt/build.gradle.kts" root0="FORCE_HIGHLIGHTING" />
@@ -300,13 +292,13 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "ignore.preview.features.used": "true",
-    "javascript.nodejs.core.library.configured.version": "22.11.0",
-    "javascript.nodejs.core.library.typings.version": "22.10.7",
+    "javascript.nodejs.core.library.configured.version": "22.15.0",
+    "javascript.nodejs.core.library.typings.version": "22.15.29",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
     "ktor.last.update.timestamp": "1684333206939",
     "last_directory_selection": "/Users/gopala.akshintala/code-clones/my-github/my-lab/kotlin-lab/src/test/java",
-    "last_opened_file_path": "/Users/gopala.akshintala/code-clones/my-github/my-lab/java-lab/src/main/java/constraints/solver/configuration/v65",
+    "last_opened_file_path": "/Users/gopala.akshintala/code-clones/my-github/my-lab/java-lab/src/main/java/ga/overfullstack/v65",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
@@ -346,11 +338,11 @@
       <recent name="ga.overfullstack" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/v65" />
+      <recent name="$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/v64" />
+      <recent name="$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/v63" />
       <recent name="$PROJECT_DIR$/java-lab/src/main/java/constraints/solver/configuration/v65" />
       <recent name="$PROJECT_DIR$/java-lab/src/main/java/constraints/solver/configuration/v64/overfullstack" />
-      <recent name="$PROJECT_DIR$/java-lab/src/main/java/constraints/solver/configuration/v63" />
-      <recent name="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack" />
-      <recent name="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/ga/overfullstack" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -1174,7 +1166,11 @@
       <workItem from="1744465259018" duration="1754000" />
       <workItem from="1744882345602" duration="2356000" />
       <workItem from="1745169534819" duration="2029000" />
-      <workItem from="1747114636808" duration="1312000" />
+      <workItem from="1747114636808" duration="1954000" />
+      <workItem from="1747308188271" duration="1135000" />
+      <workItem from="1747321134203" duration="3000" />
+      <workItem from="1747325425909" duration="1739000" />
+      <workItem from="1748690223571" duration="107000" />
     </task>
     <task id="LOCAL-00009" summary="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
       <created>1627583016664</created>
@@ -1519,7 +1515,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684333262543</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1548,10 +1544,36 @@
     <option name="OPEN_GENERIC_TABS">
       <map>
         <entry key="c78c070f-866a-4cd0-a019-e49ac65e5469" value="TOOL_WINDOW" />
+        <entry key="3b9b8850-95e3-4a32-a63f-e8c12da9aa26" value="TOOL_WINDOW" />
       </map>
     </option>
     <option name="TAB_STATES">
       <map>
+        <entry key="3b9b8850-95e3-4a32-a63f-e8c12da9aa26">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/Users/gopala.akshintala/code-clones/my-github/my-lab/buildSrc" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
