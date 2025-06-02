@@ -4,4 +4,4 @@ val libs: VersionCatalog = extensions.getByType<VersionCatalogsExtension>().name
 
 dependencies { testImplementation(libs.kotestBundle) }
 
-kotlin { compilerOptions { freeCompilerArgs.addAll("-progressive", "-Xmulti-dollar-interpolation") } }
+kotlin { compilerOptions { freeCompilerArgs.addAll("-Xcontext-parameters", "-progressive", "-Xmulti-dollar-interpolation") } }
