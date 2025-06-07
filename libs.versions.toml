@@ -41,7 +41,7 @@ dependency-analysis = "2.18.0"
 gson = "2.13.1"
 
 # Common dependencies
-junit = "5.13.0"
+junit = "5.13.1"
 kover = "0.9.1"
 kotest = "5.9.1"
 assertj-core = "3.27.3"
