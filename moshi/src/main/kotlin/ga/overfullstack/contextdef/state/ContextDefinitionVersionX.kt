@@ -8,5 +8,5 @@ data class ContextDefinitionVersionX(
   val isActive: String,
   val startDate: String,
   val contextNodes: List<ContextNode>,
-  val contextMapping: List<ContextMapping>?
+  val contextMapping: List<ContextMapping>?,
 )

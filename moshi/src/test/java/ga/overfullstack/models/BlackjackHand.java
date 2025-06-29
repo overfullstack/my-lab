@@ -18,16 +18,16 @@ package ga.overfullstack.models;
 import java.util.List;
 
 public final class BlackjackHand {
-  public final Card hidden_card;
-  public final List<Card> visible_cards;
+	public final Card hidden_card;
+	public final List<Card> visible_cards;
 
-  public BlackjackHand(Card hiddenCard, List<Card> visibleCards) {
-    this.hidden_card = hiddenCard;
-    this.visible_cards = visibleCards;
-  }
+	public BlackjackHand(Card hiddenCard, List<Card> visibleCards) {
+		this.hidden_card = hiddenCard;
+		this.visible_cards = visibleCards;
+	}
 
-  @Override
-  public String toString() {
-    return "hidden=" + hidden_card + ",visible=" + visible_cards;
-  }
+	@Override
+	public String toString() {
+		return "hidden=" + hidden_card + ",visible=" + visible_cards;
+	}
 }

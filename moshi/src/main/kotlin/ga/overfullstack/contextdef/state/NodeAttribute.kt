@@ -8,5 +8,5 @@ data class NodeAttribute(
   val contextTagList: List<ContextTag>,
   val dataType: String,
   val name: String,
-  val type: String
+  val type: String,
 )

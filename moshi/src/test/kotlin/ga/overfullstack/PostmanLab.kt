@@ -37,7 +37,7 @@ class PostmanLab {
         "taxAdminUserName",
         "billingAdminUserName",
         "productAndPricingAdminUserName",
-        "salesRepUserName"
+        "salesRepUserName",
       )
     val anyAdapter = Moshi.Builder().build().adapter<Any>()
     val env =

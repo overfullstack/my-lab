@@ -18,7 +18,7 @@ data class ConnectGraph(
   val graph: Graph?,
   val isSetGraph: Boolean,
   val isSetPricingPref: Boolean,
-  val pricingPref: String?
+  val pricingPref: String?,
 ) {
   companion object
 
@@ -29,7 +29,7 @@ data class ConnectGraph(
     val graphId: String?,
     val isSetGraphId: Boolean,
     val isSetRecords: Boolean,
-    val records: Records?
+    val records: Records?,
   ) {
     companion object
 
@@ -45,7 +45,7 @@ data class ConnectGraph(
         val isSetReferenceId: Boolean,
         val referenceId: String?,
         val isSetRecord: Boolean,
-        val record: Record?
+        val record: Record?,
       ) {
         companion object
 
@@ -112,7 +112,7 @@ data class ConnectGraph(
     fun toJson(
       writer: JsonWriter,
       connectGraph: ConnectGraph?,
-      dynamicJsonAdapter: JsonAdapter<Any>
+      dynamicJsonAdapter: JsonAdapter<Any>,
     ) =
       with(writer) {
         obj(connectGraph) {

@@ -16,16 +16,16 @@
 package ga.overfullstack.models;
 
 public final class Card {
-  public final char rank;
-  public final Suit suit;
+	public final char rank;
+	public final Suit suit;
 
-  public Card(char rank, Suit suit) {
-    this.rank = rank;
-    this.suit = suit;
-  }
+	public Card(char rank, Suit suit) {
+		this.rank = rank;
+		this.suit = suit;
+	}
 
-  @Override
-  public String toString() {
-    return String.format("%s%s", rank, suit);
-  }
+	@Override
+	public String toString() {
+		return String.format("%s%s", rank, suit);
+	}
 }

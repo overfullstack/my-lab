@@ -6,9 +6,10 @@ import io.kotest.data.row
 import io.kotest.matchers.shouldBe
 
 class ChunkingTest :
-    StringSpec({
-      "Chunking Test" {
-        val ctx3 = mutableMapOf(
+  StringSpec({
+    "Chunking Test" {
+      val ctx3 =
+        mutableMapOf(
           Id(1) to ContextRecord(4, 1, null),
           Id(2) to ContextRecord(2, 1, null),
           Id(3) to ContextRecord(2, 1, null),
@@ -18,16 +19,13 @@ class ChunkingTest :
           Id(7) to ContextRecord(2, 5, null),
           Id(8) to ContextRecord(1, 5, null),
           Id(9) to ContextRecord(1, 5, null),
-          Id(10) to ContextRecord(1, 5, null))
-        forAll(
-            row(ctx3, 3)
-        ) { context, result ->
-          greedyChunking(context) shouldBe result
-        }
-      }
-    })
+          Id(10) to ContextRecord(1, 5, null),
+        )
+      forAll(row(ctx3, 3)) { context, result -> greedyChunking(context) shouldBe result }
+    }
+  })
 
 internal fun List<Int>.toContext(): Context =
-    withIndex()
-        .associate { Id(it.index) to ContextRecord(it.value, indices.random(), null) }
-        .toMutableMap()
+  withIndex()
+    .associate { Id(it.index) to ContextRecord(it.value, indices.random(), null) }
+    .toMutableMap()

@@ -32,5 +32,5 @@ internal interface KickDef {
 }
 
 enum class ValidationStrategy {
-  FAIL_FAST,
+  FAIL_FAST
 }

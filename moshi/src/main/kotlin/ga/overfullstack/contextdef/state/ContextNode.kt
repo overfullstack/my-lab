@@ -6,5 +6,5 @@ import com.squareup.moshi.JsonClass
 data class ContextNode(
   val contextNodeId: String,
   val name: String,
-  val nodeAttributes: List<NodeAttribute>
+  val nodeAttributes: List<NodeAttribute>,
 )

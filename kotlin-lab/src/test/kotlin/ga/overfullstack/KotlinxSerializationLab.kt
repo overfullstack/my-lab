@@ -18,13 +18,15 @@ class KotlinxSerializationLab {
   fun `generate bt json`() {
     val bt = Json.parseToJsonElement(readFileInResourcesToString("json/bt-multi-action.json"))
     val billingTransactionItem =
-        bt.jsonObject["BillingTransaction"]!!
-            .jsonArray[0]
-            .jsonObject["BillingTransactionItem"]!!
-            .jsonArray
+      bt.jsonObject["BillingTransaction"]!!
+        .jsonArray[0]
+        .jsonObject["BillingTransactionItem"]!!
+        .jsonArray
     val btis = (1..(BTI_COUNT / 4)).flatMap { billingTransactionItem }
     val inflatedBT = buildJsonArray { addAll(btis) }
     // println(bt2)
-    FileSystem.SYSTEM.write("bt-$BTI_COUNT.json".toPath(), true) { writeUtf8(inflatedBT.toString()) }
+    FileSystem.SYSTEM.write("bt-$BTI_COUNT.json".toPath(), true) {
+      writeUtf8(inflatedBT.toString())
+    }
   }
 }

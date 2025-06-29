@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/ClassWithParametricTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/ClassWithParametricTypes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/v64/ClassWithParametricTypes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/v65/ClassWithParametricTypes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/libs.versions.toml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,7 +126,7 @@
     &quot;accountId&quot;: &quot;67619594-9f71-429c-8848-7bfb75858647&quot;
   }
 }</component>
-  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="$USER_HOME$/.sdkman/candidates/gradle/8.14.1" javaHome="$USER_HOME$/.sdkman/candidates/java/23.0.2-amzn" />
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="$USER_HOME$/.sdkman/candidates/gradle/8.14.2" javaHome="$USER_HOME$/.sdkman/candidates/java/21.0.7-amzn" gradleVersion="8.14.2" />
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" root0="FORCE_HIGHLIGHTING" />
@@ -153,9 +161,6 @@
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
-  <component name="LLMProjectSettings">
-    <option name="aiignore_manually_set" value="true" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -444,30 +449,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KtLab.measureTimeInMillis" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":java-lab:test" />
-            <option value="--tests" />
-            <option value="&quot;ga.overfullstack.KtLab.measureTimeInMillis&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="my-lab [clean build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -481,6 +462,28 @@
           <list>
             <option value="clean" />
             <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="my-lab [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -528,19 +531,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.my-lab [clean]" />
       <item itemvalue="Gradle.my-lab [spotlessApply]" />
       <item itemvalue="Gradle.my-lab [clean build]" />
-      <item itemvalue="Gradle.KtLab.measureTimeInMillis" />
       <item itemvalue="Kotlin.ClientKt" />
       <item itemvalue="Kotlin.ToolKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.my-lab [clean]" />
         <item itemvalue="Gradle.my-lab [spotlessApply]" />
         <item itemvalue="Kotlin.ToolKt" />
         <item itemvalue="Kotlin.ClientKt" />
         <item itemvalue="Gradle.my-lab [clean build]" />
-        <item itemvalue="Gradle.KtLab.measureTimeInMillis" />
       </list>
     </recent_temporary>
   </component>
@@ -1167,6 +1170,10 @@
       <workItem from="1747321134203" duration="3000" />
       <workItem from="1747325425909" duration="1739000" />
       <workItem from="1748690223571" duration="357000" />
+      <workItem from="1748859446625" duration="85000" />
+      <workItem from="1749783593129" duration="430000" />
+      <workItem from="1751200651296" duration="23000" />
+      <workItem from="1751200678226" duration="1188000" />
     </task>
     <task id="LOCAL-00009" summary="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
       <created>1627583016664</created>
@@ -1511,7 +1518,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684333262543</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

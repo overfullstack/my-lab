@@ -17,7 +17,7 @@ data class Tree(val tree: Tree) {
       val id: String,
       var left: Node? = null,
       var right: Node? = null,
-      var value: Int? = null
+      var value: Int? = null,
     )
   }
 }

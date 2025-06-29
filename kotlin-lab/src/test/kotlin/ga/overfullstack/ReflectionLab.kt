@@ -13,20 +13,13 @@ class ReflectionLab {
     val fieldToValue: Map<String, Serializable> =
       java.util.Map.of("str", "str", "bool", true, "anInt", 1, "integer", 9, "anEnum", "B")
     fieldToValue.forEach { (fieldName: String?, value: Serializable) ->
-      val propType: Class<*> =
-        BeanUtils.findPropertyType(
-          fieldName,
-          Bean::class.java,
-        )
+      val propType: Class<*> = BeanUtils.findPropertyType(fieldName, Bean::class.java)
       when {
         propType.isPrimitive -> {
           when (propType.getName()) {
             "int",
             "boolean" ->
-              BeanUtils.getPropertyDescriptor(
-                  Bean::class.java,
-                  fieldName,
-                )
+              BeanUtils.getPropertyDescriptor(Bean::class.java, fieldName)
                 ?.getWriteMethod()
                 ?.invoke(bean, value)
           }
@@ -34,10 +27,7 @@ class ReflectionLab {
         propType.isEnum -> {
           for (enumConstant in propType.getEnumConstants()) {
             if (enumConstant.toString() == value) {
-              BeanUtils.getPropertyDescriptor(
-                  Bean::class.java,
-                  fieldName,
-                )
+              BeanUtils.getPropertyDescriptor(Bean::class.java, fieldName)
                 ?.getWriteMethod()
                 ?.invoke(bean, enumConstant)
             }
@@ -118,6 +108,6 @@ class ReflectionLab {
   private enum class Enum {
     A,
     B,
-    C
+    C,
   }
 }

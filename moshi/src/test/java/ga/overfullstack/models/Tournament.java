@@ -18,18 +18,18 @@ package ga.overfullstack.models;
 import java.util.Date;
 
 public final class Tournament {
-  public final String name;
-  public final String location;
-  public final Date start;
+	public final String name;
+	public final String location;
+	public final Date start;
 
-  public Tournament(String name, String location, Date start) {
-    this.name = name;
-    this.location = location;
-    this.start = start;
-  }
+	public Tournament(String name, String location, Date start) {
+		this.name = name;
+		this.location = location;
+		this.start = start;
+	}
 
-  @Override
-  public String toString() {
-    return name + " at " + location + " on " + start;
-  }
+	@Override
+	public String toString() {
+		return name + " at " + location + " on " + start;
+	}
 }

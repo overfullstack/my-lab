@@ -3,10 +3,10 @@ package ga.overfullstack
 import io.exoquery.pprint
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
-import org.junit.jupiter.api.Test
 import java.util.*
 import kotlin.io.path.Path
 import kotlin.random.Random
+import org.junit.jupiter.api.Test
 
 class Misc :
   StringSpec({
@@ -42,7 +42,7 @@ class Misc :
   fun `random hex`() {
     println("${getRandomHex()}${getRandomHex()}${getRandomHex()}")
   }
-  
+
   fun getRandomHex() = Random.nextInt(255).toString(16).uppercase()
 }
 
@@ -53,4 +53,3 @@ fun someFun(vararg a: String) = print(a)
 data class Name(val first: String, val last: String)
 
 data class Person(val name: Name, val age: Int)
-

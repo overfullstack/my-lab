@@ -79,7 +79,7 @@ class ContextMappingGeneratorTest {
   class ContextMappingAdapter(
     private val mapperConfig: MapperConfig,
     private val fields: List<String>,
-    private val node: ContextNode
+    private val node: ContextNode,
   ) {
     @FromJson
     fun fromJson(contextNodeMapping: ContextNodeMapping): ContextMapping {
@@ -100,16 +100,16 @@ class ContextMappingGeneratorTest {
                 listOf(
                   contextSObjectHydrationInfo.copy(
                     queryAttribute = field,
-                    sObjectDomain = mapperConfig.sObjectName
+                    sObjectDomain = mapperConfig.sObjectName,
                   )
-                )
+                ),
             )
           }
       val contextNodeMappings =
         contextNodeMapping.copy(
           contextNodeId = node.contextNodeId,
           sObjectName = mapperConfig.sObjectName,
-          contextAttributeMappingList = contextAttrMappings
+          contextAttributeMappingList = contextAttrMappings,
         )
 
       return ContextMapping(mapperConfig.contextMappingName, listOf(contextNodeMappings))

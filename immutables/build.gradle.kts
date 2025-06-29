@@ -18,12 +18,8 @@ dependencies {
   compileOnly(libs.jetbrains.annotations)
 }
 
-kapt {
-  useBuildCache = true
-}
+kapt { useBuildCache = true }
 
-tasks.withType<Jar> {
-  duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-}
+tasks.withType<Jar> { duplicatesStrategy = DuplicatesStrategy.EXCLUDE }
 
 kotlin { compilerOptions { freeCompilerArgs.add("-Xjvm-default=all") } }

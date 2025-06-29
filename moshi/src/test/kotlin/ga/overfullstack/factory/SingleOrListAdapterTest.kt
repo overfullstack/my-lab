@@ -15,11 +15,8 @@ class SingleOrListAdapterTest {
     val moshi = Moshi.Builder().add(ObjOrListAdapterFactory).build()
     val adapter: JsonAdapter<List<Any?>> =
       moshi.adapter(
-        Types.newParameterizedType(
-          List::class.java,
-          Map::class.java,
-        ),
-        SingleOrList::class.java
+        Types.newParameterizedType(List::class.java, Map::class.java),
+        SingleOrList::class.java,
       )
     val collectionStr = readFileInResourcesToString("collection.json")
     val collection = adapter.fromJson(collectionStr)
@@ -48,11 +45,8 @@ class SingleOrListAdapterTest {
     val moshi = Moshi.Builder().add(ObjOrListAdapterFactory).build()
     val adapter: JsonAdapter<Any?> =
       moshi.adapter(
-        Types.newParameterizedType(
-          List::class.java,
-          Map::class.java,
-        ),
-        ObjOrList::class.java
+        Types.newParameterizedType(List::class.java, Map::class.java),
+        ObjOrList::class.java,
       )
     val collectionStr = readFileInResourcesToString("collection.json")
     val collection = adapter.fromJson(collectionStr)

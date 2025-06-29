@@ -3,13 +3,13 @@ package ga.overfullstack.polyglot
 import com.salesforce.revoman.input.readFileInResourcesToString
 import context.buildJSContext
 import ga.overfullstack.polyglot.PolyglotLab.UpperCase
+import java.util.*
 import okio.FileSystem
 import okio.Path.Companion.toPath
 import okio.buffer
 import org.graalvm.polyglot.Source
 import org.junit.jupiter.api.Test
 import postman.PostmanSDK
-import java.util.*
 
 class PolyglotLab {
   private val context = buildJSContext()
@@ -17,7 +17,8 @@ class PolyglotLab {
   @Test
   fun `Function as Value`() {
     val context = buildJSContext(null)
-    val jscript = """
+    val jscript =
+      """
       jsonStr => JSON.parse(jsonStr)
     """
     val jsonStr = readFileInResourcesToString("core-graph-response.json")
@@ -55,7 +56,7 @@ class PolyglotLab {
      """
         .trimIndent()
     context2.eval(
-      Source.newBuilder("js", jscript, "jscript").mimeType("application/javascript+module").build(),
+      Source.newBuilder("js", jscript, "jscript").mimeType("application/javascript+module").build()
     )
   }
 

@@ -49,7 +49,7 @@ object RecordAdapter {
     writer: JsonWriter,
     value: Record,
     attributesJsonAdapter: JsonAdapter<Attributes>,
-    dynamicJsonAdapter: JsonAdapter<Any>
+    dynamicJsonAdapter: JsonAdapter<Any>,
   ) {
     writer.beginObject()
     writer.name("attributes")

@@ -7,5 +7,5 @@ data class ContextDefinitionX(
   val name: String,
   val description: String,
   val developerName: String,
-  val contextDefinitionVersionList: List<ContextDefinitionVersion>
+  val contextDefinitionVersionList: List<ContextDefinitionVersion>,
 )

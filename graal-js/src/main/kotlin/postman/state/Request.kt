@@ -5,5 +5,5 @@ data class Request(
   val header: List<Header> = emptyList(),
   val url: Url = Url(),
   val body: Body? = null,
-  val event: List<Event>? = null
+  val event: List<Event>? = null,
 )

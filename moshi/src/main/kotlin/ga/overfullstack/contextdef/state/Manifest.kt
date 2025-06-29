@@ -7,5 +7,5 @@ data class Manifest(
   val description: String,
   val label: String,
   val name: String,
-  val version: String
+  val version: String,
 )

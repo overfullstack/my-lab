@@ -7,11 +7,11 @@ public abstract class TreeElement<T> {}
 
 @Value.Immutable
 abstract class Node<T> extends TreeElement<T> {
-  public abstract List<TreeElement<T>> elements();
+	public abstract List<TreeElement<T>> elements();
 }
 
 @Value.Immutable
 abstract class Leaf<T> extends TreeElement<T> {
-  @Value.Parameter
-  public abstract T value();
+	@Value.Parameter
+	public abstract T value();
 }

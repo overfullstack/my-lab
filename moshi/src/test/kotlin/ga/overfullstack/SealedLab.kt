@@ -37,6 +37,6 @@ class SealedLab {
   internal data class SObjectError(
     val message: String,
     val errorCode: String,
-    val fields: List<String>?
+    val fields: List<String>?,
   )
 }

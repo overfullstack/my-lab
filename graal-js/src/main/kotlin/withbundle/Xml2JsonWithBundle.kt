@@ -12,6 +12,6 @@ fun main() {
   // This path is relative to `js.commonjs-require-cwd` where node_modules is located.
   context.eval(
     "js",
-    "const xml2Json = require('graal-js/src/main/resources/xml2Json.js'); console.info(xml2Json('<a>1</a>')['a']);"
+    "const xml2Json = require('graal-js/src/main/resources/xml2Json.js'); console.info(xml2Json('<a>1</a>')['a']);",
   )
 }

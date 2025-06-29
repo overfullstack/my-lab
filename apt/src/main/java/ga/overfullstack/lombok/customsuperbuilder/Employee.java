@@ -11,29 +11,29 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 public abstract class Employee<IDT> {
 
-  /** Id of the employee */
-  private final IDT id;
+	/** Id of the employee */
+	private final IDT id;
 
-  private List<?> files;
+	private List<?> files;
 
-  /** Employees name */
-  private final String name;
+	/** Employees name */
+	private final String name;
 
-  /** Date when employee joined the company */
-  private final LocalDate joiningDate;
+	/** Date when employee joined the company */
+	private final LocalDate joiningDate;
 
-  private final Map<?, ?> promotionDates;
+	private final Map<?, ?> promotionDates;
 
-  public abstract static class EmployeeBuilder<
-      IDT, C extends Employee<IDT>, B extends EmployeeBuilder<IDT, C, B>> {
-    public B id(IDT id) {
-      this.id = id;
-      return self();
-    }
+	public abstract static class EmployeeBuilder<
+			IDT, C extends Employee<IDT>, B extends EmployeeBuilder<IDT, C, B>> {
+		public B id(IDT id) {
+			this.id = id;
+			return self();
+		}
 
-    public <FileT> B files(List<FileT> files) {
-      this.files = files;
-      return self();
-    }
-  }
+		public <FileT> B files(List<FileT> files) {
+			this.files = files;
+			return self();
+		}
+	}
 }

@@ -19,7 +19,7 @@ data class CompositeQueryResponse(val compositeResponse: List<CompositeResponse>
     val body: Body,
     val httpHeaders: HttpHeaders,
     val httpStatusCode: Int,
-    val referenceId: String
+    val referenceId: String,
   ) {
     @JsonClass(generateAdapter = true)
     data class Body(val done: Boolean, val records: List<Record>, val totalSize: Int) {

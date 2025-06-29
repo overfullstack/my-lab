@@ -15,7 +15,7 @@ fun main() {
         "", // default exchange
         QUEUE_NAME, // by default routing key = queue_name
         null,
-        message.toByteArray(StandardCharsets.UTF_8)
+        message.toByteArray(StandardCharsets.UTF_8),
       )
       println("[📮] Sent '$message'")
     }

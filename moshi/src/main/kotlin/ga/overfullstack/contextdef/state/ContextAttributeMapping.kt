@@ -8,7 +8,7 @@ import com.squareup.moshi.JsonClass
 data class ContextAttributeMapping(
   val contextAttributeId: String,
   val hydrationSource: String,
-  val contextSObjectHydrationInfoList: List<ContextSObjectHydrationInfo>
+  val contextSObjectHydrationInfoList: List<ContextSObjectHydrationInfo>,
 ) {
   companion object
 }

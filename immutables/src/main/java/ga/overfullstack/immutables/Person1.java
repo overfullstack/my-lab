@@ -7,19 +7,19 @@ import org.immutables.value.Value;
 @PersonStyle
 @Value.Immutable
 public interface Person1 {
-  int age();
+	int age();
 
-  boolean isEmployed();
-  
-  List<String> hobbies();
+	boolean isEmployed();
 
-  @Value.Default
-  default boolean isMarried() {
-    return false;
-  }
+	List<String> hobbies();
 
-  /** Control what gets exposed */
-  static Builder configure() {
-    return ImmutablePerson1.configure();
-  }
+	@Value.Default
+	default boolean isMarried() {
+		return false;
+	}
+
+	/** Control what gets exposed */
+	static Builder configure() {
+		return ImmutablePerson1.configure();
+	}
 }

@@ -33,7 +33,7 @@ fun main() {
       Pageable(
         boolean().defaulted("sortAscending", true)(it),
         int().defaulted("page", 1)(it),
-        int().defaulted("maxResults", 20)(it)
+        int().defaulted("maxResults", 20)(it),
       )
     }
 
@@ -59,7 +59,7 @@ fun main() {
       .with(
         nameHeader of "Jane Doe",
         ageQuery of 25,
-        childrenBody of listOf(Child("Rita"), Child("Sue"))
+        childrenBody of listOf(Child("Rita"), Child("Sue")),
       )
 
   println(listOf("", "Request:", goodRequest, app(goodRequest)).joinToString("\n"))

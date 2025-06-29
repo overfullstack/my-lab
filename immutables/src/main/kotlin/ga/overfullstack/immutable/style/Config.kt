@@ -13,9 +13,9 @@ import org.immutables.value.Value.Style.ImplementationVisibility.PUBLIC
   add = "*",
   put = "*",
   depluralize = true,
-//  builtinContainerAttributes = false,
+  //  builtinContainerAttributes = false,
   depluralizeDictionary = ["Odr:Order"],
-  visibility = PUBLIC
+  visibility = PUBLIC,
 )
 annotation class Config
 
@@ -29,6 +29,6 @@ annotation class Config
   put = "*",
   add = "*",
   depluralize = true,
-  visibility = PUBLIC
+  visibility = PUBLIC,
 )
 annotation class StepConfig

@@ -11,8 +11,8 @@ import lombok.experimental.SuperBuilder;
 @Setter
 @ToString
 public class User {
-  @NonNull private String name;
-  private int age;
+	@NonNull private String name;
+	private int age;
 }
 
 @SuperBuilder
@@ -20,5 +20,5 @@ public class User {
 @Setter
 @ToString(callSuper = true)
 class Admin extends User {
-  private int id;
+	private int id;
 }

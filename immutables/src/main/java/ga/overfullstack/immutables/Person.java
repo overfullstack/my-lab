@@ -6,7 +6,7 @@ import org.immutables.value.Value.Style.ImplementationVisibility;
 @Value.Immutable
 @Value.Style(visibility = ImplementationVisibility.PRIVATE)
 public interface Person {
-  String getName();
+	String getName();
 
-  String getAddress();
+	String getAddress();
 }

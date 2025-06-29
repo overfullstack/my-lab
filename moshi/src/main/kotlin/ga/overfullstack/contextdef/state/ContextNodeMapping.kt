@@ -8,7 +8,7 @@ import com.squareup.moshi.JsonClass
 data class ContextNodeMapping(
   val sObjectName: String,
   val contextNodeId: String,
-  val contextAttributeMappingList: List<ContextAttributeMapping>
+  val contextAttributeMappingList: List<ContextAttributeMapping>,
 ) {
   companion object
 }

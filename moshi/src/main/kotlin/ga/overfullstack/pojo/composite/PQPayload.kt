@@ -57,7 +57,7 @@ data class PQPayload(val graph: Graph, val pricingPref: String) {
     fun toJson(
       writer: JsonWriter,
       record: Record?,
-      attributesJsonAdapter: JsonAdapter<Attributes>
+      attributesJsonAdapter: JsonAdapter<Attributes>,
     ) =
       with(writer) {
         obj(record) {

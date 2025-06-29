@@ -18,16 +18,16 @@ package ga.overfullstack.models;
 import com.squareup.moshi.Json;
 
 public final class Player {
-  public final String username;
-  public final @Json(name = "lucky number") int luckyNumber;
+	public final String username;
+	public final @Json(name = "lucky number") int luckyNumber;
 
-  public Player(String username, int luckyNumber) {
-    this.username = username;
-    this.luckyNumber = luckyNumber;
-  }
+	public Player(String username, int luckyNumber) {
+		this.username = username;
+		this.luckyNumber = luckyNumber;
+	}
 
-  @Override
-  public String toString() {
-    return username + " gets lucky with " + luckyNumber;
-  }
+	@Override
+	public String toString() {
+		return username + " gets lucky with " + luckyNumber;
+	}
 }

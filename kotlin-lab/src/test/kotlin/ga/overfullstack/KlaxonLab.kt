@@ -7,9 +7,9 @@ import com.beust.klaxon.Parser
 import com.beust.klaxon.PathMatcher
 import com.salesforce.revoman.input.bufferFileInResources
 import com.salesforce.revoman.input.readFileInResourcesToString
-import org.junit.jupiter.api.Test
 import java.io.StringReader
 import java.util.regex.Pattern
+import org.junit.jupiter.api.Test
 
 class KlaxonLab {
   @Test
@@ -45,7 +45,7 @@ class KlaxonLab {
         StringReader(readFileInResourcesToString("json/pokemon.postman_collection.json"))
       )
   }
-  
+
   @Test
   fun `klaxon Json Object`() {
     val parser: Parser = Parser.default()
@@ -56,20 +56,19 @@ class KlaxonLab {
 
   @Test
   fun `klaxon Json Array`() {
-    val array = Parser.default().parse(bufferFileInResources("d.json").inputStream()) as JsonArray<*>
+    val array =
+      Parser.default().parse(bufferFileInResources("d.json").inputStream()) as JsonArray<*>
 
     println("=== Finding Jack:")
-    val jack = array.first {
-      it is JsonObject && it.string("first") == "Jack"
-    }
+    val jack = array.first { it is JsonObject && it.string("first") == "Jack" }
     println("Jack: $jack")
 
     println("=== Everyone who studied in Berkeley:")
-    val berkeley = array.filterIsInstance<JsonObject>().filter {
-      it.obj("schoolResults")?.string("location") == "Berkeley"
-    }.map {
-      it.string("last")
-    }
+    val berkeley =
+      array
+        .filterIsInstance<JsonObject>()
+        .filter { it.obj("schoolResults")?.string("location") == "Berkeley" }
+        .map { it.string("last") }
     println("${berkeley}")
 
     println("=== All last names:")
@@ -77,14 +76,10 @@ class KlaxonLab {
     println("$lastNames")
 
     println("=== All grades bigger than 75")
-    val result = array.filterIsInstance<JsonObject>().map {
-      it.obj("schoolResults")
-        ?.array<JsonObject>("scores")?.filter {
-          it.long("grade")!! > 75
-        }!!
-    }
+    val result =
+      array.filterIsInstance<JsonObject>().map {
+        it.obj("schoolResults")?.array<JsonObject>("scores")?.filter { it.long("grade")!! > 75 }!!
+      }
     println("Result: ${result}")
-    
   }
-  
 }
