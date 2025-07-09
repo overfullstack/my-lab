@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/ClassWithParametricTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/ClassWithParametricTypes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/v64/ClassWithParametricTypes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/v65/ClassWithParametricTypes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/libs.versions.toml" afterDir="false" />
-    </list>
+    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="ObjectMapperLab&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -226,6 +218,7 @@
     &quot;Gradle.Misc.print data class.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Misc.random hex.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.MoshiJLab.cardAdapter.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ObjectMapperLab.localDateToJson.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.PolyglotLab.Function as Value.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.PolyglotLab.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.PolyglotLab.jsonParseWithJs.executor&quot;: &quot;Run&quot;,
@@ -294,7 +287,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.15.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.15.29&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.15.35&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;ktor.last.update.timestamp&quot;: &quot;1684333206939&quot;,
@@ -312,7 +305,7 @@
     &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2693383&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;settings.editor.splitter.proportion&quot;: &quot;0.14190038&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;0b0bb7c6cf8bb04d48d26ca6cdfeb332&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -420,11 +413,11 @@
       <command value="gradle clean detektReportMerge" />
       <command value="gradle clean detekt" />
       <command value="gradle clean build -x test --no-configuration-cache" />
-      <command value="gradle clean" />
       <command value="gradle clean build -x test --no-configuration-cache --no-build-cache" />
       <command value="gradle clean build" />
       <command value="gradle clean build -x test" />
       <command value="gradle clean build -x test -x detekt" />
+      <command value="gradle clean" />
       <command value="gradle spotlessApply" />
     </option>
   </component>
@@ -435,7 +428,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.my-lab [spotlessApply]">
+  <component name="RunManager" selected="JUnit.ObjectMapperLab">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -449,27 +442,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="my-lab [clean build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ObjectMapperLab.localDateToJson" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="-x test -x detekt" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
-            <option value="build" />
+            <option value=":java-lab:test" />
+            <option value="--tests" />
+            <option value="&quot;ga.overfullstack.ObjectMapperLab.localDateToJson&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="my-lab [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -516,9 +510,17 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ClientKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ga.overfullstack.mcp.ClientKt" />
-      <module name="my-lab.http4k.main" />
+    <configuration name="ObjectMapperLab" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="my-lab.java-lab.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ga.overfullstack.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ga.overfullstack" />
+      <option name="MAIN_CLASS_NAME" value="ga.overfullstack.ObjectMapperLab" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -531,19 +533,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.ObjectMapperLab.localDateToJson" />
       <item itemvalue="Gradle.my-lab [clean]" />
       <item itemvalue="Gradle.my-lab [spotlessApply]" />
-      <item itemvalue="Gradle.my-lab [clean build]" />
-      <item itemvalue="Kotlin.ClientKt" />
+      <item itemvalue="JUnit.ObjectMapperLab" />
       <item itemvalue="Kotlin.ToolKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ObjectMapperLab" />
+        <item itemvalue="Gradle.ObjectMapperLab.localDateToJson" />
         <item itemvalue="Gradle.my-lab [clean]" />
         <item itemvalue="Gradle.my-lab [spotlessApply]" />
         <item itemvalue="Kotlin.ToolKt" />
-        <item itemvalue="Kotlin.ClientKt" />
-        <item itemvalue="Gradle.my-lab [clean build]" />
       </list>
     </recent_temporary>
   </component>
@@ -1174,6 +1176,9 @@
       <workItem from="1749783593129" duration="430000" />
       <workItem from="1751200651296" duration="23000" />
       <workItem from="1751200678226" duration="1188000" />
+      <workItem from="1751202186877" duration="142000" />
+      <workItem from="1751624179594" duration="980000" />
+      <workItem from="1752037004235" duration="2441000" />
     </task>
     <task id="LOCAL-00009" summary="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
       <created>1627583016664</created>
@@ -1518,7 +1523,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684333262543</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1650,8 +1655,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Immutables depluralizeDictionary not working&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
-    <MESSAGE value="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="Remove Json Utils and use the ones from ReVoman&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="Remove apply subprojects convention from subprojects block&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="MessageTest" />
@@ -1675,7 +1678,9 @@
     <MESSAGE value="mcp&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="gradle wrapper&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <MESSAGE value="SpotlessApply&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <MESSAGE value="ObjectMapperLab&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="ObjectMapperLab&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
   </component>
   <component name="WfRunsListSearchHistory">{
   &quot;history&quot;: [

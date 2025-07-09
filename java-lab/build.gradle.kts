@@ -6,6 +6,7 @@ dependencies {
   implementation(libs.kotlin.vavr)
   implementation(libs.moshi)
   implementation(libs.jackson.databind)
+  implementation(libs.jackson.databind.jsr310)
   implementation(libs.json)
   implementation(libs.apache.commons.collections4)
   implementation(libs.guava)
