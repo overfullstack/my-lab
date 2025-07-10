@@ -36,3 +36,5 @@ include("graal-js")
 include("kotlin-lab")
 
 include("immutables")
+
+include("proto")

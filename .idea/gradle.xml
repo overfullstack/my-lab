@@ -31,6 +31,7 @@
             <option value="$PROJECT_DIR$/java-lab" />
             <option value="$PROJECT_DIR$/kotlin-lab" />
             <option value="$PROJECT_DIR$/moshi" />
+            <option value="$PROJECT_DIR$/proto" />
           </set>
         </option>
       </GradleProjectSettings>

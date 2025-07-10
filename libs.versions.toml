@@ -39,6 +39,8 @@ kotlin-logging = "7.0.7"
 pprint = "3.0.0"
 dependency-analysis = "2.19.0"
 gson = "2.13.1"
+protobuf = "3.25.1"
+protobuf-gradle = "0.9.4"
 
 # Common dependencies
 junit = "5.13.3"
@@ -116,6 +118,8 @@ okio-jvm = { module = "com.squareup.okio:okio-jvm", version.ref = "okio" }
 okio-extras = { module = "com.saveourtool.okio-extras:okio-extras-jvm", version.ref = "okio-extras" }
 underscore = { module = "com.github.javadev:underscore", version.ref = "underscore" }
 pprint = { module = "io.exoquery:pprint-kotlin", version.ref = "pprint" }
+protobuf-java = { module = "com.google.protobuf:protobuf-java", version.ref = "protobuf" }
+protobuf-java-util = { module = "com.google.protobuf:protobuf-java-util", version.ref = "protobuf" }
 
 # Spring (version managed by spring-dependency-management)
 # spring-boot-starter-batch = { module = "org.springframework.boot:spring-boot-starter-batch" }
@@ -155,6 +159,7 @@ http4k = [
 ]
 kotlin-logging = ["kotlin-logging-jvm", "log4j-api", "log4j-core", "log4j-slf4j2-impl"]
 junit = ["junit-jupiter", "junit-engine"]
+protobuf = ["protobuf-java", "protobuf-java-util"]
 
 [plugins]
 kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
@@ -175,3 +180,4 @@ kotlin-noarg = { id = "org.jetbrains.kotlin.plugin.noarg", version.ref = "kotlin
 kotlin-lombok = { id = "org.jetbrains.kotlin.plugin.lombok", version.ref = "kotlin" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+protobuf = { id = "com.google.protobuf", version.ref = "protobuf-gradle" }

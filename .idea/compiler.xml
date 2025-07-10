@@ -43,6 +43,9 @@
       <module name="my-lab.moshi" options="--enable-preview" />
       <module name="my-lab.moshi.main" options="--enable-preview" />
       <module name="my-lab.moshi.test" options="--enable-preview" />
+      <module name="my-lab.proto" options="--enable-preview" />
+      <module name="my-lab.proto.main" options="--enable-preview" />
+      <module name="my-lab.proto.test" options="--enable-preview" />
     </option>
   </component>
 </project>

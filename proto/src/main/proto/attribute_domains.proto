@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package ga.overfullstack.proto;
+
+option java_package = "ga.overfullstack.proto";
+option java_outer_classname = "AttributeDomainsProto";
+
+// Message representing the entire JSON structure
+message AttributeDomains {
+    // Map of attribute names to their domain configurations
+    map<string, AttributeDomainList> attribute_domains = 1;
+}
+
+// Message representing a list of domain configurations for an attribute
+message AttributeDomainList {
+    // List of configuration strings (e.g., "{min=1, max=1, minIntValue=1}")
+    repeated string values = 1;
+} 
