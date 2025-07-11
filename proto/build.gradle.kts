@@ -13,6 +13,7 @@ dependencies {
   // Test dependencies
   testImplementation(libs.bundles.junit)
   testImplementation(libs.assertj.core)
+  testImplementation(libs.truth)
 }
 
 protobuf {

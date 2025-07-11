@@ -2,6 +2,7 @@ package ga.overfullstack.proto;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.protobuf.util.JsonFormat;
 import java.util.List;
 import java.util.Map;
@@ -10,6 +11,146 @@ import java.util.stream.Collectors;
 import org.junit.jupiter.api.Test;
 
 class AttributeDomainsTest {
+
+	@Test
+	void testProtobufToJsonConversion3() throws Exception {
+		final var str =
+				"""
+				{
+						"attributeDomains": {
+								"attr1": [
+										{
+												"max": 1,
+												"min": 1,
+												"minIntValue": 1
+										},
+										{
+												"max": 1,
+												"min": 1,
+												"minIntValue": 1
+										}
+								],
+								"attr2": [
+										{
+												"max": 1,
+												"min": 1,
+												"minIntValue": 1
+										}
+								],
+								"attr3": [
+										"str1, str2"
+								]
+						}
+				}
+				""";
+		final var mapper = new ObjectMapper();
+		Map<String, Object> map = mapper.readValue(str, Map.class);
+		final var attributeDomains = (Map<String, List<?>>) map.get("attributeDomains");
+		final var expectedMap =
+				attributeDomains.entrySet().stream()
+						.collect(Collectors.toMap(Entry::getKey, entry -> entry.getValue().toString()));
+		final var expected = attributeDomains.values().stream().map(String::valueOf).toList();
+
+		// Build protobuf message directly
+		final var attributeDomainsNC =
+				Map.of(
+						"attr1",
+						List.of(
+								Map.of("min", 1, "max", 1, "minIntValue", 1),
+								Map.of("min", 1, "max", 1, "minIntValue", 1)),
+						"attr2",
+						List.of(Map.of("min", 1, "max", 1, "minIntValue", 1)),
+						"attr3",
+						List.of("str1, str2"));
+		final var attributeDomainsTransformed =
+				attributeDomainsNC.entrySet().stream()
+						.collect(
+								Collectors.toMap(
+										Entry::getKey,
+										entry ->
+												AttributeDomainsProto.AttributeDomainList.newBuilder()
+														.addValues(String.valueOf(entry.getValue()))
+														.build()));
+		var message =
+				AttributeDomainsProto.AttributeDomains.newBuilder()
+						.putAllAttributeDomains(attributeDomainsTransformed)
+						.build();
+
+		// Convert to JSON using protobuf's JsonFormat
+		var response = JsonFormat.printer().print(message);
+
+		// on core deserialize
+		// Parse JSON back to protobuf to verify round-trip conversion
+		var parsedBuilder = AttributeDomainsProto.AttributeDomains.newBuilder();
+		JsonFormat.parser().merge(response, parsedBuilder);
+		var attributeDomainsCore = parsedBuilder.build();
+		// lineItem.getAttributeDomains()
+		final var attributeDomainsOnCoreTransformed =
+				attributeDomainsCore.getAttributeDomainsMap().entrySet().stream()
+						.collect(
+								Collectors.toMap(
+										Entry::getKey, entry -> entry.getValue().getValuesList().toString()));
+
+		System.out.println(attributeDomainsOnCoreTransformed);
+		// Verify the messages are equal
+		assertThat(attributeDomainsCore).isEqualTo(message);
+
+		// Verify structure
+		assertThat(attributeDomainsCore.getAttributeDomainsMap()).hasSize(3);
+		assertThat(attributeDomainsCore.getAttributeDomainsMap()).containsKey("attr1");
+		assertThat(attributeDomainsCore.getAttributeDomainsMap()).containsKey("attr2");
+	}
+
+	@Test
+	void testProtobufToJsonConversion2() throws Exception {
+		// Build protobuf message directly
+		final var attributeDomainsNC =
+				Map.of(
+						"attr1",
+						List.of(Map.of("min", 1, "max", 1, "minIntValue", 1)),
+						"attr2",
+						List.of(Map.of("min", 1, "max", 1, "minIntValue", 1)),
+						"attr3",
+						List.of("str1, str2"));
+		System.out.println(List.of(Map.of("min", 1, "max", 1, "minIntValue", 1)));
+		final var attributeDomainsTransformed =
+				attributeDomainsNC.entrySet().stream()
+						.collect(
+								Collectors.toMap(
+										Entry::getKey,
+										entry ->
+												AttributeDomainsProto.AttributeDomainList.newBuilder()
+														.addValues(String.valueOf(entry.getValue()))
+														.build()));
+		var message =
+				AttributeDomainsProto.AttributeDomains.newBuilder()
+						.putAllAttributeDomains(attributeDomainsTransformed)
+						.build();
+
+		// Convert to JSON using protobuf's JsonFormat
+		var response = JsonFormat.printer().print(message);
+
+		// on core deserialize
+		// Parse JSON back to protobuf to verify round-trip conversion
+		var parsedBuilder = AttributeDomainsProto.AttributeDomains.newBuilder();
+		JsonFormat.parser().merge(response, parsedBuilder);
+		var attributeDomainsCore = parsedBuilder.build();
+		// lineItem.getAttributeDomains()
+		final var attributeDomainsOnCoreTransformed =
+				attributeDomainsCore.getAttributeDomainsMap().entrySet().stream()
+						.collect(
+								Collectors.toMap(
+										Entry::getKey, entry -> entry.getValue().getValuesList().toString()));
+
+		System.out.println(attributeDomainsOnCoreTransformed);
+		// Verify the messages are equal
+		assertThat(attributeDomainsCore).isEqualTo(message);
+
+		// Verify structure
+		assertThat(attributeDomainsCore.getAttributeDomainsMap()).hasSize(3);
+		assertThat(attributeDomainsCore.getAttributeDomainsMap()).containsKey("attr1");
+		assertThat(attributeDomainsCore.getAttributeDomainsMap()).containsKey("attr2");
+	}
 
 	@Test
 	void testSerializeAndDeserializeAttributeDomains() throws Exception {
@@ -103,53 +244,6 @@ class AttributeDomainsTest {
 		assertThat(parsedMessage.getAttributeDomainsMap()).hasSize(2);
 		assertThat(parsedMessage.getAttributeDomainsMap()).containsKey("attr1");
 		assertThat(parsedMessage.getAttributeDomainsMap()).containsKey("attr2");
-	}
-
-	@Test
-	void testProtobufToJsonConversion2() throws Exception {
-		// Build protobuf message directly
-		final var attributeDomainsNC =
-				Map.of(
-						"attr1",
-						List.of(Map.of("min", 1, "max", 1, "minIntValue", 1)),
-						"attr2",
-						List.of(Map.of("min", 1, "max", 1, "minIntValue", 1)),
-						"attr3",
-						List.of("str1, str2"));
-		System.out.println(List.of(Map.of("min", 1, "max", 1, "minIntValue", 1)));
-		final var attributeDomainsTransformed =
-				attributeDomainsNC.entrySet().stream()
-						.collect(
-								Collectors.toMap(
-										Entry::getKey,
-										entry ->
-												AttributeDomainsProto.AttributeDomainList.newBuilder()
-														.addValues(String.valueOf(entry.getValue()))
-														.build()));
-		var message =
-				AttributeDomainsProto.AttributeDomains.newBuilder()
-						.putAllAttributeDomains(attributeDomainsTransformed)
-						.build();
-
-		// Convert to JSON using protobuf's JsonFormat
-		var jsonString = JsonFormat.printer().print(message);
-
-		// Parse JSON back to protobuf to verify round-trip conversion
-		var parsedBuilder = AttributeDomainsProto.AttributeDomains.newBuilder();
-		JsonFormat.parser().merge(jsonString, parsedBuilder);
-		var attributeDomainsCore = parsedBuilder.build();
-		System.out.println(
-				attributeDomainsCore.getAttributeDomainsMap().entrySet().stream()
-						.collect(
-								Collectors.toMap(
-										Entry::getKey, entry -> entry.getValue().getValuesList().toString())));
-		// Verify the messages are equal
-		assertThat(attributeDomainsCore).isEqualTo(message);
-
-		// Verify structure
-		assertThat(attributeDomainsCore.getAttributeDomainsMap()).hasSize(3);
-		assertThat(attributeDomainsCore.getAttributeDomainsMap()).containsKey("attr1");
-		assertThat(attributeDomainsCore.getAttributeDomainsMap()).containsKey("attr2");
 	}
 
 	@Test
