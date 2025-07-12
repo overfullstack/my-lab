@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
+      <change afterPath="$PROJECT_DIR$/proto/src/main/java/ga/overfullstack/proto/CoreLineItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomainsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomainsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/src/main/java/ga/overfullstack/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1228,7 +1229,7 @@
       <workItem from="1752250158955" duration="7274000" />
       <workItem from="1752306288925" duration="3484000" />
       <workItem from="1752309852245" duration="572000" />
-      <workItem from="1752318419320" duration="843000" />
+      <workItem from="1752318419320" duration="3933000" />
     </task>
     <task id="LOCAL-00009" summary="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
       <created>1627583016664</created>
@@ -1573,7 +1574,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684333262543</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1792,11 +1793,6 @@
           <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.graalvm.truffle/truffle-api/22.3.3/d1c07e14f8ebf260bfda3b87a351467c9b840f79/truffle-api-22.3.3-sources.jar!/com/oracle/truffle/polyglot/PolyglotContextDispatch.java</url>
           <line>62</line>
           <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/proto/src/main/java/ga/overfullstack/Main.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="73" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomainsTest.java</url>
