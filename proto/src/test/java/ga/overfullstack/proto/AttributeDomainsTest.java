@@ -197,6 +197,7 @@ class AttributeDomainsTest {
 		// --- AFTER ---
 
 		// Near-core: Build protobuf
+		// Serialize and deserialize with ObjectMapper
 		final var attributeDomainsNC =
 				new LinkedHashMap<String, List<?>>() {
 					{

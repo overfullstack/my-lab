@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
-      <change afterPath="$PROJECT_DIR$/proto/src/main/java/ga/overfullstack/proto/CoreLineItem.java" afterDir="false" />
+    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="wrapper&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
+      <change afterPath="$PROJECT_DIR$/proto/src/main/java/ga/overfullstack/proto/CoreLineItemInternal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proto/src/main/proto/execute_constraints.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proto/src/main/java/ga/overfullstack/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/src/main/java/ga/overfullstack/proto/CoreLineItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomainsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomainsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1229,7 +1231,7 @@
       <workItem from="1752250158955" duration="7274000" />
       <workItem from="1752306288925" duration="3484000" />
       <workItem from="1752309852245" duration="572000" />
-      <workItem from="1752318419320" duration="3933000" />
+      <workItem from="1752318419320" duration="5487000" />
     </task>
     <task id="LOCAL-00009" summary="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
       <created>1627583016664</created>
@@ -1574,7 +1576,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684333262543</updated>
     </task>
-    <option name="localTasksCounter" value="138" />
+    <option name="localTasksCounter" value="139" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1706,7 +1708,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="clean moshi deps" />
     <MESSAGE value="Commit" />
     <MESSAGE value="BiAdapterFactory" />
     <MESSAGE value="BiAdapterFactory&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
@@ -1731,7 +1732,8 @@
     <MESSAGE value="proto tests&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="proto tests fixed&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <MESSAGE value="wrapper&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="wrapper&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
   </component>
   <component name="WfRunsListSearchHistory">{
   &quot;history&quot;: [
@@ -1796,17 +1798,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomainsTest.java</url>
-          <line>387</line>
+          <line>388</line>
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomainsTest.java</url>
-          <line>385</line>
+          <line>386</line>
           <option name="timeStamp" value="80" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomainsTest.java</url>
-          <line>384</line>
+          <line>385</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
@@ -1819,7 +1821,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomainsTest.java</url>
-          <line>346</line>
+          <line>347</line>
           <option name="timeStamp" value="86" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

@@ -1,0 +1,126 @@
+syntax = "proto3";
+
+import "google/protobuf/struct.proto";
+
+package ga.overfullstack.proto;
+
+option java_package = "ga.overfullstack.proto";
+option java_outer_classname = "ExecuteConstraintsRequestProto";
+option java_multiple_files = true;
+
+// ActionCode enum matching the Java enum
+enum ActionCode {
+  ADD = 0;
+  EXIST = 1;
+  OPTION = 2;
+  RENEW = 3;
+  UPDATE = 4;
+  DELETE = 5;
+}
+
+message ExecuteConstraintsRequest {
+  string org_id = 1;
+  repeated string context_ids = 2;
+  string user_profile = 3;
+  // Add this for passing line items
+  repeated CoreLineItem root_line_items = 4;
+  // Add this to pass contextProperties map
+  map<string, string> context_properties = 5;
+}
+
+/**
+ * Protobuf equivalent of the `ConfigurationResponse` Java class.
+ */
+message ConfigurationResponse {
+  repeated CoreRuleAction root_rule_actions = 1;
+  repeated CoreLineItem root_line_items = 2;
+  repeated ConstraintsSolverValidationError errors = 3;
+  // Corresponds to `List<Map<String, String>> executionStats`.
+  // A list of maps is represented as a repeated message containing a map.
+  repeated StatMap execution_stats = 4;
+}
+
+message CoreLineItem {
+  optional string id = 1;
+  optional string root_id = 2;
+  optional string parent_id = 3;
+  optional string cfg_status = 4;
+  // Enums that can be null in the POJO should be optional.
+  // Otherwise, a null value will default to the 0-value enum ('ADD'),
+  // which is indistinguishable from an explicitly set 'ADD'.
+  optional ActionCode action_code = 5;
+  // String fields should be optional to distinguish null from "".
+  optional string name = 6;
+  optional string relation = 7;
+  optional string source = 8;
+  // NOTE: This is int32. If the Java POJO uses `Integer` (which can be null),
+  // making it optional is correct to distinguish null from 0.
+  // If the POJO uses primitive `int`, it cannot be null, but optional is still safer.
+  optional int32 qty = 9;
+  optional string model_name = 10;
+  optional string product_id = 11;
+  optional string product_related_component_id = 12;
+
+  // Maps and repeated fields are never optional. Their absence is an empty map/list.
+  map<string, CoreLineItemAttribute> attributes = 13;
+  map<string, string> properties = 14;
+
+  repeated CoreRuleAction rule_actions = 15;
+
+  map<string, StringList> port_domains_to_hide = 16;
+
+  repeated CoreLineItem line_items = 17;
+
+  map<string, StringList> attribute_domains = 18;
+}
+
+
+message CoreRuleAction {
+  // String fields should be optional.
+  optional string action = 1;
+  map<string, StringList> details = 2;
+}
+
+
+message ConstraintsSolverValidationError {
+  // All string fields that can be null in the source should be optional.
+  optional string root_line_id = 1;
+  optional string error_message = 2;
+  optional string validation_message_section = 3;
+  optional string category = 4;
+  optional string md_code = 5;
+  optional string message_key = 6;
+  // A repeated field cannot be optional.
+  repeated google.protobuf.Value message_args = 7;
+}
+
+message CoreLineItemAttribute {
+  // String fields should be optional.
+  optional string id = 1;
+  optional string attribute_id = 2;
+  optional string name = 3;
+  optional string cfg_status = 4;
+  optional string type = 5;
+  //  optional for a nullable Integer.
+  optional int32 scale = 6;
+  // A message field should be optional to check for its presence.
+  // This allows you to check if the `value` object itself was null.
+  optional google.protobuf.Value value = 7;
+  optional google.protobuf.Value previous_value = 8;
+}
+
+
+/**
+ * A wrapper for a list of strings, used to represent `Map<String, List<String>>`.
+ * Protobuf does not directly support maps with list values.
+ */
+message StringList {
+  repeated string values = 1;
+}
+
+/**
+ * A wrapper for a map of strings, used to represent `List<Map<String, String>>`.
+ */
+message StatMap {
+  map<string, string> entries = 1;
+}
