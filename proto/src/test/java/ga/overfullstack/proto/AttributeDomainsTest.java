@@ -103,11 +103,10 @@ class AttributeDomainsTest {
 						.collect(
 								toMap(
 										Entry::getKey,
-										entry -> {
-											final var builder = AttributeDomainList.newBuilder();
-											entry.getValue().forEach(value -> builder.addValues(String.valueOf(value)));
-											return builder.build();
-										}));
+										entry ->
+												AttributeDomainList.newBuilder()
+														.addAllValues(entry.getValue().stream().map(String::valueOf).toList())
+														.build()));
 
 		var message =
 				AttributeDomainsProto.AttributeDomains.newBuilder()
