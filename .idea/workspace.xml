@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="proto&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
-      <change afterPath="$PROJECT_DIR$/proto/src/main/proto/attribute_domains_1.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomains1Test.java" afterDir="false" />
+    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="proto tests&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http4k/src/main/kotlin/ga/overfullstack/mcp/Client.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http4k/src/main/kotlin/ga/overfullstack/mcp/Tool.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/ObjectMapperLab.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-lab/src/test/java/ga/overfullstack/ObjectMapperLab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-lab/src/main/kotlin/ga/overfullstack/interop/Misc.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/proto/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/proto/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomains1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomains1Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomainsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomainsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -197,6 +191,7 @@
     "Gradle./Users/gopala.akshintala/code-clones/my-github/my-lab/buildSrc/src/main [clean build].executor": "Run",
     "Gradle./Users/gopala.akshintala/code-clones/my-github/my-lab/buildSrc/src/main [clean].executor": "Run",
     "Gradle.AttributeDomains1Test.testProtobufToJsonConversion3.executor": "Debug",
+    "Gradle.AttributeDomainsTest.testCoreNearCore.executor": "Debug",
     "Gradle.AttributeDomainsTest.testProtobufToJsonConversion.executor": "Debug",
     "Gradle.AttributeDomainsTest.testProtobufToJsonConversion2.executor": "Debug",
     "Gradle.AttributeDomainsTest.testProtobufToJsonConversion3.executor": "Debug",
@@ -434,8 +429,8 @@
       <command value="gradle clean build" />
       <command value="gradle clean build -x test -x detekt" />
       <command value="gradle clean" />
-      <command value="gradle spotlessApply" />
       <command value="gradle clean build -x test" />
+      <command value="gradle spotlessApply" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -445,7 +440,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.AttributeDomains1Test.testProtobufToJsonConversion3">
+  <component name="RunManager" selected="Gradle.AttributeDomainsTest.testCoreNearCore">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -483,6 +478,30 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="AttributeDomainsTest.testCoreNearCore" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":proto:test" />
+            <option value="--tests" />
+            <option value="&quot;ga.overfullstack.proto.AttributeDomainsTest.testCoreNearCore&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="AttributeDomainsTest.testProtobufToJsonConversion3" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -497,30 +516,6 @@
             <option value=":proto:test" />
             <option value="--tests" />
             <option value="&quot;ga.overfullstack.proto.AttributeDomainsTest.testProtobufToJsonConversion3&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="ObjectMapperLab.objectToString" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":java-lab:test" />
-            <option value="--tests" />
-            <option value="&quot;ga.overfullstack.ObjectMapperLab.objectToString&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -577,19 +572,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Gradle.AttributeDomainsTest.testCoreNearCore" />
       <item itemvalue="Gradle.AttributeDomains1Test.testProtobufToJsonConversion3" />
       <item itemvalue="Gradle.AttributeDomainsTest.testProtobufToJsonConversion3" />
-      <item itemvalue="Gradle.ObjectMapperLab.objectToString" />
       <item itemvalue="Gradle.my-lab [clean build]" />
       <item itemvalue="Gradle.my-lab [spotlessApply]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AttributeDomainsTest.testCoreNearCore" />
         <item itemvalue="Gradle.AttributeDomains1Test.testProtobufToJsonConversion3" />
         <item itemvalue="Gradle.my-lab [clean build]" />
         <item itemvalue="Gradle.my-lab [spotlessApply]" />
         <item itemvalue="Gradle.AttributeDomainsTest.testProtobufToJsonConversion3" />
-        <item itemvalue="Gradle.ObjectMapperLab.objectToString" />
       </list>
     </recent_temporary>
   </component>
@@ -1230,7 +1225,8 @@
       <workItem from="1752128012749" duration="1436000" />
       <workItem from="1752130549453" duration="163000" />
       <workItem from="1752135448790" duration="3698000" />
-      <workItem from="1752250158955" duration="6102000" />
+      <workItem from="1752250158955" duration="7274000" />
+      <workItem from="1752306288925" duration="2096000" />
     </task>
     <task id="LOCAL-00009" summary="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
       <created>1627583016664</created>
@@ -1575,7 +1571,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684333262543</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <option name="localTasksCounter" value="135" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1707,7 +1703,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Remove apply subprojects convention from subprojects block&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;ConnectGraph Marshall unmashall.&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="MessageTest" />
     <MESSAGE value="clean moshi deps" />
     <MESSAGE value="Commit" />
@@ -1732,7 +1727,8 @@
     <MESSAGE value="SpotlessApply&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="ObjectMapperLab&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="proto&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="proto&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <MESSAGE value="proto tests&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="proto tests&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
   </component>
   <component name="WfRunsListSearchHistory">{
   &quot;history&quot;: [
@@ -1802,17 +1798,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomainsTest.java</url>
-          <line>134</line>
+          <line>254</line>
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomainsTest.java</url>
-          <line>132</line>
+          <line>252</line>
           <option name="timeStamp" value="80" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomainsTest.java</url>
-          <line>131</line>
+          <line>251</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
@@ -1825,13 +1821,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomainsTest.java</url>
-          <line>93</line>
+          <line>213</line>
           <option name="timeStamp" value="86" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomains1Test.java</url>
-          <line>116</line>
-          <option name="timeStamp" value="89" />
+          <line>129</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomainsTest.java</url>
+          <line>132</line>
+          <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/moshi-lab/src/test/kotlin/ga/overfullstack/PostmanLab.kt</url>

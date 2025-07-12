@@ -1,19 +1,141 @@
 package ga.overfullstack.proto;
 
+import static java.util.stream.Collectors.toMap;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.truth.Truth;
 import com.google.protobuf.util.JsonFormat;
+import ga.overfullstack.proto.AttributeDomainsProto.AttributeDomainList;
+import ga.overfullstack.proto.AttributeDomainsProto.AttributeDomains;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.stream.Collectors;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class AttributeDomainsTest {
 
 	@Test
-	void testProtobufToJsonConversion3() throws Exception {
+	void testCoreNearCore() throws Exception {
+		final var beforeResponse =
+				"""
+						{
+								"attributeDomains": {
+										"attr1": [
+												{
+														"min": 1,
+														"max": 1,
+														"minIntValue": 1
+												},
+												{
+														"min": 1,
+														"max": 1,
+														"minIntValue": 1
+												}
+										],
+										"attr2": [
+												{
+														"min": 1,
+														"max": 1,
+														"minIntValue": 1
+												}
+										],
+										"attr3": [
+												"str1",
+												"str2"
+										]
+								}
+						}
+						""";
+		final var mapper = new ObjectMapper();
+		Map<String, Object> map = mapper.readValue(beforeResponse, Map.class);
+		final var attributeDomainsNCBefore = (Map<String, List<?>>) map.get("attributeDomains");
+		// After we receive it in core
+		final var attributeDomainsCoreBefore =
+				attributeDomainsNCBefore.entrySet().stream()
+						.collect(
+								toMap(
+										Map.Entry::getKey,
+										entry -> entry.getValue().stream().map(String::valueOf).toList()));
+
+		// --- AFTER ---
+
+		// Near-core: Build protobuf
+		final var attributeDomainsNC =
+				new LinkedHashMap<String, List<?>>() {
+					{
+						put(
+								"attr1",
+								List.of(
+										new LinkedHashMap<String, Integer>() {
+											{
+												put("min", 1);
+												put("max", 1);
+												put("minIntValue", 1);
+											}
+										},
+										new LinkedHashMap<String, Integer>() {
+											{
+												put("min", 1);
+												put("max", 1);
+												put("minIntValue", 1);
+											}
+										}));
+						put(
+								"attr2",
+								List.of(
+										new LinkedHashMap<String, Integer>() {
+											{
+												put("min", 1);
+												put("max", 1);
+												put("minIntValue", 1);
+											}
+										}));
+						put("attr3", List.of("str1", "str2"));
+					}
+				};
+
+		// NEAR-CORE: CoreLineItemInternal Setter `setAttributeDomains()`
+		final var attributeDomainsTransformed =
+				attributeDomainsNC.entrySet().stream()
+						.collect(
+								toMap(
+										Entry::getKey,
+										entry -> {
+											final var builder = AttributeDomainList.newBuilder();
+											entry.getValue().forEach(value -> builder.addValues(String.valueOf(value)));
+											return builder.build();
+										}));
+
+		var message =
+				AttributeDomainsProto.AttributeDomains.newBuilder()
+						.putAllAttributeDomains(attributeDomainsTransformed)
+						.build();
+
+		// Serialize to JSON and send response to Core
+		var nearCoreResponse = JsonFormat.printer().print(message);
+
+		// ON CORE: deserialize the nearCoreResponse to Proto
+		var parsedBuilder = AttributeDomains.newBuilder();
+		JsonFormat.parser().merge(nearCoreResponse, parsedBuilder);
+		var attributeDomainsCore = parsedBuilder.build();
+
+		// ON CORE: CoreLineItemInternal Getter
+		final var attributeDomainsCoreAfter =
+				attributeDomainsCore.getAttributeDomainsMap().entrySet().stream()
+						.collect(
+								toMap(
+										Entry::getKey,
+										entry ->
+												entry.getValue().getValuesList().stream().map(String::valueOf).toList()));
+		Truth.assertThat(attributeDomainsCoreAfter)
+				.containsExactlyEntriesIn(attributeDomainsCoreBefore);
+	}
+
+	@Test
+	void testCoreNearCoreOld() throws Exception {
 		final var str =
 				"""
 				{
@@ -48,7 +170,7 @@ class AttributeDomainsTest {
 		final var attributeDomains = (Map<String, List<?>>) map.get("attributeDomains");
 		final var expectedMap =
 				attributeDomains.entrySet().stream()
-						.collect(Collectors.toMap(Entry::getKey, entry -> entry.getValue().toString()));
+						.collect(toMap(Entry::getKey, entry -> entry.getValue().toString()));
 		final var expected = attributeDomains.values().stream().map(String::valueOf).toList();
 
 		// Build protobuf message directly
@@ -65,7 +187,7 @@ class AttributeDomainsTest {
 		final var attributeDomainsTransformed =
 				attributeDomainsNC.entrySet().stream()
 						.collect(
-								Collectors.toMap(
+								toMap(
 										Entry::getKey,
 										entry ->
 												AttributeDomainsProto.AttributeDomainList.newBuilder()
@@ -87,13 +209,11 @@ class AttributeDomainsTest {
 		// lineItem.getAttributeDomains()
 		final var attributeDomainsOnCoreTransformed =
 				attributeDomainsCore.getAttributeDomainsMap().entrySet().stream()
-						.collect(
-								Collectors.toMap(
-										Entry::getKey, entry -> entry.getValue().getValuesList().toString()));
+						.collect(toMap(Entry::getKey, entry -> entry.getValue().getValuesList().toString()));
 
 		System.out.println(attributeDomainsOnCoreTransformed);
 		// Verify the messages are equal
-		assertThat(attributeDomainsCore).isEqualTo(message);
+		Assertions.assertThat(attributeDomainsCore).isEqualTo(message);
 
 		// Verify structure
 		assertThat(attributeDomainsCore.getAttributeDomainsMap()).hasSize(3);
@@ -116,7 +236,7 @@ class AttributeDomainsTest {
 		final var attributeDomainsTransformed =
 				attributeDomainsNC.entrySet().stream()
 						.collect(
-								Collectors.toMap(
+								toMap(
 										Entry::getKey,
 										entry ->
 												AttributeDomainsProto.AttributeDomainList.newBuilder()
@@ -138,13 +258,11 @@ class AttributeDomainsTest {
 		// lineItem.getAttributeDomains()
 		final var attributeDomainsOnCoreTransformed =
 				attributeDomainsCore.getAttributeDomainsMap().entrySet().stream()
-						.collect(
-								Collectors.toMap(
-										Entry::getKey, entry -> entry.getValue().getValuesList().toString()));
+						.collect(toMap(Entry::getKey, entry -> entry.getValue().getValuesList().toString()));
 
 		System.out.println(attributeDomainsOnCoreTransformed);
 		// Verify the messages are equal
-		assertThat(attributeDomainsCore).isEqualTo(message);
+		Assertions.assertThat(attributeDomainsCore).isEqualTo(message);
 
 		// Verify structure
 		assertThat(attributeDomainsCore.getAttributeDomainsMap()).hasSize(3);
@@ -178,7 +296,7 @@ class AttributeDomainsTest {
 		var serializedData = protobufMessage.toByteArray();
 
 		// Verify serialization worked
-		assertThat(serializedData).isNotEmpty();
+		Assertions.assertThat(serializedData).isNotEmpty();
 
 		// Step 3: Deserialize from binary back to protobuf
 		var deserializedMessage = AttributeDomainsProto.AttributeDomains.parseFrom(serializedData);
@@ -195,13 +313,13 @@ class AttributeDomainsTest {
 		List<String> attr1Configs =
 				deserializedMessage.getAttributeDomainsMap().get("attr1").getValuesList();
 		assertThat(attr1Configs).hasSize(1);
-		assertThat(attr1Configs.get(0)).isEqualTo("{min=1, max=1, minIntValue=1}");
+		Assertions.assertThat(attr1Configs.get(0)).isEqualTo("{min=1, max=1, minIntValue=1}");
 
 		// Verify attr2 values
 		List<String> attr2Configs =
 				deserializedMessage.getAttributeDomainsMap().get("attr2").getValuesList();
 		assertThat(attr2Configs).hasSize(1);
-		assertThat(attr2Configs.get(0)).isEqualTo("{min=1, max=1, minIntValue=1}");
+		Assertions.assertThat(attr2Configs.get(0)).isEqualTo("{min=1, max=1, minIntValue=1}");
 
 		// Verify JSON structure is preserved by parsing the round-trip JSON
 		var roundTripBuilder = AttributeDomainsProto.AttributeDomains.newBuilder();
@@ -209,7 +327,7 @@ class AttributeDomainsTest {
 		var roundTripMessage = roundTripBuilder.build();
 
 		// Verify original and round-trip messages are equal
-		assertThat(roundTripMessage).isEqualTo(protobufMessage);
+		Assertions.assertThat(roundTripMessage).isEqualTo(protobufMessage);
 	}
 
 	@Test
@@ -238,7 +356,7 @@ class AttributeDomainsTest {
 		var parsedMessage = parsedBuilder.build();
 
 		// Verify the messages are equal
-		assertThat(parsedMessage).isEqualTo(message);
+		Assertions.assertThat(parsedMessage).isEqualTo(message);
 
 		// Verify structure
 		assertThat(parsedMessage.getAttributeDomainsMap()).hasSize(2);
@@ -274,8 +392,8 @@ class AttributeDomainsTest {
 
 		List<String> testAttrConfigs = message.getAttributeDomainsMap().get("testAttr").getValuesList();
 		assertThat(testAttrConfigs).hasSize(2);
-		assertThat(testAttrConfigs.get(0)).isEqualTo("{min=5, max=10, minIntValue=5}");
-		assertThat(testAttrConfigs.get(1)).isEqualTo("{min=1, max=2, minIntValue=1}");
+		Assertions.assertThat(testAttrConfigs.get(0)).isEqualTo("{min=5, max=10, minIntValue=5}");
+		Assertions.assertThat(testAttrConfigs.get(1)).isEqualTo("{min=1, max=2, minIntValue=1}");
 
 		// Convert back to JSON
 		var jsonOutput = JsonFormat.printer().print(message);
@@ -285,7 +403,7 @@ class AttributeDomainsTest {
 		JsonFormat.parser().merge(jsonOutput, verifyBuilder);
 		var verifyMessage = verifyBuilder.build();
 
-		assertThat(verifyMessage).isEqualTo(message);
+		Assertions.assertThat(verifyMessage).isEqualTo(message);
 	}
 
 	@Test
@@ -347,6 +465,6 @@ class AttributeDomainsTest {
 		JsonFormat.parser().merge(protobufJson, roundTripBuilder);
 		var roundTripMessage = roundTripBuilder.build();
 
-		assertThat(roundTripMessage).isEqualTo(deserializedMessage);
+		Assertions.assertThat(roundTripMessage).isEqualTo(deserializedMessage);
 	}
 }
