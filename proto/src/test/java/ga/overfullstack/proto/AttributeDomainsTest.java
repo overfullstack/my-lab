@@ -134,36 +134,170 @@ class AttributeDomainsTest {
 	}
 
 	@Test
+	void testCoreNearCore1() throws Exception {
+		final var beforeResponse =
+				"""
+						{
+								"attributeDomains": {
+									"Graphics": [
+										"Intel Iris Xe Graphics",
+										"MSI Gaming GeForce RTX 3060"
+									],
+									"$qty": [
+										{
+											"min": 1,
+											"max": 1,
+											"minIntValue": 1
+										}
+									],
+									"Storage": [
+										"SSD Hard Drive 2TB",
+										"SSD Hard Drive 512GB",
+										"SSD Hard Drive 1TB",
+										"SSD Hard Drive 256GB",
+										"Cloud Storage Enterprise - 6 TB",
+										"Cloud Storage Enterprise - 2 TB"
+									],
+									"Memory": [
+										"RAM 64GB",
+										"RAM 32GB",
+										"RAM 8GB",
+										"RAM 16GB"
+									],
+									"Display_Size": [
+										"24 Inch",
+										"13 Inch",
+										"15 Inch",
+										"27 Inch"
+									],
+									"Windows_Processor": [
+										"i5-CPU 4.4GHz",
+										"i7-CPU 4.7GHz",
+										"Intel Core i9 5.2 GHz"
+									],
+									"Display": [
+										"1080p Built-in Display",
+										"4k Built-in Display",
+										"2k Built-in Display"
+									]
+								}
+						}
+						""";
+		final var mapper = new ObjectMapper();
+		Map<String, Object> map = mapper.readValue(beforeResponse, Map.class);
+		final var attributeDomainsNCBefore = (Map<String, List<?>>) map.get("attributeDomains");
+		// After we receive it in core
+		final var attributeDomainsCoreBefore =
+				attributeDomainsNCBefore.entrySet().stream()
+						.collect(
+								toMap(
+										Map.Entry::getKey,
+										entry -> entry.getValue().stream().map(String::valueOf).toList()));
+
+		// --- AFTER ---
+
+		// Near-core: Build protobuf
+		final var attributeDomainsNC =
+				new LinkedHashMap<String, List<?>>() {
+					{
+						put("Graphics", List.of("Intel Iris Xe Graphics", "MSI Gaming GeForce RTX 3060"));
+						put(
+								"$qty",
+								List.of(
+										new LinkedHashMap<String, Integer>() {
+											{
+												put("min", 1);
+												put("max", 1);
+												put("minIntValue", 1);
+											}
+										}));
+						put(
+								"Storage",
+								List.of(
+										"SSD Hard Drive 2TB",
+										"SSD Hard Drive 512GB",
+										"SSD Hard Drive 1TB",
+										"SSD Hard Drive 256GB",
+										"Cloud Storage Enterprise - 6 TB",
+										"Cloud Storage Enterprise - 2 TB"));
+						put("Memory", List.of("RAM 64GB", "RAM 32GB", "RAM 8GB", "RAM 16GB"));
+						put("Display_Size", List.of("24 Inch", "13 Inch", "15 Inch", "27 Inch"));
+						put(
+								"Windows_Processor",
+								List.of("i5-CPU 4.4GHz", "i7-CPU 4.7GHz", "Intel Core i9 5.2 GHz"));
+						put(
+								"Display",
+								List.of("1080p Built-in Display", "4k Built-in Display", "2k Built-in Display"));
+					}
+				};
+
+		// NEAR-CORE: CoreLineItemInternal Setter `setAttributeDomains()`
+		final var attributeDomainsTransformed =
+				attributeDomainsNC.entrySet().stream()
+						.collect(
+								toMap(
+										Entry::getKey,
+										entry ->
+												AttributeDomainList.newBuilder()
+														.addAllValues(entry.getValue().stream().map(String::valueOf).toList())
+														.build()));
+
+		var message =
+				AttributeDomainsProto.AttributeDomains.newBuilder()
+						.putAllAttributeDomains(attributeDomainsTransformed)
+						.build();
+
+		// Serialize to JSON and send response to Core
+		var nearCoreResponse = JsonFormat.printer().print(message);
+
+		// ON CORE: deserialize the nearCoreResponse to Proto
+		var parsedBuilder = AttributeDomains.newBuilder();
+		JsonFormat.parser().merge(nearCoreResponse, parsedBuilder);
+		var attributeDomainsCore = parsedBuilder.build();
+
+		// ON CORE: CoreLineItemInternal Getter
+		final var attributeDomainsCoreAfter =
+				attributeDomainsCore.getAttributeDomainsMap().entrySet().stream()
+						.collect(
+								toMap(
+										Entry::getKey,
+										entry ->
+												entry.getValue().getValuesList().stream().map(String::valueOf).toList()));
+		Truth.assertThat(attributeDomainsCoreAfter)
+				.containsExactlyEntriesIn(attributeDomainsCoreBefore);
+	}
+
+	@Test
 	void testCoreNearCoreOld() throws Exception {
 		final var str =
 				"""
-				{
-						"attributeDomains": {
-								"attr1": [
-										{
-												"max": 1,
-												"min": 1,
-												"minIntValue": 1
-										},
-										{
-												"max": 1,
-												"min": 1,
-												"minIntValue": 1
-										}
-								],
-								"attr2": [
-										{
-												"max": 1,
-												"min": 1,
-												"minIntValue": 1
-										}
-								],
-								"attr3": [
-										"str1, str2"
-								]
+						{
+								"attributeDomains": {
+										"attr1": [
+												{
+														"max": 1,
+														"min": 1,
+														"minIntValue": 1
+												},
+												{
+														"max": 1,
+														"min": 1,
+														"minIntValue": 1
+												}
+										],
+										"attr2": [
+												{
+														"max": 1,
+														"min": 1,
+														"minIntValue": 1
+												}
+										],
+										"attr3": [
+												"str1, str2"
+										]
+								}
 						}
-				}
-				""";
+						""";
 		final var mapper = new ObjectMapper();
 		Map<String, Object> map = mapper.readValue(str, Map.class);
 		final var attributeDomains = (Map<String, List<?>>) map.get("attributeDomains");
