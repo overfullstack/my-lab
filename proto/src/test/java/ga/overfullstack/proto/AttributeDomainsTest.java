@@ -52,7 +52,8 @@ class AttributeDomainsTest {
 		final var mapper = new ObjectMapper();
 		Map<String, Object> map = mapper.readValue(beforeResponse, Map.class);
 		final var attributeDomainsNCBefore = (Map<String, List<?>>) map.get("attributeDomains");
-		// After we receive it in core
+		
+    // After we receive it in core, we process them like this
 		final var attributeDomainsCoreBefore =
 				attributeDomainsNCBefore.entrySet().stream()
 						.collect(
@@ -108,13 +109,13 @@ class AttributeDomainsTest {
 														.addAllValues(entry.getValue().stream().map(String::valueOf).toList())
 														.build()));
 
-		var message =
-				AttributeDomainsProto.AttributeDomains.newBuilder()
+		var nearCoreProtoResponse =
+				AttributeDomains.newBuilder()
 						.putAllAttributeDomains(attributeDomainsTransformed)
 						.build();
 
 		// Serialize to JSON and send response to Core
-		var nearCoreResponse = JsonFormat.printer().print(message);
+		var nearCoreResponse = JsonFormat.printer().print(nearCoreProtoResponse);
 
 		// ON CORE: deserialize the nearCoreResponse to Proto
 		var parsedBuilder = AttributeDomains.newBuilder();
@@ -186,7 +187,8 @@ class AttributeDomainsTest {
 		final var mapper = new ObjectMapper();
 		Map<String, Object> map = mapper.readValue(beforeResponse, Map.class);
 		final var attributeDomainsNCBefore = (Map<String, List<?>>) map.get("attributeDomains");
-		// After we receive it in core
+		
+    // After we receive it in core, we process them like this
 		final var attributeDomainsCoreBefore =
 				attributeDomainsNCBefore.entrySet().stream()
 						.collect(
@@ -243,13 +245,13 @@ class AttributeDomainsTest {
 														.addAllValues(entry.getValue().stream().map(String::valueOf).toList())
 														.build()));
 
-		var message =
-				AttributeDomainsProto.AttributeDomains.newBuilder()
+		var nearCoreProtoResponse =
+				AttributeDomains.newBuilder()
 						.putAllAttributeDomains(attributeDomainsTransformed)
 						.build();
 
 		// Serialize to JSON and send response to Core
-		var nearCoreResponse = JsonFormat.printer().print(message);
+		var nearCoreResponse = JsonFormat.printer().print(nearCoreProtoResponse);
 
 		// ON CORE: deserialize the nearCoreResponse to Proto
 		var parsedBuilder = AttributeDomains.newBuilder();
@@ -268,7 +270,136 @@ class AttributeDomainsTest {
 				.containsExactlyEntriesIn(attributeDomainsCoreBefore);
 	}
 
-	@Test
+
+  @Test
+  void testNearCoreProtoToPojo() throws Exception {
+    final var beforeResponse =
+        """
+            {
+                "attributeDomains": {
+                    "attr1": [
+                        {
+                            "min": 1,
+                            "max": 1,
+                            "minIntValue": 1
+                        },
+                        {
+                            "min": 1,
+                            "max": 1,
+                            "minIntValue": 1
+                        }
+                    ],
+                    "attr2": [
+                        {
+                            "min": 1,
+                            "max": 1,
+                            "minIntValue": 1
+                        }
+                    ],
+                    "attr3": [
+                        "str1",
+                        "str2"
+                    ]
+                }
+            }
+            """;
+    final var mapper = new ObjectMapper();
+    Map<String, Object> map = mapper.readValue(beforeResponse, Map.class);
+    final var attributeDomainsNCBefore = (Map<String, List<?>>) map.get("attributeDomains");
+
+    // After we receive it in core, we process them like this
+    final var attributeDomainsCoreBefore =
+        attributeDomainsNCBefore.entrySet().stream()
+            .collect(
+                toMap(
+                    Map.Entry::getKey,
+                    entry -> entry.getValue().stream().map(String::valueOf).toList()));
+
+    // --- AFTER ---
+
+    // Near-core: Build protobuf
+    final var attributeDomainsNC =
+        new LinkedHashMap<String, List<?>>() {
+          {
+            put(
+                "attr1",
+                List.of(
+                    new LinkedHashMap<String, Integer>() {
+                      {
+                        put("min", 1);
+                        put("max", 1);
+                        put("minIntValue", 1);
+                      }
+                    },
+                    new LinkedHashMap<String, Integer>() {
+                      {
+                        put("min", 1);
+                        put("max", 1);
+                        put("minIntValue", 1);
+                      }
+                    }));
+            put(
+                "attr2",
+                List.of(
+                    new LinkedHashMap<String, Integer>() {
+                      {
+                        put("min", 1);
+                        put("max", 1);
+                        put("minIntValue", 1);
+                      }
+                    }));
+            put("attr3", List.of("str1", "str2"));
+          }
+        };
+
+    // NEAR-CORE: CoreLineItemInternal Setter `setAttributeDomains()`
+    final var attributeDomainsTransformed =
+        attributeDomainsNC.entrySet().stream()
+            .collect(
+                toMap(
+                    Entry::getKey,
+                    entry ->
+                        AttributeDomainList.newBuilder()
+                            .addAllValues(entry.getValue().stream().map(String::valueOf).toList())
+                            .build()));
+
+    var nearCoreProtoResponse =
+        AttributeDomains.newBuilder()
+            .putAllAttributeDomains(attributeDomainsTransformed)
+            .build();
+    // We convert attributeDomains -> Map<String, List<String>> which is compatible with Map<String, List<?>>
+    final Map<String, List<?>> oldNearCoreResponse =
+        nearCoreProtoResponse.getAttributeDomainsMap().entrySet().stream()
+            .collect(
+                toMap(
+                    Entry::getKey,
+                    entry ->
+                        entry.getValue().getValuesList().stream().map(String::valueOf).toList()));
+
+    // Serialize to JSON and send response to Core
+    var nearCoreResponse = JsonFormat.printer().print(nearCoreProtoResponse);
+
+    // ON CORE: Deserialize the nearCoreResponse to Proto
+    var parsedBuilder = AttributeDomains.newBuilder();
+    JsonFormat.parser().merge(nearCoreResponse, parsedBuilder);
+    var attributeDomainsCore = parsedBuilder.build();
+
+    // ON CORE: CoreLineItemInternal Getter
+    final var attributeDomainsCoreAfter =
+        attributeDomainsCore.getAttributeDomainsMap().entrySet().stream()
+            .collect(
+                toMap(
+                    Entry::getKey,
+                    entry ->
+                        entry.getValue().getValuesList().stream().map(String::valueOf).toList()));
+    
+    Truth.assertThat(attributeDomainsCoreAfter)
+        .containsExactlyEntriesIn(attributeDomainsCoreBefore);
+  }
+  
+  // --------------------------------------
+  
+  @Test
 	void testCoreNearCoreOld() throws Exception {
 		final var str =
 				"""
@@ -328,7 +459,7 @@ class AttributeDomainsTest {
 														.addValues(String.valueOf(entry.getValue()))
 														.build()));
 		var message =
-				AttributeDomainsProto.AttributeDomains.newBuilder()
+				AttributeDomains.newBuilder()
 						.putAllAttributeDomains(attributeDomainsTransformed)
 						.build();
 
@@ -337,7 +468,7 @@ class AttributeDomainsTest {
 
 		// on core deserialize
 		// Parse JSON back to protobuf to verify round-trip conversion
-		var parsedBuilder = AttributeDomainsProto.AttributeDomains.newBuilder();
+		var parsedBuilder = AttributeDomains.newBuilder();
 		JsonFormat.parser().merge(response, parsedBuilder);
 		var attributeDomainsCore = parsedBuilder.build();
 		// lineItem.getAttributeDomains()
@@ -377,7 +508,7 @@ class AttributeDomainsTest {
 														.addValues(String.valueOf(entry.getValue()))
 														.build()));
 		var message =
-				AttributeDomainsProto.AttributeDomains.newBuilder()
+				AttributeDomains.newBuilder()
 						.putAllAttributeDomains(attributeDomainsTransformed)
 						.build();
 
@@ -386,7 +517,7 @@ class AttributeDomainsTest {
 
 		// on core deserialize
 		// Parse JSON back to protobuf to verify round-trip conversion
-		var parsedBuilder = AttributeDomainsProto.AttributeDomains.newBuilder();
+		var parsedBuilder = AttributeDomains.newBuilder();
 		JsonFormat.parser().merge(response, parsedBuilder);
 		var attributeDomainsCore = parsedBuilder.build();
 		// lineItem.getAttributeDomains()
@@ -422,7 +553,7 @@ class AttributeDomainsTest {
 						""";
 
 		// Step 1: Parse JSON directly into protobuf using JsonFormat
-		var builder = AttributeDomainsProto.AttributeDomains.newBuilder();
+		var builder = AttributeDomains.newBuilder();
 		JsonFormat.parser().merge(sampleJson, builder);
 		var protobufMessage = builder.build();
 
@@ -433,7 +564,7 @@ class AttributeDomainsTest {
 		Assertions.assertThat(serializedData).isNotEmpty();
 
 		// Step 3: Deserialize from binary back to protobuf
-		var deserializedMessage = AttributeDomainsProto.AttributeDomains.parseFrom(serializedData);
+		var deserializedMessage = AttributeDomains.parseFrom(serializedData);
 
 		// Step 4: Convert protobuf back to JSON using JsonFormat
 		var deserializedJson = JsonFormat.printer().print(deserializedMessage);
@@ -456,7 +587,7 @@ class AttributeDomainsTest {
 		Assertions.assertThat(attr2Configs.get(0)).isEqualTo("{min=1, max=1, minIntValue=1}");
 
 		// Verify JSON structure is preserved by parsing the round-trip JSON
-		var roundTripBuilder = AttributeDomainsProto.AttributeDomains.newBuilder();
+		var roundTripBuilder = AttributeDomains.newBuilder();
 		JsonFormat.parser().merge(deserializedJson, roundTripBuilder);
 		var roundTripMessage = roundTripBuilder.build();
 
@@ -468,7 +599,7 @@ class AttributeDomainsTest {
 	void testProtobufToJsonConversion() throws Exception {
 		// Build protobuf message directly
 		var message =
-				AttributeDomainsProto.AttributeDomains.newBuilder()
+				AttributeDomains.newBuilder()
 						.putAttributeDomains(
 								"attr1",
 								AttributeDomainsProto.AttributeDomainList.newBuilder()
@@ -485,7 +616,7 @@ class AttributeDomainsTest {
 		var jsonString = JsonFormat.printer().print(message);
 
 		// Parse JSON back to protobuf to verify round-trip conversion
-		var parsedBuilder = AttributeDomainsProto.AttributeDomains.newBuilder();
+		var parsedBuilder = AttributeDomains.newBuilder();
 		JsonFormat.parser().merge(jsonString, parsedBuilder);
 		var parsedMessage = parsedBuilder.build();
 
@@ -516,7 +647,7 @@ class AttributeDomainsTest {
 						""";
 
 		// Parse JSON to protobuf
-		var builder = AttributeDomainsProto.AttributeDomains.newBuilder();
+		var builder = AttributeDomains.newBuilder();
 		JsonFormat.parser().merge(jsonInput, builder);
 		var message = builder.build();
 
@@ -533,7 +664,7 @@ class AttributeDomainsTest {
 		var jsonOutput = JsonFormat.printer().print(message);
 
 		// Parse the output JSON back to protobuf to verify consistency
-		var verifyBuilder = AttributeDomainsProto.AttributeDomains.newBuilder();
+		var verifyBuilder = AttributeDomains.newBuilder();
 		JsonFormat.parser().merge(jsonOutput, verifyBuilder);
 		var verifyMessage = verifyBuilder.build();
 
@@ -561,7 +692,7 @@ class AttributeDomainsTest {
 		// Since protobuf expects a specific structure, we need to build the protobuf message
 		// manually from the original JSON structure
 		var message =
-				AttributeDomainsProto.AttributeDomains.newBuilder()
+				AttributeDomains.newBuilder()
 						.putAttributeDomains(
 								"attr1",
 								AttributeDomainsProto.AttributeDomainList.newBuilder()
@@ -578,7 +709,7 @@ class AttributeDomainsTest {
 		var serializedData = message.toByteArray();
 
 		// Deserialize back
-		var deserializedMessage = AttributeDomainsProto.AttributeDomains.parseFrom(serializedData);
+		var deserializedMessage = AttributeDomains.parseFrom(serializedData);
 
 		// Verify the structure
 		assertThat(deserializedMessage.getAttributeDomainsMap()).hasSize(2);
@@ -595,7 +726,7 @@ class AttributeDomainsTest {
 		var protobufJson = JsonFormat.printer().print(deserializedMessage);
 
 		// Verify we can parse it back
-		var roundTripBuilder = AttributeDomainsProto.AttributeDomains.newBuilder();
+		var roundTripBuilder = AttributeDomains.newBuilder();
 		JsonFormat.parser().merge(protobufJson, roundTripBuilder);
 		var roundTripMessage = roundTripBuilder.build();
 

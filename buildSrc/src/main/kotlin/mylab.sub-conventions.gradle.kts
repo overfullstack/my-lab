@@ -23,13 +23,13 @@ spotless {
     target("src/*/kotlin/**/*.kt", "src/*/java/**/*.kt")
     trimTrailingWhitespace()
     endWithNewline()
-    targetExclude("build/**", ".gradle/**", "generated/**", "bin/**", "out/**", "tmp/**")
+    targetExclude("build/**", ".gradle/**", "generated/**", "**/bin/**", "out/**", "tmp/**")
   }
   kotlinGradle {
     ktfmt().googleStyle()
     trimTrailingWhitespace()
     endWithNewline()
-    targetExclude("build/**", ".gradle/**", "generated/**", "bin/**", "out/**", "tmp/**")
+    targetExclude("build/**", ".gradle/**", "generated/**", "**/bin/**", "out/**", "tmp/**")
   }
   java {
     toggleOffOn()
@@ -40,7 +40,7 @@ spotless {
     trimTrailingWhitespace()
     leadingSpacesToTabs(2)
     endWithNewline()
-    targetExclude("build/**", ".gradle/**", "generated/**", "bin/**", "out/**", "tmp/**")
+    targetExclude("build/**", ".gradle/**", "generated/**", "**/bin/**", "out/**", "tmp/**")
   }
   format("documentation") {
     target("*.md", "*.adoc")
