@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="CoreLineItemInternal&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
+    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="oldNearCoreResponse&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.sub-conventions.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/mylab.sub-conventions.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomainsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomainsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -260,6 +259,7 @@
     "Gradle.my-lab [spotlessApply].executor": "Run",
     "Gradle.my-lab [wrapper].executor": "Run",
     "JUnit.AttributeDomainsTest.testCoreNearCore1.executor": "Run",
+    "JUnit.AttributeDomainsTest.testNearCoreProtoToPojo.executor": "Run",
     "JUnit.MilestoneLab.milestone.executor": "Run",
     "JUnit.ObjectMapperLab.executor": "Run",
     "JUnit.PolyglotLab.Function as Value.executor": "Run",
@@ -442,7 +442,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AttributeDomainsTest.testCoreNearCore1">
+  <component name="RunManager" selected="JUnit.AttributeDomainsTest.testNearCoreProtoToPojo">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -528,29 +528,6 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="my-lab [clean build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="-x test" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="AttributeDomainsTest.testCoreNearCore1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="my-lab.proto.test" />
       <extension name="coverage">
@@ -567,20 +544,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AttributeDomainsTest.testNearCoreProtoToPojo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="my-lab.proto.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ga.overfullstack.proto.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ga.overfullstack.proto" />
+      <option name="MAIN_CLASS_NAME" value="ga.overfullstack.proto.AttributeDomainsTest" />
+      <option name="METHOD_NAME" value="testNearCoreProtoToPojo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Gradle.AttributeDomainsTest.testCoreNearCore1" />
       <item itemvalue="Gradle.AttributeDomainsTest.testCoreNearCore" />
       <item itemvalue="Gradle.AttributeDomains1Test.testProtobufToJsonConversion3" />
-      <item itemvalue="Gradle.my-lab [clean build]" />
+      <item itemvalue="JUnit.AttributeDomainsTest.testNearCoreProtoToPojo" />
       <item itemvalue="JUnit.AttributeDomainsTest.testCoreNearCore1" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AttributeDomainsTest.testNearCoreProtoToPojo" />
         <item itemvalue="JUnit.AttributeDomainsTest.testCoreNearCore1" />
         <item itemvalue="Gradle.AttributeDomainsTest.testCoreNearCore1" />
         <item itemvalue="Gradle.AttributeDomainsTest.testCoreNearCore" />
         <item itemvalue="Gradle.AttributeDomains1Test.testProtobufToJsonConversion3" />
-        <item itemvalue="Gradle.my-lab [clean build]" />
       </list>
     </recent_temporary>
   </component>
@@ -1230,7 +1223,8 @@
       <workItem from="1752496438820" duration="605000" />
       <workItem from="1752546905057" duration="26000" />
       <workItem from="1752674611789" duration="14000" />
-      <workItem from="1752819478779" duration="1755000" />
+      <workItem from="1752819478779" duration="1851000" />
+      <workItem from="1753088386488" duration="316000" />
     </task>
     <task id="LOCAL-00009" summary="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
       <created>1627583016664</created>
@@ -1575,7 +1569,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684333262543</updated>
     </task>
-    <option name="localTasksCounter" value="140" />
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1707,7 +1701,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="BiAdapterFactory" />
     <MESSAGE value="BiAdapterFactory&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="remove FileUtils to import from ReVoman&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="Commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
@@ -1732,7 +1725,8 @@
     <MESSAGE value="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="wrapper&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="CoreLineItemInternal&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="CoreLineItemInternal&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <MESSAGE value="oldNearCoreResponse&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="oldNearCoreResponse&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
   </component>
   <component name="WfRunsListSearchHistory">{
   &quot;history&quot;: [
@@ -1797,17 +1791,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomainsTest.java</url>
-          <line>519</line>
+          <line>516</line>
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomainsTest.java</url>
-          <line>517</line>
+          <line>514</line>
           <option name="timeStamp" value="80" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomainsTest.java</url>
-          <line>516</line>
+          <line>513</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
@@ -1820,7 +1814,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomainsTest.java</url>
-          <line>478</line>
+          <line>475</line>
           <option name="timeStamp" value="86" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -1830,12 +1824,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomainsTest.java</url>
-          <line>188</line>
+          <line>183</line>
           <option name="timeStamp" value="93" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomainsTest.java</url>
-          <line>365</line>
+          <line>351</line>
           <option name="timeStamp" value="95" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">

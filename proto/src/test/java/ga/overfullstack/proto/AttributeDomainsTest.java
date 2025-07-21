@@ -54,12 +54,7 @@ class AttributeDomainsTest {
 		final var attributeDomainsNCBefore = (Map<String, List<?>>) map.get("attributeDomains");
 		
     // After we receive it in core, we process them like this
-		final var attributeDomainsCoreBefore =
-				attributeDomainsNCBefore.entrySet().stream()
-						.collect(
-								toMap(
-										Map.Entry::getKey,
-										entry -> entry.getValue().stream().map(String::valueOf).toList()));
+		final var attributeDomainsCoreBefore = coreTransformation(attributeDomainsNCBefore);
 
 		// --- AFTER ---
 
@@ -190,11 +185,7 @@ class AttributeDomainsTest {
 		
     // After we receive it in core, we process them like this
 		final var attributeDomainsCoreBefore =
-				attributeDomainsNCBefore.entrySet().stream()
-						.collect(
-								toMap(
-										Map.Entry::getKey,
-										entry -> entry.getValue().stream().map(String::valueOf).toList()));
+        coreTransformation(attributeDomainsNCBefore);
 
 		// --- AFTER ---
 
@@ -305,15 +296,10 @@ class AttributeDomainsTest {
             """;
     final var mapper = new ObjectMapper();
     Map<String, Object> map = mapper.readValue(beforeResponse, Map.class);
-    final var attributeDomainsNCBefore = (Map<String, List<?>>) map.get("attributeDomains");
+    final var attributeDomainsNC258Before = (Map<String, List<?>>) map.get("attributeDomains");
 
     // After we receive it in core, we process them like this
-    final var attributeDomainsCoreBefore =
-        attributeDomainsNCBefore.entrySet().stream()
-            .collect(
-                toMap(
-                    Map.Entry::getKey,
-                    entry -> entry.getValue().stream().map(String::valueOf).toList()));
+    final var attributeDomainsCore258Before = coreTransformation(attributeDomainsNC258Before);
 
     // --- AFTER ---
 
@@ -368,14 +354,17 @@ class AttributeDomainsTest {
             .putAllAttributeDomains(attributeDomainsTransformed)
             .build();
     // We convert attributeDomains -> Map<String, List<String>> which is compatible with Map<String, List<?>>
-    final Map<String, List<?>> oldNearCoreResponse =
+    final Map<String, List<?>> attributeDomainsProtoToPojoFor256 =
         nearCoreProtoResponse.getAttributeDomainsMap().entrySet().stream()
             .collect(
                 toMap(
                     Entry::getKey,
                     entry ->
                         entry.getValue().getValuesList().stream().map(String::valueOf).toList()));
-
+    
+    final var attributeDomainsOnCore256 = coreTransformation(attributeDomainsProtoToPojoFor256);
+    assertThat(attributeDomainsOnCore256).containsExactlyEntriesOf(attributeDomainsCore258Before);
+    
     // Serialize to JSON and send response to Core
     var nearCoreResponse = JsonFormat.printer().print(nearCoreProtoResponse);
 
@@ -394,9 +383,18 @@ class AttributeDomainsTest {
                         entry.getValue().getValuesList().stream().map(String::valueOf).toList()));
     
     Truth.assertThat(attributeDomainsCoreAfter)
-        .containsExactlyEntriesIn(attributeDomainsCoreBefore);
+        .containsExactlyEntriesIn(attributeDomainsCore258Before);
   }
-  
+
+  private static Map<String, List<String>> coreTransformation(
+      Map<String, List<?>> attributeDomainsNCBefore) {
+    return attributeDomainsNCBefore.entrySet().stream()
+        .collect(
+            toMap(
+                Entry::getKey,
+                entry -> entry.getValue().stream().map(String::valueOf).toList()));
+  }
+
   // --------------------------------------
   
   @Test
