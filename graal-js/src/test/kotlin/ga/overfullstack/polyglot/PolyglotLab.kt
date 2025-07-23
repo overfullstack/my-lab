@@ -1,8 +1,6 @@
 package ga.overfullstack.polyglot
 
-import com.salesforce.revoman.input.readFileInResourcesToString
 import context.buildJSContext
-import ga.overfullstack.polyglot.PolyglotLab.UpperCase
 import java.util.*
 import okio.FileSystem
 import okio.Path.Companion.toPath
@@ -21,7 +19,7 @@ class PolyglotLab {
       """
       jsonStr => JSON.parse(jsonStr)
     """
-    val jsonStr = readFileInResourcesToString("core-graph-response.json")
+    val jsonStr = readFileToString("core-graph-response.json")
     val result = context.eval("js", jscript).execute(jsonStr)
     println(result)
   }
@@ -74,7 +72,7 @@ class PolyglotLab {
 
   @Test
   fun jsonParseWithJs() {
-    val responseBody = readFileInResourcesToString("core-user-creation-response.json")
+    val responseBody = readFileToString("core-user-creation-response.json")
     val callingScript =
       """
       var jsonData = JSON.parse(responseBody);

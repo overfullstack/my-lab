@@ -1,6 +1,5 @@
 package ga.overfullstack.factory
 
-import com.salesforce.revoman.input.readFileInResourcesToString
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
@@ -18,16 +17,16 @@ class SingleOrListAdapterTest {
         Types.newParameterizedType(List::class.java, Map::class.java),
         SingleOrList::class.java,
       )
-    val collectionStr = readFileInResourcesToString("collection.json")
+    val collectionStr = readFileToString("collection.json")
     val collection = adapter.fromJson(collectionStr)
     print(collection)
-    val objStr = readFileInResourcesToString("obj.json")
+    val objStr = readFileToString("obj.json")
     val objList = adapter.fromJson(objStr)
     print(objList)
-    val collectionInObjStr = readFileInResourcesToString("collection-in-obj.json")
+    val collectionInObjStr = readFileToString("collection-in-obj.json")
     val collectionInObj = adapter.fromJson(collectionInObjStr)
     print(collectionInObj)
-    val collectionWithSingleObjStr = readFileInResourcesToString("collection-with-single-obj.json")
+    val collectionWithSingleObjStr = readFileToString("collection-with-single-obj.json")
     val collectionWithSingleObj = adapter.fromJson(collectionWithSingleObjStr)
     print(collectionWithSingleObj)
   }
@@ -48,16 +47,16 @@ class SingleOrListAdapterTest {
         Types.newParameterizedType(List::class.java, Map::class.java),
         ObjOrList::class.java,
       )
-    val collectionStr = readFileInResourcesToString("collection.json")
+    val collectionStr = readFileToString("collection.json")
     val collection = adapter.fromJson(collectionStr)
     println(collection)
-    val objStr = readFileInResourcesToString("obj.json")
+    val objStr = readFileToString("obj.json")
     val objList = adapter.fromJson(objStr)
     println(objList)
-    val collectionInObjStr = readFileInResourcesToString("collection-in-obj.json")
+    val collectionInObjStr = readFileToString("collection-in-obj.json")
     val collectionInObj = adapter.fromJson(collectionInObjStr)
     println(collectionInObj)
-    val collectionWithSingleObjStr = readFileInResourcesToString("collection-with-single-obj.json")
+    val collectionWithSingleObjStr = readFileToString("collection-with-single-obj.json")
     val collectionWithSingleObj = adapter.fromJson(collectionWithSingleObjStr)
     println(collectionWithSingleObj)
   }
@@ -66,19 +65,19 @@ class SingleOrListAdapterTest {
   @Test
   fun anyAdapter2() {
     val adapter = Moshi.Builder().build().adapter<Any>()
-    val collectionStr = readFileInResourcesToString("collection.json")
+    val collectionStr = readFileToString("collection.json")
     val collection = adapter.fromJson(collectionStr)
     println(collection?.javaClass)
     println(collection)
-    val objStr = readFileInResourcesToString("obj.json")
+    val objStr = readFileToString("obj.json")
     val objList = adapter.fromJson(objStr)
     println(objList?.javaClass)
     println(objList)
-    val collectionInObjStr = readFileInResourcesToString("collection-in-obj.json")
+    val collectionInObjStr = readFileToString("collection-in-obj.json")
     val collectionInObj = adapter.fromJson(collectionInObjStr)
     println(collectionInObj?.javaClass)
     println(collectionInObj)
-    val collectionWithSingleObjStr = readFileInResourcesToString("collection-with-single-obj.json")
+    val collectionWithSingleObjStr = readFileToString("collection-with-single-obj.json")
     val collectionWithSingleObj = adapter.fromJson(collectionWithSingleObjStr)
     println(collectionWithSingleObj?.javaClass)
     println(collectionWithSingleObj)
@@ -90,13 +89,13 @@ class SingleOrListAdapterTest {
     val moshi = Moshi.Builder().add(AnyAdapterFactory).build()
     val adapter: JsonAdapter<List<Map<String, String>>> =
       moshi.adapter(Types.newParameterizedType(List::class.java, Map::class.java))
-    val collectionStr = readFileInResourcesToString("collection.json")
+    val collectionStr = readFileToString("collection.json")
     val collection = adapter.fromJson(collectionStr)
     println(collection)
-    val objStr = readFileInResourcesToString("obj.json")
+    val objStr = readFileToString("obj.json")
     val obj = adapter.fromJson(objStr)
     println(obj)
-    val collectionInObjStr = readFileInResourcesToString("collection-in-obj.json")
+    val collectionInObjStr = readFileToString("collection-in-obj.json")
     val collectionInObj = adapter.fromJson(collectionInObjStr)
     println(collectionInObj)
   }

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4">
-  <component name="SonarLintModuleSettings">
-    <option name="uniqueId" value="9d30ca9c-8257-4e03-aaf3-d34194bb39e1" />
+  <component name="AdditionalModuleElements">
+    <content url="file://$MODULE_DIR$/../../../kotlin-lab" dumb="true">
+      <excludeFolder url="file://$MODULE_DIR$/../../../kotlin-lab/bin" />
+    </content>
   </component>
 </module>

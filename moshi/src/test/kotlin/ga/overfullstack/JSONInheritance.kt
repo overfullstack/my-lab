@@ -1,6 +1,5 @@
 package ga.overfullstack
 
-import com.salesforce.revoman.input.readFileInResourcesToString
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.JsonClass
 import com.squareup.moshi.Moshi
@@ -31,7 +30,7 @@ class JSONInheritance {
   @OptIn(ExperimentalStdlibApi::class)
   @Test
   fun inheritance() {
-    val json = readFileInResourcesToString("inheritance.json")
+    val json = readFileToString("inheritance.json")
     val child = Moshi.Builder().build().adapter<Child>().fromJson(json)
     println(child?.pField1)
   }

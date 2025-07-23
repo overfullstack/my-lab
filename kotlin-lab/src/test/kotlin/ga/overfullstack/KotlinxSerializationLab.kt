@@ -1,6 +1,6 @@
 package ga.overfullstack
 
-import com.salesforce.revoman.input.readFileInResourcesToString
+import com.salesforce.revoman.input.readFileToString
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.buildJsonArray
@@ -16,7 +16,7 @@ class KotlinxSerializationLab {
   @OptIn(ExperimentalSerializationApi::class)
   @Test
   fun `generate bt json`() {
-    val bt = Json.parseToJsonElement(readFileInResourcesToString("json/bt-multi-action.json"))
+    val bt = Json.parseToJsonElement(readFileToString("json/bt-multi-action.json"))
     val billingTransactionItem =
       bt.jsonObject["BillingTransaction"]!!
         .jsonArray[0]

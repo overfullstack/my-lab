@@ -39,6 +39,11 @@ class Misc :
   }
 
   @Test
+  fun `empty list any`() {
+    emptyList<Any>().any { true } shouldBe false
+  }
+
+  @Test
   fun `random hex`() {
     println("${getRandomHex()}${getRandomHex()}${getRandomHex()}")
   }

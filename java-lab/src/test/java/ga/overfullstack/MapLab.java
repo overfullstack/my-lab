@@ -15,6 +15,19 @@ import org.junit.jupiter.api.Test;
 
 class MapLab {
 	@Test
+	@DisplayName("map merge")
+	void mapMerge() {
+		final var map1 = MapsKt.mutableMapOf(new Pair<>("a", 1), new Pair<>("b", 2));
+		map1.merge(
+				"c",
+				3,
+				(oldValue, newValue) -> {
+					System.out.println("Shouldn't be called for new Key");
+					return oldValue + newValue;
+				});
+	}
+
+	@Test
 	void testMapLab() {
 		final var bsId = List.of("a", "b", "c");
 		final var bsBPIs = Map.of("a", List.of(1, 2, 3), "b", List.of(4, 5, 6), "c", List.of(7, 8, 9));
@@ -49,7 +62,7 @@ class MapLab {
 	}
 
 	@Test
-	@DisplayName("MapsKt with null Value")
+	@DisplayName("MapsKt with allowed null Value")
 	void mapsKtWithNullValue() {
 		System.out.println(MapsKt.mapOf(new Pair<>("a", null)));
 	}

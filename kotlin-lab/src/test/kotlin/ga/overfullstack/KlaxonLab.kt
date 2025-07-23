@@ -5,8 +5,8 @@ import com.beust.klaxon.JsonObject
 import com.beust.klaxon.Klaxon
 import com.beust.klaxon.Parser
 import com.beust.klaxon.PathMatcher
-import com.salesforce.revoman.input.bufferFileInResources
-import com.salesforce.revoman.input.readFileInResourcesToString
+import com.salesforce.revoman.input.bufferFile
+import com.salesforce.revoman.input.readFileToString
 import java.io.StringReader
 import java.util.regex.Pattern
 import org.junit.jupiter.api.Test
@@ -25,7 +25,7 @@ class KlaxonLab {
 
     Klaxon()
       .pathMatcher(pathMatcher)
-      .parseJsonObject(StringReader(readFileInResourcesToString("json/library.json")))
+      .parseJsonObject(StringReader(readFileToString("json/library.json")))
   }
 
   @Test
@@ -41,9 +41,7 @@ class KlaxonLab {
 
     Klaxon()
       .pathMatcher(pathMatcher)
-      .parseJsonObject(
-        StringReader(readFileInResourcesToString("json/pokemon.postman_collection.json"))
-      )
+      .parseJsonObject(StringReader(readFileToString("json/pokemon.postman_collection.json")))
   }
 
   @Test
@@ -56,8 +54,7 @@ class KlaxonLab {
 
   @Test
   fun `klaxon Json Array`() {
-    val array =
-      Parser.default().parse(bufferFileInResources("d.json").inputStream()) as JsonArray<*>
+    val array = Parser.default().parse(bufferFile("d.json").inputStream()) as JsonArray<*>
 
     println("=== Finding Jack:")
     val jack = array.first { it is JsonObject && it.string("first") == "Jack" }

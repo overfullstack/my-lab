@@ -1,6 +1,5 @@
 package ga.overfullstack
 
-import com.salesforce.revoman.input.readFileInResourcesToString
 import com.squareup.moshi.JsonClass
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
@@ -13,10 +12,7 @@ class PostmanLab {
     val whiteListToRetain =
       setOf("standardPricebookId", "adminUserId", "standardUserId", "standardUserProfileId")
     val pmEnvAdapter = Moshi.Builder().build().adapter<Environment>()
-    val env =
-      pmEnvAdapter.fromJson(
-        readFileInResourcesToString("postman/linux-sm.postman_environment.json")
-      )
+    val env = pmEnvAdapter.fromJson(readFileToString("postman/linux-sm.postman_environment.json"))
     env!!
       .values
       .asSequence()
@@ -41,9 +37,8 @@ class PostmanLab {
       )
     val anyAdapter = Moshi.Builder().build().adapter<Any>()
     val env =
-      anyAdapter.fromJson(
-        readFileInResourcesToString("postman/pq-user-env.postman_environment.json")
-      ) as Map<String, Any>
+      anyAdapter.fromJson(readFileToString("postman/pq-user-env.postman_environment.json"))
+        as Map<String, Any>
     val values = env.get("values") as List<Map<String, String>>
     val envMap = values.asSequence().map { it["key"] to it["value"] }.toMap()
     val epoch = System.currentTimeMillis()

@@ -1,6 +1,5 @@
 package ga.overfullstack.adapter
 
-import com.salesforce.revoman.input.readFileInResourcesToString
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
 import ga.overfullstack.pojo.NestedBean
@@ -22,7 +21,7 @@ class RegexAdapterTest {
   @Test
   @Throws(IOException::class)
   fun `regex Factory`() {
-    val beanStr = readFileInResourcesToString("factory/bean-with-regex.json")
+    val beanStr = readFileToString("factory/bean-with-regex.json")
     val nestedBean =
       Moshi.Builder().add(RegexAdapter).build().adapter<NestedBean>().fromJson(beanStr)
     Assertions.assertNotNull(nestedBean)

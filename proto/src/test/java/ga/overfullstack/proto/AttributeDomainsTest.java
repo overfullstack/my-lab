@@ -52,8 +52,8 @@ class AttributeDomainsTest {
 		final var mapper = new ObjectMapper();
 		Map<String, Object> map = mapper.readValue(beforeResponse, Map.class);
 		final var attributeDomainsNCBefore = (Map<String, List<?>>) map.get("attributeDomains");
-		
-    // After we receive it in core, we process them like this
+
+		// After we receive it in core, we process them like this
 		final var attributeDomainsCoreBefore = coreTransformation(attributeDomainsNCBefore);
 
 		// --- AFTER ---
@@ -105,9 +105,7 @@ class AttributeDomainsTest {
 														.build()));
 
 		var nearCoreProtoResponse =
-				AttributeDomains.newBuilder()
-						.putAllAttributeDomains(attributeDomainsTransformed)
-						.build();
+				AttributeDomains.newBuilder().putAllAttributeDomains(attributeDomainsTransformed).build();
 
 		// Serialize to JSON and send response to Core
 		var nearCoreResponse = JsonFormat.printer().print(nearCoreProtoResponse);
@@ -182,10 +180,9 @@ class AttributeDomainsTest {
 		final var mapper = new ObjectMapper();
 		Map<String, Object> map = mapper.readValue(beforeResponse, Map.class);
 		final var attributeDomainsNCBefore = (Map<String, List<?>>) map.get("attributeDomains");
-		
-    // After we receive it in core, we process them like this
-		final var attributeDomainsCoreBefore =
-        coreTransformation(attributeDomainsNCBefore);
+
+		// After we receive it in core, we process them like this
+		final var attributeDomainsCoreBefore = coreTransformation(attributeDomainsNCBefore);
 
 		// --- AFTER ---
 
@@ -237,9 +234,7 @@ class AttributeDomainsTest {
 														.build()));
 
 		var nearCoreProtoResponse =
-				AttributeDomains.newBuilder()
-						.putAllAttributeDomains(attributeDomainsTransformed)
-						.build();
+				AttributeDomains.newBuilder().putAllAttributeDomains(attributeDomainsTransformed).build();
 
 		// Serialize to JSON and send response to Core
 		var nearCoreResponse = JsonFormat.printer().print(nearCoreProtoResponse);
@@ -261,143 +256,139 @@ class AttributeDomainsTest {
 				.containsExactlyEntriesIn(attributeDomainsCoreBefore);
 	}
 
+	@Test
+	void testNearCoreProtoToPojo() throws Exception {
+		final var beforeResponse =
+				"""
+						{
+								"attributeDomains": {
+										"attr1": [
+												{
+														"min": 1,
+														"max": 1,
+														"minIntValue": 1
+												},
+												{
+														"min": 1,
+														"max": 1,
+														"minIntValue": 1
+												}
+										],
+										"attr2": [
+												{
+														"min": 1,
+														"max": 1,
+														"minIntValue": 1
+												}
+										],
+										"attr3": [
+												"str1",
+												"str2"
+										]
+								}
+						}
+						""";
+		final var mapper = new ObjectMapper();
+		Map<String, Object> map = mapper.readValue(beforeResponse, Map.class);
+		final var attributeDomainsNC258Before = (Map<String, List<?>>) map.get("attributeDomains");
 
-  @Test
-  void testNearCoreProtoToPojo() throws Exception {
-    final var beforeResponse =
-        """
-            {
-                "attributeDomains": {
-                    "attr1": [
-                        {
-                            "min": 1,
-                            "max": 1,
-                            "minIntValue": 1
-                        },
-                        {
-                            "min": 1,
-                            "max": 1,
-                            "minIntValue": 1
-                        }
-                    ],
-                    "attr2": [
-                        {
-                            "min": 1,
-                            "max": 1,
-                            "minIntValue": 1
-                        }
-                    ],
-                    "attr3": [
-                        "str1",
-                        "str2"
-                    ]
-                }
-            }
-            """;
-    final var mapper = new ObjectMapper();
-    Map<String, Object> map = mapper.readValue(beforeResponse, Map.class);
-    final var attributeDomainsNC258Before = (Map<String, List<?>>) map.get("attributeDomains");
+		// After we receive it in core, we process them like this
+		final var attributeDomainsCore258Before = coreTransformation(attributeDomainsNC258Before);
 
-    // After we receive it in core, we process them like this
-    final var attributeDomainsCore258Before = coreTransformation(attributeDomainsNC258Before);
+		// --- AFTER ---
 
-    // --- AFTER ---
+		// Near-core: Build protobuf
+		final var attributeDomainsNC =
+				new LinkedHashMap<String, List<?>>() {
+					{
+						put(
+								"attr1",
+								List.of(
+										new LinkedHashMap<String, Integer>() {
+											{
+												put("min", 1);
+												put("max", 1);
+												put("minIntValue", 1);
+											}
+										},
+										new LinkedHashMap<String, Integer>() {
+											{
+												put("min", 1);
+												put("max", 1);
+												put("minIntValue", 1);
+											}
+										}));
+						put(
+								"attr2",
+								List.of(
+										new LinkedHashMap<String, Integer>() {
+											{
+												put("min", 1);
+												put("max", 1);
+												put("minIntValue", 1);
+											}
+										}));
+						put("attr3", List.of("str1", "str2"));
+					}
+				};
 
-    // Near-core: Build protobuf
-    final var attributeDomainsNC =
-        new LinkedHashMap<String, List<?>>() {
-          {
-            put(
-                "attr1",
-                List.of(
-                    new LinkedHashMap<String, Integer>() {
-                      {
-                        put("min", 1);
-                        put("max", 1);
-                        put("minIntValue", 1);
-                      }
-                    },
-                    new LinkedHashMap<String, Integer>() {
-                      {
-                        put("min", 1);
-                        put("max", 1);
-                        put("minIntValue", 1);
-                      }
-                    }));
-            put(
-                "attr2",
-                List.of(
-                    new LinkedHashMap<String, Integer>() {
-                      {
-                        put("min", 1);
-                        put("max", 1);
-                        put("minIntValue", 1);
-                      }
-                    }));
-            put("attr3", List.of("str1", "str2"));
-          }
-        };
+		// NEAR-CORE: CoreLineItemInternal Setter `setAttributeDomains()`
+		final var attributeDomainsTransformed =
+				attributeDomainsNC.entrySet().stream()
+						.collect(
+								toMap(
+										Entry::getKey,
+										entry ->
+												AttributeDomainList.newBuilder()
+														.addAllValues(entry.getValue().stream().map(String::valueOf).toList())
+														.build()));
 
-    // NEAR-CORE: CoreLineItemInternal Setter `setAttributeDomains()`
-    final var attributeDomainsTransformed =
-        attributeDomainsNC.entrySet().stream()
-            .collect(
-                toMap(
-                    Entry::getKey,
-                    entry ->
-                        AttributeDomainList.newBuilder()
-                            .addAllValues(entry.getValue().stream().map(String::valueOf).toList())
-                            .build()));
+		var nearCoreProtoResponse =
+				AttributeDomains.newBuilder().putAllAttributeDomains(attributeDomainsTransformed).build();
+		// We convert attributeDomains -> Map<String, List<String>> which is compatible with Map<String,
+		// List<?>>
+		final Map<String, List<?>> attributeDomainsProtoToPojoFor256 =
+				nearCoreProtoResponse.getAttributeDomainsMap().entrySet().stream()
+						.collect(
+								toMap(
+										Entry::getKey,
+										entry ->
+												entry.getValue().getValuesList().stream().map(String::valueOf).toList()));
 
-    var nearCoreProtoResponse =
-        AttributeDomains.newBuilder()
-            .putAllAttributeDomains(attributeDomainsTransformed)
-            .build();
-    // We convert attributeDomains -> Map<String, List<String>> which is compatible with Map<String, List<?>>
-    final Map<String, List<?>> attributeDomainsProtoToPojoFor256 =
-        nearCoreProtoResponse.getAttributeDomainsMap().entrySet().stream()
-            .collect(
-                toMap(
-                    Entry::getKey,
-                    entry ->
-                        entry.getValue().getValuesList().stream().map(String::valueOf).toList()));
-    
-    final var attributeDomainsOnCore256 = coreTransformation(attributeDomainsProtoToPojoFor256);
-    assertThat(attributeDomainsOnCore256).containsExactlyEntriesOf(attributeDomainsCore258Before);
-    
-    // Serialize to JSON and send response to Core
-    var nearCoreResponse = JsonFormat.printer().print(nearCoreProtoResponse);
+		final var attributeDomainsOnCore256 = coreTransformation(attributeDomainsProtoToPojoFor256);
+		assertThat(attributeDomainsOnCore256).containsExactlyEntriesOf(attributeDomainsCore258Before);
 
-    // ON CORE: Deserialize the nearCoreResponse to Proto
-    var parsedBuilder = AttributeDomains.newBuilder();
-    JsonFormat.parser().merge(nearCoreResponse, parsedBuilder);
-    var attributeDomainsCore = parsedBuilder.build();
+		// Serialize to JSON and send response to Core
+		var nearCoreResponse = JsonFormat.printer().print(nearCoreProtoResponse);
 
-    // ON CORE: CoreLineItemInternal Getter
-    final var attributeDomainsCoreAfter =
-        attributeDomainsCore.getAttributeDomainsMap().entrySet().stream()
-            .collect(
-                toMap(
-                    Entry::getKey,
-                    entry ->
-                        entry.getValue().getValuesList().stream().map(String::valueOf).toList()));
-    
-    Truth.assertThat(attributeDomainsCoreAfter)
-        .containsExactlyEntriesIn(attributeDomainsCore258Before);
-  }
+		// ON CORE: Deserialize the nearCoreResponse to Proto
+		var parsedBuilder = AttributeDomains.newBuilder();
+		JsonFormat.parser().merge(nearCoreResponse, parsedBuilder);
+		var attributeDomainsCore = parsedBuilder.build();
 
-  private static Map<String, List<String>> coreTransformation(
-      Map<String, List<?>> attributeDomainsNCBefore) {
-    return attributeDomainsNCBefore.entrySet().stream()
-        .collect(
-            toMap(
-                Entry::getKey,
-                entry -> entry.getValue().stream().map(String::valueOf).toList()));
-  }
+		// ON CORE: CoreLineItemInternal Getter
+		final var attributeDomainsCoreAfter =
+				attributeDomainsCore.getAttributeDomainsMap().entrySet().stream()
+						.collect(
+								toMap(
+										Entry::getKey,
+										entry ->
+												entry.getValue().getValuesList().stream().map(String::valueOf).toList()));
 
-  // --------------------------------------
-  
-  @Test
+		Truth.assertThat(attributeDomainsCoreAfter)
+				.containsExactlyEntriesIn(attributeDomainsCore258Before);
+	}
+
+	private static Map<String, List<String>> coreTransformation(
+			Map<String, List<?>> attributeDomainsNCBefore) {
+		return attributeDomainsNCBefore.entrySet().stream()
+				.collect(
+						toMap(Entry::getKey, entry -> entry.getValue().stream().map(String::valueOf).toList()));
+	}
+
+	// --------------------------------------
+
+	@Test
 	void testCoreNearCoreOld() throws Exception {
 		final var str =
 				"""
@@ -457,9 +448,7 @@ class AttributeDomainsTest {
 														.addValues(String.valueOf(entry.getValue()))
 														.build()));
 		var message =
-				AttributeDomains.newBuilder()
-						.putAllAttributeDomains(attributeDomainsTransformed)
-						.build();
+				AttributeDomains.newBuilder().putAllAttributeDomains(attributeDomainsTransformed).build();
 
 		// Convert to JSON using protobuf's JsonFormat
 		var response = JsonFormat.printer().print(message);
@@ -506,9 +495,7 @@ class AttributeDomainsTest {
 														.addValues(String.valueOf(entry.getValue()))
 														.build()));
 		var message =
-				AttributeDomains.newBuilder()
-						.putAllAttributeDomains(attributeDomainsTransformed)
-						.build();
+				AttributeDomains.newBuilder().putAllAttributeDomains(attributeDomainsTransformed).build();
 
 		// Convert to JSON using protobuf's JsonFormat
 		var response = JsonFormat.printer().print(message);

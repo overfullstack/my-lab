@@ -1,5 +1,4 @@
 import com.salesforce.revoman.input.json.pojoToJson
-import com.salesforce.revoman.input.readFileInResourcesToString
 import com.squareup.moshi.FromJson
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
@@ -23,7 +22,7 @@ class ContextMappingGeneratorTest {
     val contextDefAdapter = Moshi.Builder().build().adapter<ContextDefinition>()
     val contextDef =
       contextDefAdapter
-        .fromJson(readFileInResourcesToString("context-def/context-def.json"))!!
+        .fromJson(readFileToString("context-def/context-def.json"))!!
         .payload
         .contextDefinition
         .contextDefinitionVersionList[0]
@@ -50,7 +49,7 @@ class ContextMappingGeneratorTest {
       Moshi.Builder().addLast(KotlinJsonAdapterFactory()).build().adapter<ContextDefinition>()
     val contextDef =
       contextDefAdapter
-        .fromJson(readFileInResourcesToString("context-def/groot/context-def.json"))!!
+        .fromJson(readFileToString("context-def/groot/context-def.json"))!!
         .payload
         .contextDefinition
         .contextDefinitionVersionList[0]
@@ -61,7 +60,7 @@ class ContextMappingGeneratorTest {
       Moshi.Builder()
         .build()
         .adapter<MapperConfig>()
-        .fromJson(readFileInResourcesToString("context-def/groot/quote-mapper-config.json"))!!
+        .fromJson(readFileToString("context-def/groot/quote-mapper-config.json"))!!
     val quoteFields = Udd.getFieldsForAPIName(quoteMapperConfig.sObjectName)!!
 
     val contextMapping =
@@ -70,9 +69,7 @@ class ContextMappingGeneratorTest {
         .addLast(KotlinJsonAdapterFactory())
         .build()
         .adapter<ContextMapping>()
-        .fromJson(
-          readFileInResourcesToString("context-def/groot/context-node-mapping-template.json")
-        )
+        .fromJson(readFileToString("context-def/groot/context-node-mapping-template.json"))
     println(pojoToJson(ContextMapping::class.java, contextMapping!!))
   }
 

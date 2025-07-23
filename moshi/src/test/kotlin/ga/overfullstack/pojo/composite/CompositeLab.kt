@@ -1,6 +1,5 @@
 package ga.overfullstack.pojo.composite
 
-import com.salesforce.revoman.input.readFileInResourcesToString
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapter
 import dev.zacsweers.moshix.adapters.AdaptedBy
@@ -13,8 +12,7 @@ class CompositeLab {
   @OptIn(ExperimentalStdlibApi::class)
   @Test
   fun `Composite response JSON --) POJO --) JSON`() {
-    val compositeRepStr =
-      readFileInResourcesToString("composite/resp/composite-query-success-response.json")
+    val compositeRepStr = readFileToString("composite/resp/composite-query-success-response.json")
     val compositeRepAdapter =
       Moshi.Builder().add(AdaptedBy.Factory()).build().adapter<CompositeQueryResponse>()
     val compositeResp = compositeRepAdapter.fromJson(compositeRepStr)
@@ -25,7 +23,7 @@ class CompositeLab {
   @OptIn(ExperimentalStdlibApi::class)
   @Test
   fun `Connect graph JSON --) POJO`() {
-    val jsonStr = readFileInResourcesToString("composite/req/connect-graph.json")
+    val jsonStr = readFileToString("composite/req/connect-graph.json")
     val adapter = Moshi.Builder().build().adapter<ConnectGraph>()
     val pojo = adapter.fromJson(jsonStr)!!
     println(pojo)
@@ -34,7 +32,7 @@ class CompositeLab {
   @OptIn(ExperimentalStdlibApi::class)
   @Test
   fun `PQ payload JSON --) POJO --) Connect graph JSON`() {
-    val jsonStr = readFileInResourcesToString("composite/req/pq-payload.json")
+    val jsonStr = readFileToString("composite/req/pq-payload.json")
     val adapter = Moshi.Builder().add(RecordAdapter).build().adapter<PQPayload>()
     val pqGraph = adapter.fromJson(jsonStr)!!
     println(pqGraph)
@@ -46,7 +44,7 @@ class CompositeLab {
   @OptIn(ExperimentalStdlibApi::class)
   @Test
   fun `toJson ~ Connect graph JSON --) Connect graph POJO --) PQ payload JSON`() {
-    val jsonStr = readFileInResourcesToString("composite/req/connect-graph.json")
+    val jsonStr = readFileToString("composite/req/connect-graph.json")
     val connectGraphAdapter = Moshi.Builder().build().adapter<ConnectGraph>()
     val connectGraph = connectGraphAdapter.fromJson(jsonStr)!!
     println(connectGraph)
@@ -58,7 +56,7 @@ class CompositeLab {
   @OptIn(ExperimentalStdlibApi::class)
   @Test
   fun `fromJson ~ PQ payload JSON --) Connect graph POJO --) Connect graph JSON`() {
-    val jsonStr = readFileInResourcesToString("composite/req/pq-payload.json")
+    val jsonStr = readFileToString("composite/req/pq-payload.json")
     val pqJsonToConnectGraphAdapter =
       Moshi.Builder().add(ConnectPQGraphAdapter).build().adapter<ConnectGraph>()
     val connectGraph = pqJsonToConnectGraphAdapter.fromJson(jsonStr)!!
