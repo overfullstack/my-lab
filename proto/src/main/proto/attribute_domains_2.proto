@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package ga.overfullstack.proto;
+
+import "google/protobuf/any.proto";
+
+option java_package = "ga.overfullstack.proto";
+option java_outer_classname = "AttributeDomainsProto2";
+
+message AttributeDomains2 {
+    map<string, AttributeDomainList2> attribute_domains = 1;
+}
+
+// Message representing a list of domain configurations for an attribute
+message AttributeDomainList2 {
+    repeated google.protobuf.Any values = 1;
+} 
