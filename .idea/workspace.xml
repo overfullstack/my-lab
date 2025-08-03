@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="Fix spotless&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
-      <change afterPath="$PROJECT_DIR$/proto/src/main/proto/attribute_domains_2.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proto/src/test/java/ga/overfullstack/proto/AttributeDomains2Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="b22a2070-8318-438e-b0db-7b9b867e1b30" name="Default Changelist" comment="Kotest properties&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/Misc.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/Misc.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,6 +230,7 @@
     &quot;Gradle.Misc.empty list any.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Misc.print data class.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Misc.random hex.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Misc.zip unequal strings.executor&quot;: &quot;Debug&quot;,
     &quot;Gradle.MoshiJLab.cardAdapter.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.ObjectMapperLab.localDateToJson.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.ObjectMapperLab.objectToString.executor&quot;: &quot;Run&quot;,
@@ -311,7 +310,7 @@
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;ktor.last.update.timestamp&quot;: &quot;1684333206939&quot;,
     &quot;last_directory_selection&quot;: &quot;/Users/gopala.akshintala/code-clones/my-github/my-lab/kotlin-lab/src/test/java&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/gopala.akshintala/code-clones/my-github/my-lab/proto/src/main/proto&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/gopala.akshintala/code-clones/my-github/my-lab/common/src/test/resources&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -352,11 +351,11 @@
       <recent name="ga.overfullstack" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/common/src/test/resources" />
       <recent name="$PROJECT_DIR$/proto/src/main/proto" />
       <recent name="$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/v65" />
       <recent name="$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/v64" />
       <recent name="$PROJECT_DIR$/java-lab/src/main/java/ga/overfullstack/v63" />
-      <recent name="$PROJECT_DIR$/java-lab/src/main/java/constraints/solver/configuration/v65" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -448,7 +447,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.my-lab [clean build]">
+  <component name="RunManager" selected="Gradle.Misc.zip unequal strings">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -486,30 +485,6 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="MapLab.mapsKtWithNullValue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":java-lab:test" />
-            <option value="--tests" />
-            <option value="&quot;ga.overfullstack.MapLab.mapsKtWithNullValue&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="Misc.empty list any" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -524,6 +499,30 @@
             <option value=":kotlin-lab:test" />
             <option value="--tests" />
             <option value="&quot;ga.overfullstack.Misc.empty list any&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Misc.zip unequal strings" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":kotlin-lab:test" />
+            <option value="--tests" />
+            <option value="&quot;ga.overfullstack.Misc.zip unequal strings&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -580,19 +579,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Gradle.Misc.zip unequal strings" />
       <item itemvalue="Gradle.my-lab [clean build]" />
       <item itemvalue="Gradle.Misc.empty list any" />
       <item itemvalue="Gradle.my-lab [spotlessApply]" />
       <item itemvalue="Gradle.MapLab.mapMerge" />
-      <item itemvalue="Gradle.MapLab.mapsKtWithNullValue" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Misc.zip unequal strings" />
         <item itemvalue="Gradle.my-lab [clean build]" />
         <item itemvalue="Gradle.my-lab [spotlessApply]" />
         <item itemvalue="Gradle.Misc.empty list any" />
         <item itemvalue="Gradle.MapLab.mapMerge" />
-        <item itemvalue="Gradle.MapLab.mapsKtWithNullValue" />
       </list>
     </recent_temporary>
   </component>
@@ -1250,6 +1249,10 @@
       <workItem from="1753269238858" duration="819000" />
       <workItem from="1753287261933" duration="72000" />
       <workItem from="1753839120025" duration="2388000" />
+      <workItem from="1753880147988" duration="144000" />
+      <workItem from="1754105882774" duration="80000" />
+      <workItem from="1754105980087" duration="278000" />
+      <workItem from="1754108430167" duration="727000" />
     </task>
     <task id="LOCAL-00009" summary="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;">
       <created>1627583016664</created>
@@ -1594,7 +1597,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684333262543</updated>
     </task>
-    <option name="localTasksCounter" value="145" />
+    <option name="localTasksCounter" value="146" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1729,7 +1732,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="Kotlin 2.0.0-RC1&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="Better spotless&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="Fix Detekt&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
@@ -1754,7 +1756,8 @@
     <MESSAGE value="AttributeDomainsTest for 256&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="commit&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
     <MESSAGE value="Fix spotless&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix spotless&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <MESSAGE value="Kotest properties&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kotest properties&#10;&#10;Signed-off-by: Gopal S Akshintala &lt;gopala.akshintala@salesforce.com&gt;" />
   </component>
   <component name="WfRunsListSearchHistory">{
   &quot;history&quot;: [
@@ -1907,6 +1910,22 @@
           <url>file://$PROJECT_DIR$/moshi/src/test/kotlin/ga/overfullstack/adapter/RecordAdapterTest.kt</url>
           <line>28</line>
           <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/Misc.kt</url>
+          <line>53</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/kotlin-lab/src/test/kotlin/ga/overfullstack/Misc.kt</url>
+          <line>53</line>
+          <properties>
+            <option name="lambda-ordinal" value="0" />
+          </properties>
+          <option name="timeStamp" value="98" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
