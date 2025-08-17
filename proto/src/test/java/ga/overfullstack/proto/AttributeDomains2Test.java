@@ -3,11 +3,6 @@ package ga.overfullstack.proto;
 import static java.util.stream.Collectors.toMap;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.common.truth.Truth;
-import com.google.protobuf.Any;
-import com.google.protobuf.util.JsonFormat;
-import ga.overfullstack.proto.AttributeDomainsProto2.AttributeDomainList2;
-import ga.overfullstack.proto.AttributeDomainsProto2.AttributeDomains2;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -125,7 +120,6 @@ class AttributeDomains2Test {
 		Truth.assertThat(attributeDomainsCoreAfter)
 				.containsExactlyEntriesIn(attributeDomainsCoreBefore);*/
 	}
-  
 
 	private static Map<String, List<String>> coreTransformation(
 			Map<String, List<?>> attributeDomainsNCBefore) {
@@ -133,5 +127,4 @@ class AttributeDomains2Test {
 				.collect(
 						toMap(Entry::getKey, entry -> entry.getValue().stream().map(String::valueOf).toList()));
 	}
-  
 }

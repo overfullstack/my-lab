@@ -1,4 +1,5 @@
 import com.diffplug.spotless.LineEnding.PLATFORM_NATIVE
+import io.gitlab.arturbosch.detekt.Detekt
 
 plugins {
   application
@@ -63,4 +64,8 @@ detekt {
   baseline = file("$rootDir/detekt/baseline.xml")
   config.setFrom(file("$rootDir/detekt/config.yml"))
   ignoreFailures = true
+}
+
+tasks.withType<Detekt>().configureEach {
+  jvmTarget = "22"
 }

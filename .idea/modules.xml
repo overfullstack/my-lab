@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/graal-js/my-lab.graal-js.test.iml" filepath="$PROJECT_DIR$/.idea/modules/graal-js/my-lab.graal-js.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/http4k/my-lab.http4k.test.iml" filepath="$PROJECT_DIR$/.idea/modules/http4k/my-lab.http4k.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/immutables/my-lab.immutables.test.iml" filepath="$PROJECT_DIR$/.idea/modules/immutables/my-lab.immutables.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java-lab/my-lab.java-lab.iml" filepath="$PROJECT_DIR$/.idea/modules/java-lab/my-lab.java-lab.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlin-lab/my-lab.kotlin-lab.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlin-lab/my-lab.kotlin-lab.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/my-lab.main.iml" filepath="$PROJECT_DIR$/.idea/modules/my-lab.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/proto/my-lab.proto.iml" filepath="$PROJECT_DIR$/.idea/modules/proto/my-lab.proto.iml" />
