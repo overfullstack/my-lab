@@ -5,8 +5,10 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/vador-lab/ga.overfullstack.my-lab.vador-lab.main.iml" filepath="$PROJECT_DIR$/.idea/modules/vador-lab/ga.overfullstack.my-lab.vador-lab.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/vador-lab/ga.overfullstack.my-lab.vador-lab.test.iml" filepath="$PROJECT_DIR$/.idea/modules/vador-lab/ga.overfullstack.my-lab.vador-lab.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/apt/my-github.my-lab.apt.main.iml" filepath="$PROJECT_DIR$/.idea/modules/apt/my-github.my-lab.apt.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/my-lab.iml" filepath="$PROJECT_DIR$/.idea/modules/my-lab.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/apt/my-lab.apt.main.iml" filepath="$PROJECT_DIR$/.idea/modules/apt/my-lab.apt.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/apt/my-lab.apt.test.iml" filepath="$PROJECT_DIR$/.idea/modules/apt/my-lab.apt.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildSrc/my-lab.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/buildSrc/my-lab.buildSrc.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/my-lab.buildSrc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/my-lab.buildSrc.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/my-lab.common.test.iml" filepath="$PROJECT_DIR$/.idea/modules/common/my-lab.common.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/graal-js/my-lab.graal-js.test.iml" filepath="$PROJECT_DIR$/.idea/modules/graal-js/my-lab.graal-js.test.iml" />

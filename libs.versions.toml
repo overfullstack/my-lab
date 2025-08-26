@@ -46,6 +46,7 @@ protobuf-gradle = "0.9.5"
 junit = "5.13.4"
 kover = "0.9.1"
 kotest = "6.0.1"
+power-assert = "2.2.0"
 assertj-core = "3.27.4"
 truth = "1.4.4"
 detekt = "1.23.8"
@@ -162,6 +163,7 @@ junit = ["junit-jupiter", "junit-engine"]
 protobuf = ["protobuf-java", "protobuf-java-util"]
 
 [plugins]
+power-assert = { id = "org.jetbrains.kotlin.plugin.power-assert", version.ref = "power-assert" } 
 kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
