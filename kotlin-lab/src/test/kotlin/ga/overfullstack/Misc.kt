@@ -3,13 +3,17 @@ package ga.overfullstack
 import io.exoquery.pprint
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
+import org.junit.jupiter.api.Test
 import java.util.*
 import kotlin.io.path.Path
 import kotlin.random.Random
-import org.junit.jupiter.api.Test
 
 class Misc :
   StringSpec({
+    "some Test" {
+      someFun()
+    }
+    
     "testOptionalGroupBy" {
       val list = listOf(Optional.of("a"), Optional.of("a"), Optional.of("c"))
       val group = list.groupBy { it }
