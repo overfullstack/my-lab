@@ -5,10 +5,10 @@ import static ga.overfullstack.Misc.Some.B;
 import static ga.overfullstack.Misc.Some.C;
 import static ga.overfullstack.Misc.Some.D;
 import static ga.overfullstack.Misc.Some.E;
-import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -35,6 +35,16 @@ class Misc {
 			System.out.println("finally - someFun");
 		}
 	}
+
+  @Test
+  @DisplayName("arrayList add")
+  void arrayListAdd() {
+    var list = new ArrayList<Integer>();
+    list.add(0);
+    list.add(2);
+    list.add(1, 1);
+    System.out.println(list); // [0, 1, 2]
+  }
 
 	@Test
 	void testIntCast() {
@@ -74,18 +84,6 @@ class Misc {
 	@DisplayName("Collections Disjoint")
 	void collectionsDisjoint() {
 		System.out.println(Collections.disjoint(List.of(), List.of()));
-	}
-
-	@Test
-	@DisplayName("Assert test")
-	void assertTest() {
-		assertThat(
-						List.of(
-								"01txx0000006iyWAAQ",
-								"01txx0000006iyXAAQ",
-								"01txx0000006iwuAAA",
-								"01txx0000006iwuAAA"))
-				.containsAll(List.of("01txx0000006iwuAAA", "01txx0000006iyWAAQ", "01txx0000006iyXAAQ"));
 	}
 
 	@Test
