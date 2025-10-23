@@ -1,6 +1,6 @@
 plugins {
   id("com.autonomousapps.build-health") version "3.2.0"
-  id("org.jetbrains.kotlin.jvm") version "2.2.20" apply false
+  id("org.jetbrains.kotlin.jvm") version "2.2.21" apply false
 }
 
 dependencyResolutionManagement {
