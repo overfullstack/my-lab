@@ -10,7 +10,7 @@
     "path-browserify": "1.0.1",
     "postman-collection": "5.2.0",
     "postman-runtime": "7.50.0",
-    "postman-sandbox": "6.2.2",
+    "postman-sandbox": "6.3.0",
     "randombytes": "2.1.0",
     "timers": "0.1.1",
     "uuid-browser": "3.1.0",
