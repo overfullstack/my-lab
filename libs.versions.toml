@@ -37,9 +37,9 @@ underscore = "1.119"
 rabbitmq-client = "5.28.0"
 kotlin-logging = "8.0.01"
 pprint = "3.0.0"
-dependency-analysis = "3.6.0"
+dependency-analysis = "3.6.1"
 gson = "2.13.2"
-protobuf = "4.33.5"
+protobuf = "4.34.0"
 protobuf-gradle = "0.9.6"
 
 # Common dependencies
