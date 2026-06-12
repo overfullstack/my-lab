@@ -39,7 +39,7 @@ kotlin-logging = "8.0.4"
 pprint = "3.0.0"
 dependency-analysis = "3.15.0"
 gson = "2.14.0"
-protobuf = "4.35.0"
+protobuf = "4.35.1"
 protobuf-gradle = "0.10.0"
 
 # Common dependencies
