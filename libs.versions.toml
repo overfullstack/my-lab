@@ -43,7 +43,7 @@ protobuf = "4.35.1"
 protobuf-gradle = "0.10.0"
 
 # Common dependencies
-junit = "6.1.1"
+junit = "6.1.2"
 kover = "0.9.8"
 kotest = "6.2.2"
 power-assert = "2.4.0"
